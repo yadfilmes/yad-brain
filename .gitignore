@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Obsidian — mantemos a configuração do vault (para o setup ser reprodutível),
+# mas não o estado de janela/cache de cada máquina
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
+
+# Cofre-lite: originais de terceiros NUNCA entram no Git.
+# Ficam fora do repositório; aqui guardamos só manifesto (URL + hash) e destilação.
+_cofre/
+*.pdf
+
+# Python (scripts de build/validação)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Temporários
+*.tmp
+*.log
