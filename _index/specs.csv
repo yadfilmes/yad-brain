@@ -3,14 +3,14 @@ id,title,type,brand,zona,status,confidence,risco,updated,n_fontes,tiers,path
 aces,ACES (Academy Color Encoding System),pipeline-cor,,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/aces.md
 alexa-35,ARRI ALEXA 35,camera,arri,universal,draft,media,,2026-07-26,2,lab|oficial,captacao/cameras/arri/alexa-35.md
 ampas,AMPAS (Academy of Motion Picture Arts and Sciences),orgao,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/orgaos/ampas.md
-aputure,Aputure,marca,,universal,draft,alta,,2026-07-26,1,oficial,marcas/aputure.md
-arri,ARRI,marca,,universal,draft,alta,,2026-07-26,1,oficial,marcas/arri.md
+aputure,Aputure,marca,,universal,draft,alta,,2026-07-26,2,educacao|oficial,marcas/aputure.md
+arri,ARRI,marca,,universal,draft,alta,,2026-07-26,2,educacao|oficial,marcas/arri.md
 arri-wide-gamut-4,ARRI Wide Gamut 4,colorspace,arri,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/arri-wide-gamut-4.md
 arriraw,ARRIRAW,codec,arri,universal,draft,media,,2026-07-26,1,oficial,conceitos/codecs/arriraw.md
 atem-constellation-8k,Blackmagic ATEM Constellation 8K,switcher,blackmagic-design,universal,draft,alta,,2026-07-26,4,educacao|oficial,live/switchers/atem-constellation-8k.md
 atem-constellation-hd,Blackmagic ATEM Constellation HD e 4K Plus,switcher,blackmagic-design,universal,stub,baixa,,2026-07-26,1,oficial,live/switchers/atem-constellation-hd.md
 bat--b-mount,B-Mount (padrão de bateria),battery-mount,,universal,draft,media,,2026-07-26,1,oficial,_meta/vocab/bat--b-mount.md
-blackmagic-design,Blackmagic Design,marca,,universal,draft,alta,,2026-07-26,1,oficial,marcas/blackmagic-design.md
+blackmagic-design,Blackmagic Design,marca,,universal,draft,alta,,2026-07-26,2,educacao|oficial,marcas/blackmagic-design.md
 braw,Blackmagic RAW,codec,blackmagic-design,universal,draft,alta,,2026-07-26,1,oficial,conceitos/codecs/braw.md
 cri-tlci-ssi,"CRI, TLCI, SSI e TM-30 — qualidade de cor de fixture",conceito,,universal,draft,media,,2026-07-26,1,oficial,luz/conceitos/cri-tlci-ssi.md
 diretor-de-fotografia,Diretor de fotografia (DoP),funcao,,universal,draft,media,,2026-07-26,1,educacao,producao/funcoes/diretor-de-fotografia.md
@@ -33,7 +33,7 @@ mount--e,E-mount (Sony),mount,,universal,draft,alta,,2026-07-26,1,oficial,_meta/
 mount--lpl,LPL (Large Positive Lock — ARRI),mount,arri,universal,draft,alta,,2026-07-26,1,oficial,_meta/vocab/mount--lpl.md
 mount--pl,PL (Positive Lock),mount,,universal,draft,alta,,2026-07-26,1,oficial,_meta/vocab/mount--pl.md
 mte,MTE — Ministério do Trabalho e Emprego (Brasil),orgao,,universal,draft,media,,2026-07-26,1,oficial,conceitos/orgaos/mte.md
-nanlux,Nanlux,marca,,universal,draft,media,,2026-07-26,1,oficial,marcas/nanlux.md
+nanlux,Nanlux,marca,,universal,draft,media,,2026-07-26,2,educacao|oficial,marcas/nanlux.md
 ndi,NDI (Network Device Interface),interface,,universal,draft,media,,2026-07-26,1,oficial,live/sinais/ndi.md
 netflix-approved,Netflix Approved (câmeras para produções originais),certificacao,,universal,draft,media,,2026-07-26,1,oficial,conceitos/certificacoes/netflix-approved.md
 nr-35-trabalho-em-altura,NR-35 — Trabalho em Altura,norma,,universal,stub,media,seguranca,2026-07-26,1,oficial,seguranca/nr-35-trabalho-em-altura.md

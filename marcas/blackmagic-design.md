@@ -9,9 +9,11 @@ status: draft
 confidence: alta
 updated: 2026-07-26
 rel:
+  competes_with: [sony]
   see_also: [pyxis-6k, braw, ecossistema-blackmagic]
 sources:
-  - {url: "https://www.blackmagicdesign.com", tier: oficial, ret: 2026-07-26}
+  - {url: "https://www.blackmagicdesign.com/au/company", tier: oficial, ret: 2026-07-26, loc: "Company", nota: "sede em Melbourne, linhas de produto"}
+  - {url: "https://en.wikipedia.org/wiki/Blackmagic_Design", tier: educacao, ret: 2026-07-26, loc: "secao History", nota: "fundada em 2001 por Grant Petty; capital fechado, sem investidor externo"}
 ---
 
 # Blackmagic Design
@@ -30,6 +32,14 @@ profissional.
 | pós | DaVinci Resolve (edição, cor, Fusion, Fairlight) |
 | infraestrutura | conversores Mini, Videohub, HyperDeck |
 | codec | [[braw]] |
+
+## Quem controla
+
+Fundada em **2001** por Grant Petty, em South Melbourne. Segue **capital
+fechado, sem investidor externo** — o fundador continua no comando. É a
+condição estrutural da estratégia de preço abaixo: quem não precisa entregar
+margem a acionista externo pode sustentar hardware barato com software junto
+por muito mais tempo que um concorrente listado em bolsa.
 
 ## Estratégia que importa para orçamento
 

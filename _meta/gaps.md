@@ -9,7 +9,6 @@ apontar para o vazio — aí vira erro de validação.
 
 | slug faltante | citado por | nº |
 |---|---|---:|
-| `netflix-approved` | captacao/cameras/arri/alexa-35.md, captacao/cameras/sony/venice-2.md | 2 |
-| `bat--b-mount` | captacao/cameras/arri/alexa-35.md | 1 |
-| `venice` | captacao/cameras/sony/venice-2.md | 1 |
-| `xavc` | captacao/cameras/sony/venice-2.md | 1 |
+| `amaran` | marcas/aputure.md | 1 |
+| `nanguang` | marcas/nanlux.md | 1 |
+| `nanlite` | marcas/nanlux.md | 1 |

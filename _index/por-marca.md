@@ -7,7 +7,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[00-indice-mestre]] — ponto de entrada humano do acervo. Ler este arquivo custa pouco e diz para onde ir; ler o acervo inteiro custa
 - [[aces]] — sistema de gerenciamento de cor da Academia: cada câmera entra por uma **IDT** (transformação de entrada), tod
 - [[ampas]] — a Academia (a mesma do Oscar) mantém um braço de ciência e tecnologia que publica padrões de uso corrente na i
-- [[aputure]] — fabricante chinesa que reposicionou o mercado de iluminação: potência e recursos de fixture profissional a pre
+- [[aputure]] — fabricante fundada em 2013, sede em Shenzhen, que reposicionou o mercado de iluminação: potência e recursos de
 - [[arri]] — fabricante alemã centenária, referência de cinema em três frentes ao mesmo tempo: câmeras (ALEXA), iluminação 
 - [[bat--b-mount]] — padrão de bateria de 24 V criado por consórcio (ARRI, Bebob, Core SWX) para equipamento que consome mais do qu
 - [[blackmagic-design]] — fabricante australiana que mudou o preço-base do mercado: câmeras de cinema, switchers ATEM, conversores, grav
@@ -25,7 +25,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[mount--e]] — mount eletrônico da Sony com flange focal distance curto (18 mm), usado da mirrorless de entrada ao topo de ci
 - [[mount--pl]] — mount padrão do cinema profissional, criado pela ARRI: trava mecânica de quatro flanges, sem contatos elétrico
 - [[mte]] — órgão federal que edita e mantém as **Normas Regulamentadoras (NRs)**, de cumprimento obrigatório em qualquer 
-- [[nanlux]] — linha profissional de alta potência da mesma casa da Nanlite, posicionada acima dela. Disputa com a Aputure a 
+- [[nanlux]] — marca de alta potência da chinesa **NANGUANG** (Guangdong NANGUANG Photo & Video Systems), irmã da Nanlite e p
 - [[ndi]] — vídeo profissional trafegando sobre rede Ethernet comum, com descoberta automática de fontes. Troca cabo coaxi
 - [[netflix-approved]] — lista de câmeras que a Netflix aceita como principal em produções originais. O critério central é **resolução 
 - [[nr-35-trabalho-em-altura]] — norma regulamentadora brasileira que rege qualquer atividade executada acima de 2 metros do nível inferior com

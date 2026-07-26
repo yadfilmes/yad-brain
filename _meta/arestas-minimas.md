@@ -14,11 +14,25 @@ aparece enquanto se escreve, não na hora de promover.
 
 ---
 
-## Piso universal (vale para todo tipo)
+## Piso universal (vale para todo tipo, menos dois)
 
 Toda nota fora de `stub` declara **ao menos uma aresta que não seja
 `see_also`**. `see_also` é "relacionado, sem semântica específica" — uma nota
 cujo grafo inteiro é `see_also` não afirma nenhuma relação, só vizinhança.
+
+**Isentos: `moc` e `orgao`.** Não é concessão, é a semântica dos dois tipos:
+
+- Um **MOC** é um mapa. "Relacionado, sem semântica específica" é literalmente
+  o que um mapa afirma sobre o que lista — exigir aresta tipada ali forçaria
+  relação inventada.
+- Um **órgão** recebe suas arestas fortes de fora: normas apontam para ele com
+  `governed_by`. O vocabulário não tem aresta de saída própria de órgão (não
+  existe `publishes`), e criar uma só para satisfazer esta regra seria deixar a
+  régua desenhar a ontologia — inversão que este acervo evita.
+
+A isenção foi descoberta pela própria regra: ela apontou 22 notas, e 5 delas
+estavam certas. Regra nova erra nas duas direções, e a que reprova o correto é
+a mais cara — some no ruído de aviso e ensina a ignorar o CI.
 
 ---
 

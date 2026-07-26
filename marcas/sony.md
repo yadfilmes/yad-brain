@@ -9,9 +9,10 @@ status: draft
 confidence: alta
 updated: 2026-07-26
 rel:
+  competes_with: [arri, blackmagic-design]
   see_also: [venice-2]
 sources:
-  - {url: "https://pro.sony", tier: oficial, ret: 2026-07-26}
+  - {url: "https://pro.sony/ue_US/products/digital-cinema-cameras", tier: oficial, ret: 2026-07-26, loc: "Digital Cinema Cameras", nota: "linhas VENICE, BURANO e FX"}
 ---
 
 # Sony

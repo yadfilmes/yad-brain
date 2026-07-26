@@ -1408,11 +1408,11 @@
    "risco": "",
    "updated": "2026-07-26",
    "path": "marcas/aputure.md",
-   "tldr": "fabricante chinesa que reposicionou o mercado de iluminação: potência e recursos de fixture profissional a preço que produtora pequena alcança. Mantém a marca **amaran** como linha de entrada, e o padrão Bowens como apos",
+   "tldr": "fabricante fundada em 2013, sede em Shenzhen, que reposicionou o mercado de iluminação: potência e recursos de fixture profissional a preço que produtora pequena alcança. O padrão Bowens é a aposta de ecossistema.",
    "aliases": [
     "Aputure",
     "Aputure Imaging",
-    "amaran"
+    "APUTURE"
    ],
    "tags": [
     "marca",
@@ -1420,8 +1420,9 @@
     "led",
     "custo-beneficio"
    ],
-   "n_fontes": 1,
+   "n_fontes": 2,
    "tiers": [
+    "educacao",
     "oficial"
    ]
   },
@@ -1449,8 +1450,9 @@
     "optica",
     "cinema"
    ],
-   "n_fontes": 1,
+   "n_fontes": 2,
    "tiers": [
+    "educacao",
     "oficial"
    ]
   },
@@ -1478,8 +1480,9 @@
     "software",
     "conversores"
    ],
-   "n_fontes": 1,
+   "n_fontes": 2,
    "tiers": [
+    "educacao",
     "oficial"
    ]
   },
@@ -1524,11 +1527,10 @@
    "risco": "",
    "updated": "2026-07-26",
    "path": "marcas/nanlux.md",
-   "tldr": "linha profissional de alta potência da mesma casa da Nanlite, posicionada acima dela. Disputa com a Aputure a faixa em que LED substitui HMI: fixtures de 1200 W a 2400 W e acima, para externa e difusão grande.",
+   "tldr": "marca de alta potência da chinesa **NANGUANG** (Guangdong NANGUANG Photo & Video Systems), irmã da Nanlite e posicionada acima dela. Disputa com a [[aputure]] a faixa em que LED substitui HMI: fixtures de 1200 W a 2400 W",
    "aliases": [
     "Nanlux",
-    "Nanlite",
-    "Nanguang"
+    "NANLUX"
    ],
    "tags": [
     "marca",
@@ -1536,8 +1538,9 @@
     "led",
     "alta-potencia"
    ],
-   "n_fontes": 1,
+   "n_fontes": 2,
    "tiers": [
+    "educacao",
     "oficial"
    ]
   },
@@ -2872,8 +2875,26 @@
   },
   {
    "de": "aputure",
+   "aresta": "competes_with",
+   "para": "nanlux",
+   "derivada": false
+  },
+  {
+   "de": "aputure",
+   "aresta": "distinct_from",
+   "para": "amaran",
+   "derivada": false
+  },
+  {
+   "de": "aputure",
    "aresta": "see_also",
    "para": "ls-600d-pro",
+   "derivada": false
+  },
+  {
+   "de": "arri",
+   "aresta": "competes_with",
+   "para": "sony",
    "derivada": false
   },
   {
@@ -2886,6 +2907,12 @@
    "de": "arri",
    "aresta": "see_also",
    "para": "mount--pl",
+   "derivada": false
+  },
+  {
+   "de": "blackmagic-design",
+   "aresta": "competes_with",
+   "para": "sony",
    "derivada": false
   },
   {
@@ -2932,8 +2959,38 @@
   },
   {
    "de": "nanlux",
+   "aresta": "owned_by",
+   "para": "nanguang",
+   "derivada": false
+  },
+  {
+   "de": "nanlux",
+   "aresta": "competes_with",
+   "para": "aputure",
+   "derivada": false
+  },
+  {
+   "de": "nanlux",
+   "aresta": "distinct_from",
+   "para": "nanlite",
+   "derivada": false
+  },
+  {
+   "de": "nanlux",
    "aresta": "see_also",
    "para": "evoke-2400b",
+   "derivada": false
+  },
+  {
+   "de": "sony",
+   "aresta": "competes_with",
+   "para": "arri",
+   "derivada": false
+  },
+  {
+   "de": "sony",
+   "aresta": "competes_with",
+   "para": "blackmagic-design",
    "derivada": false
   },
   {

@@ -50,6 +50,10 @@ TIPO_ESPERADO = {
     "caused_by": {"conceito", "problema", "interface"},
 }
 
+# Tipos em que grafo só de `see_also` é a forma correta, não defeito.
+# Justificativa em _meta/arestas-minimas.md, "Piso universal".
+ISENTOS_DO_PISO = {"moc", "orgao"}
+
 RAIZ_DE_DOMINIO = re.compile(r"^https?://[^/]+/?$")
 SLUG = re.compile(r"^[a-z0-9]+(?:[-]{1,2}[a-z0-9]+)*$")
 LIMITE_PALAVRAS = 900          # ~1.200 tokens
@@ -150,12 +154,16 @@ def checar_arestas_minimas(tipo, status, presentes, dispensas, regras, vocab):
     if silencioso:
         return saida
 
-    # piso universal: pelo menos uma aresta com semântica
-    if not presentes:
-        saida.append((nivel, "nota sem nenhuma aresta — o acervo é o grafo"))
-    elif not presentes - {"see_also"}:
-        saida.append((nivel, "grafo sem semântica: todas as arestas são 'see_also' "
-                             "(ver _meta/arestas-minimas.md, piso universal)"))
+    # piso universal: pelo menos uma aresta com semântica.
+    # `moc` e `orgao` são isentos por semântica do tipo, não por concessão —
+    # ver _meta/arestas-minimas.md. Um mapa afirma vizinhança; um órgão recebe
+    # suas arestas de fora.
+    if tipo not in ISENTOS_DO_PISO:
+        if not presentes:
+            saida.append((nivel, "nota sem nenhuma aresta — o acervo é o grafo"))
+        elif not presentes - {"see_also"}:
+            saida.append((nivel, "grafo sem semântica: todas as arestas são 'see_also' "
+                                 "(ver _meta/arestas-minimas.md, piso universal)"))
 
     regra = regras.get(tipo)
     if regra:

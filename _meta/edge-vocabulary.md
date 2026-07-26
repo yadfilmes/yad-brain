@@ -22,7 +22,10 @@ Propriedades reconhecidas: `to` (obrigatória na forma longa), `via`, `limite`,
 
 - `made_by` — fabricado/comercializado por · ex: Alexa 35 → ARRI
 - `part_of_series` — pertence à família · ex: Bolt 6 LT → Teradek Bolt
-- `sub_brand_of` — marca de valor da mesma casa · ex: amaran → Aputure
+- `sub_brand_of` — marca de valor da mesma casa. **Datar sempre:** relação de
+  marca muda — amaran era `sub_brand_of` Aputure até o spin-off de 2024. Marcas
+  irmãs sob a mesma empresa não são sub-marcas uma da outra: aí é `owned_by`
+  para a mãe e `distinct_from` entre si (Nanlux e Nanlite → NANGUANG)
 - `owned_by` — controle societário · ex: RED → Nikon
 - `variant_of` — variante do mesmo corpo/plataforma · ex: VENICE 2 6K → VENICE 2
 

@@ -123,6 +123,19 @@ s = rodar("pipeline-cor", "draft", ["governed_by"])
 checa("type deliberadamente aberto não ganha exigência inventada",
       not s, msgs(s))
 
+# A regra apontou 22 notas e 5 estavam certas. Falso positivo em regra de CI é
+# mais caro que falso negativo: some no ruído e ensina a ignorar o aviso.
+s = rodar("moc", "draft", ["see_also"])
+checa("MOC só com see_also é a forma CORRETA de um mapa", not s, msgs(s))
+
+s = rodar("orgao", "draft", ["see_also"])
+checa("órgão recebe arestas de fora — see_also sozinho não é defeito",
+      not s, msgs(s))
+
+s = rodar("conceito", "draft", ["see_also"])
+checa("a isenção não vazou para os demais types",
+      any("sem semântica" in m for _, m in s), msgs(s))
+
 
 # -------------------------------------------------------- a régua por status
 print("\navisa em draft, reprova em reviewed (regra do lote 03)")

@@ -73,10 +73,10 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 ## marca
 
-- [[aputure]] — fabricante chinesa que reposicionou o mercado de iluminação: potência e recursos de fixture profissional a pre
+- [[aputure]] — fabricante fundada em 2013, sede em Shenzhen, que reposicionou o mercado de iluminação: potência e recursos de
 - [[arri]] — fabricante alemã centenária, referência de cinema em três frentes ao mesmo tempo: câmeras (ALEXA), iluminação 
 - [[blackmagic-design]] — fabricante australiana que mudou o preço-base do mercado: câmeras de cinema, switchers ATEM, conversores, grav
-- [[nanlux]] — linha profissional de alta potência da mesma casa da Nanlite, posicionada acima dela. Disputa com a Aputure a 
+- [[nanlux]] — marca de alta potência da chinesa **NANGUANG** (Guangdong NANGUANG Photo & Video Systems), irmã da Nanlite e p
 - [[sony]] — fabricante japonesa presente em quase toda a cadeia audiovisual: câmeras de cinema (CineAlta/VENICE), broadcas
 
 ## midia
