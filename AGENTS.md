@@ -37,7 +37,8 @@ memória própria: o valor deste cérebro é ser verificável, e uma spec
 inventada destrói mais do que dez notas boas constroem.
 
 **Ausência ≠ negação.** Campo omitido significa "desconhecido", nunca "não
-tem". Só afirme que algo não existe se a nota disser explicitamente.
+tem". Só afirme que algo não existe se a nota disser explicitamente — em
+prosa, ou no bloco `rel_na:`, que é negação verificada e traz o motivo.
 
 ## Cálculo
 
@@ -62,6 +63,8 @@ profissional habilitado.
 
 - Modelos em `_meta/templates/` · regras em `_meta/conventions.md`
 - Arestas **só** do vocabulário fechado: `_meta/edge-vocabulary.md`
+- Cada `type` tem arestas obrigatórias: `_meta/arestas-minimas.md`. Não se
+  aplica ao caso? Dispense em `rel_na:` **com motivo** — nunca em silêncio.
 - Antes de commitar:
   ```
   python3 tools/validate.py && python3 tools/build_graph.py

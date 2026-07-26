@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| **Versão** | 1.0 |
-| **Data** | 2026-07-24 |
+| **Versão** | 1.1 — ver histórico em S.11 |
+| **Data** | 2026-07-24 (v1.0) · 2026-07-26 (v1.1) |
 | **Projeto** | Cérebro Audiovisual (`yadfilmes/yad-brain`) |
 | **Regra única** | Nenhum artefato do projeto é aceito com nota computada < 92/100 ou com qualquer item eliminatório reprovado. Abaixo disso: corrigir e re-revisar, até 3 ciclos; sem passar, escala para humano — **nunca** se força a nota. |
 | **Destino no repo** | `_meta/qa/protocolo-92.md` (Fase 0 da fundação) |
@@ -103,7 +103,7 @@ Regra de fechamento: **artefato sem rubrica mapeada não existe no projeto** —
 |---|---|---|
 | 1 | TL;DR na 1ª linha do corpo, auto-suficiente (responde "o que é e por que importa" sem abrir o resto) | 15 |
 | 2 | Specs em linhas `chave: valor` greppáveis; **toda spec condicional carrega as condições na mesma linha** (claim-lite) | 15 |
-| 3 | Arestas completas e específicas para o tipo de nó (câmera sem `records_codec` reprova; `see_also` onde cabia aresta típica reprova) | 12 |
+| 3 | Arestas completas e específicas para o tipo de nó — **conjunto mínimo fechado em `_meta/arestas-minimas.md`**, cobrado pelo `validate.py`. O revisor confere o veredito da máquina, não recria o critério | 12 |
 | 4 | Fontes: ≥1 oficial para specs; URLs resolvem; `loc` quando a fonte é documento paginado | 10 |
 | 5 | Aliases completos (grafias com/sem acento, códigos de modelo, termo EN) | 8 |
 | 6 | Posicionamento presente (contra quem compete, para quem faz sentido) — ficha técnica sozinha não é conhecimento | 8 |
@@ -291,3 +291,43 @@ O que este histórico demonstra: a régua não afrouxou entre ciclos, a nota sub
 | Q3 | **Gatilho de relaxamento da amostragem humana** (S.6.1) | Iniciar com: divergência < 10% por 3 lotes consecutivos → próximo degrau; divergência grave (gate) → degrau anterior. Segurança (`G4`) nunca relaxa. |
 
 Cada valor acima está aplicado no texto como padrão inicial; alterá-los é prerrogativa do dono e se faz por PR na rubrica (meta-regra 8).
+
+---
+
+## 11. Histórico de versões da rubrica
+
+A meta-regra 8 exige que a régua seja versionada e mude por PR, nunca dentro de
+um ciclo de correção. Este é o registro.
+
+### v1.1 — 2026-07-26
+
+**Origem:** três lotes e dois experimentos com **0 de 10 aprovadas**. O
+scorecard `2026-07/fx6-esforco-maximo-rn.md` mostrou que uma nota escrita com
+esforço máximo de pesquisa ainda reprova — e que parte do problema é a régua
+ter itens que ninguém consegue auditar.
+
+**Mudança única:** o **item 3 da R-N** deixou de ser julgamento e passou a
+apontar para `_meta/arestas-minimas.md`, um conjunto mínimo fechado por `type`
+que o `validate.py` cobra (aviso em `draft`, erro em `reviewed`).
+
+Por que isto **não** é afrouxar a régua:
+
+- O **peso continua 12** e a nota de corte continua **92**.
+- A exigência não mudou de conteúdo — mudou de *modo de verificação*: de
+  julgamento não-reprodutível para check determinístico. Um revisor complacente
+  agora não consegue aprovar o item; a máquina já reprovou.
+- O produtor passa a conseguir **conferir antes de gastar revisão**, que era o
+  desperdício apontado no lote 03.
+
+**O que deliberadamente NÃO mudou:**
+
+| | |
+|---|---|
+| nota de corte 92 | **decisão do dono** — não se toca sem ele |
+| pesos dos 12 itens | idem |
+| itens 4 e 11 | conhecidamente sub-especificados; correção proposta está no `_meta/roadmap.md`, não aplicada por conta própria |
+| gate G1 | segue cobrindo número órfão; **não** cobre número mal transcrito — a lacuna está registrada, não fechada |
+
+**Efeito medido no acervo:** 162 → 216 avisos. Os 54 novos são dívida que já
+existia e era invisível; nenhuma nota mudou de status por conta desta versão.
+

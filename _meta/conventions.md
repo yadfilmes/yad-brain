@@ -147,6 +147,28 @@ Campo ou aresta **omitido significa "desconhecido"**, nunca "não tem".
 Negação verificada é explícita: `nd_interno: nao` com fonte.
 Quem consulta não pode inferir incapacidade a partir de silêncio.
 
+No grafo, a negação verificada é o bloco `rel_na` — "não se aplica, e eis o
+porquê":
+
+```yaml
+rel:
+  made_by: [sony]
+rel_na:
+  outputs_signal: "corpo sem saída de vídeo — só grava interno (manual, p. 12)"
+```
+
+Dispensa sem motivo é reprovada pelo CI. É afirmação sobre o mundo, sujeita à
+mesma exigência de evidência que uma spec — não botão de silenciar aviso.
+
+## Arestas mínimas por `type`
+
+Cada `type` tem um conjunto mínimo de arestas em `_meta/arestas-minimas.md`,
+cobrado pelo `validate.py` (aviso em `draft`, erro em `reviewed`). Câmera sem
+`records_codec` não é nota incompleta por descuido — é nota que não responde à
+pergunta pela qual alguém a abriu.
+
+Piso que vale para todo tipo: **ao menos uma aresta que não seja `see_also`**.
+
 ## Estados
 
 `status`: `stub` → `draft` → `reviewed` (+ `revisar` quando a fonte mudar)

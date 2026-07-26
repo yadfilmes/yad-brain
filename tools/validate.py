@@ -82,6 +82,95 @@ def carregar_vocabulario():
     return vocab
 
 
+def carregar_arestas_minimas():
+    """Lê o conjunto mínimo de arestas por type de _meta/arestas-minimas.md.
+
+    Devolve {type: {"obrigatorias": [...], "grupos": [[...], ...]}}.
+    O arquivo é a fonte da verdade — mudar a regra é editar lá, não aqui.
+    Formato lido:
+
+        ### `camera`
+        - obrigatorias: `made_by`, `records_codec`
+        - uma de: `uses_battery_mount`, `powered_by`
+    """
+    caminho = RAIZ / "_meta" / "arestas-minimas.md"
+    if not caminho.exists():
+        return {}
+    regras, atuais = {}, None
+    for linha in caminho.read_text(encoding="utf-8").split("\n"):
+        cab = re.match(r"^###\s+(.+)$", linha)
+        if cab:
+            # um cabeçalho pode reger mais de um type: "### `a` · `b`"
+            nomes = re.findall(r"`([a-z-]+)`", cab.group(1))
+            atuais = []
+            for n in nomes:
+                regras[n] = {"obrigatorias": [], "grupos": []}
+                atuais.append(n)
+            continue
+        if not atuais or not linha.startswith("- "):
+            continue
+        rotulo, _, resto = linha[2:].partition(":")
+        arestas = re.findall(r"`([a-z_]+)`", resto)
+        if not arestas:
+            continue
+        chave = "obrigatorias" if rotulo.strip() == "obrigatorias" else \
+                "grupos" if rotulo.strip() == "uma de" else None
+        for n in atuais:
+            if chave == "obrigatorias":
+                regras[n]["obrigatorias"].extend(arestas)
+            elif chave == "grupos":
+                regras[n]["grupos"].append(arestas)
+    # seções de prosa que não declaram regra nenhuma não viram tipo
+    return {t: r for t, r in regras.items() if r["obrigatorias"] or r["grupos"]}
+
+
+def checar_arestas_minimas(tipo, status, presentes, dispensas, regras, vocab):
+    """Aplica o conjunto mínimo de arestas. Função pura — testável isolada.
+
+    `presentes` é o conjunto de arestas declaradas em `rel` com pelo menos um
+    alvo; `dispensas` é o dict `rel_na` (aresta -> motivo).
+
+    Devolve lista de ("erro"|"aviso", mensagem). A regra do lote 03 vale aqui
+    como no resto do CI: avisa em `draft`, reprova em `reviewed`.
+    """
+    saida = []
+    nivel = "erro" if status == "reviewed" else "aviso"
+    silencioso = status in ("", "stub")
+
+    for aresta, motivo in sorted(dispensas.items()):
+        if aresta not in vocab:
+            saida.append(("erro", f"'rel_na' dispensa aresta fora do vocabulário: '{aresta}'"))
+        elif aresta in presentes:
+            saida.append(("erro", f"aresta '{aresta}' declarada em 'rel' e dispensada "
+                                  f"em 'rel_na' ao mesmo tempo"))
+        if not (isinstance(motivo, str) and motivo.strip()):
+            saida.append(("erro", f"'rel_na: {aresta}' sem motivo — dispensa é afirmação "
+                                  f"sobre o mundo, não botão de silenciar o CI"))
+
+    if silencioso:
+        return saida
+
+    # piso universal: pelo menos uma aresta com semântica
+    if not presentes:
+        saida.append((nivel, "nota sem nenhuma aresta — o acervo é o grafo"))
+    elif not presentes - {"see_also"}:
+        saida.append((nivel, "grafo sem semântica: todas as arestas são 'see_also' "
+                             "(ver _meta/arestas-minimas.md, piso universal)"))
+
+    regra = regras.get(tipo)
+    if regra:
+        resolvidas = presentes | set(dispensas)
+        ausentes = [a for a in regra["obrigatorias"] if a not in resolvidas]
+        if ausentes:
+            saida.append((nivel, f"type '{tipo}' exige aresta(s) {', '.join(ausentes)} "
+                                 f"— declarar, ou dispensar com motivo em 'rel_na'"))
+        for grupo in regra["grupos"]:
+            if not set(grupo) & resolvidas:
+                saida.append((nivel, f"type '{tipo}' exige ao menos uma de "
+                                     f"{', '.join(grupo)}"))
+    return saida
+
+
 def notas():
     """Percorre só o que é nota do acervo.
 
@@ -106,6 +195,7 @@ def notas():
 
 def main():
     vocab = carregar_vocabulario()
+    minimas = carregar_arestas_minimas()
     registro, tipos, arestas_totais = {}, {}, 0
     lista = list(notas())
 
@@ -262,6 +352,24 @@ def main():
         if n_total >= 2 and n_see_also / n_total > 0.5:
             aviso(rel, f"grafo raso: {n_see_also}/{n_total} arestas são 'see_also' "
                        f"— preferir aresta específica")
+
+        # ---- conjunto mínimo de arestas por type (_meta/arestas-minimas.md) ----
+        # Item 3 da R-N ("arestas completas e específicas para o tipo de nó")
+        # era julgamento do revisor e reprovava 100% das notas sem que o
+        # produtor pudesse conferir antes. Aqui vira check determinístico.
+        dispensas = dados.get("rel_na") or {}
+        if not isinstance(dispensas, dict):
+            erro(rel, "bloco 'rel_na' malformado — esperado 'aresta: motivo'")
+            dispensas = {}
+        for nivel, msg in checar_arestas_minimas(
+            dados.get("type", ""),
+            dados.get("status", ""),
+            {a for a, v in relacoes.items() if fm.alvos(v)},
+            dispensas,
+            minimas,
+            vocab,
+        ):
+            (erro if nivel == "erro" else aviso)(rel, msg)
 
         for aresta, valor in relacoes.items():
             if aresta not in vocab:

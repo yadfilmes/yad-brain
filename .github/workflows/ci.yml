@@ -22,6 +22,9 @@ jobs:
       - name: Validar notas
         run: python3 tools/validate.py
 
+      - name: Testar as regras do validador
+        run: python3 tools/test_validate.py
+
       - name: Testar calculadoras
         run: |
           python3 tools/calc/test_storage.py

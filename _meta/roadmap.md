@@ -66,6 +66,31 @@ Ordem sugerida (a de captação e cor já existem):
 
 ---
 
+## R9 · Fechar os itens sub-especificados da R-N · **prioridade alta**
+
+O item 3 virou mecânico na v1.1 da rubrica (`_meta/arestas-minimas.md`). Ficam
+dois, com correção desenhada e **não aplicada** — mexer em régua por conta
+própria é o que a meta-regra 8 proíbe.
+
+| item | defeito | correção proposta |
+|---|---|---|
+| **4** (10 pts) | um binário só para três exigências diferentes (fonte oficial, URL que resolve, `loc`) | dividir: parte mecânica (cada grupo de specs referencia um id de fonte; fonte de comunidade exige permalink) + parte de julgamento (o valor **como aparece na fonte**, com data `ret`) |
+| **11** (4 pts) | cobra coerência com uma "rubrica de confiança (fontes × corroboração)" **que não existe no repositório** | escrever a rubrica de confiança em `_meta/qa/`, ou remover o item — hoje ele é inauditável por construção |
+
+**Gate G1, lacuna conhecida:** cobre número **órfão** (sem fonte ao lado); não
+cobre número **mal transcrito** — valor certo atribuído ao escopo errado, ou
+afirmação atribuída a fonte que não a sustenta. Foram 5 dos 6 defeitos da FX6.
+Fechar isso é trabalho de rubrica, não de script: nenhum validador confere
+fidelidade sem abrir a fonte.
+
+**Aritmética que o dono precisa ver antes de decidir:** com os pesos atuais e
+corte em 92, a perda máxima tolerada é **8 pontos** — o que torna os itens 1, 2,
+3 e 4 gates disfarçados (falhar um sozinho já reprova). Ou os pesos se
+achatam, ou esses quatro viram gates declarados, ou o corte desce. **As três
+saídas são decisão do dono** — ver `2026-07/fx6-esforco-maximo-rn.md`.
+
+---
+
 ## R7 · Templates faltantes · **prioridade alta**
 
 `funcao`, `documento` e `interface` estão em produção sem template em
