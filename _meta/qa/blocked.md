@@ -6,50 +6,65 @@ Registrar aqui é a alternativa honesta a afrouxar a régua (Protocolo 92, S.1).
 
 ---
 
-## B1 · Verificação de fonte — **PARCIALMENTE DESTRAVADO em 2026-07-26**
+## B1 · Leitura de fonte primária — **teto de ambiente, medido em 2026-07-26**
 
-**Correção de diagnóstico.** O bloqueio original dizia "sem acesso à rede".
-Estava errado, por eu ter propagado o relato de subagentes sem testar eu mesmo.
-O quadro real, medido:
+**Diagnóstico testado, não suposto.** Duas versões anteriores deste bloqueio
+estavam erradas: a primeira dizia "sem acesso à rede" (falso — eu havia
+propagado relato de subagente sem testar); a segunda dizia "parcialmente
+destravado" sem nomear a causa. O quadro real, medido caminho a caminho:
 
-| caminho | estado |
+| caminho | estado | por quê |
+|---|---|---|
+| `curl` | **bloqueado** | proxy nega CONNECT com 403 |
+| `WebFetch` | **bloqueado** | 403 em todos os hosts testados — `arri.com`, `en.wikipedia.org`, `tech.ebu.ch` |
+| **`WebSearch`** | **funciona** | roda pela infraestrutura da Anthropic, que está no `noProxy` |
+
+**A causa, do próprio proxy** (`/root/.ccr/README.md`):
+
+> **403 / 407 from the proxy** — The destination host is not allowed by your
+> organization's egress policy for this session. Do not retry or route around
+> it — report the blocked host.
+
+A lista de exceção do proxy confirma: passam **só** `*.anthropic.com`, os
+registries de pacote (npm, jsr, PyPI, crates.io, proxy.golang.org) e faixas
+privadas. Ou seja, esta sessão tem política de egresso **"registries apenas"**.
+Não é bloqueio de host, é política do ambiente — e não se contorna de dentro.
+
+### O que isso permite e o que não permite
+
+| tarefa | possível hoje? |
 |---|---|
-| `curl` | bloqueado — proxy nega CONNECT com 403 |
-| `WebFetch` | bloqueado — 403 em todos os domínios testados, inclusive Wikipedia |
-| **`WebSearch`** | **funciona** — devolve conteúdo real, URLs verificadas e títulos de seção |
+| confirmar que uma URL existe | sim (`WebSearch`) |
+| achar a página específica em vez da raiz do domínio | sim |
+| obter título de seção para `loc` | sim |
+| **transcrever `cit` nas palavras da fonte** | **só quando a busca devolve a frase literal** |
+| abrir PDF de manual e citar página/tabela | **não** |
+| conferir tabela extensa de spec sheet | **não** |
 
-**O que isso destrava:** dá para confirmar que uma URL existe, achar a **página
-específica** em vez da raiz do domínio, e extrair o título da seção para o
-campo `loc`. É exatamente o defeito que reprovou 9 de 9 notas nos lotes 02 e 03.
+**Teto medido:** com a passada de transcrição de 2026-07-26, **9 de 65 fontes
+fortes (14%)** ganharam `cit` honesta. As outras 56 continuam marcadas — não
+por preguiça, mas porque a busca devolveu resumo e não as palavras da fonte.
+Preencher as 56 seria trivial e destruiria o instrumento; o campo `cit` só vale
+enquanto for prova de leitura.
 
-**O que continua bloqueado:** abrir PDF de manual página a página, conferir
-tabela extensa e obter número de página de spec sheet. Para essas, `loc` fica
-no nível de seção nomeada, não de página.
+### O que destrava
 
-**Consequência prática:** `reviewed` deixou de ser inalcançável. Fonte com
-página específica e `loc` de seção é atingível hoje.
+Rodar a passada de verificação num **ambiente com política de egresso mais
+ampla** — decisão de quem cria o ambiente, não ajuste de sessão. Ver
+`https://code.claude.com/docs/en/claude-code-on-the-web` para as políticas
+disponíveis. Alternativa equivalente: sessão de Claude Code na máquina do time,
+com rede aberta.
 
-**Desde:** 2026-07-26
-**Afeta:** o acervo escrito antes desta data (55 notas, com fonte a corrigir)
-**Origem:** scorecard `2026-07/lote-02-rn.md`, padrão sistêmico nº 1
-
-O item 4 da rubrica R-N (fonte oficial com localizador) reprovou 4 de 4 notas
-revisadas. A correção exige abrir a documentação oficial de cada fabricante,
-localizar página/tabela/seção e registrar em `loc`.
-
-**Por que está bloqueado:** o ambiente onde as notas foram escritas não tem
-acesso à rede (proxy retorna 403 para todos os hosts, incluindo `pro.sony`,
-`bromptontech.com`, `docs.acescentral.com` e `gov.br`). Sem acesso às fontes
-primárias, a conferência não pode ser feita — e afirmar que foi seria
-exatamente o tipo de falsidade que este protocolo existe para impedir.
-
-**O que destrava:** executar a fase de verificação num ambiente com acesso à
-web (sessão do Claude Code na máquina do time, com rede), percorrendo as notas
-por ordem de dependência (`_meta/gaps.md`) e preenchendo `loc` em cada fonte.
+Com `WebFetch` liberado, a passada percorre `_meta/gaps.md` por ordem de
+dependência, abre cada fonte, e `loc` passa de "seção nomeada" para
+"p. X, tab. Y" — que é o que a convenção pede.
 
 **Enquanto isso:** as notas permanecem em `draft`/`stub`, que é o estado
-honesto. O acervo é utilizável — o que não se pode é declarar `reviewed` o que
-não foi conferido.
+honesto. O acervo é utilizável; o que não se pode é declarar `reviewed` o que
+não foi lido na fonte.
+
+**Origem:** scorecard `2026-07/lote-02-rn.md` (padrão nº 1) e
+`2026-07/lote-04-rn.md` (regra da transcrição).
 
 ---
 
