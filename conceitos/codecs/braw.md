@@ -12,7 +12,8 @@ updated: 2026-07-26
 rel:
   made_by: [blackmagic-design]
   part_of_ecosystem: [ecossistema-blackmagic]
-  see_also: [pyxis-6k]
+  conforms_to_pipeline: [aces]
+  see_also: [pyxis-6k, x-ocn, arriraw, prores]
 sources:
   - {url: "https://www.blackmagicdesign.com/products/blackmagicraw", tier: oficial, ret: 2026-07-26}
 ---

@@ -10,8 +10,16 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 ## codec
 
+- [[arriraw]] — formato RAW não comprimido (ou com compressão sem perdas) das câmeras ARRI: os dados do sensor saem sem debaye
 - [[braw]] — codec RAW parcialmente debayerizado da Blackmagic: guarda a informação de sensor como RAW, mas move parte do p
 - [[prores]] — família de codecs intraframe da Apple que virou o padrão de fato para mezanino e entrega em pós: cada quadro é
+- [[x-ocn]] — formato de negativo digital da Sony, gravado pelos corpos VENICE. Guarda a informação de sensor com compressão
+
+## colorspace
+
+- [[arri-wide-gamut-4]] — espaço de cor da ARRI para a geração ALEV 4 ([[alexa-35]]), par obrigatório da curva [[log-c4]]. Sucede o ARRI
+- [[rec-709]] — o padrão de cor da televisão HD e, na prática, o denominador comum de entrega até hoje: gamut relativamente pe
+- [[s-gamut3-cine]] — espaço de cor da Sony pensado para trabalho de cinema: mais contido que o S-Gamut3 puro, o que o torna mais fá
 
 ## conceito
 
@@ -38,6 +46,20 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 - [[nr-35-trabalho-em-altura]] — norma regulamentadora brasileira que rege qualquer atividade executada acima de 2 metros do nível inferior com
 
+## orgao
+
+- [[ampas]] — a Academia (a mesma do Oscar) mantém um braço de ciência e tecnologia que publica padrões de uso corrente na i
+- [[itu-r]] — órgão da ONU que publica as recomendações da série **BT**, que definem os padrões de imagem de televisão do mu
+
+## pipeline-cor
+
+- [[aces]] — sistema de gerenciamento de cor da Academia: cada câmera entra por uma **IDT** (transformação de entrada), tod
+
 ## problema
 
 - [[flicker-parede-led]] — a câmera enxerga bandas horizontais, cintilação ou linha rolando sobre a parede de LED. Quase sempre é dessinc
+
+## transfer-function
+
+- [[log-c4]] — curva logarítmica da ARRI para a geração ALEVE 4 ([[alexa-35]]), desenhada para a latitude maior desse sensor.
+- [[s-log3]] — curva logarítmica da Sony que comprime a latitude do sensor num sinal de 10 bits sem estourar altas nem esmaga

@@ -4,16 +4,16 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 ## Números gerais
 
-- Notas: **16**
-- Arestas declaradas: **57** (+1 derivadas por simetria/inversa)
-- Notas com fonte oficial ou de laboratório: **15/16** (93%)
+- Notas: **26**
+- Arestas declaradas: **104** (+1 derivadas por simetria/inversa)
+- Notas com fonte oficial ou de laboratório: **25/26** (96%)
 - Notas órfãs: **1**
 
 ## Por status
 
 | status | notas |
 |---|---:|
-| draft | 15 |
+| draft | 25 |
 | stub | 1 |
 
 ## Por tipo
@@ -21,27 +21,31 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 | tipo | notas |
 |---|---:|
 | camera | 3 |
-| codec | 2 |
+| codec | 4 |
+| colorspace | 3 |
 | conceito | 3 |
 | marca | 3 |
 | moc | 1 |
 | mount | 2 |
 | norma | 1 |
+| orgao | 2 |
+| pipeline-cor | 1 |
 | problema | 1 |
+| transfer-function | 2 |
 
 ## Arestas mais usadas
 
 | aresta | nº |
 |---|---:|
-| `see_also` | 22 |
+| `see_also` | 46 |
+| `made_by` | 11 |
+| `paired_gamut` | 6 |
 | `records_codec` | 6 |
-| `made_by` | 5 |
+| `conforms_to_pipeline` | 5 |
 | `caused_by` | 4 |
+| `distinct_from` | 4 |
 | `accepts_mount` | 3 |
 | `competes_with` | 3 |
 | `has_native_mount` | 3 |
 | `certified_for` | 2 |
-| `part_of_ecosystem` | 2 |
-| `resolved_by` | 2 |
-| `budget_alternative_to` | 1 |
-| `diagnosed_with` | 1 |
+| `governed_by` | 2 |

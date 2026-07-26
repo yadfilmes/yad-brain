@@ -174,6 +174,35 @@
    ]
   },
   {
+   "id": "arriraw",
+   "title": "ARRIRAW",
+   "type": "codec",
+   "brand": "arri",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/codecs/arriraw.md",
+   "tldr": "formato RAW não comprimido (ou com compressão sem perdas) das câmeras ARRI: os dados do sensor saem sem debayer, preservando o máximo de maleabilidade para cor e VFX. É o negativo digital mais \"cru\" dos formatos de uso c",
+   "aliases": [
+    "ARRIRAW",
+    "ARRI RAW",
+    ".ari"
+   ],
+   "tags": [
+    "codec",
+    "raw",
+    "aquisicao",
+    "arri",
+    "cinema"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
    "id": "braw",
    "title": "Blackmagic RAW",
    "type": "codec",
@@ -225,6 +254,275 @@
     "mezanino",
     "entrega",
     "apple"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "x-ocn",
+   "title": "X-OCN (eXtended Original Camera Negative)",
+   "type": "codec",
+   "brand": "sony",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/codecs/x-ocn.md",
+   "tldr": "formato de negativo digital da Sony, gravado pelos corpos VENICE. Guarda a informação de sensor com compressão eficiente, entregando qualidade próxima de RAW linear com arquivos bem menores. Vem em três pesos: XT, ST e L",
+   "aliases": [
+    "X-OCN",
+    "XOCN",
+    "X-OCN XT",
+    "X-OCN ST",
+    "X-OCN LT"
+   ],
+   "tags": [
+    "codec",
+    "raw",
+    "aquisicao",
+    "sony",
+    "cinema"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "aces",
+   "title": "ACES (Academy Color Encoding System)",
+   "type": "pipeline-cor",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/cor/aces.md",
+   "tldr": "sistema de gerenciamento de cor da Academia: cada câmera entra por uma **IDT** (transformação de entrada), todo mundo trabalha num espaço comum e enorme, e cada destino sai por uma **ODT** (transformação de saída). Resol",
+   "aliases": [
+    "ACES",
+    "Academy Color Encoding System",
+    "ACEScct",
+    "ACEScg",
+    "AP0",
+    "AP1"
+   ],
+   "tags": [
+    "cor",
+    "pipeline",
+    "gerenciamento-de-cor",
+    "padrao",
+    "academy"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "arri-wide-gamut-4",
+   "title": "ARRI Wide Gamut 4",
+   "type": "colorspace",
+   "brand": "arri",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/cor/arri-wide-gamut-4.md",
+   "tldr": "espaço de cor da ARRI para a geração ALEV 4 ([[alexa-35]]), par obrigatório da curva [[log-c4]]. Sucede o ARRI Wide Gamut 3 e acompanha o salto de latitude do sensor novo.",
+   "aliases": [
+    "ARRI Wide Gamut 4",
+    "AWG4",
+    "AWG 4",
+    "Wide Gamut 4"
+   ],
+   "tags": [
+    "cor",
+    "gamut",
+    "colorspace",
+    "arri"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "log-c4",
+   "title": "LogC4 (ARRI)",
+   "type": "transfer-function",
+   "brand": "arri",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/cor/log-c4.md",
+   "tldr": "curva logarítmica da ARRI para a geração ALEVE 4 ([[alexa-35]]), desenhada para a latitude maior desse sensor. Sucede o LogC3, e **não é intercambiável com ele**: material das duas gerações precisa de transformação corre",
+   "aliases": [
+    "LogC4",
+    "Log C4",
+    "ARRI LogC4",
+    "LogC"
+   ],
+   "tags": [
+    "cor",
+    "log",
+    "curva",
+    "arri",
+    "cena-referida"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "rec-709",
+   "title": "Rec. 709",
+   "type": "colorspace",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/cor/rec-709.md",
+   "tldr": "o padrão de cor da televisão HD e, na prática, o denominador comum de entrega até hoje: gamut relativamente pequeno, curva de exibição, faixa dinâmica limitada. É **espaço de destino**, não de trabalho.",
+   "aliases": [
+    "Rec709",
+    "Rec. 709",
+    "BT.709",
+    "ITU-R BT.709",
+    "HD padrão"
+   ],
+   "tags": [
+    "cor",
+    "colorspace",
+    "gamut",
+    "entrega",
+    "broadcast"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "s-gamut3-cine",
+   "title": "S-Gamut3.Cine (Sony)",
+   "type": "colorspace",
+   "brand": "sony",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/cor/s-gamut3-cine.md",
+   "tldr": "espaço de cor da Sony pensado para trabalho de cinema: mais contido que o S-Gamut3 puro, o que o torna mais fácil de graduar, e ainda assim bem maior que [[rec-709]]. É o par natural da curva [[s-log3]].",
+   "aliases": [
+    "S-Gamut3.Cine",
+    "SGamut3.Cine",
+    "S-Gamut3"
+   ],
+   "tags": [
+    "cor",
+    "gamut",
+    "colorspace",
+    "sony"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "s-log3",
+   "title": "S-Log3 (Sony)",
+   "type": "transfer-function",
+   "brand": "sony",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/cor/s-log3.md",
+   "tldr": "curva logarítmica da Sony que comprime a latitude do sensor num sinal de 10 bits sem estourar altas nem esmagar baixas. Imagem parece lavada e sem contraste no monitor — **isso é correto**: S-Log3 é formato de trabalho, ",
+   "aliases": [
+    "S-Log3",
+    "SLog3",
+    "S Log 3",
+    "S-Log3/S-Gamut3.Cine"
+   ],
+   "tags": [
+    "cor",
+    "log",
+    "curva",
+    "sony",
+    "cena-referida"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "ampas",
+   "title": "AMPAS (Academy of Motion Picture Arts and Sciences)",
+   "type": "orgao",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/orgaos/ampas.md",
+   "tldr": "a Academia (a mesma do Oscar) mantém um braço de ciência e tecnologia que publica padrões de uso corrente na indústria. O mais relevante para o fluxo diário é o [[aces]].",
+   "aliases": [
+    "AMPAS",
+    "Academy",
+    "Academia de Artes e Ciências Cinematográficas",
+    "Academy Sci-Tech"
+   ],
+   "tags": [
+    "orgao",
+    "norma",
+    "cor",
+    "padrao"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "itu-r",
+   "title": "ITU-R (União Internacional de Telecomunicações — setor de rádio)",
+   "type": "orgao",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/orgaos/itu-r.md",
+   "tldr": "órgão da ONU que publica as recomendações da série **BT**, que definem os padrões de imagem de televisão do mundo inteiro: [[rec-709]] (HD), BT.2020 (UHD/wide gamut) e BT.2100 (HDR, com as curvas PQ e HLG).",
+   "aliases": [
+    "ITU-R",
+    "ITU",
+    "UIT",
+    "International Telecommunication Union"
+   ],
+   "tags": [
+    "orgao",
+    "norma",
+    "broadcast",
+    "cor"
    ],
    "n_fontes": 1,
    "tiers": [
@@ -678,6 +976,36 @@
    "derivada": false
   },
   {
+   "de": "arriraw",
+   "aresta": "made_by",
+   "para": "arri",
+   "derivada": false
+  },
+  {
+   "de": "arriraw",
+   "aresta": "paired_gamut",
+   "para": "log-c4",
+   "derivada": false
+  },
+  {
+   "de": "arriraw",
+   "aresta": "see_also",
+   "para": "x-ocn",
+   "derivada": false
+  },
+  {
+   "de": "arriraw",
+   "aresta": "see_also",
+   "para": "braw",
+   "derivada": false
+  },
+  {
+   "de": "arriraw",
+   "aresta": "see_also",
+   "para": "prores",
+   "derivada": false
+  },
+  {
    "de": "braw",
    "aresta": "made_by",
    "para": "blackmagic-design",
@@ -691,14 +1019,266 @@
   },
   {
    "de": "braw",
+   "aresta": "conforms_to_pipeline",
+   "para": "aces",
+   "derivada": false
+  },
+  {
+   "de": "braw",
    "aresta": "see_also",
    "para": "pyxis-6k",
+   "derivada": false
+  },
+  {
+   "de": "braw",
+   "aresta": "see_also",
+   "para": "x-ocn",
+   "derivada": false
+  },
+  {
+   "de": "braw",
+   "aresta": "see_also",
+   "para": "arriraw",
+   "derivada": false
+  },
+  {
+   "de": "braw",
+   "aresta": "see_also",
+   "para": "prores",
    "derivada": false
   },
   {
    "de": "prores",
    "aresta": "see_also",
    "para": "braw",
+   "derivada": false
+  },
+  {
+   "de": "x-ocn",
+   "aresta": "made_by",
+   "para": "sony",
+   "derivada": false
+  },
+  {
+   "de": "x-ocn",
+   "aresta": "paired_gamut",
+   "para": "s-log3",
+   "derivada": false
+  },
+  {
+   "de": "x-ocn",
+   "aresta": "see_also",
+   "para": "braw",
+   "derivada": false
+  },
+  {
+   "de": "x-ocn",
+   "aresta": "see_also",
+   "para": "arriraw",
+   "derivada": false
+  },
+  {
+   "de": "x-ocn",
+   "aresta": "see_also",
+   "para": "prores",
+   "derivada": false
+  },
+  {
+   "de": "aces",
+   "aresta": "governed_by",
+   "para": "ampas",
+   "derivada": false
+  },
+  {
+   "de": "aces",
+   "aresta": "see_also",
+   "para": "s-log3",
+   "derivada": false
+  },
+  {
+   "de": "aces",
+   "aresta": "see_also",
+   "para": "log-c4",
+   "derivada": false
+  },
+  {
+   "de": "aces",
+   "aresta": "see_also",
+   "para": "rec-709",
+   "derivada": false
+  },
+  {
+   "de": "aces",
+   "aresta": "see_also",
+   "para": "braw",
+   "derivada": false
+  },
+  {
+   "de": "arri-wide-gamut-4",
+   "aresta": "made_by",
+   "para": "arri",
+   "derivada": false
+  },
+  {
+   "de": "arri-wide-gamut-4",
+   "aresta": "paired_gamut",
+   "para": "log-c4",
+   "derivada": false
+  },
+  {
+   "de": "arri-wide-gamut-4",
+   "aresta": "conforms_to_pipeline",
+   "para": "aces",
+   "derivada": false
+  },
+  {
+   "de": "arri-wide-gamut-4",
+   "aresta": "see_also",
+   "para": "s-gamut3-cine",
+   "derivada": false
+  },
+  {
+   "de": "arri-wide-gamut-4",
+   "aresta": "see_also",
+   "para": "rec-709",
+   "derivada": false
+  },
+  {
+   "de": "log-c4",
+   "aresta": "made_by",
+   "para": "arri",
+   "derivada": false
+  },
+  {
+   "de": "log-c4",
+   "aresta": "paired_gamut",
+   "para": "arri-wide-gamut-4",
+   "derivada": false
+  },
+  {
+   "de": "log-c4",
+   "aresta": "conforms_to_pipeline",
+   "para": "aces",
+   "derivada": false
+  },
+  {
+   "de": "log-c4",
+   "aresta": "distinct_from",
+   "para": "rec-709",
+   "derivada": false
+  },
+  {
+   "de": "log-c4",
+   "aresta": "see_also",
+   "para": "arriraw",
+   "derivada": false
+  },
+  {
+   "de": "log-c4",
+   "aresta": "see_also",
+   "para": "alexa-35",
+   "derivada": false
+  },
+  {
+   "de": "log-c4",
+   "aresta": "see_also",
+   "para": "s-log3",
+   "derivada": false
+  },
+  {
+   "de": "rec-709",
+   "aresta": "governed_by",
+   "para": "itu-r",
+   "derivada": false
+  },
+  {
+   "de": "rec-709",
+   "aresta": "distinct_from",
+   "para": "s-log3",
+   "derivada": false
+  },
+  {
+   "de": "rec-709",
+   "aresta": "distinct_from",
+   "para": "log-c4",
+   "derivada": false
+  },
+  {
+   "de": "rec-709",
+   "aresta": "see_also",
+   "para": "aces",
+   "derivada": false
+  },
+  {
+   "de": "s-gamut3-cine",
+   "aresta": "made_by",
+   "para": "sony",
+   "derivada": false
+  },
+  {
+   "de": "s-gamut3-cine",
+   "aresta": "paired_gamut",
+   "para": "s-log3",
+   "derivada": false
+  },
+  {
+   "de": "s-gamut3-cine",
+   "aresta": "conforms_to_pipeline",
+   "para": "aces",
+   "derivada": false
+  },
+  {
+   "de": "s-gamut3-cine",
+   "aresta": "see_also",
+   "para": "rec-709",
+   "derivada": false
+  },
+  {
+   "de": "s-log3",
+   "aresta": "made_by",
+   "para": "sony",
+   "derivada": false
+  },
+  {
+   "de": "s-log3",
+   "aresta": "paired_gamut",
+   "para": "s-gamut3-cine",
+   "derivada": false
+  },
+  {
+   "de": "s-log3",
+   "aresta": "conforms_to_pipeline",
+   "para": "aces",
+   "derivada": false
+  },
+  {
+   "de": "s-log3",
+   "aresta": "distinct_from",
+   "para": "rec-709",
+   "derivada": false
+  },
+  {
+   "de": "s-log3",
+   "aresta": "see_also",
+   "para": "x-ocn",
+   "derivada": false
+  },
+  {
+   "de": "s-log3",
+   "aresta": "see_also",
+   "para": "venice-2",
+   "derivada": false
+  },
+  {
+   "de": "ampas",
+   "aresta": "see_also",
+   "para": "aces",
+   "derivada": false
+  },
+  {
+   "de": "itu-r",
+   "aresta": "see_also",
+   "para": "rec-709",
    "derivada": false
   },
   {
