@@ -40,6 +40,12 @@ cadência do movimento.
 Câmeras com ND interno — como a [[venice-2]] — reduzem muito a troca de vidro
 em set. Sem ND interno, o filtro vive no matte box.
 
+## Dimensionar
+
+`python3 tools/calc/optica.py --formato ff --focal 50 --tstop 2.8 --distancia 3`
+mostra o que a abertura de trabalho faz com a profundidade de campo — que é
+justamente o que o ND permite preservar sob sol.
+
 ## Gotchas
 
 - VND barato em grande-angular: vinheta em cruz nas densidades altas.

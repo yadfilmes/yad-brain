@@ -21,7 +21,7 @@ cruzando com `budget_alternative_to`.
 
 ---
 
-## R2 · Calculadoras restantes · **prioridade alta**
+## R2 · Calculadoras · **as quatro de prioridade alta estão feitas**
 
 Só existe `tools/calc/storage.py`. Ordem de valor por esforço:
 
@@ -30,7 +30,7 @@ Só existe `tools/calc/storage.py`. Ordem de valor por esforço:
 | mídia / storage | diário | **feito** |
 | parede de LED | gabinetes, portas, potência, peso, shutter × scan × refresh | **feito** |
 | elétrica | corrente, circuitos, cabo/queda, gerador, balanceamento de fase | **feito** |
-| óptica | profundidade de campo, FOV, crop, hiperfocal | a fazer |
+| óptica | FOV, enquadramento, profundidade, hiperfocal, equivalência | **feito** |
 | áudio / timecode | conversão 23.976 ↔ 29.97, drift, delay por distância | sob demanda |
 | redes | ST 2110, NDI, SRT | adiado até haver job IP |
 | RF | **rejeitada como calculadora** — usar Wireless Workbench; o acervo precisa é da nota "RF no Brasil (ANATEL)" | — |

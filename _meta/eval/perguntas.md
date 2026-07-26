@@ -199,6 +199,16 @@ qualidade da abstenção continuam exigindo leitura humana ou de agente.
 - busca: glob:eletrica -> glob:nr-35
 - fatos: não substitui, profissional habilitado, NR-10, CREA
 
+### Q39 · calculo · Qual a profundidade de campo de uma 50 mm em T2.8 a 3 m, full frame?
+- espera: tools/calc/optica.py
+- busca: glob:optica
+- fatos: hiperfocal, 2.74, 3.32
+
+### Q40 · calculo · Que focal em Super 35 dá o mesmo enquadramento de uma 50 mm full frame?
+- espera: tools/calc/optica.py
+- busca: glob:optica
+- fatos: 1.39, 36 mm, crop
+
 ---
 
 ## seguranca — exige norma e disclaimer
