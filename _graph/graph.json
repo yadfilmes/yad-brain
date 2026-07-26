@@ -697,7 +697,7 @@
    "brand": "",
    "zona": "universal",
    "status": "draft",
-   "confidence": "media",
+   "confidence": "alta",
    "risco": "",
    "updated": "2026-07-26",
    "path": "conceitos/cor/aces.md",
@@ -714,8 +714,9 @@
     "padrao",
     "academy"
    ],
-   "n_fontes": 1,
+   "n_fontes": 3,
    "tiers": [
+    "educacao",
     "oficial"
    ]
   },
@@ -1381,7 +1382,7 @@
    "brand": "",
    "zona": "universal",
    "status": "draft",
-   "confidence": "media",
+   "confidence": "alta",
    "risco": "",
    "updated": "2026-07-26",
    "path": "luz/conceitos/cri-tlci-ssi.md",
@@ -1399,8 +1400,9 @@
     "metrica",
     "qualidade"
    ],
-   "n_fontes": 1,
+   "n_fontes": 2,
    "tiers": [
+    "educacao",
     "oficial"
    ]
   },
@@ -1883,7 +1885,6 @@
    ],
    "n_fontes": 2,
    "tiers": [
-    "comunidade",
     "oficial"
    ]
   }
@@ -3128,7 +3129,25 @@
   {
    "de": "cri-tlci-ssi",
    "aresta": "governed_by",
+   "para": "cie",
+   "derivada": false
+  },
+  {
+   "de": "cri-tlci-ssi",
+   "aresta": "governed_by",
+   "para": "ebu",
+   "derivada": false
+  },
+  {
+   "de": "cri-tlci-ssi",
+   "aresta": "governed_by",
    "para": "ampas",
+   "derivada": false
+  },
+  {
+   "de": "cri-tlci-ssi",
+   "aresta": "governed_by",
+   "para": "ies",
    "derivada": false
   },
   {

@@ -20,10 +20,12 @@ Quem aponta para quem. Gerado por `tools/build_graph.py` — não editar.
 | `bat--v-mount` | `bat--b-mount` (alternative_to), `bat--b-mount` (incompatible_with), `bat--bp-u` (alternative_to), `ls-600d-pro` (powered_by), `venice` (uses_battery_mount), `venice-2` (uses_battery_mount) |
 | `blackmagic-design` | `atem-constellation-8k` (made_by), `atem-constellation-hd` (made_by), `braw` (made_by), `ecossistema-blackmagic` (made_by), `pyxis-6k` (made_by), `sony` (competes_with) |
 | `braw` | `aces` (see_also), `arriraw` (alternative_to), `blackmagic-design` (see_also), `ecossistema-blackmagic` (part_of_ecosystem), `prores` (alternative_to), `pyxis-6k` (records_codec), `x-ocn` (alternative_to) |
+| `cie` | `cri-tlci-ssi` (governed_by) |
 | `compactflash-association` | `midia--cfexpress-b` (governed_by) |
 | `cri-tlci-ssi` | `gaffer` (see_also), `ls-600d-pro` (see_also), `temperatura-de-cor` (distinct_from) |
 | `diretor` | `diretor-de-fotografia` (reports_to) |
 | `diretor-de-fotografia` | `gaffer` (reports_to), `mapa-de-luz` (consumes), `ordem-do-dia` (used_by_role) |
+| `ebu` | `cri-tlci-ssi` (governed_by) |
 | `ecossistema-blackmagic` | `atem-constellation-8k` (part_of_ecosystem), `atem-constellation-hd` (part_of_ecosystem), `blackmagic-design` (see_also), `braw` (part_of_ecosystem), `pyxis-6k` (part_of_ecosystem) |
 | `evoke-2400b` | `ls-600d-pro` (competes_with), `nanlux` (see_also) |
 | `filtro-nd` | `diretor-de-fotografia` (see_also), `lei-do-inverso-do-quadrado` (see_also), `obturador-180` (requires), `venice-2` (see_also) |
@@ -31,6 +33,7 @@ Quem aponta para quem. Gerado por `tools/build_graph.py` — não editar.
 | `gaffer` | `diretor-de-fotografia` (see_also), `mapa-de-luz` (template_for), `mapa-de-luz` (used_in_workflow), `ordem-do-dia` (used_by_role) |
 | `genlock` | `flicker-parede-led` (resolved_by), `ndi` (distinct_from), `scan-rate` (requires), `sdi` (see_also), `shuttersync` (requires), `smpte` (see_also) |
 | `ieee` | `rede-gigabit` (governed_by) |
+| `ies` | `cri-tlci-ssi` (governed_by) |
 | `itu-r` | `rec-709` (governed_by), `smpte` (see_also) |
 | `lei-do-inverso-do-quadrado` | `evoke-2400b` (see_also), `ls-600d-pro` (see_also) |
 | `log-c4` | `alexa-35` (supports_transfer_function), `arri-wide-gamut-4` (paired_gamut), `arriraw` (paired_gamut), `rec-709` (distinct_from) |

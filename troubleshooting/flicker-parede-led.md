@@ -14,8 +14,8 @@ rel:
   diagnosed_with: [obturador-180, scan-rate]
   see_also: [obturador-180, scan-rate]
 sources:
-  - {url: "https://www.bromptontech.com", tier: oficial, ret: 2026-07-26, nota: "documentação de ShutterSync"}
-  - {url: "https://www.reddit.com/r/virtualproduction/", tier: comunidade, ret: 2026-07-26, nota: "casos relatados de banda em 24p"}
+  - {url: "https://www.bromptontech.com/features/shuttersync/", tier: oficial, ret: 2026-07-26, loc: "ShutterSync - Features", nota: "exclusivo dos processadores Tessera SX40 e S8, a partir do software Tessera 3.2; opcao de Sensor Type (Any / Global / Rolling)"}
+  - {url: "https://www.bromptontech.com/recreating-reality-synchronisation-artefacts/", tier: oficial, ret: 2026-07-26, loc: "Recreating Reality - Synchronisation Artefacts", nota: "mecanismo do frame blending quando a fase esta errada"}
 ---
 
 # Flicker ou banda horizontal filmando parede de LED
@@ -52,7 +52,22 @@ hardware, não ajuste de set.
 
 - Casar shutter com a frequência de refresh do painel.
 - Genlock entre câmera e processadora sempre que houver mais de uma câmera.
-- Usar o ajuste fino de fase da processadora (em produtos que oferecem).
+- Ajuste fino de fase na processadora — **onde existir**, ver abaixo.
+
+### O que a fase corrige, e onde ela existe
+
+O mecanismo: quando a fase está certa, o painel exibe **um quadro inteiro
+durante todo o tempo em que o obturador está aberto**. Fase errada produz
+*frame blending* — o painel começa o quadro seguinte antes de a câmera terminar
+de capturar o atual.
+
+| item | escopo |
+|---|---|
+| ShutterSync (Brompton) | **exclusivo** dos processadores Tessera SX40 e S8, a partir do software Tessera 3.2 |
+| opção Sensor Type | `Any` (padrão, maior compatibilidade), `Global Shutter`, `Rolling Shutter` |
+
+Isto é decisão de **orçamento de locação**, não de set: processadora fora dessa
+lista não tem o ajuste, e aí a única saída é casar shutter e subir o scan rate.
 
 ## Dimensionar antes de montar
 

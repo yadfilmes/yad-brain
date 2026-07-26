@@ -66,6 +66,13 @@ Semântica da nota: pesos inteiros somados produzem nota inteira de 0–100 — 
 8. **A rubrica é versionada e muda por PR.** Ninguém "ajusta a régua" dentro de um ciclo de correção: rubrica que valeu no ciclo 1 vale no ciclo 3.
 9. **Correção cirúrgica.** No ciclo de correção, mexe-se nos itens reprovados; reescrever o artefato inteiro para "impressionar" o revisor seguinte é desperdício e ruído — e o revisor seguinte continua sem saber que houve ciclo anterior.
 10. **Escalar não é falhar.** O desfecho honesto de um artefato que não atinge 92 em 3 ciclos é a fila `blocked.md` com o diagnóstico — não uma quarta tentativa com a régua afrouxada.
+11. **Régua defeituosa anula a medição — nunca promove o artefato.** Se um item da rubrica for encontrado *inganhável por construção* (critério inexistente, documento citado que não existe, exigência que o próprio CI reprova), todo ciclo medido com ela é **anulado**: os artefatos voltam ao ciclo 0 e são **re-medidos do zero** com a régua corrigida.
+    Três travas para que isto não vire porta dos fundos:
+    - anular exige **defeito demonstrável na régua**, registrado no histórico de versões (S.11) — "o revisor foi duro" não é defeito;
+    - a anulação **não concede status nenhum**: nada vira `reviewed` por anulação, só volta para a fila de medição;
+    - o scorecard anulado **permanece arquivado**, marcado como anulado e com o motivo. Trilha auditável não se apaga.
+
+    A alternativa — insistir em medir com instrumento comprovadamente quebrado, porque foi ele que valeu no ciclo 1 — transformaria a meta-regra 8 numa armadilha: a régua fica imutável **justamente** no caso em que está errada.
 
 ---
 

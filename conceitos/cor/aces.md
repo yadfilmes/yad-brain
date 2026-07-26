@@ -6,7 +6,7 @@ zona: universal
 aliases: [ACES, "Academy Color Encoding System", "ACES 2065-1"]
 tags: [cor, pipeline, gerenciamento-de-cor, padrao, academy]
 status: draft
-confidence: media
+confidence: alta
 updated: 2026-07-26
 rel:
   governed_by: [ampas]
@@ -14,7 +14,9 @@ rel:
   distinct_from: [rec-709]
   see_also: [braw]
 sources:
-  - {url: "https://docs.acescentral.com", tier: oficial, ret: 2026-07-26, nota: "documentação oficial do sistema"}
+  - {url: "https://docs.acescentral.com/background/overview/", tier: oficial, ret: 2026-07-26, loc: "ACES System - Overview", nota: "arquitetura IDT / espaco de trabalho / ODT"}
+  - {url: "https://docs.acescentral.com/encodings/acescct/", tier: oficial, ret: 2026-07-26, loc: "ACEScct Specification", nota: "encoding log em primarias AP1, para grading scene-referred"}
+  - {url: "https://chrisbrejon.com/cg-cinematography/chapter-1-5-academy-color-encoding-system-aces/", tier: educacao, ret: 2026-07-26, loc: "Chapter 1.5 - Academy Color Encoding System", nota: "pratica de pipeline e armadilhas de IDT"}
 ---
 
 # ACES (Academy Color Encoding System)
@@ -29,9 +31,19 @@ refazer o grading.
 
 | peça | função |
 |---|---|
-| **IDT** | traz o material da câmera para o espaço comum — uma por câmera/curva |
-| **espaço de trabalho** | onde a cor é manipulada (ACEScct para grading, ACEScg para VFX/render) |
-| **ODT** | leva o resultado para o destino — cinema, [[rec-709]], HDR |
+| **IDT** (Input Transform) | traz o material da câmera para ACES2065-1 — uma por câmera/curva |
+| **espaço de trabalho** | onde a cor é manipulada |
+| **ODT** (Output Transform) | leva o resultado ACES scene-linear para o destino — cinema, [[rec-709]], HDR |
+
+Os dois espaços de trabalho, que são a confusão mais comum:
+
+| encoding | spec | primárias | codificação | serve para |
+|---|---|---|---|---|
+| **ACEScct** | S-2016-001 | AP1 | logarítmica | grading scene-referred |
+| **ACEScg** | S-2014-004 | AP1 | linear | render e composição de CG |
+
+Mesmas primárias, codificações diferentes — é por isso que trocar um pelo outro
+produz resultado sutilmente errado em vez de obviamente quebrado.
 
 ## Por que importa numa produtora
 
