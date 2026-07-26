@@ -13,7 +13,7 @@ rel:
   alternative_to: [braw]
   wraps_in: [mov]
 sources:
-  - {url: "https://support.apple.com/en-us/106409", tier: oficial, ret: 2026-07-26, nota: "white paper com tabela de data rates"}
+  - {url: "https://support.apple.com/en-us/102207", tier: oficial, ret: 2026-07-26, loc: "About Apple ProRes", cit: "The target data rate of Apple ProRes 422 HQ is approximately 220 Mbps at 1920 x 1080 and 29.97 fps", nota: "taxas-alvo por variante; substitui a URL 106409 que o acervo citava e que nao resolve para pagina de ProRes"}
 ---
 
 # Apple ProRes
@@ -32,6 +32,24 @@ edição fluida e o conform previsível. Pesado no disco, leve no processador.
 | ProRes 422 HQ | **o padrão de entrega** na maioria dos contratos |
 | ProRes 4444 | material com canal alpha, VFX |
 | ProRes 4444 XQ | máxima qualidade, arquivo pesado |
+
+## Taxa-alvo, com o escopo em que ela vale
+
+Todos os números da Apple são declarados **a 1920 × 1080 e 29,97 fps** — é a
+condição, não uma nota de rodapé. Em 4K a taxa sobe na proporção da área, e é
+por isso que orçar mídia pela tabela de HD subestima por volta de 4×.
+
+| variante | taxa-alvo @ 1080p29,97 |
+|---|---|
+| ProRes 422 HQ | ~220 Mb/s |
+| ProRes 4444 | ~330 Mb/s (fontes 4:4:4) |
+| ProRes 4444 XQ | ~500 Mb/s (fontes 4:4:4) |
+
+Para dimensionar de verdade, use a calculadora em vez da regra de três:
+
+```
+python3 tools/calc/storage.py --listar
+```
 | ProRes RAW | RAW da Apple — categoria diferente, não confundir |
 
 Data rates variam com resolução e frame rate; para orçar storage, usar

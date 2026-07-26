@@ -564,7 +564,7 @@
     "arri",
     "cinema"
    ],
-   "n_fontes": 1,
+   "n_fontes": 2,
    "tiers": [
     "oficial"
    ]
@@ -629,7 +629,7 @@
   },
   {
    "id": "x-ocn",
-   "title": "X-OCN (eXtended Original Camera Negative)",
+   "title": "X-OCN (eXtended tonal range Original Camera Negative)",
    "type": "codec",
    "brand": "sony",
    "zona": "universal",
@@ -644,7 +644,8 @@
     "XOCN",
     "X-OCN XT",
     "X-OCN ST",
-    "X-OCN LT"
+    "X-OCN LT",
+    "eXtended tonal range Original Camera Negative"
    ],
    "tags": [
     "codec",
@@ -653,8 +654,9 @@
     "sony",
     "cinema"
    ],
-   "n_fontes": 1,
+   "n_fontes": 2,
    "tiers": [
+    "educacao",
     "oficial"
    ]
   },

@@ -1,10 +1,10 @@
 ---
 id: x-ocn
-title: X-OCN (eXtended Original Camera Negative)
+title: X-OCN (eXtended tonal range Original Camera Negative)
 type: codec
 brand: sony
 zona: universal
-aliases: [X-OCN, XOCN, "X-OCN XT", "X-OCN ST", "X-OCN LT"]
+aliases: [X-OCN, XOCN, "X-OCN XT", "X-OCN ST", "X-OCN LT", "eXtended tonal range Original Camera Negative"]
 tags: [codec, raw, aquisicao, sony, cinema]
 status: draft
 confidence: baixa
@@ -16,10 +16,11 @@ rel:
   distinct_from: [xavc]
   accepts_media: [midia--axs]
 sources:
-  - {url: "https://pro.sony/ue_US/technology/x-ocn", tier: oficial, ret: 2026-07-26, nota: "definição e variantes"}
+  - {url: "https://pro.sony/ue_US/technology/recording-formats/technology-xocn", tier: oficial, ret: 2026-07-26, loc: "X-OCN explained", cit: "X-OCN stands for eXtended tonal range Original Camera Negative", nota: "expansao correta da sigla - o acervo trazia 'eXtended Original Camera Negative', sem 'tonal range'"}
+  - {url: "https://www.newsshooter.com/2023/05/09/sony-x-ocn-explained/", tier: educacao, ret: 2026-07-26, loc: "Sony X-OCN Explained", cit: "X-OCN ST is recommended for most applications with 30% smaller file sizes than Sony RAW, while X-OCN LT is ideal when you need even smaller file sizes - 60% smaller than Sony RAW", nota: "ordem de grandeza das tres variantes"}
 ---
 
-# X-OCN (eXtended Original Camera Negative)
+# X-OCN (eXtended tonal range Original Camera Negative)
 
 **TL;DR** — formato de negativo digital da Sony, gravado pelos corpos VENICE.
 Guarda a informação de sensor com compressão eficiente, entregando qualidade

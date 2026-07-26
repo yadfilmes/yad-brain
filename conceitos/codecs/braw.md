@@ -16,7 +16,7 @@ rel:
   alternative_to: [x-ocn, arriraw]
   see_also: [pyxis-6k]
 sources:
-  - {url: "https://www.blackmagicdesign.com/products/blackmagicraw", tier: oficial, ret: 2026-07-26}
+  - {url: "https://www.blackmagicdesign.com/products/blackmagicraw", tier: oficial, ret: 2026-07-26, loc: "Blackmagic RAW - constant bitrate e constant quality", cit: "Blackmagic RAW 3:1, 5:1, 8:1 and 12:1 use constant bitrate encoding to give customers the best possible images with predictable and consistent file sizes", nota: "o que cada familia de modo garante"}
 ---
 
 # Blackmagic RAW

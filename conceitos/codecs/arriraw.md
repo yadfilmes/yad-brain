@@ -15,7 +15,8 @@ rel:
   alternative_to: [x-ocn, braw]
   conforms_to_pipeline: [aces]
 sources:
-  - {url: "https://www.arri.com/en/learn-help/learn-help-camera-system/camera-workflow", tier: oficial, ret: 2026-07-26, nota: "definição e fluxo"}
+  - {url: "https://www.arri.com/en/learn-help/learn-help-camera-system/pre-postproduction/file-formats-data-handling/arriraw-faq", tier: oficial, ret: 2026-07-26, loc: "ARRIRAW FAQ", cit: "sensor readout provided as uncompressed, 12-bit log ARRIRAW data (or 13-bit for ALEXA 35). File extensions are *.ari or *.mxf", nota: "profundidade depende do corpo - 13 bits na ALEXA 35"}
+  - {url: "https://www.arri.com/en/learn-help/learn-help-camera-system/pre-postproduction/file-formats-data-handling/arriraw", tier: oficial, ret: 2026-07-26, loc: "ARRIRAW - High Density Encoding", cit: "ARRIRAW images encoded with HDE are approximately 60% of the original size, and HDE encoding is completely lossless - when decoded, it is a bit-for-bit perfect match to the original file", nota: "HDE e sem perda"}
 ---
 
 # ARRIRAW
@@ -30,9 +31,21 @@ de uso corrente — e o mais pesado.
 | aspecto | comportamento |
 |---|---|
 | debayer | feito na pós, não na câmera |
-| compressão | sem perdas (ou nenhuma), conforme o modo |
+| profundidade | **12 bits log**; **13 bits na [[alexa-35]]** — depende do corpo, não do formato |
+| compressão | não comprimido, ou **HDE** (sem perdas) |
+| extensão | `.ari` ou `.mxf` |
 | curva associada | [[log-c4]] na geração atual |
 | peso | o maior entre os formatos de aquisição correntes |
+
+## HDE não é "ARRIRAW comprimido com perda"
+
+*High Density Encoding* reduz o arquivo a **~60% do original** e é
+**completamente sem perdas**: decodificado, é idêntico bit a bit ao original.
+Não há decisão de qualidade a tomar — a decisão é de compatibilidade de
+ferramenta e de tempo de encode, não de imagem.
+
+Confundir HDE com um nível de compressão com perda (como se fosse um "12:1"
+da ARRI) leva a recusar economia de storage que não custa nada em qualidade.
 
 ## Por que importa
 

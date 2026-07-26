@@ -6,7 +6,7 @@ ampas,AMPAS (Academy of Motion Picture Arts and Sciences),orgao,,universal,draft
 aputure,Aputure,marca,,universal,draft,alta,,2026-07-26,2,educacao|oficial,marcas/aputure.md
 arri,ARRI,marca,,universal,draft,alta,,2026-07-26,2,educacao|oficial,marcas/arri.md
 arri-wide-gamut-4,ARRI Wide Gamut 4,colorspace,arri,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/arri-wide-gamut-4.md
-arriraw,ARRIRAW,codec,arri,universal,draft,media,,2026-07-26,1,oficial,conceitos/codecs/arriraw.md
+arriraw,ARRIRAW,codec,arri,universal,draft,media,,2026-07-26,2,oficial,conceitos/codecs/arriraw.md
 atem-constellation-8k,Blackmagic ATEM Constellation 8K,switcher,blackmagic-design,universal,draft,alta,,2026-07-26,4,educacao|oficial,live/switchers/atem-constellation-8k.md
 atem-constellation-hd,Blackmagic ATEM Constellation HD e 4K Plus,switcher,blackmagic-design,universal,stub,baixa,,2026-07-26,1,oficial,live/switchers/atem-constellation-hd.md
 bat--b-mount,B-Mount (padrão de bateria),battery-mount,,universal,draft,media,,2026-07-26,1,oficial,_meta/vocab/bat--b-mount.md
@@ -60,5 +60,5 @@ tally,Tally (sinalização de câmera no ar),conceito,,universal,draft,media,,20
 temperatura-de-cor,Temperatura de cor (CCT) e tint,conceito,,universal,draft,media,,2026-07-26,1,oficial,luz/conceitos/temperatura-de-cor.md
 venice,Sony VENICE (primeira geração),camera,sony,universal,draft,media,,2026-07-26,1,oficial,captacao/cameras/sony/venice.md
 venice-2,Sony VENICE 2,camera,sony,universal,draft,baixa,,2026-07-26,2,comunidade|oficial,captacao/cameras/sony/venice-2.md
-x-ocn,X-OCN (eXtended Original Camera Negative),codec,sony,universal,draft,baixa,,2026-07-26,1,oficial,conceitos/codecs/x-ocn.md
+x-ocn,X-OCN (eXtended tonal range Original Camera Negative),codec,sony,universal,draft,baixa,,2026-07-26,2,educacao|oficial,conceitos/codecs/x-ocn.md
 xavc,XAVC (Sony),codec,sony,universal,draft,media,,2026-07-26,1,oficial,conceitos/codecs/xavc.md
