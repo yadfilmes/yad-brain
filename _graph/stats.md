@@ -4,16 +4,16 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 ## Números gerais
 
-- Notas: **57**
-- Arestas declaradas: **209** (+9 derivadas por simetria/inversa)
-- Notas com fonte oficial ou de laboratório: **52/57** (91%)
+- Notas: **58**
+- Arestas declaradas: **219** (+10 derivadas por simetria/inversa)
+- Notas com fonte oficial ou de laboratório: **53/58** (91%)
 - Notas órfãs: **0**
 
 ## Por status
 
 | status | notas |
 |---|---:|
-| draft | 55 |
+| draft | 56 |
 | stub | 2 |
 
 ## Por tipo
@@ -21,7 +21,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 | tipo | notas |
 |---|---:|
 | battery-mount | 1 |
-| camera | 4 |
+| camera | 5 |
 | certificacao | 1 |
 | codec | 5 |
 | colorspace | 3 |
@@ -46,15 +46,15 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 | aresta | nº |
 |---|---:|
-| `see_also` | 66 |
-| `made_by` | 20 |
-| `alternative_to` | 15 |
+| `see_also` | 67 |
+| `made_by` | 21 |
+| `alternative_to` | 16 |
 | `distinct_from` | 11 |
-| `conforms_to_pipeline` | 9 |
-| `records_codec` | 9 |
-| `competes_with` | 7 |
+| `conforms_to_pipeline` | 10 |
+| `records_codec` | 10 |
+| `competes_with` | 8 |
+| `supports_colorspace` | 7 |
 | `governed_by` | 6 |
 | `paired_gamut` | 6 |
 | `part_of_ecosystem` | 6 |
-| `supports_colorspace` | 6 |
-| `accepts_media` | 4 |
+| `has_native_mount` | 5 |

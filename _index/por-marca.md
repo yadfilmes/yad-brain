@@ -72,6 +72,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 ## sony
 
+- [[fx6]] — câmera de cinema full-frame compacta da Sony com sensor 10,2 MP BSI, **ND eletrônico interno variável** e dual
 - [[midia--axs]] — mídia proprietária da Sony para as câmeras VENICE, exigida pelas taxas do [[x-ocn]]. Exclusiva do ecossistema:
 - [[s-gamut3-cine]] — espaço de cor da Sony pensado para trabalho de cinema: mais contido que o S-Gamut3 puro, o que o torna mais fá
 - [[s-log3]] — curva logarítmica da Sony que comprime a latitude do sensor num sinal de 10 bits sem estourar altas nem esmaga

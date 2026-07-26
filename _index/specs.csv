@@ -18,6 +18,7 @@ ecossistema-blackmagic,Ecossistema Blackmagic,ecossistema,blackmagic-design,univ
 evoke-2400b,Nanlux Evoke 2400B,fixture,nanlux,universal,draft,media,,2026-07-26,1,oficial,luz/fixtures/nanlux/evoke-2400b.md
 filtro-nd,Filtro ND (densidade neutra),conceito,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/tecnicas/filtro-nd.md
 flicker-parede-led,Flicker ou banda horizontal filmando parede de LED,problema,,universal,draft,media,,2026-07-26,2,comunidade|oficial,troubleshooting/flicker-parede-led.md
+fx6,Sony FX6,camera,sony,universal,draft,alta,,2026-07-26,4,comunidade|lab|oficial,captacao/cameras/sony/fx6.md
 gaffer,Gaffer (chefe de elétrica),funcao,,universal,draft,media,,2026-07-26,1,educacao,producao/funcoes/gaffer.md
 genlock,Genlock (sincronismo de referência),conceito,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/sinais/genlock.md
 itu-r,ITU-R (União Internacional de Telecomunicações — setor de rádio),orgao,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/orgaos/itu-r.md

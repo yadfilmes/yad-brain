@@ -261,6 +261,40 @@
    ]
   },
   {
+   "id": "fx6",
+   "title": "Sony FX6",
+   "type": "camera",
+   "brand": "sony",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "captacao/cameras/sony/fx6.md",
+   "tldr": "câmera de cinema full-frame compacta da Sony com sensor 10,2 MP BSI, **ND eletrônico interno variável** e dual base ISO — o cavalo de batalha de documentário e corporativo. Ganha do resto da faixa em pouca luz e em agili",
+   "aliases": [
+    "FX6",
+    "Sony FX6",
+    "ILME-FX6V",
+    "Cinema Line FX6",
+    "PXW-FX6"
+   ],
+   "tags": [
+    "full-frame",
+    "dual-base-iso",
+    "xavc",
+    "nd-interno",
+    "documentario",
+    "corporativo"
+   ],
+   "n_fontes": 4,
+   "tiers": [
+    "comunidade",
+    "lab",
+    "oficial"
+   ]
+  },
+  {
    "id": "venice-2",
    "title": "Sony VENICE 2",
    "type": "camera",
@@ -1890,6 +1924,66 @@
    "derivada": false
   },
   {
+   "de": "fx6",
+   "aresta": "made_by",
+   "para": "sony",
+   "derivada": false
+  },
+  {
+   "de": "fx6",
+   "aresta": "has_native_mount",
+   "para": "mount--e",
+   "derivada": false
+  },
+  {
+   "de": "fx6",
+   "aresta": "records_codec",
+   "para": "xavc",
+   "derivada": false
+  },
+  {
+   "de": "fx6",
+   "aresta": "supports_transfer_function",
+   "para": "s-log3",
+   "derivada": false
+  },
+  {
+   "de": "fx6",
+   "aresta": "supports_colorspace",
+   "para": "s-gamut3-cine",
+   "derivada": false
+  },
+  {
+   "de": "fx6",
+   "aresta": "conforms_to_pipeline",
+   "para": "aces",
+   "derivada": false
+  },
+  {
+   "de": "fx6",
+   "aresta": "budget_alternative_to",
+   "para": "venice-2",
+   "derivada": false
+  },
+  {
+   "de": "fx6",
+   "aresta": "competes_with",
+   "para": "pyxis-6k",
+   "derivada": false
+  },
+  {
+   "de": "fx6",
+   "aresta": "alternative_to",
+   "para": "filtro-nd",
+   "derivada": false
+  },
+  {
+   "de": "fx6",
+   "aresta": "see_also",
+   "para": "obturador-180",
+   "derivada": false
+  },
+  {
    "de": "venice-2",
    "aresta": "made_by",
    "para": "sony",
@@ -2961,6 +3055,12 @@
    "de": "venice-2",
    "aresta": "competes_with",
    "para": "pyxis-6k",
+   "derivada": true
+  },
+  {
+   "de": "pyxis-6k",
+   "aresta": "competes_with",
+   "para": "fx6",
    "derivada": true
   },
   {

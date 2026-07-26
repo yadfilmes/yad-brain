@@ -9,6 +9,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 ## camera
 
 - [[alexa-35]] — câmera de cinema Super35 da ARRI com sensor 4.6K de geração nova (ALEV 4) e o salto de latitude que definiu a 
+- [[fx6]] — câmera de cinema full-frame compacta da Sony com sensor 10,2 MP BSI, **ND eletrônico interno variável** e dual
 - [[pyxis-6k]] — câmera de cinema full-frame 6K da Blackmagic que grava [[braw]] internamente, vendida em versões de mount dist
 - [[venice]] — primeira geração da linha VENICE: sensor full-frame 6K, dual base ISO 500/2500 e gravação [[x-ocn]] em [[midia
 - [[venice-2]] — câmera de cinema digital full-frame da Sony com sensor 8.6K (há versão 6K no mesmo corpo), dual base ISO 800/3
