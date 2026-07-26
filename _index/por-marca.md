@@ -18,7 +18,9 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[nr-35-trabalho-em-altura]] — norma regulamentadora brasileira que rege qualquer atividade executada acima de 2 metros do nível inferior com
 - [[obturador-180]] — manter o obturador em 180° (velocidade = 1 ÷ (2 × frame rate)) entrega o borrão de movimento a que o olho está
 - [[prores]] — família de codecs intraframe da Apple que virou o padrão de fato para mezanino e entrega em pós: cada quadro é
+- [[pwm-brilho-led]] — LED não regula intensidade baixando tensão: ele **pisca muito rápido** e o tempo ligado define o brilho aparen
 - [[rec-709]] — o padrão de cor da televisão HD e, na prática, o denominador comum de entrega até hoje: gamut relativamente pe
+- [[scan-rate]] — quantas vezes por segundo o painel redesenha a imagem inteira, em Hz. O olho humano se satisfaz com pouco; **a
 - [[sony]] — fabricante japonesa presente em quase toda a cadeia audiovisual: câmeras de cinema (CineAlta/VENICE), broadcas
 
 ## arri
@@ -27,11 +29,17 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[arri-wide-gamut-4]] — espaço de cor da ARRI para a geração ALEV 4 ([[alexa-35]]), par obrigatório da curva [[log-c4]]. Sucede o ARRI
 - [[arriraw]] — formato RAW não comprimido (ou com compressão sem perdas) das câmeras ARRI: os dados do sensor saem sem debaye
 - [[log-c4]] — curva logarítmica da ARRI para a geração ALEVE 4 ([[alexa-35]]), desenhada para a latitude maior desse sensor.
+- [[mount--lpl]] — mount da ARRI criado para formato grande: diâmetro maior e flange focal distance menor que o [[mount--pl]] (44
 
 ## blackmagic-design
 
 - [[braw]] — codec RAW parcialmente debayerizado da Blackmagic: guarda a informação de sensor como RAW, mas move parte do p
+- [[ecossistema-blackmagic]] — o conjunto de câmera, switcher, gravador, conversores e software da Blackmagic desenhado para funcionar junto:
 - [[pyxis-6k]] — câmera de cinema full-frame 6K da Blackmagic que grava [[braw]] internamente, vendida em versões de mount dist
+
+## brompton
+
+- [[shuttersync]] — recurso das processadoras Brompton que alinha a varredura do painel com o obturador da câmera, permitindo ajus
 
 ## sony
 

@@ -26,6 +26,13 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[filtro-nd]] — filtro cinza que corta luz sem (idealmente) alterar cor, para manter diafragma aberto e obturador 180° sob sol
 - [[genlock]] — sinal de referência comum que faz vários equipamentos varrerem o quadro no mesmo instante. Sem ele, cada câmer
 - [[obturador-180]] — manter o obturador em 180° (velocidade = 1 ÷ (2 × frame rate)) entrega o borrão de movimento a que o olho está
+- [[pwm-brilho-led]] — LED não regula intensidade baixando tensão: ele **pisca muito rápido** e o tempo ligado define o brilho aparen
+- [[scan-rate]] — quantas vezes por segundo o painel redesenha a imagem inteira, em Hz. O olho humano se satisfaz com pouco; **a
+- [[shuttersync]] — recurso das processadoras Brompton que alinha a varredura do painel com o obturador da câmera, permitindo ajus
+
+## ecossistema
+
+- [[ecossistema-blackmagic]] — o conjunto de câmera, switcher, gravador, conversores e software da Blackmagic desenhado para funcionar junto:
 
 ## marca
 
@@ -40,6 +47,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 ## mount
 
 - [[mount--e]] — mount eletrônico da Sony com flange focal distance curto (18 mm), usado da mirrorless de entrada ao topo de ci
+- [[mount--lpl]] — mount da ARRI criado para formato grande: diâmetro maior e flange focal distance menor que o [[mount--pl]] (44
 - [[mount--pl]] — mount padrão do cinema profissional, criado pela ARRI: trava mecânica de quatro flanges, sem contatos elétrico
 
 ## norma

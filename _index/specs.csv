@@ -8,20 +8,25 @@ arri-wide-gamut-4,ARRI Wide Gamut 4,colorspace,arri,universal,draft,media,,2026-
 arriraw,ARRIRAW,codec,arri,universal,draft,media,,2026-07-26,1,oficial,conceitos/codecs/arriraw.md
 blackmagic-design,Blackmagic Design,marca,,universal,draft,alta,,2026-07-26,1,oficial,marcas/blackmagic-design.md
 braw,Blackmagic RAW,codec,blackmagic-design,universal,draft,alta,,2026-07-26,1,oficial,conceitos/codecs/braw.md
+ecossistema-blackmagic,Ecossistema Blackmagic,ecossistema,blackmagic-design,universal,draft,alta,,2026-07-26,1,oficial,marcas/ecossistema-blackmagic.md
 filtro-nd,Filtro ND (densidade neutra),conceito,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/tecnicas/filtro-nd.md
 flicker-parede-led,Flicker ou banda horizontal filmando parede de LED,problema,,universal,draft,media,,2026-07-26,2,comunidade|oficial,troubleshooting/flicker-parede-led.md
 genlock,Genlock (sincronismo de referência),conceito,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/sinais/genlock.md
 itu-r,ITU-R (União Internacional de Telecomunicações — setor de rádio),orgao,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/orgaos/itu-r.md
 log-c4,LogC4 (ARRI),transfer-function,arri,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/log-c4.md
 mount--e,E-mount (Sony),mount,,universal,draft,alta,,2026-07-26,1,oficial,_meta/vocab/mount--e.md
+mount--lpl,LPL (Large Positive Lock — ARRI),mount,arri,universal,draft,alta,,2026-07-26,1,oficial,_meta/vocab/mount--lpl.md
 mount--pl,PL (Positive Lock),mount,,universal,draft,alta,,2026-07-26,1,oficial,_meta/vocab/mount--pl.md
 nr-35-trabalho-em-altura,NR-35 — Trabalho em Altura,norma,,universal,stub,media,seguranca,2026-07-26,1,oficial,seguranca/nr-35-trabalho-em-altura.md
 obturador-180,Regra do obturador 180°,conceito,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/tecnicas/obturador-180.md
 prores,Apple ProRes,codec,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/codecs/prores.md
+pwm-brilho-led,PWM e brilho em painel de LED,conceito,,universal,draft,media,,2026-07-26,1,oficial,led-vp/conceitos/pwm-brilho-led.md
 pyxis-6k,Blackmagic Pyxis 6K,camera,blackmagic-design,universal,draft,media,,2026-07-26,1,oficial,captacao/cameras/blackmagic/pyxis-6k.md
 rec-709,Rec. 709,colorspace,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/cor/rec-709.md
 s-gamut3-cine,S-Gamut3.Cine (Sony),colorspace,sony,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/s-gamut3-cine.md
 s-log3,S-Log3 (Sony),transfer-function,sony,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/s-log3.md
+scan-rate,Scan rate (taxa de varredura de painel de LED),conceito,,universal,draft,media,,2026-07-26,1,oficial,led-vp/conceitos/scan-rate.md
+shuttersync,ShutterSync (Brompton),conceito,brompton,universal,draft,media,,2026-07-26,1,oficial,led-vp/conceitos/shuttersync.md
 sony,Sony,marca,,universal,draft,alta,,2026-07-26,1,oficial,marcas/sony.md
 venice-2,Sony VENICE 2,camera,sony,universal,draft,alta,,2026-07-26,2,comunidade|oficial,captacao/cameras/sony/venice-2.md
 x-ocn,X-OCN (eXtended Original Camera Negative),codec,sony,universal,draft,media,,2026-07-26,1,oficial,conceitos/codecs/x-ocn.md

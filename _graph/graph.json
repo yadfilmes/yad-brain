@@ -30,6 +30,35 @@
    ]
   },
   {
+   "id": "mount--lpl",
+   "title": "LPL (Large Positive Lock — ARRI)",
+   "type": "mount",
+   "brand": "arri",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "_meta/vocab/mount--lpl.md",
+   "tldr": "mount da ARRI criado para formato grande: diâmetro maior e flange focal distance menor que o [[mount--pl]] (44 mm contra 52 mm). Aceita lente PL por adaptador; o contrário é impossível.",
+   "aliases": [
+    "LPL",
+    "LPL mount",
+    "Large Positive Lock"
+   ],
+   "tags": [
+    "mount",
+    "optica",
+    "cine",
+    "arri",
+    "large-format"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
    "id": "mount--pl",
    "title": "PL (Positive Lock)",
    "type": "mount",
@@ -622,6 +651,94 @@
    ]
   },
   {
+   "id": "pwm-brilho-led",
+   "title": "PWM e brilho em painel de LED",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "led-vp/conceitos/pwm-brilho-led.md",
+   "tldr": "LED não regula intensidade baixando tensão: ele **pisca muito rápido** e o tempo ligado define o brilho aparente (PWM). Consequência contraintuitiva: **baixar o brilho do painel piora a estabilidade na câmera**, porque s",
+   "aliases": [
+    "PWM",
+    "pulse width modulation",
+    "modulação por largura de pulso",
+    "brilho LED"
+   ],
+   "tags": [
+    "led-wall",
+    "virtual-production",
+    "flicker",
+    "brilho"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "scan-rate",
+   "title": "Scan rate (taxa de varredura de painel de LED)",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "led-vp/conceitos/scan-rate.md",
+   "tldr": "quantas vezes por segundo o painel redesenha a imagem inteira, em Hz. O olho humano se satisfaz com pouco; **a câmera não**. Painel de scan baixo entrega banda horizontal ou cintilação no take, mesmo parecendo perfeito a",
+   "aliases": [
+    "scan rate",
+    "taxa de varredura",
+    "refresh rate",
+    "taxa de atualização",
+    "Hz"
+   ],
+   "tags": [
+    "led-wall",
+    "virtual-production",
+    "flicker",
+    "sincronia"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "shuttersync",
+   "title": "ShutterSync (Brompton)",
+   "type": "conceito",
+   "brand": "brompton",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "led-vp/conceitos/shuttersync.md",
+   "tldr": "recurso das processadoras Brompton que alinha a varredura do painel com o obturador da câmera, permitindo ajuste fino de **fase** além do casamento de frequência. É a ferramenta que resolve a banda residual quando [[genl",
+   "aliases": [
+    "ShutterSync",
+    "Shutter Sync",
+    "sincronia de obturador"
+   ],
+   "tags": [
+    "led-wall",
+    "virtual-production",
+    "flicker",
+    "sincronia",
+    "brompton"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
    "id": "arri",
    "title": "ARRI",
    "type": "marca",
@@ -673,6 +790,36 @@
     "switcher",
     "software",
     "conversores"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "ecossistema-blackmagic",
+   "title": "Ecossistema Blackmagic",
+   "type": "ecossistema",
+   "brand": "blackmagic-design",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "marcas/ecossistema-blackmagic.md",
+   "tldr": "o conjunto de câmera, switcher, gravador, conversores e software da Blackmagic desenhado para funcionar junto: [[braw]] da câmera abre no Resolve com a cor já declarada, o ATEM fala com o HyperDeck, e o custo total do fl",
+   "aliases": [
+    "ecossistema Blackmagic",
+    "mundo Blackmagic",
+    "fluxo Blackmagic",
+    "BMD workflow"
+   ],
+   "tags": [
+    "ecossistema",
+    "blackmagic",
+    "live",
+    "pos",
+    "integracao"
    ],
    "n_fontes": 1,
    "tiers": [
@@ -781,6 +928,24 @@
    "de": "mount--e",
    "aresta": "see_also",
    "para": "mount--pl",
+   "derivada": false
+  },
+  {
+   "de": "mount--lpl",
+   "aresta": "made_by",
+   "para": "arri",
+   "derivada": false
+  },
+  {
+   "de": "mount--lpl",
+   "aresta": "see_also",
+   "para": "mount--pl",
+   "derivada": false
+  },
+  {
+   "de": "mount--lpl",
+   "aresta": "see_also",
+   "para": "mount--e",
    "derivada": false
   },
   {
@@ -1312,6 +1477,60 @@
    "derivada": false
   },
   {
+   "de": "pwm-brilho-led",
+   "aresta": "see_also",
+   "para": "flicker-parede-led",
+   "derivada": false
+  },
+  {
+   "de": "pwm-brilho-led",
+   "aresta": "see_also",
+   "para": "scan-rate",
+   "derivada": false
+  },
+  {
+   "de": "scan-rate",
+   "aresta": "see_also",
+   "para": "flicker-parede-led",
+   "derivada": false
+  },
+  {
+   "de": "scan-rate",
+   "aresta": "see_also",
+   "para": "genlock",
+   "derivada": false
+  },
+  {
+   "de": "scan-rate",
+   "aresta": "see_also",
+   "para": "obturador-180",
+   "derivada": false
+  },
+  {
+   "de": "shuttersync",
+   "aresta": "see_also",
+   "para": "flicker-parede-led",
+   "derivada": false
+  },
+  {
+   "de": "shuttersync",
+   "aresta": "see_also",
+   "para": "scan-rate",
+   "derivada": false
+  },
+  {
+   "de": "shuttersync",
+   "aresta": "see_also",
+   "para": "genlock",
+   "derivada": false
+  },
+  {
+   "de": "shuttersync",
+   "aresta": "see_also",
+   "para": "obturador-180",
+   "derivada": false
+  },
+  {
    "de": "arri",
    "aresta": "see_also",
    "para": "alexa-35",
@@ -1342,6 +1561,30 @@
    "derivada": false
   },
   {
+   "de": "ecossistema-blackmagic",
+   "aresta": "made_by",
+   "para": "blackmagic-design",
+   "derivada": false
+  },
+  {
+   "de": "ecossistema-blackmagic",
+   "aresta": "see_also",
+   "para": "pyxis-6k",
+   "derivada": false
+  },
+  {
+   "de": "ecossistema-blackmagic",
+   "aresta": "see_also",
+   "para": "braw",
+   "derivada": false
+  },
+  {
+   "de": "ecossistema-blackmagic",
+   "aresta": "see_also",
+   "para": "aces",
+   "derivada": false
+  },
+  {
    "de": "sony",
    "aresta": "see_also",
    "para": "venice-2",
@@ -1350,7 +1593,7 @@
   {
    "de": "flicker-parede-led",
    "aresta": "caused_by",
-   "para": "shutter-angle",
+   "para": "obturador-180",
    "derivada": false
   },
   {
@@ -1385,14 +1628,14 @@
   },
   {
    "de": "flicker-parede-led",
-   "aresta": "diagnosed_with",
-   "para": "teste-de-shutter",
+   "aresta": "see_also",
+   "para": "obturador-180",
    "derivada": false
   },
   {
    "de": "flicker-parede-led",
    "aresta": "see_also",
-   "para": "obturador-180",
+   "para": "scan-rate",
    "derivada": false
   },
   {

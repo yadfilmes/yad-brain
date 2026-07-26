@@ -9,11 +9,10 @@ status: draft
 confidence: media
 updated: 2026-07-26
 rel:
-  caused_by: [shutter-angle, genlock, scan-rate, pwm-brilho-led]
+  caused_by: [obturador-180, genlock, scan-rate, pwm-brilho-led]
   resolved_by: [shuttersync, genlock]
-  diagnosed_with: [teste-de-shutter]
   known_issue: []
-  see_also: [obturador-180]
+  see_also: [obturador-180, scan-rate]
 sources:
   - {url: "https://www.bromptontech.com", tier: oficial, ret: 2026-07-26, nota: "documentação de ShutterSync"}
   - {url: "https://www.reddit.com/r/virtualproduction/", tier: comunidade, ret: 2026-07-26, nota: "casos relatados de banda em 24p"}
