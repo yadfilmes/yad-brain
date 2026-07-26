@@ -84,6 +84,16 @@ RUIDO_DE_HOST = {
     "jp", "de", "cn", "fr", "es", "it", "nl", "au", "ca",
 }
 WIKILINK = re.compile(r"\[\[([^\]]+)\]\]")
+# Conteudo de pratica de campo, reconhecido pela forma e nao pelo titulo da
+# secao — renomear "## Gotchas" para "## Quando nao e isso" nao deve escapar.
+# Apertado depois de medir: "em set" e "conferir antes" disparavam em nota
+# que so MENCIONA uso de set. A regra existe para conteudo que PUBLICA
+# recomendacao — conselho imperativo, nao contexto.
+PRATICA_NO_CORPO = re.compile(
+    r"(##\s*Gotchas|regra (?:pr[aá]tica|de campo)|pr[aá]tica de campo"
+    r"|erro (?:cl[aá]ssico|comum) (?:[eé]|de|em|ao|aqui|nesse)|na pr[aá]tica,"
+    r"|nunca (?:usar|fazer|deixar|improvis)|sempre (?:conferir|usar|desenrolar))",
+    re.IGNORECASE)
 # 3a linha da rubrica de confianca: afirmacao numerica sem fonte forte -> baixa.
 # Unidades do dominio do acervo; ver o limite declarado em rubrica-confianca.md.
 NUMERO_COM_UNIDADE = re.compile(
@@ -424,12 +434,20 @@ def main():
         # Padrão novo nº 7 do lote 03: prática de campo sustentada por fonte
         # oficial. Oficial sustenta número; prática pede comunidade ou
         # campo-proprio — AGENTS.md proíbe trocar um pelo outro.
-        tiers_nota = {f.get("tier") for f in fontes if isinstance(f, dict)}
-        tem_pratica = any(m in corpo for m in
-                          ("## Gotchas", "Regra prática", "regra prática", "prática de campo"))
-        if tem_pratica and not (tiers_nota - {"oficial"}):
-            aviso(rel, "conteúdo de prática apoiado só em fonte 'oficial' — "
-                       "prática pede lab, educacao, comunidade ou campo-proprio")
+        # Caminho de escape achado no lote de elétrica: a regra só disparava
+        # quando os tiers eram EXCLUSIVAMENTE 'oficial'. Uma fonte `educacao`
+        # sobre a norma bastava para calar o aviso numa nota cheia de gotcha
+        # que essa fonte não cobre. Agora exige fonte de prática COM `cit` —
+        # a transcrição é o que prova que a fonte diz alguma coisa.
+        tem_pratica = bool(PRATICA_NO_CORPO.search(corpo))
+        de_pratica = [f for f in fontes if isinstance(f, dict)
+                      and f.get("tier") in ("comunidade", "campo-proprio", "lab", "educacao")]
+        if tem_pratica and not de_pratica:
+            aviso(rel, "conteúdo de prática sem fonte de prática — "
+                       "pede tier comunidade, campo-proprio, lab ou educacao")
+        elif tem_pratica and not any(f.get("cit") for f in de_pratica):
+            aviso(rel, "conteúdo de prática cuja fonte não tem 'cit' — sem a "
+                       "transcrição não há como saber se a fonte cobre o gotcha")
 
         # corpo
         if "**TL;DR**" not in corpo:

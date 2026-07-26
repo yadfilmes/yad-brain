@@ -24,8 +24,10 @@ Markdown. **Não leia diretórios inteiros.** Este arquivo é o mapa; siga-o.
 ## Como responder
 
 **Contrato de resposta — toda resposta declara:**
-- **Fonte e tier.** `oficial` e `lab` sustentam número; `comunidade` e
-  `educacao` sustentam prática e opinião — nunca troque um pelo outro.
+- **Fonte e tier.** `oficial` e `lab` sustentam **número**; `comunidade` e
+  `campo-proprio` sustentam **prática de campo e gotcha**; `educacao` sustenta
+  **síntese e contexto** — e só sustenta prática quando o trecho citado for
+  ele próprio sobre a prática. Nunca troque um pelo outro.
 - **Escopo.** Spec condicional vai com as condições: "120 fps *@ 4K crop,
   firmware ≥ 3.0*". Número sem escopo é meia-verdade.
 - **Conflito**, quando a nota registrar um: apresente os dois lados.

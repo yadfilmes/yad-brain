@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| **Versão** | 1.2 — ver histórico em S.11 |
-| **Data** | 2026-07-24 (v1.0) · 2026-07-26 (v1.1 e v1.2) |
+| **Versão** | 1.3 — ver histórico em S.11 |
+| **Data** | 2026-07-24 (v1.0) · 2026-07-26 (v1.1 a v1.3) |
 | **Projeto** | Cérebro Audiovisual (`yadfilmes/yad-brain`) |
 | **Regra única** | Nenhum artefato do projeto é aceito com nota computada < 92/100 ou com qualquer item eliminatório reprovado. Abaixo disso: corrigir e re-revisar, até 3 ciclos; sem passar, escala para humano — **nunca** se força a nota. |
 | **Destino no repo** | `_meta/qa/protocolo-92.md` (Fase 0 da fundação) |
@@ -108,10 +108,10 @@ Regra de fechamento: **artefato sem rubrica mapeada não existe no projeto** —
 
 | # | Item (binário) | Peso |
 |---|---|---|
-| 1 | TL;DR na 1ª linha do corpo, auto-suficiente (responde "o que é e por que importa" sem abrir o resto) | 15 |
+| 1 | TL;DR na **1ª linha de prosa** do corpo — após o título e, quando a nota for `risco: seguranca`, após o disclaimer obrigatório. Auto-suficiente: responde "o que é e por que importa" sem abrir o resto | 15 |
 | 2 | Specs em linhas `chave: valor` greppáveis; **toda spec condicional carrega as condições na mesma linha** (claim-lite) | 15 |
 | 3 | Arestas completas e específicas para o tipo de nó — **conjunto mínimo fechado em `_meta/arestas-minimas.md`**, cobrado pelo `validate.py`. O revisor confere o veredito da máquina, não recria o critério | 12 |
-| 4 | Fontes: ≥1 oficial para specs; URLs resolvem; `loc` quando a fonte é documento paginado | 10 |
+| 4 | **Rastreabilidade** da fonte: URLs resolvem; `loc` localiza (não repete o título do documento); `cit` transcreve o trecho que sustenta a afirmação. *A exigência de tier forte para spec numérica é do gate G3 — não se mede duas vezes* | 10 |
 | 5 | Aliases completos (grafias com/sem acento, códigos de modelo, termo EN) | 8 |
 | 6 | Posicionamento presente (contra quem compete, para quem faz sentido) — ficha técnica sozinha não é conhecimento | 8 |
 | 7 | Dicas de comunidade parafraseadas, citadas com tier, **sem handles** (LGPD), sem colagem | 8 |
@@ -305,6 +305,34 @@ Cada valor acima está aplicado no texto como padrão inicial; alterá-los é pr
 
 A meta-regra 8 exige que a régua seja versionada e mude por PR, nunca dentro de
 um ciclo de correção. Este é o registro.
+
+### v1.3 — 2026-07-26 · os três defeitos que o lote de elétrica achou na régua
+
+O revisor do lote 05 levantou três defeitos **na régua**, e por disciplina não
+os usou para alterar nota nenhuma — registrou e mandou a PR. É esta.
+
+| # | defeito | correção |
+|---|---|---|
+| 1 | **Item 1 colidia com o disclaimer obrigatório.** Nota `risco: seguranca` é obrigada a carregar disclaimer; se ele vier antes do TL;DR, o item reprova **por construção**. Eram 15 pontos que `nr-10` e `nr-35` não podiam recuperar | item 1 passa a ler "1ª linha **de prosa** — após o título e, quando houver, após o disclaimer obrigatório" |
+| 2 | **Item 4 media o mesmo que o gate G3.** Nas quatro notas do lote os dois foram decididos pela mesma evidência; os 10 pontos do item não acrescentaram diagnóstico. As outras duas pernas do item (URL resolve, `loc` presente) passaram nas quatro | item 4 vira **rastreabilidade**: URL resolve, `loc` localiza sem repetir o título, `cit` transcreve o trecho. Tier forte para número continua sendo do G3, e não se mede duas vezes |
+| 3 | **A heurística de prática tinha caminho de escape novo.** Só disparava quando os tiers eram *exclusivamente* `oficial` — uma fonte `educacao` sobre a norma bastava para calar o aviso numa nota cheia de gotcha que essa fonte não cobre | passa a exigir fonte de prática **com `cit`**, e o gatilho reconhece a **forma** (conselho imperativo) em vez do título da seção |
+
+**Incoerência de documento resolvida junto.** O `conventions.md` dizia que
+`educacao` serve para "síntese e contexto" e `comunidade`/`campo-proprio` para
+"experiência de campo, gotchas"; o `AGENTS.md` dizia que "comunidade e
+`educacao` sustentam prática". **Terceira vez neste projeto que dois artefatos
+meus divergem e o mais frouxo é o que vale na prática** — as duas anteriores
+foram régua × script na 4ª e na 3ª linha da rubrica de confiança.
+
+Resolvido a favor do `conventions.md`, que é o mais preciso: `educacao`
+sustenta prática **apenas quando o trecho citado for ele próprio sobre a
+prática**. O `AGENTS.md` foi alinhado.
+
+**Efeito medido:** 45 avisos novos, todos de notas com `## Gotchas` sem fonte
+de campo. É dívida real e antiga, que só agora ficou visível — e é exatamente o
+que o tier `campo-proprio` (R6, decisão do dono pendente) existe para pagar.
+
+**Nada mudou no corte 92 nem nos pesos.**
 
 ### v1.2 — 2026-07-26 · a recalibração que não mexeu no corte
 

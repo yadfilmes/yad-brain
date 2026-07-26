@@ -288,6 +288,31 @@ for txt, esperado in NUM:
 checa("número dentro de bloco de código é comando, não afirmação",
       not V.tem_afirmacao_numerica("veja:\n```\npython3 x.py --potencia 5000\n```"))
 
+print("\nconteúdo de prática: reconhece a forma, não o título da seção")
+
+# Padrão nº 15 do lote 04: o gatilho era por literal ("## Gotchas") e escapava
+# renomeando a seção. E a primeira versão do gatilho novo disparava em nota que
+# só MENCIONA set — as duas direções estão travadas aqui.
+PRATICA = [
+    ("## Gotchas\n- cabo enrolado conduz menos", True),
+    ("Regra prática de campo: acender em escada", True),
+    ("O erro clássico é ninguém conferir onde ligou", True),
+    ("Nunca improvisar a ligação do quadro", True),
+    ("Na prática, o mount decide mais que o corpo", True),
+    ("Padrão de vídeo profissional sobre cabo coaxial.", False),
+    ("A norma estabelece condições mínimas de segurança.", False),
+    ("O sensor tem 6K e grava em 12 bits.", False),
+    ("É muito usado em set de publicidade brasileira.", False),
+]
+for txt, esperado in PRATICA:
+    checa(f"prática? {txt[:34]!r}",
+          bool(V.PRATICA_NO_CORPO.search(txt)) == esperado)
+
+checa("renomear a seção não escapa do gatilho",
+      bool(V.PRATICA_NO_CORPO.search(
+          "## Quando não é isso\nNunca deixar o cabo enrolado no carretel")))
+
+
 print("\nwikilink de corpo")
 checa("regex de wikilink acha o alvo",
       V.WIKILINK.findall("ver [[hmi]] e [[gerador]]") == ["hmi", "gerador"])
