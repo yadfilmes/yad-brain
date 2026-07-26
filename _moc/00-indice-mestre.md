@@ -29,7 +29,8 @@ Os índices automáticos ficam em `_index/`; este aqui é curado à mão.
 | **Conceitos** | [[filtro-nd]] · [[obturador-180]] · [[genlock]] |
 | **Diagnóstico** | [[flicker-parede-led]] |
 | **Segurança** | [[nr-35-trabalho-em-altura]] |
-| **Marcas** | [[sony]] · [[arri]] · [[blackmagic-design]] |
+| **Luz** | [[ls-600d-pro]] · [[evoke-2400b]] · [[temperatura-de-cor]] · [[cri-tlci-ssi]] · [[lei-do-inverso-do-quadrado]] |
+| **Marcas** | [[sony]] · [[arri]] · [[blackmagic-design]] · [[aputure]] · [[nanlux]] |
 
 ## Índices automáticos
 

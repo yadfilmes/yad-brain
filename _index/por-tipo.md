@@ -33,21 +33,31 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 ## conceito
 
+- [[cri-tlci-ssi]] — quatro métricas que tentam responder "essa luz reproduz cor direito?". **CRI é a mais citada e a mais fraca**;
 - [[filtro-nd]] — filtro cinza que corta luz sem (idealmente) alterar cor, para manter diafragma aberto e obturador 180° sob sol
 - [[genlock]] — sinal de referência comum que faz vários equipamentos varrerem o quadro no mesmo instante. Sem ele, cada câmer
+- [[lei-do-inverso-do-quadrado]] — dobrar a distância entre a luz e o sujeito derruba a intensidade a **um quarto** (dois stops), não à metade. É
 - [[obturador-180]] — manter o obturador em 180° (velocidade = 1 ÷ (2 × frame rate)) entrega o borrão de movimento a que o olho está
 - [[pwm-brilho-led]] — LED não regula intensidade baixando tensão: ele **pisca muito rápido** e o tempo ligado define o brilho aparen
 - [[scan-rate]] — quantas vezes por segundo o painel redesenha a imagem inteira, em Hz. O olho humano se satisfaz com pouco; **a
 - [[shuttersync]] — recurso das processadoras Brompton que alinha a varredura do painel com o obturador da câmera, permitindo ajus
+- [[temperatura-de-cor]] — CCT, em Kelvin, descreve se a luz é "quente" (3200 K, tungstênio) ou "fria" (5600 K, luz do dia). Mas **um eix
 
 ## ecossistema
 
 - [[ecossistema-blackmagic]] — o conjunto de câmera, switcher, gravador, conversores e software da Blackmagic desenhado para funcionar junto:
 
+## fixture
+
+- [[evoke-2400b]] — COB bicolor de 2400 W, na faixa de potência que compete com HMI grande. É a resposta da categoria a quem preci
+- [[ls-600d-pro]] — COB de 600 W daylight com montagem Bowens, resistente a intempérie e alimentável por AC ou bateria. Virou o ca
+
 ## marca
 
+- [[aputure]] — fabricante chinesa que reposicionou o mercado de iluminação: potência e recursos de fixture profissional a pre
 - [[arri]] — fabricante alemã centenária, referência de cinema em três frentes ao mesmo tempo: câmeras (ALEXA), iluminação 
 - [[blackmagic-design]] — fabricante australiana que mudou o preço-base do mercado: câmeras de cinema, switchers ATEM, conversores, grav
+- [[nanlux]] — linha profissional de alta potência da mesma casa da Nanlite, posicionada acima dela. Disputa com a Aputure a 
 - [[sony]] — fabricante japonesa presente em quase toda a cadeia audiovisual: câmeras de cinema (CineAlta/VENICE), broadcas
 
 ## midia

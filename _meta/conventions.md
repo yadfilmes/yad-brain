@@ -85,6 +85,43 @@ servem apenas para descoberta.
 Dados de cliente, orçamento e contrato **não entram neste repositório**,
 em zona nenhuma.
 
+## Preço — camada separada (planejado, ainda não implementado)
+
+Preço **não entra na nota de conhecimento**. Spec de equipamento é estável;
+cotação no Brasil move com câmbio, importação, sazonalidade e negociação — e
+preço velho é pior que preço nenhum, porque está confiantemente errado.
+
+Quando for implementado, o desenho é este:
+
+```
+_precos/                        zona: yad — nunca sai do time
+  diarias-AAAA.yaml             alexa-35: {valor, moeda, locadora,
+                                           data_cotacao, pacote}
+```
+
+| tipo de dado | zona | vai junto se o acervo for vendido? |
+|---|---|---|
+| `price_tier` qualitativo (budget…high-end) | `universal` | sim — já existe hoje |
+| diária de referência de mercado | `yad` | não |
+| diária negociada da YAD / preço de venda | `yad` | **nunca** |
+
+Quatro razões para ser camada separada e não campo na nota:
+
+1. A nota fica estável e vendável — o build comercial só não inclui `_precos/`.
+2. Atualizar preço não suja a nota nem invalida sua revisão no Protocolo 92.
+3. Validade muito mais curta: `data_cotacao` obrigatória e **90 dias** para
+   vencer (nota técnica tolera 12 meses). Vencida, a resposta avisa em vez de
+   repetir número velho com cara de certeza.
+4. Várias locadoras convivem para o mesmo item, cada uma com sua data — que é
+   como o mercado funciona.
+
+**O que destrava:** preço estruturado + calculadora de storage + notas de
+equipamento = orçamento montado pelo cérebro, e a pergunta "qual câmera me dá
+o melhor resultado por real neste job" cruzando com `budget_alternative_to`.
+
+Ao implementar: atualizar a pergunta Q28 do conjunto-ouro, que hoje afirma que
+preço está fora de escopo.
+
 ## Segurança
 
 Notas com `risco: seguranca` (elétrica, rigging, altura, RF, drone):

@@ -947,6 +947,186 @@
    ]
   },
   {
+   "id": "cri-tlci-ssi",
+   "title": "CRI, TLCI, SSI e TM-30 — qualidade de cor de fixture",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "luz/conceitos/cri-tlci-ssi.md",
+   "tldr": "quatro métricas que tentam responder \"essa luz reproduz cor direito?\". **CRI é a mais citada e a mais fraca**; TLCI foi feita para câmera; SSI compara espectros; TM-30 é a mais completa. Fabricante anuncia o número que l",
+   "aliases": [
+    "CRI",
+    "TLCI",
+    "SSI",
+    "TM-30",
+    "Ra",
+    "índice de reprodução de cor",
+    "color rendering"
+   ],
+   "tags": [
+    "luz",
+    "cor",
+    "fotometria",
+    "metrica",
+    "qualidade"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "lei-do-inverso-do-quadrado",
+   "title": "Lei do inverso do quadrado",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "luz/conceitos/lei-do-inverso-do-quadrado.md",
+   "tldr": "dobrar a distância entre a luz e o sujeito derruba a intensidade a **um quarto** (dois stops), não à metade. É a física que explica por que aproximar a luz um pouco muda tudo, e por que a fotometria do fabricante só faz ",
+   "aliases": [
+    "inverse square law",
+    "lei do quadrado inverso",
+    "queda de luz",
+    "falloff"
+   ],
+   "tags": [
+    "luz",
+    "fotometria",
+    "exposicao",
+    "fisica"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "temperatura-de-cor",
+   "title": "Temperatura de cor (CCT) e tint",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "luz/conceitos/temperatura-de-cor.md",
+   "tldr": "CCT, em Kelvin, descreve se a luz é \"quente\" (3200 K, tungstênio) ou \"fria\" (5600 K, luz do dia). Mas **um eixo não basta**: o tint (verde ↔ magenta) é a segunda dimensão, e é onde mora a maior parte dos problemas de cor",
+   "aliases": [
+    "CCT",
+    "temperatura de cor",
+    "correlated color temperature",
+    "Kelvin",
+    "tint",
+    "green-magenta"
+   ],
+   "tags": [
+    "luz",
+    "cor",
+    "fotometria",
+    "balanco-de-branco"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "ls-600d-pro",
+   "title": "Aputure LS 600d Pro",
+   "type": "fixture",
+   "brand": "aputure",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "luz/fixtures/aputure/ls-600d-pro.md",
+   "tldr": "COB de 600 W daylight com montagem Bowens, resistente a intempérie e alimentável por AC ou bateria. Virou o cavalo de batalha do mercado por entregar potência de HMI de médio porte a uma fração do preço, com o ecossistem",
+   "aliases": [
+    "LS 600d Pro",
+    "600d",
+    "Light Storm 600d Pro",
+    "LS600d"
+   ],
+   "tags": [
+    "luz",
+    "cob",
+    "daylight",
+    "bowens",
+    "custo-beneficio"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "evoke-2400b",
+   "title": "Nanlux Evoke 2400B",
+   "type": "fixture",
+   "brand": "nanlux",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "luz/fixtures/nanlux/evoke-2400b.md",
+   "tldr": "COB bicolor de 2400 W, na faixa de potência que compete com HMI grande. É a resposta da categoria a quem precisa **furar luz do dia** ou encher um difusor grande em externa, sem reator e sem gerador dedicado a lâmpada de",
+   "aliases": [
+    "Evoke 2400B",
+    "Nanlux Evoke 2400",
+    "Evoke 2400"
+   ],
+   "tags": [
+    "luz",
+    "cob",
+    "bicolor",
+    "alta-potencia",
+    "externa"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "aputure",
+   "title": "Aputure",
+   "type": "marca",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "marcas/aputure.md",
+   "tldr": "fabricante chinesa que reposicionou o mercado de iluminação: potência e recursos de fixture profissional a preço que produtora pequena alcança. Mantém a marca **amaran** como linha de entrada, e o padrão Bowens como apos",
+   "aliases": [
+    "Aputure",
+    "Aputure Imaging",
+    "amaran"
+   ],
+   "tags": [
+    "marca",
+    "luz",
+    "led",
+    "custo-beneficio"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
    "id": "arri",
    "title": "ARRI",
    "type": "marca",
@@ -1028,6 +1208,34 @@
     "live",
     "pos",
     "integracao"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "nanlux",
+   "title": "Nanlux",
+   "type": "marca",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "marcas/nanlux.md",
+   "tldr": "linha profissional de alta potência da mesma casa da Nanlite, posicionada acima dela. Disputa com a Aputure a faixa em que LED substitui HMI: fixtures de 1200 W a 2400 W e acima, para externa e difusão grande.",
+   "aliases": [
+    "Nanlux",
+    "Nanlite",
+    "Nanguang"
+   ],
+   "tags": [
+    "marca",
+    "luz",
+    "led",
+    "alta-potencia"
    ],
    "n_fontes": 1,
    "tiers": [
@@ -1890,6 +2098,90 @@
    "derivada": false
   },
   {
+   "de": "cri-tlci-ssi",
+   "aresta": "see_also",
+   "para": "temperatura-de-cor",
+   "derivada": false
+  },
+  {
+   "de": "lei-do-inverso-do-quadrado",
+   "aresta": "see_also",
+   "para": "temperatura-de-cor",
+   "derivada": false
+  },
+  {
+   "de": "lei-do-inverso-do-quadrado",
+   "aresta": "see_also",
+   "para": "filtro-nd",
+   "derivada": false
+  },
+  {
+   "de": "temperatura-de-cor",
+   "aresta": "see_also",
+   "para": "cri-tlci-ssi",
+   "derivada": false
+  },
+  {
+   "de": "ls-600d-pro",
+   "aresta": "made_by",
+   "para": "aputure",
+   "derivada": false
+  },
+  {
+   "de": "ls-600d-pro",
+   "aresta": "competes_with",
+   "para": "evoke-2400b",
+   "derivada": false
+  },
+  {
+   "de": "ls-600d-pro",
+   "aresta": "see_also",
+   "para": "temperatura-de-cor",
+   "derivada": false
+  },
+  {
+   "de": "ls-600d-pro",
+   "aresta": "see_also",
+   "para": "cri-tlci-ssi",
+   "derivada": false
+  },
+  {
+   "de": "ls-600d-pro",
+   "aresta": "see_also",
+   "para": "lei-do-inverso-do-quadrado",
+   "derivada": false
+  },
+  {
+   "de": "evoke-2400b",
+   "aresta": "made_by",
+   "para": "nanlux",
+   "derivada": false
+  },
+  {
+   "de": "evoke-2400b",
+   "aresta": "competes_with",
+   "para": "ls-600d-pro",
+   "derivada": false
+  },
+  {
+   "de": "evoke-2400b",
+   "aresta": "see_also",
+   "para": "temperatura-de-cor",
+   "derivada": false
+  },
+  {
+   "de": "evoke-2400b",
+   "aresta": "see_also",
+   "para": "lei-do-inverso-do-quadrado",
+   "derivada": false
+  },
+  {
+   "de": "aputure",
+   "aresta": "see_also",
+   "para": "ls-600d-pro",
+   "derivada": false
+  },
+  {
    "de": "arri",
    "aresta": "see_also",
    "para": "alexa-35",
@@ -1941,6 +2233,12 @@
    "de": "ecossistema-blackmagic",
    "aresta": "see_also",
    "para": "aces",
+   "derivada": false
+  },
+  {
+   "de": "nanlux",
+   "aresta": "see_also",
+   "para": "evoke-2400b",
    "derivada": false
   },
   {
