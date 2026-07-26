@@ -54,6 +54,11 @@ hardware, não ajuste de set.
 - Genlock entre câmera e processadora sempre que houver mais de uma câmera.
 - Usar o ajuste fino de fase da processadora (em produtos que oferecem).
 
+## Dimensionar antes de montar
+
+`tools/calc/led_wall.py --fps <frame rate>` devolve o refresh mínimo e lembra
+do genlock — boa parte deste problema se evita no orçamento, não em set.
+
 ## Quando não é isso
 
 Se a banda **não muda** ao variar shutter, brilho e genlock, provavelmente

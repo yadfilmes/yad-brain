@@ -47,6 +47,12 @@ mais comum de [[flicker-parede-led]].
 Interage diretamente com [[obturador-180]] (a velocidade que a câmera usa) e
 com [[genlock]] (a referência comum que impede a varredura de deslizar).
 
+## Dimensionar
+
+`python3 tools/calc/led_wall.py --largura 6 --altura 3 --pitch 2.6 --fps 24`
+calcula gabinetes, portas, energia, peso e o refresh mínimo para o frame
+rate da câmera.
+
 ## Gotchas
 
 - Especificação de fabricante às vezes mistura "refresh" e "scan" — pedir o

@@ -179,6 +179,16 @@ qualidade da abstenção continuam exigindo leitura humana ou de agente.
 - busca: glob:storage
 - fatos: calculadora
 
+### Q35 · calculo · Quantos gabinetes e quanta energia para uma parede de 6 x 3 m em P2.6?
+- espera: tools/calc/led_wall.py
+- busca: glob:led_wall
+- fatos: 72 gabinetes, 2304, circuitos
+
+### Q36 · calculo · Que refresh o painel precisa para filmar a 24 fps sem banda?
+- espera: tools/calc/led_wall.py, led-vp/conceitos/scan-rate.md
+- busca: glob:led_wall -> glob:scan-rate
+- fatos: 3840, obturador, genlock
+
 ---
 
 ## seguranca — exige norma e disclaimer

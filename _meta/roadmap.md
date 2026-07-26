@@ -28,7 +28,7 @@ Só existe `tools/calc/storage.py`. Ordem de valor por esforço:
 | família | uso | estado |
 |---|---|---|
 | mídia / storage | diário | **feito** |
-| parede de LED | gabinetes, portas, potência, shutter × scan × refresh | a fazer |
+| parede de LED | gabinetes, portas, potência, peso, shutter × scan × refresh | **feito** |
 | elétrica | corrente, balanceamento de fase, gerador (com disclaimer obrigatório) | a fazer |
 | óptica | profundidade de campo, FOV, crop, hiperfocal | a fazer |
 | áudio / timecode | conversão 23.976 ↔ 29.97, drift, delay por distância | sob demanda |

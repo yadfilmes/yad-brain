@@ -23,7 +23,9 @@ jobs:
         run: python3 tools/validate.py
 
       - name: Testar calculadoras
-        run: python3 tools/calc/test_storage.py
+        run: |
+          python3 tools/calc/test_storage.py
+          python3 tools/calc/test_led_wall.py
 
       - name: Avaliar recuperação (conjunto-ouro)
         run: python3 tools/eval.py
