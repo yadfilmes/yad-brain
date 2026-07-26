@@ -7,7 +7,8 @@ aputure,Aputure,marca,,universal,draft,alta,,2026-07-26,1,oficial,marcas/aputure
 arri,ARRI,marca,,universal,draft,alta,,2026-07-26,1,oficial,marcas/arri.md
 arri-wide-gamut-4,ARRI Wide Gamut 4,colorspace,arri,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/arri-wide-gamut-4.md
 arriraw,ARRIRAW,codec,arri,universal,draft,media,,2026-07-26,1,oficial,conceitos/codecs/arriraw.md
-atem-constellation-8k,Blackmagic ATEM Constellation 8K,switcher,blackmagic-design,universal,draft,alta,,2026-07-26,3,educacao|oficial,live/switchers/atem-constellation-8k.md
+atem-constellation-8k,Blackmagic ATEM Constellation 8K,switcher,blackmagic-design,universal,draft,alta,,2026-07-26,4,educacao|oficial,live/switchers/atem-constellation-8k.md
+atem-constellation-hd,Blackmagic ATEM Constellation HD e 4K Plus,switcher,blackmagic-design,universal,stub,baixa,,2026-07-26,1,oficial,live/switchers/atem-constellation-hd.md
 bat--b-mount,B-Mount (padrão de bateria),battery-mount,,universal,draft,media,,2026-07-26,1,oficial,_meta/vocab/bat--b-mount.md
 blackmagic-design,Blackmagic Design,marca,,universal,draft,alta,,2026-07-26,1,oficial,marcas/blackmagic-design.md
 braw,Blackmagic RAW,codec,blackmagic-design,universal,draft,alta,,2026-07-26,1,oficial,conceitos/codecs/braw.md

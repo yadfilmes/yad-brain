@@ -32,6 +32,24 @@ STATUS_VALIDOS = {"stub", "draft", "reviewed", "revisar"}
 CONFIANCA_VALIDA = {"alta", "media", "baixa"}
 ZONAS_VALIDAS = {"universal", "yad"}
 TIERS_VALIDOS = {"oficial", "lab", "educacao", "comunidade", "campo-proprio"}
+# Achado do lote-teste: o CI ficou limpo com duas arestas semanticamente
+# erradas. Regra de coerência de tipo — aresta X só aponta para tipo Y.
+TIPO_ESPERADO = {
+    "governed_by": {"orgao"},
+    "implements_standard": {"norma", "padrao", "interface"},
+    "made_by": {"marca", "ecossistema"},
+    "has_native_mount": {"mount"},
+    "accepts_mount": {"mount"},
+    "uses_battery_mount": {"battery-mount"},
+    "records_codec": {"codec"},
+    "accepts_media": {"midia"},
+    "paired_gamut": {"colorspace", "transfer-function"},
+    "conforms_to_pipeline": {"pipeline-cor"},
+    "reports_to": {"funcao"},
+    "part_of_department": {"departamento"},
+    "caused_by": {"conceito", "problema", "interface"},
+}
+
 RAIZ_DE_DOMINIO = re.compile(r"^https?://[^/]+/?$")
 SLUG = re.compile(r"^[a-z0-9]+(?:[-]{1,2}[a-z0-9]+)*$")
 LIMITE_PALAVRAS = 900          # ~1.200 tokens
@@ -88,7 +106,7 @@ def notas():
 
 def main():
     vocab = carregar_vocabulario()
-    registro, arestas_totais = {}, 0
+    registro, tipos, arestas_totais = {}, {}, 0
     lista = list(notas())
 
     # -------- passo 1: parse e checagens locais --------
@@ -117,6 +135,7 @@ def main():
                 erro(rel, f"id duplicado — já usado em {registro[ident]}")
             else:
                 registro[ident] = rel
+                tipos[ident] = dados.get("type", "")
 
         status = dados.get("status", "")
         if status and status not in STATUS_VALIDOS:
@@ -250,6 +269,12 @@ def main():
                 continue
             for alvo in fm.alvos(valor):
                 arestas_totais += 1
+                esperado = TIPO_ESPERADO.get(aresta)
+                if esperado and alvo in registro:
+                    tipo_alvo = tipos.get(alvo, "")
+                    if tipo_alvo and tipo_alvo not in esperado:
+                        erro(rel, f"aresta '{aresta}' aponta para type '{tipo_alvo}' "
+                                  f"(esperado: {'/'.join(sorted(esperado))}) — alvo '{alvo}'")
                 if alvo not in registro:
                     # Referência a nota ainda não escrita é NORMAL num acervo em
                     # construção — é a fila de trabalho, não um defeito. Mas uma

@@ -9,7 +9,7 @@ status: draft
 confidence: media
 updated: 2026-07-26
 rel:
-  implements_standard: [smpte]
+  governed_by: [smpte]
   alternative_to: [ndi]
   see_also: [genlock]
 sources:

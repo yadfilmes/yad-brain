@@ -57,6 +57,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 ## blackmagic-design
 
 - [[atem-constellation-8k]] — switcher de produção ao vivo em 2RU com **4 M/E**, **40 entradas 12G-SDI** e 16 keyers, com conversão de padrã
+- [[atem-constellation-hd]] — linha de switchers ATEM Constellation **distinta do modelo 8K**, para produção que não precisa de 8K nem de 40
 - [[braw]] — codec RAW parcialmente debayerizado da Blackmagic: guarda a informação de sensor como RAW, mas move parte do p
 - [[ecossistema-blackmagic]] — o conjunto de câmera, switcher, gravador, conversores e software da Blackmagic desenhado para funcionar junto:
 - [[pyxis-6k]] — câmera de cinema full-frame 6K da Blackmagic que grava [[braw]] internamente, vendida em versões de mount dist

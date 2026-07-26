@@ -115,6 +115,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 ## switcher
 
 - [[atem-constellation-8k]] — switcher de produção ao vivo em 2RU com **4 M/E**, **40 entradas 12G-SDI** e 16 keyers, com conversão de padrã
+- [[atem-constellation-hd]] — linha de switchers ATEM Constellation **distinta do modelo 8K**, para produção que não precisa de 8K nem de 40
 
 ## transfer-function
 

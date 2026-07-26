@@ -1142,7 +1142,7 @@
    "aliases": [
     "ATEM Constellation 8K",
     "Constellation 8K",
-    "ATEM Constellation"
+    "SWATEMSCN4/1ME4/8K"
    ],
    "tags": [
     "live",
@@ -1151,9 +1151,37 @@
     "12g-sdi",
     "8k"
    ],
-   "n_fontes": 3,
+   "n_fontes": 4,
    "tiers": [
     "educacao",
+    "oficial"
+   ]
+  },
+  {
+   "id": "atem-constellation-hd",
+   "title": "Blackmagic ATEM Constellation HD e 4K Plus",
+   "type": "switcher",
+   "brand": "blackmagic-design",
+   "zona": "universal",
+   "status": "stub",
+   "confidence": "baixa",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "live/switchers/atem-constellation-hd.md",
+   "tldr": "linha de switchers ATEM Constellation **distinta do modelo 8K**, para produção que não precisa de 8K nem de 40 entradas. Existe como nota principalmente para desambiguar: \"ATEM Constellation\" sozinho é ambíguo.",
+   "aliases": [
+    "ATEM Constellation HD",
+    "ATEM Constellation 4K Plus",
+    "Constellation HD"
+   ],
+   "tags": [
+    "live",
+    "switcher",
+    "broadcast",
+    "custo-beneficio"
+   ],
+   "n_fontes": 1,
+   "tiers": [
     "oficial"
    ]
   },
@@ -2523,7 +2551,7 @@
   },
   {
    "de": "sdi",
-   "aresta": "implements_standard",
+   "aresta": "governed_by",
    "para": "smpte",
    "derivada": false
   },
@@ -2559,20 +2587,62 @@
   },
   {
    "de": "atem-constellation-8k",
+   "aresta": "outputs_signal",
+   "para": "sdi",
+   "derivada": false
+  },
+  {
+   "de": "atem-constellation-8k",
    "aresta": "controls",
    "para": "tally",
    "derivada": false
   },
   {
    "de": "atem-constellation-8k",
-   "aresta": "implements_standard",
+   "aresta": "governed_by",
    "para": "smpte",
    "derivada": false
   },
   {
    "de": "atem-constellation-8k",
-   "aresta": "incompatible_with",
+   "aresta": "interoperates_with",
    "para": "ndi",
+   "derivada": false
+  },
+  {
+   "de": "atem-constellation-8k",
+   "aresta": "competes_with",
+   "para": "atem-constellation-hd",
+   "derivada": false
+  },
+  {
+   "de": "atem-constellation-hd",
+   "aresta": "made_by",
+   "para": "blackmagic-design",
+   "derivada": false
+  },
+  {
+   "de": "atem-constellation-hd",
+   "aresta": "part_of_ecosystem",
+   "para": "ecossistema-blackmagic",
+   "derivada": false
+  },
+  {
+   "de": "atem-constellation-hd",
+   "aresta": "accepts_signal",
+   "para": "sdi",
+   "derivada": false
+  },
+  {
+   "de": "atem-constellation-hd",
+   "aresta": "competes_with",
+   "para": "atem-constellation-8k",
+   "derivada": false
+  },
+  {
+   "de": "atem-constellation-hd",
+   "aresta": "distinct_from",
+   "para": "atem-constellation-8k",
    "derivada": false
   },
   {
@@ -2915,6 +2985,18 @@
    "de": "genlock",
    "aresta": "distinct_from",
    "para": "ndi",
+   "derivada": true
+  },
+  {
+   "de": "ndi",
+   "aresta": "interoperates_with",
+   "para": "atem-constellation-8k",
+   "derivada": true
+  },
+  {
+   "de": "atem-constellation-8k",
+   "aresta": "distinct_from",
+   "para": "atem-constellation-hd",
    "derivada": true
   },
   {
