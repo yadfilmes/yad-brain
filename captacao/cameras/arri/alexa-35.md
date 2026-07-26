@@ -8,7 +8,7 @@ zona: universal
 aliases: ["ALEXA 35", "Alexa 35", AL35]
 tags: [super35, arriraw, cinema-digital, latitude, netflix-approved]
 status: draft
-confidence: media
+confidence: baixa
 updated: 2026-07-26
 rel:
   made_by: [arri]

@@ -6,7 +6,7 @@ zona: universal
 aliases: [gaffer, "chefe de eletrica", "chefe de elétrica", "chefe de eletricistas", "chief lighting technician"]
 tags: [funcao, luz, eletrica, set, g-e]
 status: draft
-confidence: media
+confidence: baixa
 updated: 2026-07-26
 rel:
   reports_to: [diretor-de-fotografia]

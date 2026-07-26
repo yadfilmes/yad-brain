@@ -6,7 +6,7 @@ zona: universal
 aliases: [DoP, DP, "diretor de fotografia", "director of photography", "cinematographer", fotógrafo]
 tags: [funcao, camera, luz, autoria, set]
 status: draft
-confidence: media
+confidence: baixa
 updated: 2026-07-26
 rel:
   reports_to: [diretor]

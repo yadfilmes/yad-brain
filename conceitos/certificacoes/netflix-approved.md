@@ -6,7 +6,7 @@ zona: universal
 aliases: ["Netflix Approved", "Netflix approved camera", "lista Netflix", "Netflix Post Technology Alliance"]
 tags: [certificacao, entrega, streaming, camera, requisito]
 status: draft
-confidence: media
+confidence: baixa
 updated: 2026-07-26
 sources:
   - {url: "https://partnerhelp.netflixstudios.com/hc/en-us/articles/360000579527", tier: oficial, ret: 2026-07-26, nota: "requisitos de câmera para originais"}

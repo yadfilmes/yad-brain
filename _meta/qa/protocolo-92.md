@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| **Versão** | 1.1 — ver histórico em S.11 |
-| **Data** | 2026-07-24 (v1.0) · 2026-07-26 (v1.1) |
+| **Versão** | 1.2 — ver histórico em S.11 |
+| **Data** | 2026-07-24 (v1.0) · 2026-07-26 (v1.1 e v1.2) |
 | **Projeto** | Cérebro Audiovisual (`yadfilmes/yad-brain`) |
 | **Regra única** | Nenhum artefato do projeto é aceito com nota computada < 92/100 ou com qualquer item eliminatório reprovado. Abaixo disso: corrigir e re-revisar, até 3 ciclos; sem passar, escala para humano — **nunca** se força a nota. |
 | **Destino no repo** | `_meta/qa/protocolo-92.md` (Fase 0 da fundação) |
@@ -111,7 +111,7 @@ Regra de fechamento: **artefato sem rubrica mapeada não existe no projeto** —
 | 8 | Gotchas reais quando o item notoriamente os tem (VND barato sem "cruz" reprova) | 6 |
 | 9 | Atômica e na faixa de tamanho (300–1.200 tokens) | 6 |
 | 10 | Slug ASCII correto, pasta certa, template respeitado | 5 |
-| 11 | `confidence` coerente com a rubrica de confiança (fontes × corroboração) | 4 |
+| 11 | `confidence` coerente com **`_meta/qa/rubrica-confianca.md`** (fontes × corroboração). Declarar mais conservador que a tabela passa; mais otimista reprova | 4 |
 | 12 | `updated` e `status` corretos | 3 |
 
 ### 4.2 R-D — Documento de fundação/planejamento (100 pts)
@@ -298,6 +298,45 @@ Cada valor acima está aplicado no texto como padrão inicial; alterá-los é pr
 
 A meta-regra 8 exige que a régua seja versionada e mude por PR, nunca dentro de
 um ciclo de correção. Este é o registro.
+
+### v1.2 — 2026-07-26 · a recalibração que não mexeu no corte
+
+**A descoberta que mudou a pergunta.** Ao preparar a recalibração do corte 92,
+a aritmética mostrou que **o corte nunca foi o gargalo**:
+
+| item | peso | por que era inganhável |
+|---|---:|---|
+| 3 · arestas completas | 12 | critério não existia — julgamento do revisor a cada rodada (fechado na v1.1) |
+| 11 · `confidence` coerente | 4 | a "rubrica de confiança" que ele cita **não existia no repositório** |
+
+Dois itens inauditáveis somam **16 pontos inganháveis ⇒ máximo efetivo 84**,
+contra um corte de 92. **Nenhuma nota podia passar, por melhor que fosse.** É a
+explicação completa de 0 aprovadas em 11 avaliadas, sem precisar culpar as
+notas: a melhor delas (`aces`, 70) perdeu apenas 14 pontos além dos
+inganháveis.
+
+**Decisão do dono: destravar, não recalibrar.** Corte 92 e os 12 pesos seguem
+**exatamente como estavam**. O que muda é que o item 11 passou a ter documento:
+`_meta/qa/rubrica-confianca.md`, com tabela determinística de `confidence` em
+função de fontes × corroboração, piso mecânico no `validate.py` e os limites do
+piso escritos na própria rubrica.
+
+Com os dois itens fechados, o **máximo efetivo volta a 100** e o 92 passa a
+significar o que sempre pretendeu: *uma nota `reviewed` tolera no máximo um
+deslize moderado.* Pela primeira vez isso é uma afirmação testável.
+
+**Efeito imediato:** 31 das 63 notas declaravam `confidence` acima do que suas
+fontes sustentam — metade do acervo, invisível porque não havia régua. Todas
+corrigidas para o valor honesto. O caminho de volta para `alta` é acrescentar
+fonte independente com `loc`, que é o trabalho de R3.
+
+**Ainda em aberto (R9):** o item 4 continua juntando três exigências num
+binário só. E o gate G1 segue cobrindo número **órfão**, não número **mal
+transcrito** — foram 5 dos 6 defeitos da FX6, e fechar isso é trabalho de
+rubrica, não de script.
+
+**Próximo passo obrigatório:** um lote real sob a v1.2. Se ainda assim nada
+passar, aí sim a discussão é de calibração — e com dado, não com aritmética.
 
 ### v1.1 — 2026-07-26
 

@@ -6,7 +6,7 @@ zona: universal
 aliases: ["E-mount", "Sony E", "E mount", FE]
 tags: [mount, optica, sony, mirrorless]
 status: draft
-confidence: alta
+confidence: media
 updated: 2026-07-26
 rel:
   made_by: [sony]

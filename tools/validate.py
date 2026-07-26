@@ -57,6 +57,16 @@ TIPO_ESPERADO = {
 # Justificativa em _meta/arestas-minimas.md, "Piso universal".
 ISENTOS_DO_PISO = {"moc", "orgao", "certificacao"}
 
+# Rótulos de host que não identificam organização — descartados ao contar
+# fontes independentes (ver _meta/qa/rubrica-confianca.md).
+RUIDO_DE_HOST = {
+    "www", "pro", "docs", "doc", "support", "help", "partnerhelp", "forum",
+    "blog", "shop", "store", "api", "m", "en", "us", "br", "uk", "eu",
+    "com", "org", "net", "io", "co", "tv", "gov", "edu", "online", "info",
+    "jp", "de", "cn", "fr", "es", "it", "nl", "au", "ca",
+}
+ORDEM_CONFIANCA = {"baixa": 0, "media": 1, "alta": 2}
+
 RAIZ_DE_DOMINIO = re.compile(r"^https?://[^/]+/?$")
 SLUG = re.compile(r"^[a-z0-9]+(?:[-]{1,2}[a-z0-9]+)*$")
 LIMITE_PALAVRAS = 900          # ~1.200 tokens
@@ -129,6 +139,44 @@ def carregar_arestas_minimas():
                 regras[n]["grupos"].append(arestas)
     # seções de prosa que não declaram regra nenhuma não viram tipo
     return {t: r for t, r in regras.items() if r["obrigatorias"] or r["grupos"]}
+
+
+def organizacao(url):
+    """Extrai o 'token de marca' de uma URL, para contar fontes independentes.
+
+    Duas páginas do mesmo fabricante não se corroboram — repetem-se. Este é o
+    piso mecânico da rubrica de confiança: `pro.sony` e `www.sony.com` viram
+    ambos "sony". Limite conhecido e documentado: `nanlux.com` e
+    `nanliteus.com` são a mesma empresa e contam como duas — o contador erra
+    para o lado permissivo, e por isso o item 11 mantém parte de julgamento.
+    """
+    m = re.match(r"^https?://([^/]+)", url or "")
+    if not m:
+        return url or ""
+    partes = [p for p in m.group(1).lower().split(".") if p not in RUIDO_DE_HOST]
+    return partes[0] if partes else m.group(1).lower()
+
+
+def confianca_esperada(fontes, tem_lacuna):
+    """Aplica a tabela de _meta/qa/rubrica-confianca.md. Função pura.
+
+    Devolve o valor MAIS ALTO que as fontes sustentam. A nota pode declarar
+    esse valor ou um mais conservador; declarar mais otimista é que reprova.
+    """
+    if tem_lacuna:
+        return "baixa"
+    tiers = {f.get("tier") for f in fontes if isinstance(f, dict)}
+    orgs = {organizacao(f.get("url", "")) for f in fontes if isinstance(f, dict)}
+    orgs.discard("")
+    forte = bool(tiers & {"oficial", "lab"})
+    sem_loc = any(f.get("tier") in ("oficial", "lab") and not f.get("loc")
+                  for f in fontes if isinstance(f, dict))
+
+    if len(orgs) < 2:
+        return "baixa" if not forte else "media"
+    if not forte:
+        return "media"
+    return "media" if sem_loc else "alta"
 
 
 def checar_arestas_minimas(tipo, status, presentes, dispensas, regras, vocab):
@@ -301,14 +349,6 @@ def main():
             aviso(rel, "conteúdo de prática apoiado só em fonte 'oficial' — "
                        "prática pede lab, educacao, comunidade ou campo-proprio")
 
-        # 'media' virou valor-padrão automático: 5/5 notas do lote 03 com
-        # fonte única, sem loc e sem corroboração. Confiança é julgamento
-        # sobre evidência, não campo a preencher.
-        sem_loc = all(not f.get("loc") for f in fontes if isinstance(f, dict))
-        if conf == "media" and len(fontes) <= 1 and sem_loc and status != "stub":
-            aviso(rel, "confidence 'media' com fonte única sem 'loc' — "
-                       "sem corroboração o valor honesto é 'baixa'")
-
         # corpo
         if "**TL;DR**" not in corpo:
             erro(rel, "corpo sem TL;DR na abertura")
@@ -320,6 +360,17 @@ def main():
             erro(rel, f"confidence 'alta' com {pendencias} pendência(s) <!-- verificar --> no corpo")
         if pendencias and status == "reviewed":
             erro(rel, f"status 'reviewed' com {pendencias} pendência(s) <!-- verificar --> no corpo")
+
+        # Piso mecânico da rubrica de confiança (_meta/qa/rubrica-confianca.md).
+        # Declarar mais conservador que a tabela é permitido e honesto; mais
+        # otimista, não. O que a máquina NÃO confere está escrito na rubrica:
+        # se as fontes de fato dizem a mesma coisa é julgamento do revisor.
+        if conf and status != "stub":
+            teto = confianca_esperada(fontes, pendencias > 0)
+            if ORDEM_CONFIANCA[conf] > ORDEM_CONFIANCA[teto]:
+                msg = (f"confidence '{conf}' acima do que as fontes sustentam "
+                       f"('{teto}') — ver _meta/qa/rubrica-confianca.md")
+                (erro if status == "reviewed" else aviso)(rel, msg)
         palavras = len(corpo.split())
         if palavras > LIMITE_PALAVRAS:
             aviso(rel, f"nota longa ({palavras} palavras) — considerar dividir")

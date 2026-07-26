@@ -8,7 +8,7 @@ zona: universal
 aliases: ["LS 600d Pro", "600d", "Light Storm 600d Pro", "LS600d"]
 tags: [luz, cob, daylight, bowens, custo-beneficio]
 status: draft
-confidence: media
+confidence: baixa
 updated: 2026-07-26
 rel:
   made_by: [aputure]

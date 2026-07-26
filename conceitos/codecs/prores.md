@@ -6,7 +6,7 @@ zona: universal
 aliases: [ProRes, "Apple ProRes", "422 HQ", "4444 XQ"]
 tags: [codec, intraframe, mezanino, entrega, apple]
 status: draft
-confidence: alta
+confidence: media
 updated: 2026-07-26
 rel:
   made_by: [apple]

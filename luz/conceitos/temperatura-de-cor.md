@@ -6,7 +6,7 @@ zona: universal
 aliases: [CCT, "temperatura de cor", "correlated color temperature", Kelvin, tint, "green-magenta"]
 tags: [luz, cor, fotometria, balanco-de-branco]
 status: draft
-confidence: alta
+confidence: media
 updated: 2026-07-26
 rel:
   distinct_from: [cri-tlci-ssi]

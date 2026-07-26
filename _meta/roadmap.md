@@ -66,16 +66,17 @@ Ordem sugerida (a de captação e cor já existem):
 
 ---
 
-## R9 · Fechar os itens sub-especificados da R-N · **prioridade alta**
+## R9 · Fechar os itens sub-especificados da R-N · **2 de 3 feitos**
 
-O item 3 virou mecânico na v1.1 da rubrica (`_meta/arestas-minimas.md`). Ficam
-dois, com correção desenhada e **não aplicada** — mexer em régua por conta
-própria é o que a meta-regra 8 proíbe.
+| item | estado |
+|---|---|
+| **3** · arestas completas (12 pts) | **fechado na v1.1** — `_meta/arestas-minimas.md`, cobrado pelo `validate.py` |
+| **11** · `confidence` coerente (4 pts) | **fechado na v1.2** — `_meta/qa/rubrica-confianca.md`, com piso mecânico |
+| **4** · fontes (10 pts) | **aberto** — um binário só para três exigências (fonte oficial, URL que resolve, `loc`) |
 
-| item | defeito | correção proposta |
-|---|---|---|
-| **4** (10 pts) | um binário só para três exigências diferentes (fonte oficial, URL que resolve, `loc`) | dividir: parte mecânica (cada grupo de specs referencia um id de fonte; fonte de comunidade exige permalink) + parte de julgamento (o valor **como aparece na fonte**, com data `ret`) |
-| **11** (4 pts) | cobra coerência com uma "rubrica de confiança (fontes × corroboração)" **que não existe no repositório** | escrever a rubrica de confiança em `_meta/qa/`, ou remover o item — hoje ele é inauditável por construção |
+**Correção proposta para o item 4:** dividir em parte mecânica (cada grupo de
+specs referencia um id de fonte; fonte de comunidade exige permalink) e parte
+de julgamento (o valor **como aparece na fonte**, com data `ret`).
 
 **Gate G1, lacuna conhecida:** cobre número **órfão** (sem fonte ao lado); não
 cobre número **mal transcrito** — valor certo atribuído ao escopo errado, ou
@@ -83,11 +84,11 @@ afirmação atribuída a fonte que não a sustenta. Foram 5 dos 6 defeitos da FX
 Fechar isso é trabalho de rubrica, não de script: nenhum validador confere
 fidelidade sem abrir a fonte.
 
-**Aritmética que o dono precisa ver antes de decidir:** com os pesos atuais e
-corte em 92, a perda máxima tolerada é **8 pontos** — o que torna os itens 1, 2,
-3 e 4 gates disfarçados (falhar um sozinho já reprova). Ou os pesos se
-achatam, ou esses quatro viram gates declarados, ou o corte desce. **As três
-saídas são decisão do dono** — ver `2026-07/fx6-esforco-maximo-rn.md`.
+**Sobre o corte 92 — decidido em 2026-07-26.** A recalibração foi examinada e a
+decisão do dono foi **destravar, não recalibrar**: o corte nunca havia sido
+testado, porque os itens 3 e 11 somavam 16 pontos inganháveis e o máximo
+efetivo era 84. Corte e pesos seguem intactos. A calibração se valida agora
+para a frente, num lote real sob a v1.2 — ver S.11 do protocolo.
 
 ---
 

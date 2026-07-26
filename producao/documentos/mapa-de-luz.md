@@ -6,7 +6,7 @@ zona: universal
 aliases: ["mapa de luz", "lighting diagram", "planta de luz", "light plot", "diagrama de iluminacao", "diagrama de iluminação"]
 tags: [producao, documento, luz, prep, g-e]
 status: draft
-confidence: media
+confidence: baixa
 updated: 2026-07-26
 rel:
   template_for: [gaffer]

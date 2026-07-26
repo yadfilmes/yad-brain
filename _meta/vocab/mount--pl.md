@@ -6,7 +6,7 @@ zona: universal
 aliases: [PL, "PL mount", "Positive Lock", "montagem PL"]
 tags: [mount, optica, cine, padrao]
 status: draft
-confidence: alta
+confidence: media
 updated: 2026-07-26
 rel:
   made_by: [arri]

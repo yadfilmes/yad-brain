@@ -6,7 +6,7 @@ zona: universal
 aliases: [ND, "neutral density", IRND, VND, "densidade neutra", "filtro de densidade neutra"]
 tags: [exposicao, optica, filtro, fotometria]
 status: draft
-confidence: alta
+confidence: media
 updated: 2026-07-26
 rel:
   enables_technique: [obturador-180]

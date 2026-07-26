@@ -6,7 +6,7 @@ zona: universal
 aliases: ["180 degree shutter", "shutter 180", "regra dos 180 graus", "ângulo de obturador"]
 tags: [exposicao, movimento, motion-blur, cadencia]
 status: draft
-confidence: alta
+confidence: media
 updated: 2026-07-26
 rel:
   requires: [{to: filtro-nd, nota: "em luz alta, para manter o angulo sem fechar diafragma"}]

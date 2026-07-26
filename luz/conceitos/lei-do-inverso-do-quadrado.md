@@ -6,7 +6,7 @@ zona: universal
 aliases: ["inverse square law", "lei do quadrado inverso", "queda de luz", "falloff"]
 tags: [luz, fotometria, exposicao, fisica]
 status: draft
-confidence: alta
+confidence: media
 updated: 2026-07-26
 rel:
   see_also: [temperatura-de-cor, filtro-nd]

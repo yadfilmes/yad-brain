@@ -8,7 +8,7 @@ zona: universal
 aliases: [Pyxis, "Pyxis 6K", "Blackmagic Pyxis"]
 tags: [full-frame, braw, cinema-digital, custo-beneficio]
 status: draft
-confidence: media
+confidence: baixa
 updated: 2026-07-26
 rel:
   made_by: [blackmagic-design]

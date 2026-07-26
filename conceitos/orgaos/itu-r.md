@@ -6,7 +6,7 @@ zona: universal
 aliases: [ITU-R, ITU, UIT, "International Telecommunication Union"]
 tags: [orgao, norma, broadcast, cor]
 status: draft
-confidence: alta
+confidence: media
 updated: 2026-07-26
 rel:
   see_also: [rec-709]

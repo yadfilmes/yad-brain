@@ -6,7 +6,7 @@ zona: universal
 aliases: [AMPAS, Academy, "Academia de Artes e Ciências Cinematográficas", "Academy Sci-Tech"]
 tags: [orgao, norma, cor, padrao]
 status: draft
-confidence: alta
+confidence: media
 updated: 2026-07-26
 rel:
   see_also: [aces]

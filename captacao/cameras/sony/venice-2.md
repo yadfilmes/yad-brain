@@ -8,7 +8,7 @@ zona: universal
 aliases: [VENICE 2, Venice2, MPC-3610, "VENICE II"]
 tags: [full-frame, dual-base-iso, x-ocn, cinema-digital, netflix-approved]
 status: draft
-confidence: media
+confidence: baixa
 updated: 2026-07-26
 rel:
   made_by: [sony]

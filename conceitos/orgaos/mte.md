@@ -7,7 +7,7 @@ jurisdicao: BR
 aliases: [MTE, "Ministério do Trabalho", "Ministerio do Trabalho e Emprego", MTP]
 tags: [orgao, norma, seguranca, brasil, trabalho]
 status: draft
-confidence: media
+confidence: baixa
 updated: 2026-07-26
 rel:
   see_also: [nr-35-trabalho-em-altura]

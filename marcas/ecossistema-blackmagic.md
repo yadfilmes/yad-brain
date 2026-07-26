@@ -7,7 +7,7 @@ zona: universal
 aliases: ["ecossistema Blackmagic", "mundo Blackmagic", "fluxo Blackmagic", "BMD workflow"]
 tags: [ecossistema, blackmagic, live, pos, integracao]
 status: draft
-confidence: alta
+confidence: media
 updated: 2026-07-26
 rel:
   made_by: [blackmagic-design]

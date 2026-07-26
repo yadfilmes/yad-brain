@@ -7,7 +7,7 @@ zona: universal
 aliases: [X-OCN, XOCN, "X-OCN XT", "X-OCN ST", "X-OCN LT"]
 tags: [codec, raw, aquisicao, sony, cinema]
 status: draft
-confidence: media
+confidence: baixa
 updated: 2026-07-26
 rel:
   made_by: [sony]

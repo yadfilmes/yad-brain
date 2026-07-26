@@ -6,7 +6,7 @@ zona: universal
 aliases: ["call sheet", "ordem do dia", "callsheet", "OD", "plano de trabalho diário"]
 tags: [producao, documento, set, logistica, ad]
 status: draft
-confidence: media
+confidence: baixa
 updated: 2026-07-26
 rel:
   template_for: [producao]

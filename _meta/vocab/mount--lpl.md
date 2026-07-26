@@ -7,7 +7,7 @@ zona: universal
 aliases: [LPL, "LPL mount", "Large Positive Lock"]
 tags: [mount, optica, cine, arri, large-format]
 status: draft
-confidence: alta
+confidence: media
 updated: 2026-07-26
 rel:
   made_by: [arri]

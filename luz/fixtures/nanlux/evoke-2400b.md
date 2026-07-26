@@ -8,7 +8,7 @@ zona: universal
 aliases: ["Evoke 2400B", "Nanlux Evoke 2400", "Evoke 2400"]
 tags: [luz, cob, bicolor, alta-potencia, externa]
 status: draft
-confidence: media
+confidence: baixa
 updated: 2026-07-26
 rel:
   made_by: [nanlux]

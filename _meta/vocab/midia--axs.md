@@ -7,7 +7,7 @@ zona: universal
 aliases: [AXS, "AXS card", "cartão AXS", AXSM, "AXS-R7"]
 tags: [midia, cartao, sony, cinema, gravacao]
 status: draft
-confidence: media
+confidence: baixa
 updated: 2026-07-26
 rel:
   made_by: [sony]

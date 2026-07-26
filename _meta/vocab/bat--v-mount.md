@@ -6,7 +6,7 @@ zona: universal
 aliases: ["V-Mount", "V Mount", "V-Lock", "V-lock", "VMount", "bateria V-Mount"]
 tags: [energia, bateria, padrao, sony]
 status: draft
-confidence: media
+confidence: baixa
 updated: 2026-07-26
 rel:
   made_by: [sony]

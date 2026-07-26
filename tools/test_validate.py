@@ -194,6 +194,64 @@ checa("stub não silencia rel_na malformado — erro de forma é sempre erro",
       any(n == "erro" for n, _ in s), msgs(s))
 
 
+# ------------------------------------------------- rubrica de confiança
+print("\nrubrica de confiança: o piso mecânico (item 11 da R-N)")
+
+checa("duas páginas do mesmo fabricante são UMA organização",
+      V.organizacao("https://pro.sony/x") == V.organizacao("https://www.sony.com/y"),
+      f'{V.organizacao("https://pro.sony/x")} vs {V.organizacao("https://www.sony.com/y")}')
+
+checa("fabricantes diferentes são organizações diferentes",
+      V.organizacao("https://www.arri.com/a") != V.organizacao("https://www.cined.com/b"))
+
+checa("subdomínio de suporte não vira organização nova",
+      V.organizacao("https://partnerhelp.netflixstudios.com/hc") == "netflixstudios",
+      V.organizacao("https://partnerhelp.netflixstudios.com/hc"))
+
+
+def fonte(dominio, tier, loc=True):
+    d = {"url": f"https://www.{dominio}.com/pagina", "tier": tier}
+    if loc:
+        d["loc"] = "secao X"
+    return d
+
+
+OFICIAL_LOC = fonte("sony", "oficial")
+LAB_LOC = fonte("cined", "lab")
+
+checa("duas orgs, oficial + lab, todas com loc -> alta",
+      V.confianca_esperada([OFICIAL_LOC, LAB_LOC], False) == "alta",
+      V.confianca_esperada([OFICIAL_LOC, LAB_LOC], False))
+
+checa("lacuna <!-- verificar --> derruba para baixa, independente das fontes",
+      V.confianca_esperada([OFICIAL_LOC, LAB_LOC], True) == "baixa")
+
+checa("mesma organização em duas URLs não corrobora",
+      V.confianca_esperada([fonte("sony", "oficial"),
+                            {"url": "https://pro.sony/z", "tier": "oficial",
+                             "loc": "y"}], False) == "media",
+      V.confianca_esperada([fonte("sony", "oficial"),
+                            {"url": "https://pro.sony/z", "tier": "oficial",
+                             "loc": "y"}], False))
+
+checa("fonte oficial única com loc -> media, não alta",
+      V.confianca_esperada([OFICIAL_LOC], False) == "media")
+
+checa("fonte única sem tier forte -> baixa",
+      V.confianca_esperada([fonte("algumblog", "educacao")], False) == "baixa")
+
+checa("duas orgs sem nenhuma oficial/lab -> media, nunca alta",
+      V.confianca_esperada([fonte("blog1", "educacao"),
+                            fonte("forum2", "comunidade")], False) == "media")
+
+checa("falta de loc em fonte oficial impede alta",
+      V.confianca_esperada([fonte("sony", "oficial", loc=False), LAB_LOC],
+                           False) == "media")
+
+checa("nota sem fonte nenhuma -> baixa",
+      V.confianca_esperada([], False) == "baixa")
+
+
 # -------------------------------------------------------------------- saída
 print()
 if falhas:

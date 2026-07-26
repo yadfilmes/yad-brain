@@ -6,7 +6,7 @@ zona: universal
 aliases: ["indice mestre", "mapa do acervo", "start here"]
 tags: [moc, navegacao]
 status: draft
-confidence: alta
+confidence: baixa
 updated: 2026-07-26
 rel:
   see_also: [venice-2, alexa-35, pyxis-6k]

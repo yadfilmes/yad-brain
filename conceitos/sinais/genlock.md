@@ -6,7 +6,7 @@ zona: universal
 aliases: [genlock, "gen lock", "sync reference", "referência de sincronismo", "black burst", "tri-level"]
 tags: [sinal, sincronia, multicamera, live, virtual-production]
 status: draft
-confidence: alta
+confidence: media
 updated: 2026-07-26
 rel:
   governed_by: [smpte]

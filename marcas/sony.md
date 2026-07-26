@@ -6,7 +6,7 @@ zona: universal
 aliases: ["Sony Corporation", "Sony Professional"]
 tags: [marca, camera, broadcast, audio, midia]
 status: draft
-confidence: alta
+confidence: media
 updated: 2026-07-26
 rel:
   competes_with: [arri, blackmagic-design]

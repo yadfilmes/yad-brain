@@ -6,7 +6,7 @@ zona: universal
 aliases: [SMPTE, "Society of Motion Picture and Television Engineers"]
 tags: [orgao, norma, broadcast, sinal, padrao]
 status: draft
-confidence: alta
+confidence: media
 updated: 2026-07-26
 rel:
   see_also: [sdi, genlock, itu-r]
