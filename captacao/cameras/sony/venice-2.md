@@ -18,11 +18,13 @@ rel:
   supports_transfer_function: [s-log3]
   supports_colorspace: [s-gamut3-cine]
   accepts_media: [midia--axs]
+  outputs_signal: [sdi]
+  uses_battery_mount: [bat--v-mount]
   competes_with: [alexa-35]
   successor_of: [venice]
   certified_for: [netflix-approved]
-  alternative_to: [filtro-nd]
-  see_also: [obturador-180]
+  enables_technique: [obturador-180]
+  see_also: [filtro-nd]
 sources:
   - {url: "https://pro.sony/ue_US/products/digital-cinema-cameras/venice-2", tier: oficial, ret: 2026-07-26, nota: "specs de sensor, ISO e mídia"}
   - {url: "https://www.reddit.com/r/cinematography/", tier: comunidade, ret: 2026-07-26, nota: "experiência com base ISO 3200 em externa noturna"}

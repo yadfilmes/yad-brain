@@ -5,13 +5,15 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 ## battery-mount
 
 - [[bat--b-mount]] — padrão de bateria de 24 V criado por consórcio (ARRI, Bebob, Core SWX) para equipamento que consome mais do qu
+- [[bat--bp-u]] — bateria **encaixada no corpo**, não em placa traseira: o padrão da linha de camcorder e cinema compacta da Son
+- [[bat--v-mount]] — o padrão de bateria mais difundido do mundo em câmera profissional, de origem **Sony**. O nome vem da peça em 
 
 ## camera
 
 - [[alexa-35]] — câmera de cinema Super35 da ARRI com sensor 4.6K de geração nova (ALEV 4) e o salto de latitude que definiu a 
 - [[fx6]] — câmera de cinema full-frame compacta da Sony com sensor 10,2 MP BSI, **ND eletrônico interno variável** e dual
 - [[pyxis-6k]] — câmera de cinema full-frame 6K da Blackmagic que grava [[braw]] internamente, vendida em versões de mount dist
-- [[venice]] — primeira geração da linha VENICE: sensor full-frame 6K, dual base ISO 500/2500 e gravação [[x-ocn]] em [[midia
+- [[venice]] — primeira geração da linha VENICE: sensor full-frame 6K, dual base ISO 500/2500. Grava XAVC e ProRes **internam
 - [[venice-2]] — câmera de cinema digital full-frame da Sony com sensor 8.6K (há versão 6K no mesmo corpo), dual base ISO 800/3
 
 ## certificacao
@@ -84,6 +86,8 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[midia--axs]] — mídia proprietária da Sony para as câmeras VENICE, exigida pelas taxas do [[x-ocn]]. Exclusiva do ecossistema:
 - [[midia--cfexpress-a]] — formato menor do padrão CFexpress, adotado pela Sony nas linhas Alpha e Cinema Line. **Não é intercambiável co
 - [[midia--cfexpress-b]] — padrão aberto de cartão de alta velocidade (PCIe/NVMe por baixo), adotado por praticamente todo fabricante de 
+- [[midia--codex-compact-drive]] — mídia proprietária ARRI/Codex da linha ALEXA. Grava ARRIRAW e ProRes; a variante **Express grava só ProRes**, 
+- [[midia--sxs]] — cartão Sony da era XDCAM, base do ExpressCard. É a mídia **interna** da [[venice]] para XAVC, ProRes e MPEG HD
 
 ## moc
 

@@ -4,23 +4,23 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 ## Números gerais
 
-- Notas: **59**
-- Arestas declaradas: **231** (+11 derivadas por simetria/inversa)
-- Notas com fonte oficial ou de laboratório: **54/59** (91%)
+- Notas: **63**
+- Arestas declaradas: **253** (+13 derivadas por simetria/inversa)
+- Notas com fonte oficial ou de laboratório: **57/63** (90%)
 - Notas órfãs: **0**
 
 ## Por status
 
 | status | notas |
 |---|---:|
-| draft | 56 |
+| draft | 60 |
 | stub | 3 |
 
 ## Por tipo
 
 | tipo | notas |
 |---|---:|
-| battery-mount | 1 |
+| battery-mount | 3 |
 | camera | 5 |
 | certificacao | 1 |
 | codec | 5 |
@@ -32,7 +32,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 | funcao | 2 |
 | interface | 2 |
 | marca | 5 |
-| midia | 3 |
+| midia | 5 |
 | moc | 1 |
 | mount | 3 |
 | norma | 1 |
@@ -47,14 +47,14 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 | aresta | nº |
 |---|---:|
 | `see_also` | 66 |
-| `made_by` | 21 |
-| `alternative_to` | 16 |
-| `competes_with` | 14 |
-| `distinct_from` | 14 |
+| `made_by` | 25 |
+| `alternative_to` | 20 |
+| `competes_with` | 15 |
+| `distinct_from` | 15 |
 | `conforms_to_pipeline` | 10 |
 | `records_codec` | 10 |
+| `accepts_media` | 7 |
 | `supports_colorspace` | 7 |
 | `governed_by` | 6 |
+| `outputs_signal` | 6 |
 | `paired_gamut` | 6 |
-| `part_of_ecosystem` | 6 |
-| `accepts_media` | 5 |

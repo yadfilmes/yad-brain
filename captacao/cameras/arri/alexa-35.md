@@ -15,15 +15,19 @@ rel:
   has_native_mount: [mount--lpl]
   accepts_mount: [{to: mount--pl, via: adaptador-pl-lpl, nota: "adaptador ARRI padrão"}]
   records_codec: [arriraw, prores]
+  accepts_media: [midia--codex-compact-drive]
+  outputs_signal: [sdi]
   uses_battery_mount: [bat--b-mount]
   competes_with: [venice-2]
+  alternative_to: [venice-2]
   certified_for: [netflix-approved]
   supports_transfer_function: [log-c4]
   supports_colorspace: [arri-wide-gamut-4]
   conforms_to_pipeline: [aces]
 sources:
-  - {url: "https://www.arri.com/en/camera-systems/cameras/alexa-35", tier: oficial, ret: 2026-07-26, nota: "sensor, mount, codecs"}
-  - {url: "https://www.cined.com", tier: lab, ret: 2026-07-26, nota: "testes independentes de latitude"}
+  - {url: "https://www.arri.com/en/camera-systems/cameras/legacy-camera-systems/alexa-35", tier: oficial, ret: 2026-07-26, loc: "Tech Data - sensor, mount, codecs, outputs", nota: "duas saidas 12G-SDI independentes no modelo padrao"}
+  - {url: "https://www.arri.com/en/cine-systems/cine-camera-components/recording-media/codex-compact-drive", tier: oficial, ret: 2026-07-26, loc: "Codex Compact Drive", nota: "capacidades e variante Express"}
+  - {url: "https://www.fdtimes.com/2025/01/28/alexa-35-base/", tier: educacao, ret: 2026-07-26, loc: "ALEXA 35 Base Model with Flexible Licenses", nota: "Base Model traz tres saidas de monitoracao de 10 bits, nao as duas 12G do padrao"}
 ---
 
 # ARRI ALEXA 35
@@ -40,7 +44,9 @@ adaptador.
 | sensor | Super35 4.6K (ALEV 4, CMOS) |
 | mount | LPL nativo; PL via adaptador ARRI |
 | codecs internos | ARRIRAW, [[prores]] |
-| bateria | B-Mount |
+| midia | [[midia--codex-compact-drive]] — 2 TB é requisito para ARRIRAW em alta cadência |
+| saída de vídeo | dois [[sdi]] 12G independentes (**modelo padrão**); o Base Model traz três saídas de monitoração de 10 bits (SDI 1, SDI 2, VF) |
+| bateria | [[bat--b-mount]] |
 | latitude | 17 stops (declarado ARRI) <!-- verificar valor medido independente --> |
 | texturas | sistema de "ARRI Textures" — grão e resposta selecionáveis |
 

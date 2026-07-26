@@ -16,6 +16,7 @@ rel:
   records_codec: [xavc]
   accepts_media: [midia--cfexpress-a]
   outputs_signal: [sdi]
+  uses_battery_mount: [bat--bp-u]
   enables_technique: [obturador-180]
   supports_transfer_function: [s-log3]
   supports_colorspace: [s-gamut3-cine]

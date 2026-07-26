@@ -1,7 +1,7 @@
 id,title,type,brand,zona,status,confidence,risco,updated,n_fontes,tiers,path
 00-indice-mestre,Índice mestre,moc,,universal,draft,alta,,2026-07-26,1,campo-proprio,_moc/00-indice-mestre.md
 aces,ACES (Academy Color Encoding System),pipeline-cor,,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/aces.md
-alexa-35,ARRI ALEXA 35,camera,arri,universal,draft,media,,2026-07-26,2,lab|oficial,captacao/cameras/arri/alexa-35.md
+alexa-35,ARRI ALEXA 35,camera,arri,universal,draft,media,,2026-07-26,3,educacao|oficial,captacao/cameras/arri/alexa-35.md
 ampas,AMPAS (Academy of Motion Picture Arts and Sciences),orgao,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/orgaos/ampas.md
 aputure,Aputure,marca,,universal,draft,alta,,2026-07-26,2,educacao|oficial,marcas/aputure.md
 arri,ARRI,marca,,universal,draft,alta,,2026-07-26,2,educacao|oficial,marcas/arri.md
@@ -10,6 +10,8 @@ arriraw,ARRIRAW,codec,arri,universal,draft,media,,2026-07-26,1,oficial,conceitos
 atem-constellation-8k,Blackmagic ATEM Constellation 8K,switcher,blackmagic-design,universal,draft,alta,,2026-07-26,4,educacao|oficial,live/switchers/atem-constellation-8k.md
 atem-constellation-hd,Blackmagic ATEM Constellation HD e 4K Plus,switcher,blackmagic-design,universal,stub,baixa,,2026-07-26,1,oficial,live/switchers/atem-constellation-hd.md
 bat--b-mount,B-Mount (padrão de bateria),battery-mount,,universal,draft,media,,2026-07-26,1,oficial,_meta/vocab/bat--b-mount.md
+bat--bp-u,BP-U (padrão de bateria Sony),battery-mount,,universal,draft,media,,2026-07-26,2,oficial,_meta/vocab/bat--bp-u.md
+bat--v-mount,V-Mount (padrão de bateria),battery-mount,,universal,draft,media,,2026-07-26,1,educacao,_meta/vocab/bat--v-mount.md
 blackmagic-design,Blackmagic Design,marca,,universal,draft,alta,,2026-07-26,2,educacao|oficial,marcas/blackmagic-design.md
 braw,Blackmagic RAW,codec,blackmagic-design,universal,draft,alta,,2026-07-26,1,oficial,conceitos/codecs/braw.md
 cri-tlci-ssi,"CRI, TLCI, SSI e TM-30 — qualidade de cor de fixture",conceito,,universal,draft,media,,2026-07-26,1,oficial,luz/conceitos/cri-tlci-ssi.md
@@ -29,6 +31,8 @@ mapa-de-luz,Mapa de luz (lighting diagram),documento,,universal,draft,media,,202
 midia--axs,Cartão AXS (Sony),midia,sony,universal,draft,media,,2026-07-26,1,oficial,_meta/vocab/midia--axs.md
 midia--cfexpress-a,CFexpress Type A,midia,,universal,stub,baixa,,2026-07-26,1,oficial,_meta/vocab/midia--cfexpress-a.md
 midia--cfexpress-b,CFexpress Type B,midia,,universal,draft,media,,2026-07-26,1,oficial,_meta/vocab/midia--cfexpress-b.md
+midia--codex-compact-drive,Codex Compact Drive,midia,,universal,draft,media,,2026-07-26,2,oficial,_meta/vocab/midia--codex-compact-drive.md
+midia--sxs,SxS,midia,,universal,draft,media,,2026-07-26,1,oficial,_meta/vocab/midia--sxs.md
 mount--e,E-mount (Sony),mount,,universal,draft,alta,,2026-07-26,1,oficial,_meta/vocab/mount--e.md
 mount--lpl,LPL (Large Positive Lock — ARRI),mount,arri,universal,draft,alta,,2026-07-26,1,oficial,_meta/vocab/mount--lpl.md
 mount--pl,PL (Positive Lock),mount,,universal,draft,alta,,2026-07-26,1,oficial,_meta/vocab/mount--pl.md

@@ -30,6 +30,71 @@
    ]
   },
   {
+   "id": "bat--bp-u",
+   "title": "BP-U (padrão de bateria Sony)",
+   "type": "battery-mount",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "_meta/vocab/bat--bp-u.md",
+   "tldr": "bateria **encaixada no corpo**, não em placa traseira: o padrão da linha de camcorder e cinema compacta da Sony. É o que permite [[fx6]] e [[pyxis-6k]] operarem no ombro sem cauda de bateria — e é por isso que a autonomi",
+   "aliases": [
+    "BP-U",
+    "BPU",
+    "BP-U series",
+    "serie BP-U",
+    "BP-U30",
+    "BP-U35",
+    "BP-U60",
+    "BP-U70",
+    "BP-U100"
+   ],
+   "tags": [
+    "energia",
+    "bateria",
+    "sony",
+    "camcorder"
+   ],
+   "n_fontes": 2,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "bat--v-mount",
+   "title": "V-Mount (padrão de bateria)",
+   "type": "battery-mount",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "_meta/vocab/bat--v-mount.md",
+   "tldr": "o padrão de bateria mais difundido do mundo em câmera profissional, de origem **Sony**. O nome vem da peça em V na traseira da bateria. É o default de fato fora dos EUA — onde o Gold Mount da Anton Bauer divide espaço.",
+   "aliases": [
+    "V-Mount",
+    "V Mount",
+    "V-Lock",
+    "V-lock",
+    "VMount",
+    "bateria V-Mount"
+   ],
+   "tags": [
+    "energia",
+    "bateria",
+    "padrao",
+    "sony"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "educacao"
+   ]
+  },
+  {
    "id": "midia--axs",
    "title": "Cartão AXS (Sony)",
    "type": "midia",
@@ -111,6 +176,67 @@
     "cartao",
     "padrao",
     "gravacao"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "midia--codex-compact-drive",
+   "title": "Codex Compact Drive",
+   "type": "midia",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "_meta/vocab/midia--codex-compact-drive.md",
+   "tldr": "mídia proprietária ARRI/Codex da linha ALEXA. Grava ARRIRAW e ProRes; a variante **Express grava só ProRes**, e a capacidade de 2 TB é requisito para ARRIRAW em cadência alta na [[alexa-35]]. Cartão que só serve numa mar",
+   "aliases": [
+    "Compact Drive",
+    "Codex Compact Drive",
+    "CCD ARRI",
+    "Compact Drive 2TB"
+   ],
+   "tags": [
+    "midia",
+    "arri",
+    "codex",
+    "proprietario",
+    "arriraw"
+   ],
+   "n_fontes": 2,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "midia--sxs",
+   "title": "SxS",
+   "type": "midia",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "_meta/vocab/midia--sxs.md",
+   "tldr": "cartão Sony da era XDCAM, base do ExpressCard. É a mídia **interna** da [[venice]] para XAVC, ProRes e MPEG HD — enquanto X-OCN e RAW de 16 bits exigem o gravador externo AXS-R7 com [[midia--axs]]. Formato em fim de cicl",
+   "aliases": [
+    "SxS",
+    "SxS PRO",
+    "SxS-1",
+    "S x S",
+    "ExpressCard SxS"
+   ],
+   "tags": [
+    "midia",
+    "sony",
+    "cartao",
+    "xdcam",
+    "legado"
    ],
    "n_fontes": 1,
    "tiers": [
@@ -254,9 +380,9 @@
     "latitude",
     "netflix-approved"
    ],
-   "n_fontes": 2,
+   "n_fontes": 3,
    "tiers": [
-    "lab",
+    "educacao",
     "oficial"
    ]
   },
@@ -365,7 +491,7 @@
    "risco": "",
    "updated": "2026-07-26",
    "path": "captacao/cameras/sony/venice.md",
-   "tldr": "primeira geração da linha VENICE: sensor full-frame 6K, dual base ISO 500/2500 e gravação [[x-ocn]] em [[midia--axs]]. Continua muito presente em locadora e em produção, a preço de diária bem menor que a [[venice-2]].",
+   "tldr": "primeira geração da linha VENICE: sensor full-frame 6K, dual base ISO 500/2500. Grava XAVC e ProRes **internamente em [[midia--sxs]]**; [[x-ocn]] e RAW de 16 bits só com o **gravador externo AXS-R7** acoplado, em [[midia",
    "aliases": [
     "VENICE",
     "Sony VENICE",
@@ -1764,6 +1890,36 @@
  ],
  "arestas": [
   {
+   "de": "bat--bp-u",
+   "aresta": "made_by",
+   "para": "sony",
+   "derivada": false
+  },
+  {
+   "de": "bat--bp-u",
+   "aresta": "alternative_to",
+   "para": "bat--v-mount",
+   "derivada": false
+  },
+  {
+   "de": "bat--v-mount",
+   "aresta": "made_by",
+   "para": "sony",
+   "derivada": false
+  },
+  {
+   "de": "bat--v-mount",
+   "aresta": "alternative_to",
+   "para": "bat--b-mount",
+   "derivada": false
+  },
+  {
+   "de": "bat--v-mount",
+   "aresta": "incompatible_with",
+   "para": "bat--b-mount",
+   "derivada": false
+  },
+  {
    "de": "midia--axs",
    "aresta": "made_by",
    "para": "sony",
@@ -1790,6 +1946,36 @@
   {
    "de": "midia--cfexpress-b",
    "aresta": "alternative_to",
+   "para": "midia--axs",
+   "derivada": false
+  },
+  {
+   "de": "midia--codex-compact-drive",
+   "aresta": "made_by",
+   "para": "arri",
+   "derivada": false
+  },
+  {
+   "de": "midia--codex-compact-drive",
+   "aresta": "alternative_to",
+   "para": "midia--cfexpress-b",
+   "derivada": false
+  },
+  {
+   "de": "midia--sxs",
+   "aresta": "made_by",
+   "para": "sony",
+   "derivada": false
+  },
+  {
+   "de": "midia--sxs",
+   "aresta": "alternative_to",
+   "para": "midia--cfexpress-b",
+   "derivada": false
+  },
+  {
+   "de": "midia--sxs",
+   "aresta": "distinct_from",
    "para": "midia--axs",
    "derivada": false
   },
@@ -1879,6 +2065,18 @@
   },
   {
    "de": "alexa-35",
+   "aresta": "accepts_media",
+   "para": "midia--codex-compact-drive",
+   "derivada": false
+  },
+  {
+   "de": "alexa-35",
+   "aresta": "outputs_signal",
+   "para": "sdi",
+   "derivada": false
+  },
+  {
+   "de": "alexa-35",
    "aresta": "uses_battery_mount",
    "para": "bat--b-mount",
    "derivada": false
@@ -1886,6 +2084,12 @@
   {
    "de": "alexa-35",
    "aresta": "competes_with",
+   "para": "venice-2",
+   "derivada": false
+  },
+  {
+   "de": "alexa-35",
+   "aresta": "alternative_to",
    "para": "venice-2",
    "derivada": false
   },
@@ -1963,6 +2167,18 @@
   },
   {
    "de": "pyxis-6k",
+   "aresta": "outputs_signal",
+   "para": "sdi",
+   "derivada": false
+  },
+  {
+   "de": "pyxis-6k",
+   "aresta": "uses_battery_mount",
+   "para": "bat--bp-u",
+   "derivada": false
+  },
+  {
+   "de": "pyxis-6k",
    "aresta": "conforms_to_pipeline",
    "para": "aces",
    "derivada": false
@@ -1995,6 +2211,12 @@
    "de": "fx6",
    "aresta": "outputs_signal",
    "para": "sdi",
+   "derivada": false
+  },
+  {
+   "de": "fx6",
+   "aresta": "uses_battery_mount",
+   "para": "bat--bp-u",
    "derivada": false
   },
   {
@@ -2089,6 +2311,18 @@
   },
   {
    "de": "venice-2",
+   "aresta": "outputs_signal",
+   "para": "sdi",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
+   "aresta": "uses_battery_mount",
+   "para": "bat--v-mount",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
    "aresta": "competes_with",
    "para": "alexa-35",
    "derivada": false
@@ -2107,14 +2341,14 @@
   },
   {
    "de": "venice-2",
-   "aresta": "alternative_to",
-   "para": "filtro-nd",
+   "aresta": "enables_technique",
+   "para": "obturador-180",
    "derivada": false
   },
   {
    "de": "venice-2",
    "aresta": "see_also",
-   "para": "obturador-180",
+   "para": "filtro-nd",
    "derivada": false
   },
   {
@@ -2138,12 +2372,6 @@
   {
    "de": "venice",
    "aresta": "records_codec",
-   "para": "x-ocn",
-   "derivada": false
-  },
-  {
-   "de": "venice",
-   "aresta": "records_codec",
    "para": "prores",
    "derivada": false
   },
@@ -2155,8 +2383,32 @@
   },
   {
    "de": "venice",
+   "aresta": "records_codec",
+   "para": "x-ocn",
+   "derivada": false
+  },
+  {
+   "de": "venice",
+   "aresta": "accepts_media",
+   "para": "midia--sxs",
+   "derivada": false
+  },
+  {
+   "de": "venice",
    "aresta": "accepts_media",
    "para": "midia--axs",
+   "derivada": false
+  },
+  {
+   "de": "venice",
+   "aresta": "outputs_signal",
+   "para": "sdi",
+   "derivada": false
+  },
+  {
+   "de": "venice",
+   "aresta": "uses_battery_mount",
+   "para": "bat--v-mount",
    "derivada": false
   },
   {
@@ -2175,6 +2427,12 @@
    "de": "venice",
    "aresta": "predecessor_of",
    "para": "venice-2",
+   "derivada": false
+  },
+  {
+   "de": "venice",
+   "aresta": "competes_with",
+   "para": "alexa-35",
    "derivada": false
   },
   {
@@ -3156,6 +3414,12 @@
    "derivada": true
   },
   {
+   "de": "midia--axs",
+   "aresta": "distinct_from",
+   "para": "midia--sxs",
+   "derivada": true
+  },
+  {
    "de": "mount--pl",
    "aresta": "predecessor_of",
    "para": "mount--lpl",
@@ -3171,6 +3435,12 @@
    "de": "pyxis-6k",
    "aresta": "competes_with",
    "para": "fx6",
+   "derivada": true
+  },
+  {
+   "de": "alexa-35",
+   "aresta": "competes_with",
+   "para": "venice",
    "derivada": true
   },
   {

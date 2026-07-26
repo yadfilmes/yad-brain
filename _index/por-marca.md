@@ -10,6 +10,8 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[aputure]] — fabricante fundada em 2013, sede em Shenzhen, que reposicionou o mercado de iluminação: potência e recursos de
 - [[arri]] — fabricante alemã centenária, referência de cinema em três frentes ao mesmo tempo: câmeras (ALEXA), iluminação 
 - [[bat--b-mount]] — padrão de bateria de 24 V criado por consórcio (ARRI, Bebob, Core SWX) para equipamento que consome mais do qu
+- [[bat--bp-u]] — bateria **encaixada no corpo**, não em placa traseira: o padrão da linha de camcorder e cinema compacta da Son
+- [[bat--v-mount]] — o padrão de bateria mais difundido do mundo em câmera profissional, de origem **Sony**. O nome vem da peça em 
 - [[blackmagic-design]] — fabricante australiana que mudou o preço-base do mercado: câmeras de cinema, switchers ATEM, conversores, grav
 - [[cri-tlci-ssi]] — quatro métricas que tentam responder "essa luz reproduz cor direito?". **CRI é a mais citada e a mais fraca**;
 - [[diretor-de-fotografia]] — responsável autoral pela imagem: define câmera, lente, luz, paleta e movimento, em serviço da narrativa que o 
@@ -22,6 +24,8 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[mapa-de-luz]] — planta baixa da cena com posição, altura, modificador e potência de cada fixture, mais a posição de câmera. Se
 - [[midia--cfexpress-a]] — formato menor do padrão CFexpress, adotado pela Sony nas linhas Alpha e Cinema Line. **Não é intercambiável co
 - [[midia--cfexpress-b]] — padrão aberto de cartão de alta velocidade (PCIe/NVMe por baixo), adotado por praticamente todo fabricante de 
+- [[midia--codex-compact-drive]] — mídia proprietária ARRI/Codex da linha ALEXA. Grava ARRIRAW e ProRes; a variante **Express grava só ProRes**, 
+- [[midia--sxs]] — cartão Sony da era XDCAM, base do ExpressCard. É a mídia **interna** da [[venice]] para XAVC, ProRes e MPEG HD
 - [[mount--e]] — mount eletrônico da Sony com flange focal distance curto (18 mm), usado da mirrorless de entrada ao topo de ci
 - [[mount--pl]] — mount padrão do cinema profissional, criado pela ARRI: trava mecânica de quatro flanges, sem contatos elétrico
 - [[mte]] — órgão federal que edita e mantém as **Normas Regulamentadoras (NRs)**, de cumprimento obrigatório em qualquer 
@@ -77,7 +81,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[midia--axs]] — mídia proprietária da Sony para as câmeras VENICE, exigida pelas taxas do [[x-ocn]]. Exclusiva do ecossistema:
 - [[s-gamut3-cine]] — espaço de cor da Sony pensado para trabalho de cinema: mais contido que o S-Gamut3 puro, o que o torna mais fá
 - [[s-log3]] — curva logarítmica da Sony que comprime a latitude do sensor num sinal de 10 bits sem estourar altas nem esmaga
-- [[venice]] — primeira geração da linha VENICE: sensor full-frame 6K, dual base ISO 500/2500 e gravação [[x-ocn]] em [[midia
+- [[venice]] — primeira geração da linha VENICE: sensor full-frame 6K, dual base ISO 500/2500. Grava XAVC e ProRes **internam
 - [[venice-2]] — câmera de cinema digital full-frame da Sony com sensor 8.6K (há versão 6K no mesmo corpo), dual base ISO 800/3
 - [[x-ocn]] — formato de negativo digital da Sony, gravado pelos corpos VENICE. Guarda a informação de sensor com compressão
 - [[xavc]] — família de codecs de gravação da Sony baseada em H.264/H.265, usada dos corpos de broadcast aos de cinema como
