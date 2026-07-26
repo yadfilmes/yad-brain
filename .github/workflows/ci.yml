@@ -25,6 +25,9 @@ jobs:
       - name: Testar calculadoras
         run: python3 tools/calc/test_storage.py
 
+      - name: Avaliar recuperação (conjunto-ouro)
+        run: python3 tools/eval.py
+
       - name: Regenerar grafo e índices
         run: python3 tools/build_graph.py
 
