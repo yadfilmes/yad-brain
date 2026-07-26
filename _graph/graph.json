@@ -1128,6 +1128,36 @@
    ]
   },
   {
+   "id": "atem-constellation-8k",
+   "title": "Blackmagic ATEM Constellation 8K",
+   "type": "switcher",
+   "brand": "blackmagic-design",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "live/switchers/atem-constellation-8k.md",
+   "tldr": "switcher de produção ao vivo em 2RU com **4 M/E**, **40 entradas 12G-SDI** e 16 keyers, com conversão de padrão em cada entrada. Não é para evento pequeno: é para redação e produção com roteamento complexo. **Não tem nen",
+   "aliases": [
+    "ATEM Constellation 8K",
+    "Constellation 8K",
+    "ATEM Constellation"
+   ],
+   "tags": [
+    "live",
+    "switcher",
+    "broadcast",
+    "12g-sdi",
+    "8k"
+   ],
+   "n_fontes": 3,
+   "tiers": [
+    "educacao",
+    "oficial"
+   ]
+  },
+  {
    "id": "cri-tlci-ssi",
    "title": "CRI, TLCI, SSI e TM-30 — qualidade de cor de fixture",
    "type": "conceito",
@@ -2507,6 +2537,42 @@
    "de": "sdi",
    "aresta": "see_also",
    "para": "genlock",
+   "derivada": false
+  },
+  {
+   "de": "atem-constellation-8k",
+   "aresta": "made_by",
+   "para": "blackmagic-design",
+   "derivada": false
+  },
+  {
+   "de": "atem-constellation-8k",
+   "aresta": "part_of_ecosystem",
+   "para": "ecossistema-blackmagic",
+   "derivada": false
+  },
+  {
+   "de": "atem-constellation-8k",
+   "aresta": "accepts_signal",
+   "para": "sdi",
+   "derivada": false
+  },
+  {
+   "de": "atem-constellation-8k",
+   "aresta": "controls",
+   "para": "tally",
+   "derivada": false
+  },
+  {
+   "de": "atem-constellation-8k",
+   "aresta": "implements_standard",
+   "para": "smpte",
+   "derivada": false
+  },
+  {
+   "de": "atem-constellation-8k",
+   "aresta": "incompatible_with",
+   "para": "ndi",
    "derivada": false
   },
   {

@@ -177,9 +177,9 @@ def main():
         tiers_nota = {f.get("tier") for f in fontes if isinstance(f, dict)}
         tem_pratica = any(m in corpo for m in
                           ("## Gotchas", "Regra prática", "regra prática", "prática de campo"))
-        if tem_pratica and not (tiers_nota & {"comunidade", "campo-proprio", "lab"}):
-            aviso(rel, "conteúdo de prática de campo sem fonte de tier "
-                       "'comunidade', 'campo-proprio' ou 'lab'")
+        if tem_pratica and not (tiers_nota - {"oficial"}):
+            aviso(rel, "conteúdo de prática apoiado só em fonte 'oficial' — "
+                       "prática pede lab, educacao, comunidade ou campo-proprio")
 
         # 'media' virou valor-padrão automático: 5/5 notas do lote 03 com
         # fonte única, sem loc e sem corroboração. Confiança é julgamento

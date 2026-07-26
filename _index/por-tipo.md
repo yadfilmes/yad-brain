@@ -112,6 +112,10 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 - [[flicker-parede-led]] — a câmera enxerga bandas horizontais, cintilação ou linha rolando sobre a parede de LED. Quase sempre é dessinc
 
+## switcher
+
+- [[atem-constellation-8k]] — switcher de produção ao vivo em 2RU com **4 M/E**, **40 entradas 12G-SDI** e 16 keyers, com conversão de padrã
+
 ## transfer-function
 
 - [[log-c4]] — curva logarítmica da ARRI para a geração ALEVE 4 ([[alexa-35]]), desenhada para a latitude maior desse sensor.

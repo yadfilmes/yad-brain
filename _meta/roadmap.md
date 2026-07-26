@@ -37,10 +37,16 @@ Só existe `tools/calc/storage.py`. Ordem de valor por esforço:
 
 ---
 
-## R3 · Passada de verificação de fontes · **bloqueada**
+## R3 · Passada de verificação de fontes · **DESBLOQUEADA (parcial)**
 
-Nenhuma nota vira `reviewed` sem conferir fonte contra documentação oficial e
-preencher `loc`. Exige rede — ver `_meta/qa/blocked.md`, bloqueio B1.
+Descoberto em 2026-07-26 que `WebSearch` funciona neste ambiente, embora
+`curl` e `WebFetch` estejam bloqueados. Dá para trocar raiz de domínio por
+página específica e preencher `loc` no nível de seção — o defeito que
+reprovou 9 de 9 notas.
+
+**Trabalho:** percorrer as 55 notas na ordem de dependência, buscar a página
+específica de cada fonte, preencher `loc`, e acrescentar tier não-oficial onde
+a nota faz afirmação de prática.
 
 Roteiro: percorrer as notas na ordem de `_meta/gaps.md`, abrir a fonte oficial
 de cada uma, registrar página/tabela/seção.

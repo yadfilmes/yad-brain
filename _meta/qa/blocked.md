@@ -6,10 +6,31 @@ Registrar aqui é a alternativa honesta a afrouxar a régua (Protocolo 92, S.1).
 
 ---
 
-## B1 · Nenhuma nota pode chegar a `reviewed` sem verificação de fonte
+## B1 · Verificação de fonte — **PARCIALMENTE DESTRAVADO em 2026-07-26**
+
+**Correção de diagnóstico.** O bloqueio original dizia "sem acesso à rede".
+Estava errado, por eu ter propagado o relato de subagentes sem testar eu mesmo.
+O quadro real, medido:
+
+| caminho | estado |
+|---|---|
+| `curl` | bloqueado — proxy nega CONNECT com 403 |
+| `WebFetch` | bloqueado — 403 em todos os domínios testados, inclusive Wikipedia |
+| **`WebSearch`** | **funciona** — devolve conteúdo real, URLs verificadas e títulos de seção |
+
+**O que isso destrava:** dá para confirmar que uma URL existe, achar a **página
+específica** em vez da raiz do domínio, e extrair o título da seção para o
+campo `loc`. É exatamente o defeito que reprovou 9 de 9 notas nos lotes 02 e 03.
+
+**O que continua bloqueado:** abrir PDF de manual página a página, conferir
+tabela extensa e obter número de página de spec sheet. Para essas, `loc` fica
+no nível de seção nomeada, não de página.
+
+**Consequência prática:** `reviewed` deixou de ser inalcançável. Fonte com
+página específica e `loc` de seção é atingível hoje.
 
 **Desde:** 2026-07-26
-**Afeta:** todo o acervo (31 notas)
+**Afeta:** o acervo escrito antes desta data (55 notas, com fonte a corrigir)
 **Origem:** scorecard `2026-07/lote-02-rn.md`, padrão sistêmico nº 1
 
 O item 4 da rubrica R-N (fonte oficial com localizador) reprovou 4 de 4 notas

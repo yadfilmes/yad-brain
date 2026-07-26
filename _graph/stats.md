@@ -4,16 +4,16 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 ## Números gerais
 
-- Notas: **55**
-- Arestas declaradas: **196** (+7 derivadas por simetria/inversa)
-- Notas com fonte oficial ou de laboratório: **50/55** (90%)
+- Notas: **56**
+- Arestas declaradas: **202** (+7 derivadas por simetria/inversa)
+- Notas com fonte oficial ou de laboratório: **51/56** (91%)
 - Notas órfãs: **0**
 
 ## Por status
 
 | status | notas |
 |---|---:|
-| draft | 54 |
+| draft | 55 |
 | stub | 1 |
 
 ## Por tipo
@@ -39,6 +39,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 | orgao | 4 |
 | pipeline-cor | 1 |
 | problema | 1 |
+| switcher | 1 |
 | transfer-function | 2 |
 
 ## Arestas mais usadas
@@ -46,7 +47,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 | aresta | nº |
 |---|---:|
 | `see_also` | 66 |
-| `made_by` | 18 |
+| `made_by` | 19 |
 | `alternative_to` | 15 |
 | `distinct_from` | 10 |
 | `conforms_to_pipeline` | 9 |
@@ -54,6 +55,6 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 | `paired_gamut` | 6 |
 | `supports_colorspace` | 6 |
 | `competes_with` | 5 |
+| `part_of_ecosystem` | 5 |
 | `accepts_media` | 4 |
 | `accepts_mount` | 4 |
-| `governed_by` | 4 |
