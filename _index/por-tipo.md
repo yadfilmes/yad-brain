@@ -82,6 +82,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 ## midia
 
 - [[midia--axs]] — mídia proprietária da Sony para as câmeras VENICE, exigida pelas taxas do [[x-ocn]]. Exclusiva do ecossistema:
+- [[midia--cfexpress-a]] — formato menor do padrão CFexpress, adotado pela Sony nas linhas Alpha e Cinema Line. **Não é intercambiável co
 - [[midia--cfexpress-b]] — padrão aberto de cartão de alta velocidade (PCIe/NVMe por baixo), adotado por praticamente todo fabricante de 
 
 ## moc

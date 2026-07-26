@@ -61,6 +61,34 @@
    ]
   },
   {
+   "id": "midia--cfexpress-a",
+   "title": "CFexpress Type A",
+   "type": "midia",
+   "brand": "",
+   "zona": "universal",
+   "status": "stub",
+   "confidence": "baixa",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "_meta/vocab/midia--cfexpress-a.md",
+   "tldr": "formato menor do padrão CFexpress, adotado pela Sony nas linhas Alpha e Cinema Line. **Não é intercambiável com o Type B**: encaixe e desempenho diferentes, apesar do nome de família comum.",
+   "aliases": [
+    "CFexpress Type A",
+    "CFe A",
+    "CFexpress A"
+   ],
+   "tags": [
+    "midia",
+    "cartao",
+    "sony",
+    "gravacao"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
    "id": "midia--cfexpress-b",
    "title": "CFexpress Type B",
    "type": "midia",
@@ -275,9 +303,10 @@
    "aliases": [
     "FX6",
     "Sony FX6",
+    "ILME-FX6",
     "ILME-FX6V",
-    "Cinema Line FX6",
-    "PXW-FX6"
+    "ILME-FX6VK",
+    "Cinema Line FX6"
    ],
    "tags": [
     "full-frame",
@@ -1744,6 +1773,18 @@
    "derivada": false
   },
   {
+   "de": "midia--cfexpress-a",
+   "aresta": "alternative_to",
+   "para": "midia--cfexpress-b",
+   "derivada": false
+  },
+  {
+   "de": "midia--cfexpress-a",
+   "aresta": "distinct_from",
+   "para": "midia--cfexpress-b",
+   "derivada": false
+  },
+  {
    "de": "midia--cfexpress-b",
    "aresta": "alternative_to",
    "para": "midia--axs",
@@ -1943,6 +1984,24 @@
   },
   {
    "de": "fx6",
+   "aresta": "accepts_media",
+   "para": "midia--cfexpress-a",
+   "derivada": false
+  },
+  {
+   "de": "fx6",
+   "aresta": "outputs_signal",
+   "para": "sdi",
+   "derivada": false
+  },
+  {
+   "de": "fx6",
+   "aresta": "enables_technique",
+   "para": "obturador-180",
+   "derivada": false
+  },
+  {
+   "de": "fx6",
    "aresta": "supports_transfer_function",
    "para": "s-log3",
    "derivada": false
@@ -1969,18 +2028,6 @@
    "de": "fx6",
    "aresta": "competes_with",
    "para": "pyxis-6k",
-   "derivada": false
-  },
-  {
-   "de": "fx6",
-   "aresta": "alternative_to",
-   "para": "filtro-nd",
-   "derivada": false
-  },
-  {
-   "de": "fx6",
-   "aresta": "see_also",
-   "para": "obturador-180",
    "derivada": false
   },
   {
@@ -3044,6 +3091,12 @@
    "aresta": "see_also",
    "para": "scan-rate",
    "derivada": false
+  },
+  {
+   "de": "midia--cfexpress-b",
+   "aresta": "distinct_from",
+   "para": "midia--cfexpress-a",
+   "derivada": true
   },
   {
    "de": "mount--pl",

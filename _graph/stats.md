@@ -4,9 +4,9 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 ## Números gerais
 
-- Notas: **58**
-- Arestas declaradas: **219** (+10 derivadas por simetria/inversa)
-- Notas com fonte oficial ou de laboratório: **53/58** (91%)
+- Notas: **59**
+- Arestas declaradas: **222** (+11 derivadas por simetria/inversa)
+- Notas com fonte oficial ou de laboratório: **54/59** (91%)
 - Notas órfãs: **0**
 
 ## Por status
@@ -14,7 +14,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 | status | notas |
 |---|---:|
 | draft | 56 |
-| stub | 2 |
+| stub | 3 |
 
 ## Por tipo
 
@@ -32,7 +32,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 | funcao | 2 |
 | interface | 2 |
 | marca | 5 |
-| midia | 2 |
+| midia | 3 |
 | moc | 1 |
 | mount | 3 |
 | norma | 1 |
@@ -46,10 +46,10 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 | aresta | nº |
 |---|---:|
-| `see_also` | 67 |
+| `see_also` | 66 |
 | `made_by` | 21 |
 | `alternative_to` | 16 |
-| `distinct_from` | 11 |
+| `distinct_from` | 12 |
 | `conforms_to_pipeline` | 10 |
 | `records_codec` | 10 |
 | `competes_with` | 8 |
@@ -57,4 +57,4 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 | `governed_by` | 6 |
 | `paired_gamut` | 6 |
 | `part_of_ecosystem` | 6 |
-| `has_native_mount` | 5 |
+| `accepts_media` | 5 |

@@ -5,7 +5,7 @@ type: camera
 brand: sony
 category: cinema / full-frame compacta
 zona: universal
-aliases: [FX6, "Sony FX6", ILME-FX6V, "Cinema Line FX6", PXW-FX6]
+aliases: [FX6, "Sony FX6", ILME-FX6, ILME-FX6V, ILME-FX6VK, "Cinema Line FX6"]
 tags: [full-frame, dual-base-iso, xavc, nd-interno, documentario, corporativo]
 status: draft
 confidence: alta
@@ -14,13 +14,14 @@ rel:
   made_by: [sony]
   has_native_mount: [mount--e]
   records_codec: [xavc]
+  accepts_media: [midia--cfexpress-a]
+  outputs_signal: [sdi]
+  enables_technique: [obturador-180]
   supports_transfer_function: [s-log3]
   supports_colorspace: [s-gamut3-cine]
   conforms_to_pipeline: [aces]
-  budget_alternative_to: [{to: venice-2, ratio: "ordem de 1/6 do corpo"}]
+  budget_alternative_to: [venice-2]
   competes_with: [pyxis-6k]
-  alternative_to: [filtro-nd]
-  see_also: [obturador-180]
 sources:
   - {url: "https://www.sony.com/electronics/interchangeable-lens-cameras/ilme-fx6v-b", tier: oficial, ret: 2026-07-26, loc: "pagina de produto - Specifications: sensor, ISO, recording e ND", nota: "sensor, dual base ISO, formatos e ND eletronico"}
   - {url: "https://www.cined.com/sony-fx6-lab-test-external-prores-raw-vs-internal-xavc-intra/", tier: lab, ret: 2026-07-26, loc: "Lab Test - Dynamic Range e Rolling Shutter", nota: "faixa dinamica com SNR declarado e rolling shutter medido"}
@@ -34,7 +35,7 @@ sources:
 BSI, **ND eletrônico interno variável** e dual base ISO — o cavalo de batalha
 de documentário e corporativo. Ganha do resto da faixa em pouca luz e em
 agilidade de operador único; perde em faixa dinâmica medida, que fica em torno
-de 11,7 stops.
+de 11,7 stops (SNR=2, XAVC-I interno, ISO 800 — CineD, medido).
 
 ## Specs-chave
 
@@ -52,7 +53,8 @@ de 11,7 stops.
 | modo | resolução | fps máx | codec |
 |---|---|---|---|
 | C4K | 4096 × 2160 | 60 | XAVC-I / XAVC-L, 10 bits 4:2:2 |
-| 4K UHD full frame | 3840 × 2160 | 120 | XAVC-I / XAVC-L, 10 bits 4:2:2 |
+| 4K UHD | 3840 × 2160 | 60 | XAVC-I / XAVC-L, 10 bits 4:2:2 |
+| 4K UHD alta cadência | 3840 × 2160 | 120 | **crop de ~1,1× — não é full frame**; exige CFexpress Type A |
 | FHD | 1920 × 1080 | 240 | XAVC-I / XAVC-L |
 | RAW externo | — | — | saída por SDI/HDMI para gravador externo |
 
@@ -66,8 +68,8 @@ ruído declarado — número de fabricante não é comparável a estes:
 | faixa dinâmica | 11,7 stops @ SNR=2; 12,8 @ SNR=1 | XAVC-I interno, ISO 800 (CineD, medido) |
 | faixa dinâmica | 11,4 stops @ SNR=2; 12,6 @ SNR=1 | ProRes RAW externo, ISO 800 (CineD, medido) |
 | latitude de exposição | ~8 stops (3 acima, 5 abaixo) | CineD, medido |
-| rolling shutter | 8,7 ms | full frame, 3840 × 2160, 25 fps, XAVC |
-| rolling shutter | 7,7 ms | 120 fps |
+| rolling shutter | 8,7 ms | 4096 × 2160, 25 fps, XAVC (CineD, medido) |
+| rolling shutter | 7,7 ms | 4096 × 2160, 120 fps (CineD, medido) |
 
 Detalhe contraintuitivo do teste: o **RAW externo mede um pouco pior** que o
 XAVC-I interno em faixa dinâmica. Gravar externo aqui compra maleabilidade de
@@ -97,15 +99,14 @@ variável sem trocar vidro, reduzindo (sem eliminar) a dependência de
 
 ## Gotchas
 
-- **O codec grava 8 canais de áudio**, mesmo o manual declarando até 4. É
-  característica do codec Sony, confirmada pelo fabricante segundo relatos de
-  usuários — e quebra o *link* de proxy no Final Cut, porque o proxy interno
-  sai com contagem de canais diferente do original. Quem depende de proxy
-  interno precisa testar o fluxo antes do job.
+- **O codec grava 8 canais de áudio**, mesmo o manual declarando até 4.
+  Relato de comunidade no fórum do Premiere Pro: os 8 canais aparecem no
+  Premiere e no Media Encoder, e o descasamento de contagem de canais entre
+  original e proxy interno atrapalha o fluxo de proxy. Quem depende de proxy
+  gerado na câmera precisa testar antes do job.
 - **Autofoco é confiável para manter, não para racking.** Relato recorrente de
-  proprietários: o sistema segura o sujeito bem, mas transições de foco
-  deliberadas continuam pedindo mão ou motor.
-- Sem controle de foco externo por acessórios que a FX3 aceita — assimetria
-  que surpreende quem monta kit misto.
-- Dobradiça do monitor é ponto frágil relatado com frequência; vale suporte
-  próprio em uso pesado.
+  proprietários (comunidade): o sistema segura o sujeito bem, mas transições
+  de foco deliberadas continuam pedindo mão ou motor.
+- **Alta cadência cobra crop e mídia.** 100/120 fps saem com crop de ~1,1× e
+  exigem CFexpress Type A — não é o modo full frame que o resto da tabela
+  descreve.

@@ -27,6 +27,7 @@ log-c4,LogC4 (ARRI),transfer-function,arri,universal,draft,media,,2026-07-26,1,o
 ls-600d-pro,Aputure LS 600d Pro,fixture,aputure,universal,draft,media,,2026-07-26,1,oficial,luz/fixtures/aputure/ls-600d-pro.md
 mapa-de-luz,Mapa de luz (lighting diagram),documento,,universal,draft,media,,2026-07-26,1,educacao,producao/documentos/mapa-de-luz.md
 midia--axs,Cartão AXS (Sony),midia,sony,universal,draft,media,,2026-07-26,1,oficial,_meta/vocab/midia--axs.md
+midia--cfexpress-a,CFexpress Type A,midia,,universal,stub,baixa,,2026-07-26,1,oficial,_meta/vocab/midia--cfexpress-a.md
 midia--cfexpress-b,CFexpress Type B,midia,,universal,draft,media,,2026-07-26,1,oficial,_meta/vocab/midia--cfexpress-b.md
 mount--e,E-mount (Sony),mount,,universal,draft,alta,,2026-07-26,1,oficial,_meta/vocab/mount--e.md
 mount--lpl,LPL (Large Positive Lock — ARRI),mount,arri,universal,draft,alta,,2026-07-26,1,oficial,_meta/vocab/mount--lpl.md
