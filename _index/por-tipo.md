@@ -39,9 +39,17 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[lei-do-inverso-do-quadrado]] — dobrar a distância entre a luz e o sujeito derruba a intensidade a **um quarto** (dois stops), não à metade. É
 - [[obturador-180]] — manter o obturador em 180° (velocidade = 1 ÷ (2 × frame rate)) entrega o borrão de movimento a que o olho está
 - [[pwm-brilho-led]] — LED não regula intensidade baixando tensão: ele **pisca muito rápido** e o tempo ligado define o brilho aparen
+- [[rede-gigabit]] — vídeo sobre IP exige rede **dedicada**: gigabit no mínimo, switch gerenciado, e nada de compartilhar com a int
 - [[scan-rate]] — quantas vezes por segundo o painel redesenha a imagem inteira, em Hz. O olho humano se satisfaz com pouco; **a
 - [[shuttersync]] — recurso das processadoras Brompton que alinha a varredura do painel com o obturador da câmera, permitindo ajus
+- [[switcher-me]] — **M/E (Mix/Effects)** é um bloco completo de mistura: escolhe fontes, aplica transição e chaves, e entrega um 
+- [[tally]] — luz que avisa **quem está no ar** (vermelho) e, em muitos sistemas, quem está no preview (verde). Parece detal
 - [[temperatura-de-cor]] — CCT, em Kelvin, descreve se a luz é "quente" (3200 K, tungstênio) ou "fria" (5600 K, luz do dia). Mas **um eix
+
+## documento
+
+- [[mapa-de-luz]] — planta baixa da cena com posição, altura, modificador e potência de cada fixture, mais a posição de câmera. Se
+- [[ordem-do-dia]] — documento diário que diz a **cada pessoa** onde estar, a que horas, para filmar o quê. Emitido pela assistênci
 
 ## ecossistema
 
@@ -51,6 +59,16 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 - [[evoke-2400b]] — COB bicolor de 2400 W, na faixa de potência que compete com HMI grande. É a resposta da categoria a quem preci
 - [[ls-600d-pro]] — COB de 600 W daylight com montagem Bowens, resistente a intempérie e alimentável por AC ou bateria. Virou o ca
+
+## funcao
+
+- [[diretor-de-fotografia]] — responsável autoral pela imagem: define câmera, lente, luz, paleta e movimento, em serviço da narrativa que o 
+- [[gaffer]] — chefe do departamento de elétrica: transforma a intenção do diretor de fotografia em plano executável de luz, 
+
+## interface
+
+- [[ndi]] — vídeo profissional trafegando sobre rede Ethernet comum, com descoberta automática de fontes. Troca cabo coaxi
+- [[sdi]] — padrão de vídeo profissional sobre cabo coaxial com conector BNC: **trava**, aceita tirada longa e não negocia
 
 ## marca
 
@@ -84,6 +102,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[ampas]] — a Academia (a mesma do Oscar) mantém um braço de ciência e tecnologia que publica padrões de uso corrente na i
 - [[itu-r]] — órgão da ONU que publica as recomendações da série **BT**, que definem os padrões de imagem de televisão do mu
 - [[mte]] — órgão federal que edita e mantém as **Normas Regulamentadoras (NRs)**, de cumprimento obrigatório em qualquer 
+- [[smpte]] — sociedade de engenheiros que normatiza boa parte da infraestrutura técnica de cinema e televisão: [[sdi]], tim
 
 ## pipeline-cor
 

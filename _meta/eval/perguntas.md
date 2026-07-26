@@ -223,6 +223,31 @@ qualidade da abstenção continuam exigindo leitura humana ou de agente.
 - busca: glob:mte -> glob:nr-35
 - fatos: MTE, NR
 
+### Q41 · lookup · Qual a diferença entre 3G-SDI e 12G-SDI?
+- espera: live/sinais/sdi.md
+- busca: glob:sdi
+- fatos: 12 Gb/s, UHD 60p, quad link
+
+### Q42 · comparativa · SDI ou NDI para um evento multicâmera?
+- espera: live/sinais/sdi.md, live/sinais/ndi.md
+- busca: glob:sdi -> glob:ndi
+- fatos: latência, rede dedicada, previsibilidade
+
+### Q43 · travessia · Quantos M/E preciso num switcher para evento com telão?
+- espera: live/conceitos/switcher-me.md
+- busca: glob:switcher-me
+- fatos: 2, composições simultâneas, aux
+
+### Q44 · workflow · Quem responde pela carga elétrica do set?
+- espera: producao/funcoes/gaffer.md
+- busca: glob:gaffer
+- fatos: gaffer, chefe de elétrica, locação aguenta
+
+### Q45 · travessia · O que precisa constar num mapa de luz para orçar energia?
+- espera: producao/documentos/mapa-de-luz.md, tools/calc/eletrica.py
+- busca: glob:mapa-de-luz -> glob:eletrica
+- fatos: potência, circuito, fase
+
 ---
 
 ## abstencao — o acervo NÃO cobre; a resposta certa é dizer isso

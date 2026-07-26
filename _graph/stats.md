@@ -4,16 +4,16 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 ## Números gerais
 
-- Notas: **45**
-- Arestas declaradas: **161** (+4 derivadas por simetria/inversa)
-- Notas com fonte oficial ou de laboratório: **44/45** (97%)
+- Notas: **55**
+- Arestas declaradas: **194** (+4 derivadas por simetria/inversa)
+- Notas com fonte oficial ou de laboratório: **50/55** (90%)
 - Notas órfãs: **0**
 
 ## Por status
 
 | status | notas |
 |---|---:|
-| draft | 44 |
+| draft | 54 |
 | stub | 1 |
 
 ## Por tipo
@@ -25,15 +25,18 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 | certificacao | 1 |
 | codec | 5 |
 | colorspace | 3 |
-| conceito | 9 |
+| conceito | 12 |
+| documento | 2 |
 | ecossistema | 1 |
 | fixture | 2 |
+| funcao | 2 |
+| interface | 2 |
 | marca | 5 |
 | midia | 2 |
 | moc | 1 |
 | mount | 3 |
 | norma | 1 |
-| orgao | 3 |
+| orgao | 4 |
 | pipeline-cor | 1 |
 | problema | 1 |
 | transfer-function | 2 |
@@ -42,9 +45,9 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 | aresta | nº |
 |---|---:|
-| `see_also` | 51 |
+| `see_also` | 79 |
 | `made_by` | 18 |
-| `alternative_to` | 13 |
+| `alternative_to` | 15 |
 | `records_codec` | 9 |
 | `conforms_to_pipeline` | 8 |
 | `distinct_from` | 8 |

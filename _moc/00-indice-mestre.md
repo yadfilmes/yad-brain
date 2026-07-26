@@ -30,6 +30,8 @@ Os índices automáticos ficam em `_index/`; este aqui é curado à mão.
 | **Diagnóstico** | [[flicker-parede-led]] |
 | **Segurança** | [[nr-35-trabalho-em-altura]] |
 | **Luz** | [[ls-600d-pro]] · [[evoke-2400b]] · [[temperatura-de-cor]] · [[cri-tlci-ssi]] · [[lei-do-inverso-do-quadrado]] |
+| **Live** | [[sdi]] · [[ndi]] · [[switcher-me]] · [[tally]] · [[rede-gigabit]] |
+| **Produção** | [[diretor-de-fotografia]] · [[gaffer]] · [[ordem-do-dia]] · [[mapa-de-luz]] |
 | **Marcas** | [[sony]] · [[arri]] · [[blackmagic-design]] · [[aputure]] · [[nanlux]] |
 
 ## Índices automáticos

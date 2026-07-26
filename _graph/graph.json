@@ -767,6 +767,34 @@
    ]
   },
   {
+   "id": "smpte",
+   "title": "SMPTE",
+   "type": "orgao",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/orgaos/smpte.md",
+   "tldr": "sociedade de engenheiros que normatiza boa parte da infraestrutura técnica de cinema e televisão: [[sdi]], timecode, DCP, ST 2110 (vídeo sobre IP profissional) e sincronismo. Quando um equipamento diz \"SMPTE 12M\", está c",
+   "aliases": [
+    "SMPTE",
+    "Society of Motion Picture and Television Engineers"
+   ],
+   "tags": [
+    "orgao",
+    "norma",
+    "broadcast",
+    "sinal",
+    "padrao"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
    "id": "genlock",
    "title": "Genlock (sincronismo de referência)",
    "type": "conceito",
@@ -940,6 +968,160 @@
     "flicker",
     "sincronia",
     "brompton"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "switcher-me",
+   "title": "M/E, program, preview e keyer — anatomia de um switcher",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "live/conceitos/switcher-me.md",
+   "tldr": "**M/E (Mix/Effects)** é um bloco completo de mistura: escolhe fontes, aplica transição e chaves, e entrega um resultado. Um switcher de \"1 M/E\" monta uma composição por vez; de \"4 M/E\", quatro em paralelo — é a métrica q",
+   "aliases": [
+    "M/E",
+    "ME",
+    "mix effects",
+    "program preview",
+    "keyer",
+    "downstream key",
+    "DSK"
+   ],
+   "tags": [
+    "live",
+    "switcher",
+    "broadcast",
+    "operacao"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "tally",
+   "title": "Tally (sinalização de câmera no ar)",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "live/conceitos/tally.md",
+   "tldr": "luz que avisa **quem está no ar** (vermelho) e, em muitos sistemas, quem está no preview (verde). Parece detalhe; na prática é o que impede o operador de reenquadrar durante o take e o apresentador de olhar para a câmera",
+   "aliases": [
+    "tally",
+    "luz de tally",
+    "red light",
+    "sinalização de no ar"
+   ],
+   "tags": [
+    "live",
+    "switcher",
+    "operacao",
+    "multicamera"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "ndi",
+   "title": "NDI (Network Device Interface)",
+   "type": "interface",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "live/sinais/ndi.md",
+   "tldr": "vídeo profissional trafegando sobre rede Ethernet comum, com descoberta automática de fontes. Troca cabo coaxial dedicado por infraestrutura de rede: uma fonte, muitos destinos, sem matriz de roteamento.",
+   "aliases": [
+    "NDI",
+    "NDI HX",
+    "NDI 5",
+    "NDI 6",
+    "vídeo sobre IP"
+   ],
+   "tags": [
+    "live",
+    "sinal",
+    "ip",
+    "rede",
+    "streaming"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "rede-gigabit",
+   "title": "Rede para vídeo sobre IP",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "live/sinais/rede-gigabit.md",
+   "tldr": "vídeo sobre IP exige rede **dedicada**: gigabit no mínimo, switch gerenciado, e nada de compartilhar com a internet do escritório. A rede deixa de ser encanamento e passa a ser equipamento de produção — com custo, teste ",
+   "aliases": [
+    "rede gigabit",
+    "switch gerenciado",
+    "rede dedicada",
+    "infraestrutura de rede"
+   ],
+   "tags": [
+    "live",
+    "rede",
+    "ip",
+    "ndi",
+    "infraestrutura"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "sdi",
+   "title": "SDI (Serial Digital Interface)",
+   "type": "interface",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "live/sinais/sdi.md",
+   "tldr": "padrão de vídeo profissional sobre cabo coaxial com conector BNC: **trava**, aceita tirada longa e não negocia handshake como o HDMI. É a razão de todo set e estúdio sério usar SDI onde o HDMI cairia.",
+   "aliases": [
+    "SDI",
+    "3G-SDI",
+    "6G-SDI",
+    "12G-SDI",
+    "HD-SDI",
+    "SDI 12G"
+   ],
+   "tags": [
+    "live",
+    "sinal",
+    "broadcast",
+    "cabo",
+    "bnc"
    ],
    "n_fontes": 1,
    "tiers": [
@@ -1268,6 +1450,131 @@
    "n_fontes": 1,
    "tiers": [
     "oficial"
+   ]
+  },
+  {
+   "id": "mapa-de-luz",
+   "title": "Mapa de luz (lighting diagram)",
+   "type": "documento",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "producao/documentos/mapa-de-luz.md",
+   "tldr": "planta baixa da cena com posição, altura, modificador e potência de cada fixture, mais a posição de câmera. Serve para montar rápido, para remontar igual em outro dia, e para orçar equipamento e energia antes de chegar n",
+   "aliases": [
+    "mapa de luz",
+    "lighting diagram",
+    "planta de luz",
+    "light plot",
+    "diagrama de iluminação"
+   ],
+   "tags": [
+    "producao",
+    "documento",
+    "luz",
+    "prep",
+    "g-e"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "educacao"
+   ]
+  },
+  {
+   "id": "ordem-do-dia",
+   "title": "Ordem do dia (call sheet)",
+   "type": "documento",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "producao/documentos/ordem-do-dia.md",
+   "tldr": "documento diário que diz a **cada pessoa** onde estar, a que horas, para filmar o quê. Emitido pela assistência de direção na véspera. É o documento mais lido de uma produção e o que mais custa caro quando sai errado.",
+   "aliases": [
+    "call sheet",
+    "ordem do dia",
+    "callsheet",
+    "OD",
+    "plano de trabalho diário"
+   ],
+   "tags": [
+    "producao",
+    "documento",
+    "set",
+    "logistica",
+    "ad"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "educacao"
+   ]
+  },
+  {
+   "id": "diretor-de-fotografia",
+   "title": "Diretor de fotografia (DoP)",
+   "type": "funcao",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "producao/funcoes/diretor-de-fotografia.md",
+   "tldr": "responsável autoral pela imagem: define câmera, lente, luz, paleta e movimento, em serviço da narrativa que o diretor quer contar. Chefia os departamentos de câmera e elétrica, e responde pelo resultado visual do começo ",
+   "aliases": [
+    "DoP",
+    "DP",
+    "diretor de fotografia",
+    "director of photography",
+    "cinematographer",
+    "fotógrafo"
+   ],
+   "tags": [
+    "funcao",
+    "camera",
+    "luz",
+    "autoria",
+    "set"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "educacao"
+   ]
+  },
+  {
+   "id": "gaffer",
+   "title": "Gaffer (chefe de elétrica)",
+   "type": "funcao",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "producao/funcoes/gaffer.md",
+   "tldr": "chefe do departamento de elétrica: transforma a intenção do diretor de fotografia em plano executável de luz, e responde pela equipe, pelo equipamento e pela **segurança elétrica** do set. Não é quem escolhe o visual; é ",
+   "aliases": [
+    "gaffer",
+    "chefe de elétrica",
+    "chefe de eletricistas",
+    "chief lighting technician",
+    "CLT"
+   ],
+   "tags": [
+    "funcao",
+    "luz",
+    "eletrica",
+    "set",
+    "g-e"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "educacao"
    ]
   },
   {
@@ -2020,6 +2327,24 @@
    "derivada": false
   },
   {
+   "de": "smpte",
+   "aresta": "see_also",
+   "para": "sdi",
+   "derivada": false
+  },
+  {
+   "de": "smpte",
+   "aresta": "see_also",
+   "para": "genlock",
+   "derivada": false
+  },
+  {
+   "de": "smpte",
+   "aresta": "see_also",
+   "para": "itu-r",
+   "derivada": false
+  },
+  {
    "de": "genlock",
    "aresta": "see_also",
    "para": "flicker-parede-led",
@@ -2095,6 +2420,90 @@
    "de": "shuttersync",
    "aresta": "see_also",
    "para": "scan-rate",
+   "derivada": false
+  },
+  {
+   "de": "switcher-me",
+   "aresta": "see_also",
+   "para": "sdi",
+   "derivada": false
+  },
+  {
+   "de": "switcher-me",
+   "aresta": "see_also",
+   "para": "ndi",
+   "derivada": false
+  },
+  {
+   "de": "switcher-me",
+   "aresta": "see_also",
+   "para": "tally",
+   "derivada": false
+  },
+  {
+   "de": "tally",
+   "aresta": "see_also",
+   "para": "switcher-me",
+   "derivada": false
+  },
+  {
+   "de": "tally",
+   "aresta": "see_also",
+   "para": "ndi",
+   "derivada": false
+  },
+  {
+   "de": "tally",
+   "aresta": "see_also",
+   "para": "sdi",
+   "derivada": false
+  },
+  {
+   "de": "ndi",
+   "aresta": "alternative_to",
+   "para": "sdi",
+   "derivada": false
+  },
+  {
+   "de": "ndi",
+   "aresta": "requires",
+   "para": "rede-gigabit",
+   "derivada": false
+  },
+  {
+   "de": "ndi",
+   "aresta": "see_also",
+   "para": "genlock",
+   "derivada": false
+  },
+  {
+   "de": "rede-gigabit",
+   "aresta": "see_also",
+   "para": "ndi",
+   "derivada": false
+  },
+  {
+   "de": "rede-gigabit",
+   "aresta": "see_also",
+   "para": "sdi",
+   "derivada": false
+  },
+  {
+   "de": "sdi",
+   "aresta": "implements_standard",
+   "para": "smpte",
+   "derivada": false
+  },
+  {
+   "de": "sdi",
+   "aresta": "alternative_to",
+   "para": "ndi",
+   "derivada": false
+  },
+  {
+   "de": "sdi",
+   "aresta": "see_also",
+   "para": "genlock",
    "derivada": false
   },
   {
@@ -2245,6 +2654,102 @@
    "de": "sony",
    "aresta": "see_also",
    "para": "venice-2",
+   "derivada": false
+  },
+  {
+   "de": "mapa-de-luz",
+   "aresta": "see_also",
+   "para": "gaffer",
+   "derivada": false
+  },
+  {
+   "de": "mapa-de-luz",
+   "aresta": "see_also",
+   "para": "diretor-de-fotografia",
+   "derivada": false
+  },
+  {
+   "de": "mapa-de-luz",
+   "aresta": "see_also",
+   "para": "ordem-do-dia",
+   "derivada": false
+  },
+  {
+   "de": "mapa-de-luz",
+   "aresta": "see_also",
+   "para": "ls-600d-pro",
+   "derivada": false
+  },
+  {
+   "de": "ordem-do-dia",
+   "aresta": "see_also",
+   "para": "gaffer",
+   "derivada": false
+  },
+  {
+   "de": "ordem-do-dia",
+   "aresta": "see_also",
+   "para": "diretor-de-fotografia",
+   "derivada": false
+  },
+  {
+   "de": "ordem-do-dia",
+   "aresta": "see_also",
+   "para": "mapa-de-luz",
+   "derivada": false
+  },
+  {
+   "de": "diretor-de-fotografia",
+   "aresta": "see_also",
+   "para": "gaffer",
+   "derivada": false
+  },
+  {
+   "de": "diretor-de-fotografia",
+   "aresta": "see_also",
+   "para": "venice-2",
+   "derivada": false
+  },
+  {
+   "de": "diretor-de-fotografia",
+   "aresta": "see_also",
+   "para": "alexa-35",
+   "derivada": false
+  },
+  {
+   "de": "diretor-de-fotografia",
+   "aresta": "see_also",
+   "para": "filtro-nd",
+   "derivada": false
+  },
+  {
+   "de": "diretor-de-fotografia",
+   "aresta": "see_also",
+   "para": "aces",
+   "derivada": false
+  },
+  {
+   "de": "gaffer",
+   "aresta": "reports_to",
+   "para": "diretor-de-fotografia",
+   "derivada": false
+  },
+  {
+   "de": "gaffer",
+   "aresta": "see_also",
+   "para": "ls-600d-pro",
+   "derivada": false
+  },
+  {
+   "de": "gaffer",
+   "aresta": "see_also",
+   "para": "temperatura-de-cor",
+   "derivada": false
+  },
+  {
+   "de": "gaffer",
+   "aresta": "see_also",
+   "para": "nr-35-trabalho-em-altura",
    "derivada": false
   },
   {

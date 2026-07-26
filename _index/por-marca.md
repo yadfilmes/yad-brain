@@ -12,24 +12,34 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[bat--b-mount]] — padrão de bateria de 24 V criado por consórcio (ARRI, Bebob, Core SWX) para equipamento que consome mais do qu
 - [[blackmagic-design]] — fabricante australiana que mudou o preço-base do mercado: câmeras de cinema, switchers ATEM, conversores, grav
 - [[cri-tlci-ssi]] — quatro métricas que tentam responder "essa luz reproduz cor direito?". **CRI é a mais citada e a mais fraca**;
+- [[diretor-de-fotografia]] — responsável autoral pela imagem: define câmera, lente, luz, paleta e movimento, em serviço da narrativa que o 
 - [[filtro-nd]] — filtro cinza que corta luz sem (idealmente) alterar cor, para manter diafragma aberto e obturador 180° sob sol
 - [[flicker-parede-led]] — a câmera enxerga bandas horizontais, cintilação ou linha rolando sobre a parede de LED. Quase sempre é dessinc
+- [[gaffer]] — chefe do departamento de elétrica: transforma a intenção do diretor de fotografia em plano executável de luz, 
 - [[genlock]] — sinal de referência comum que faz vários equipamentos varrerem o quadro no mesmo instante. Sem ele, cada câmer
 - [[itu-r]] — órgão da ONU que publica as recomendações da série **BT**, que definem os padrões de imagem de televisão do mu
 - [[lei-do-inverso-do-quadrado]] — dobrar a distância entre a luz e o sujeito derruba a intensidade a **um quarto** (dois stops), não à metade. É
+- [[mapa-de-luz]] — planta baixa da cena com posição, altura, modificador e potência de cada fixture, mais a posição de câmera. Se
 - [[midia--cfexpress-b]] — padrão aberto de cartão de alta velocidade (PCIe/NVMe por baixo), adotado por praticamente todo fabricante de 
 - [[mount--e]] — mount eletrônico da Sony com flange focal distance curto (18 mm), usado da mirrorless de entrada ao topo de ci
 - [[mount--pl]] — mount padrão do cinema profissional, criado pela ARRI: trava mecânica de quatro flanges, sem contatos elétrico
 - [[mte]] — órgão federal que edita e mantém as **Normas Regulamentadoras (NRs)**, de cumprimento obrigatório em qualquer 
 - [[nanlux]] — linha profissional de alta potência da mesma casa da Nanlite, posicionada acima dela. Disputa com a Aputure a 
+- [[ndi]] — vídeo profissional trafegando sobre rede Ethernet comum, com descoberta automática de fontes. Troca cabo coaxi
 - [[netflix-approved]] — lista de câmeras que a Netflix aceita como principal em produções originais. O critério central é **resolução 
 - [[nr-35-trabalho-em-altura]] — norma regulamentadora brasileira que rege qualquer atividade executada acima de 2 metros do nível inferior com
 - [[obturador-180]] — manter o obturador em 180° (velocidade = 1 ÷ (2 × frame rate)) entrega o borrão de movimento a que o olho está
+- [[ordem-do-dia]] — documento diário que diz a **cada pessoa** onde estar, a que horas, para filmar o quê. Emitido pela assistênci
 - [[prores]] — família de codecs intraframe da Apple que virou o padrão de fato para mezanino e entrega em pós: cada quadro é
 - [[pwm-brilho-led]] — LED não regula intensidade baixando tensão: ele **pisca muito rápido** e o tempo ligado define o brilho aparen
 - [[rec-709]] — o padrão de cor da televisão HD e, na prática, o denominador comum de entrega até hoje: gamut relativamente pe
+- [[rede-gigabit]] — vídeo sobre IP exige rede **dedicada**: gigabit no mínimo, switch gerenciado, e nada de compartilhar com a int
 - [[scan-rate]] — quantas vezes por segundo o painel redesenha a imagem inteira, em Hz. O olho humano se satisfaz com pouco; **a
+- [[sdi]] — padrão de vídeo profissional sobre cabo coaxial com conector BNC: **trava**, aceita tirada longa e não negocia
+- [[smpte]] — sociedade de engenheiros que normatiza boa parte da infraestrutura técnica de cinema e televisão: [[sdi]], tim
 - [[sony]] — fabricante japonesa presente em quase toda a cadeia audiovisual: câmeras de cinema (CineAlta/VENICE), broadcas
+- [[switcher-me]] — **M/E (Mix/Effects)** é um bloco completo de mistura: escolhe fontes, aplica transição e chaves, e entrega um 
+- [[tally]] — luz que avisa **quem está no ar** (vermelho) e, em muitos sistemas, quem está no preview (verde). Parece detal
 - [[temperatura-de-cor]] — CCT, em Kelvin, descreve se a luz é "quente" (3200 K, tungstênio) ou "fria" (5600 K, luz do dia). Mas **um eix
 
 ## aputure

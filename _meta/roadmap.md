@@ -52,8 +52,8 @@ de cada uma, registrar página/tabela/seção.
 Ordem sugerida (a de captação e cor já existem):
 
 1. **Iluminação e elétrica** — o maior em volume e o mais usado no dia a dia
-2. **Live e broadcast** — switchers, NDI, roteamento, intercom
-3. **Produção** — funções por departamento, workflows, documentos de set
+2. **Live e broadcast** — espinha de sinal feita (SDI, NDI, M/E, tally, rede); faltam switchers, roteamento e intercom
+3. **Produção** — DoP, gaffer, ordem do dia e mapa de luz feitos; faltam demais funções e documentos
 4. **Áudio** — microfones, wireless, mixers, timecode
 5. **Grip e suporte**
 6. **Pós** — softwares, plugins, entrega (DCP/IMF), arquivo (LTO, ASC MHL)
