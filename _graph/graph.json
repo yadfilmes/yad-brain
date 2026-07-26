@@ -1,6 +1,95 @@
 {
  "nos": [
   {
+   "id": "bat--b-mount",
+   "title": "B-Mount (padrão de bateria)",
+   "type": "battery-mount",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "_meta/vocab/bat--b-mount.md",
+   "tldr": "padrão de bateria de 24 V criado por consórcio (ARRI, Bebob, Core SWX) para equipamento que consome mais do que V-Mount e Gold-Mount entregam com folga. É o padrão da [[alexa-35]] e de fixtures de LED potentes.",
+   "aliases": [
+    "B-Mount",
+    "B Mount",
+    "BMount",
+    "bateria B-Mount"
+   ],
+   "tags": [
+    "energia",
+    "bateria",
+    "padrao",
+    "arri"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "midia--axs",
+   "title": "Cartão AXS (Sony)",
+   "type": "midia",
+   "brand": "sony",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "_meta/vocab/midia--axs.md",
+   "tldr": "mídia proprietária da Sony para as câmeras VENICE, exigida pelas taxas do [[x-ocn]]. Exclusiva do ecossistema: precisa de leitor próprio, e o custo dela entra no orçamento junto do corpo da câmera, não depois.",
+   "aliases": [
+    "AXS",
+    "AXS card",
+    "cartão AXS",
+    "AXSM",
+    "AXS-R7"
+   ],
+   "tags": [
+    "midia",
+    "cartao",
+    "sony",
+    "cinema",
+    "gravacao"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "midia--cfexpress-b",
+   "title": "CFexpress Type B",
+   "type": "midia",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "_meta/vocab/midia--cfexpress-b.md",
+   "tldr": "padrão aberto de cartão de alta velocidade (PCIe/NVMe por baixo), adotado por praticamente todo fabricante de câmera fora do mundo proprietário. É o oposto do [[midia--axs]]: mesmo cartão serve câmeras de marcas diferent",
+   "aliases": [
+    "CFexpress",
+    "CFexpress Type B",
+    "CFe B",
+    "CF express tipo B"
+   ],
+   "tags": [
+    "midia",
+    "cartao",
+    "padrao",
+    "gravacao"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
    "id": "mount--e",
    "title": "E-mount (Sony)",
    "type": "mount",
@@ -203,6 +292,66 @@
    ]
   },
   {
+   "id": "venice",
+   "title": "Sony VENICE (primeira geração)",
+   "type": "camera",
+   "brand": "sony",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "captacao/cameras/sony/venice.md",
+   "tldr": "primeira geração da linha VENICE: sensor full-frame 6K, dual base ISO 500/2500 e gravação [[x-ocn]] em [[midia--axs]]. Continua muito presente em locadora e em produção, a preço de diária bem menor que a [[venice-2]].",
+   "aliases": [
+    "VENICE",
+    "Sony VENICE",
+    "VENICE 1",
+    "MPC-3610"
+   ],
+   "tags": [
+    "full-frame",
+    "dual-base-iso",
+    "x-ocn",
+    "cinema-digital",
+    "legacy"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "netflix-approved",
+   "title": "Netflix Approved (câmeras para produções originais)",
+   "type": "certificacao",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/certificacoes/netflix-approved.md",
+   "tldr": "lista de câmeras que a Netflix aceita como principal em produções originais. O critério central é **resolução de sensor de 4K real ou superior** para a maior parte da metragem, mais requisitos de codec, gravação e metada",
+   "aliases": [
+    "Netflix Approved",
+    "Netflix approved camera",
+    "lista Netflix",
+    "Netflix Post Technology Alliance"
+   ],
+   "tags": [
+    "certificacao",
+    "entrega",
+    "streaming",
+    "camera",
+    "requisito"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
    "id": "arriraw",
    "title": "ARRIRAW",
    "type": "codec",
@@ -321,6 +470,38 @@
    ]
   },
   {
+   "id": "xavc",
+   "title": "XAVC (Sony)",
+   "type": "codec",
+   "brand": "sony",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/codecs/xavc.md",
+   "tldr": "família de codecs de gravação da Sony baseada em H.264/H.265, usada dos corpos de broadcast aos de cinema como formato **leve**, ao lado do [[x-ocn]]. Não confundir os dois: XAVC é vídeo já revelado; X-OCN é negativo.",
+   "aliases": [
+    "XAVC",
+    "XAVC-I",
+    "XAVC Intra",
+    "XAVC-L",
+    "XAVC HS",
+    "XAVC S"
+   ],
+   "tags": [
+    "codec",
+    "sony",
+    "entrega",
+    "broadcast",
+    "aquisicao"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
    "id": "aces",
    "title": "ACES (Academy Color Encoding System)",
    "type": "pipeline-cor",
@@ -335,10 +516,7 @@
    "aliases": [
     "ACES",
     "Academy Color Encoding System",
-    "ACEScct",
-    "ACEScg",
-    "AP0",
-    "AP1"
+    "ACES 2065-1"
    ],
    "tags": [
     "cor",
@@ -552,6 +730,36 @@
     "norma",
     "broadcast",
     "cor"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "mte",
+   "title": "MTE — Ministério do Trabalho e Emprego (Brasil)",
+   "type": "orgao",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/orgaos/mte.md",
+   "tldr": "órgão federal que edita e mantém as **Normas Regulamentadoras (NRs)**, de cumprimento obrigatório em qualquer atividade com empregados no Brasil — inclusive set de filmagem. As NRs que mais encostam em audiovisual são a ",
+   "aliases": [
+    "MTE",
+    "Ministério do Trabalho",
+    "Ministerio do Trabalho e Emprego",
+    "MTP"
+   ],
+   "tags": [
+    "orgao",
+    "norma",
+    "seguranca",
+    "brasil",
+    "trabalho"
    ],
    "n_fontes": 1,
    "tiers": [
@@ -920,6 +1128,24 @@
  ],
  "arestas": [
   {
+   "de": "midia--axs",
+   "aresta": "made_by",
+   "para": "sony",
+   "derivada": false
+  },
+  {
+   "de": "midia--axs",
+   "aresta": "alternative_to",
+   "para": "midia--cfexpress-b",
+   "derivada": false
+  },
+  {
+   "de": "midia--cfexpress-b",
+   "aresta": "alternative_to",
+   "para": "midia--axs",
+   "derivada": false
+  },
+  {
    "de": "mount--e",
    "aresta": "made_by",
    "para": "sony",
@@ -927,7 +1153,7 @@
   },
   {
    "de": "mount--e",
-   "aresta": "see_also",
+   "aresta": "alternative_to",
    "para": "mount--pl",
    "derivada": false
   },
@@ -939,13 +1165,13 @@
   },
   {
    "de": "mount--lpl",
-   "aresta": "see_also",
+   "aresta": "successor_of",
    "para": "mount--pl",
    "derivada": false
   },
   {
    "de": "mount--lpl",
-   "aresta": "see_also",
+   "aresta": "alternative_to",
    "para": "mount--e",
    "derivada": false
   },
@@ -1023,8 +1249,20 @@
   },
   {
    "de": "alexa-35",
-   "aresta": "see_also",
-   "para": "filtro-nd",
+   "aresta": "supports_transfer_function",
+   "para": "log-c4",
+   "derivada": false
+  },
+  {
+   "de": "alexa-35",
+   "aresta": "supports_colorspace",
+   "para": "arri-wide-gamut-4",
+   "derivada": false
+  },
+  {
+   "de": "alexa-35",
+   "aresta": "conforms_to_pipeline",
+   "para": "aces",
    "derivada": false
   },
   {
@@ -1071,8 +1309,14 @@
   },
   {
    "de": "pyxis-6k",
-   "aresta": "see_also",
-   "para": "filtro-nd",
+   "aresta": "accepts_media",
+   "para": "midia--cfexpress-b",
+   "derivada": false
+  },
+  {
+   "de": "pyxis-6k",
+   "aresta": "conforms_to_pipeline",
+   "para": "aces",
    "derivada": false
   },
   {
@@ -1119,6 +1363,18 @@
   },
   {
    "de": "venice-2",
+   "aresta": "supports_colorspace",
+   "para": "s-gamut3-cine",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
+   "aresta": "accepts_media",
+   "para": "midia--axs",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
    "aresta": "competes_with",
    "para": "alexa-35",
    "derivada": false
@@ -1137,8 +1393,80 @@
   },
   {
    "de": "venice-2",
-   "aresta": "see_also",
+   "aresta": "alternative_to",
    "para": "filtro-nd",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
+   "aresta": "see_also",
+   "para": "obturador-180",
+   "derivada": false
+  },
+  {
+   "de": "venice",
+   "aresta": "made_by",
+   "para": "sony",
+   "derivada": false
+  },
+  {
+   "de": "venice",
+   "aresta": "has_native_mount",
+   "para": "mount--e",
+   "derivada": false
+  },
+  {
+   "de": "venice",
+   "aresta": "accepts_mount",
+   "para": "mount--pl",
+   "derivada": false
+  },
+  {
+   "de": "venice",
+   "aresta": "records_codec",
+   "para": "x-ocn",
+   "derivada": false
+  },
+  {
+   "de": "venice",
+   "aresta": "records_codec",
+   "para": "prores",
+   "derivada": false
+  },
+  {
+   "de": "venice",
+   "aresta": "records_codec",
+   "para": "xavc",
+   "derivada": false
+  },
+  {
+   "de": "venice",
+   "aresta": "accepts_media",
+   "para": "midia--axs",
+   "derivada": false
+  },
+  {
+   "de": "venice",
+   "aresta": "supports_transfer_function",
+   "para": "s-log3",
+   "derivada": false
+  },
+  {
+   "de": "venice",
+   "aresta": "supports_colorspace",
+   "para": "s-gamut3-cine",
+   "derivada": false
+  },
+  {
+   "de": "venice",
+   "aresta": "predecessor_of",
+   "para": "venice-2",
+   "derivada": false
+  },
+  {
+   "de": "venice",
+   "aresta": "certified_for",
+   "para": "netflix-approved",
    "derivada": false
   },
   {
@@ -1155,20 +1483,20 @@
   },
   {
    "de": "arriraw",
-   "aresta": "see_also",
+   "aresta": "alternative_to",
    "para": "x-ocn",
    "derivada": false
   },
   {
    "de": "arriraw",
-   "aresta": "see_also",
+   "aresta": "alternative_to",
    "para": "braw",
    "derivada": false
   },
   {
    "de": "arriraw",
-   "aresta": "see_also",
-   "para": "prores",
+   "aresta": "conforms_to_pipeline",
+   "para": "aces",
    "derivada": false
   },
   {
@@ -1191,26 +1519,20 @@
   },
   {
    "de": "braw",
-   "aresta": "see_also",
-   "para": "pyxis-6k",
-   "derivada": false
-  },
-  {
-   "de": "braw",
-   "aresta": "see_also",
+   "aresta": "alternative_to",
    "para": "x-ocn",
    "derivada": false
   },
   {
    "de": "braw",
-   "aresta": "see_also",
+   "aresta": "alternative_to",
    "para": "arriraw",
    "derivada": false
   },
   {
    "de": "braw",
    "aresta": "see_also",
-   "para": "prores",
+   "para": "pyxis-6k",
    "derivada": false
   },
   {
@@ -1233,20 +1555,44 @@
   },
   {
    "de": "x-ocn",
-   "aresta": "see_also",
+   "aresta": "alternative_to",
    "para": "braw",
    "derivada": false
   },
   {
    "de": "x-ocn",
-   "aresta": "see_also",
+   "aresta": "alternative_to",
    "para": "arriraw",
    "derivada": false
   },
   {
    "de": "x-ocn",
-   "aresta": "see_also",
+   "aresta": "distinct_from",
+   "para": "xavc",
+   "derivada": false
+  },
+  {
+   "de": "x-ocn",
+   "aresta": "accepts_media",
+   "para": "midia--axs",
+   "derivada": false
+  },
+  {
+   "de": "xavc",
+   "aresta": "made_by",
+   "para": "sony",
+   "derivada": false
+  },
+  {
+   "de": "xavc",
+   "aresta": "alternative_to",
    "para": "prores",
+   "derivada": false
+  },
+  {
+   "de": "xavc",
+   "aresta": "distinct_from",
+   "para": "x-ocn",
    "derivada": false
   },
   {
@@ -1257,19 +1603,25 @@
   },
   {
    "de": "aces",
-   "aresta": "see_also",
-   "para": "s-log3",
+   "aresta": "supports_colorspace",
+   "para": "rec-709",
    "derivada": false
   },
   {
    "de": "aces",
-   "aresta": "see_also",
-   "para": "log-c4",
+   "aresta": "supports_colorspace",
+   "para": "s-gamut3-cine",
    "derivada": false
   },
   {
    "de": "aces",
-   "aresta": "see_also",
+   "aresta": "supports_colorspace",
+   "para": "arri-wide-gamut-4",
+   "derivada": false
+  },
+  {
+   "de": "aces",
+   "aresta": "distinct_from",
    "para": "rec-709",
    "derivada": false
   },
@@ -1335,6 +1687,12 @@
   },
   {
    "de": "log-c4",
+   "aresta": "alternative_to",
+   "para": "s-log3",
+   "derivada": false
+  },
+  {
+   "de": "log-c4",
    "aresta": "see_also",
    "para": "arriraw",
    "derivada": false
@@ -1343,12 +1701,6 @@
    "de": "log-c4",
    "aresta": "see_also",
    "para": "alexa-35",
-   "derivada": false
-  },
-  {
-   "de": "log-c4",
-   "aresta": "see_also",
-   "para": "s-log3",
    "derivada": false
   },
   {
@@ -1425,6 +1777,12 @@
   },
   {
    "de": "s-log3",
+   "aresta": "distinct_from",
+   "para": "s-gamut3-cine",
+   "derivada": false
+  },
+  {
+   "de": "s-log3",
    "aresta": "see_also",
    "para": "x-ocn",
    "derivada": false
@@ -1445,6 +1803,12 @@
    "de": "itu-r",
    "aresta": "see_also",
    "para": "rec-709",
+   "derivada": false
+  },
+  {
+   "de": "mte",
+   "aresta": "see_also",
+   "para": "nr-35-trabalho-em-altura",
    "derivada": false
   },
   {
@@ -1509,6 +1873,12 @@
   },
   {
    "de": "shuttersync",
+   "aresta": "requires",
+   "para": "genlock",
+   "derivada": false
+  },
+  {
+   "de": "shuttersync",
    "aresta": "see_also",
    "para": "flicker-parede-led",
    "derivada": false
@@ -1517,18 +1887,6 @@
    "de": "shuttersync",
    "aresta": "see_also",
    "para": "scan-rate",
-   "derivada": false
-  },
-  {
-   "de": "shuttersync",
-   "aresta": "see_also",
-   "para": "genlock",
-   "derivada": false
-  },
-  {
-   "de": "shuttersync",
-   "aresta": "see_also",
-   "para": "obturador-180",
    "derivada": false
   },
   {
@@ -1569,13 +1927,13 @@
   },
   {
    "de": "ecossistema-blackmagic",
-   "aresta": "see_also",
+   "aresta": "part_of_ecosystem",
    "para": "pyxis-6k",
    "derivada": false
   },
   {
    "de": "ecossistema-blackmagic",
-   "aresta": "see_also",
+   "aresta": "part_of_ecosystem",
    "para": "braw",
    "derivada": false
   },
@@ -1589,6 +1947,12 @@
    "de": "sony",
    "aresta": "see_also",
    "para": "venice-2",
+   "derivada": false
+  },
+  {
+   "de": "nr-35-trabalho-em-altura",
+   "aresta": "governed_by",
+   "para": "mte",
    "derivada": false
   },
   {
@@ -1640,9 +2004,27 @@
    "derivada": false
   },
   {
+   "de": "mount--pl",
+   "aresta": "predecessor_of",
+   "para": "mount--lpl",
+   "derivada": true
+  },
+  {
    "de": "venice-2",
    "aresta": "competes_with",
    "para": "pyxis-6k",
+   "derivada": true
+  },
+  {
+   "de": "rec-709",
+   "aresta": "distinct_from",
+   "para": "aces",
+   "derivada": true
+  },
+  {
+   "de": "s-gamut3-cine",
+   "aresta": "distinct_from",
+   "para": "s-log3",
    "derivada": true
   }
  ]

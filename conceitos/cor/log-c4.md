@@ -14,7 +14,8 @@ rel:
   paired_gamut: [arri-wide-gamut-4]
   conforms_to_pipeline: [aces]
   distinct_from: [rec-709]
-  see_also: [arriraw, alexa-35, s-log3]
+  alternative_to: [s-log3]
+  see_also: [arriraw, alexa-35]
 sources:
   - {url: "https://www.arri.com/en/learn-help/learn-help-camera-system/image-science", tier: oficial, ret: 2026-07-26, nota: "documentação de ciência de cor"}
 ---

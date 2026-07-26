@@ -13,7 +13,7 @@ rel:
   made_by: [sony]
   paired_gamut: [s-gamut3-cine]
   conforms_to_pipeline: [aces]
-  distinct_from: [rec-709]
+  distinct_from: [rec-709, s-gamut3-cine]
   see_also: [x-ocn, venice-2]
 sources:
   - {url: "https://pro.sony/ue_US/technology/s-log", tier: oficial, ret: 2026-07-26, nota: "definição da curva e uso"}

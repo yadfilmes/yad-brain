@@ -18,7 +18,9 @@ rel:
   uses_battery_mount: [bat--b-mount]
   competes_with: [venice-2]
   certified_for: [netflix-approved]
-  see_also: [filtro-nd]
+  supports_transfer_function: [log-c4]
+  supports_colorspace: [arri-wide-gamut-4]
+  conforms_to_pipeline: [aces]
 sources:
   - {url: "https://www.arri.com/en/camera-systems/cameras/alexa-35", tier: oficial, ret: 2026-07-26, nota: "sensor, mount, codecs"}
   - {url: "https://www.cined.com", tier: lab, ret: 2026-07-26, nota: "testes independentes de latitude"}

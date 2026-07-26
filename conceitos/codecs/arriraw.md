@@ -12,7 +12,8 @@ updated: 2026-07-26
 rel:
   made_by: [arri]
   paired_gamut: [log-c4]
-  see_also: [x-ocn, braw, prores]
+  alternative_to: [x-ocn, braw]
+  conforms_to_pipeline: [aces]
 sources:
   - {url: "https://www.arri.com/en/learn-help/learn-help-camera-system/camera-workflow", tier: oficial, ret: 2026-07-26, nota: "definição e fluxo"}
 ---

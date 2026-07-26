@@ -10,7 +10,6 @@ confidence: alta
 updated: 2026-07-26
 rel:
   see_also: [venice-2, pyxis-6k]
-  distinct_from: []
 sources:
   - {url: "https://tiffen.com", tier: oficial, ret: 2026-07-26, nota: "escala de densidade e tipos"}
 ---

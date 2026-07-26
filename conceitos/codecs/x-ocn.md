@@ -12,7 +12,9 @@ updated: 2026-07-26
 rel:
   made_by: [sony]
   paired_gamut: [s-log3]
-  see_also: [braw, arriraw, prores]
+  alternative_to: [braw, arriraw]
+  distinct_from: [xavc]
+  accepts_media: [midia--axs]
 sources:
   - {url: "https://pro.sony/ue_US/technology/x-ocn", tier: oficial, ret: 2026-07-26, nota: "definição e variantes"}
 ---

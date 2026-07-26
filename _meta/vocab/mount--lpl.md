@@ -11,7 +11,8 @@ confidence: alta
 updated: 2026-07-26
 rel:
   made_by: [arri]
-  see_also: [mount--pl, mount--e]
+  successor_of: [mount--pl]
+  alternative_to: [mount--e]
 sources:
   - {url: "https://www.arri.com", tier: oficial, ret: 2026-07-26, nota: "especificação do mount LPL"}
 ---

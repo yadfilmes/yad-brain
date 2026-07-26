@@ -10,7 +10,8 @@ status: draft
 confidence: media
 updated: 2026-07-26
 rel:
-  see_also: [flicker-parede-led, scan-rate, genlock, obturador-180]
+  requires: [genlock]
+  see_also: [flicker-parede-led, scan-rate]
 sources:
   - {url: "https://www.bromptontech.com", tier: oficial, ret: 2026-07-26, nota: "recurso de sincronização de obturador"}
 ---

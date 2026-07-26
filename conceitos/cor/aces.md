@@ -3,14 +3,16 @@ id: aces
 title: ACES (Academy Color Encoding System)
 type: pipeline-cor
 zona: universal
-aliases: [ACES, "Academy Color Encoding System", "ACEScct", "ACEScg", AP0, AP1]
+aliases: [ACES, "Academy Color Encoding System", "ACES 2065-1"]
 tags: [cor, pipeline, gerenciamento-de-cor, padrao, academy]
 status: draft
 confidence: media
 updated: 2026-07-26
 rel:
   governed_by: [ampas]
-  see_also: [s-log3, log-c4, rec-709, braw]
+  supports_colorspace: [rec-709, s-gamut3-cine, arri-wide-gamut-4]
+  distinct_from: [rec-709]
+  see_also: [braw]
 sources:
   - {url: "https://docs.acescentral.com", tier: oficial, ret: 2026-07-26, nota: "documentação oficial do sistema"}
 ---

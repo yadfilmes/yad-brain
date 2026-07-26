@@ -8,13 +8,17 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[aces]] — sistema de gerenciamento de cor da Academia: cada câmera entra por uma **IDT** (transformação de entrada), tod
 - [[ampas]] — a Academia (a mesma do Oscar) mantém um braço de ciência e tecnologia que publica padrões de uso corrente na i
 - [[arri]] — fabricante alemã centenária, referência de cinema em três frentes ao mesmo tempo: câmeras (ALEXA), iluminação 
+- [[bat--b-mount]] — padrão de bateria de 24 V criado por consórcio (ARRI, Bebob, Core SWX) para equipamento que consome mais do qu
 - [[blackmagic-design]] — fabricante australiana que mudou o preço-base do mercado: câmeras de cinema, switchers ATEM, conversores, grav
 - [[filtro-nd]] — filtro cinza que corta luz sem (idealmente) alterar cor, para manter diafragma aberto e obturador 180° sob sol
 - [[flicker-parede-led]] — a câmera enxerga bandas horizontais, cintilação ou linha rolando sobre a parede de LED. Quase sempre é dessinc
 - [[genlock]] — sinal de referência comum que faz vários equipamentos varrerem o quadro no mesmo instante. Sem ele, cada câmer
 - [[itu-r]] — órgão da ONU que publica as recomendações da série **BT**, que definem os padrões de imagem de televisão do mu
+- [[midia--cfexpress-b]] — padrão aberto de cartão de alta velocidade (PCIe/NVMe por baixo), adotado por praticamente todo fabricante de 
 - [[mount--e]] — mount eletrônico da Sony com flange focal distance curto (18 mm), usado da mirrorless de entrada ao topo de ci
 - [[mount--pl]] — mount padrão do cinema profissional, criado pela ARRI: trava mecânica de quatro flanges, sem contatos elétrico
+- [[mte]] — órgão federal que edita e mantém as **Normas Regulamentadoras (NRs)**, de cumprimento obrigatório em qualquer 
+- [[netflix-approved]] — lista de câmeras que a Netflix aceita como principal em produções originais. O critério central é **resolução 
 - [[nr-35-trabalho-em-altura]] — norma regulamentadora brasileira que rege qualquer atividade executada acima de 2 metros do nível inferior com
 - [[obturador-180]] — manter o obturador em 180° (velocidade = 1 ÷ (2 × frame rate)) entrega o borrão de movimento a que o olho está
 - [[prores]] — família de codecs intraframe da Apple que virou o padrão de fato para mezanino e entrega em pós: cada quadro é
@@ -43,7 +47,10 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 ## sony
 
+- [[midia--axs]] — mídia proprietária da Sony para as câmeras VENICE, exigida pelas taxas do [[x-ocn]]. Exclusiva do ecossistema:
 - [[s-gamut3-cine]] — espaço de cor da Sony pensado para trabalho de cinema: mais contido que o S-Gamut3 puro, o que o torna mais fá
 - [[s-log3]] — curva logarítmica da Sony que comprime a latitude do sensor num sinal de 10 bits sem estourar altas nem esmaga
+- [[venice]] — primeira geração da linha VENICE: sensor full-frame 6K, dual base ISO 500/2500 e gravação [[x-ocn]] em [[midia
 - [[venice-2]] — câmera de cinema digital full-frame da Sony com sensor 8.6K (há versão 6K no mesmo corpo), dual base ISO 800/3
 - [[x-ocn]] — formato de negativo digital da Sony, gravado pelos corpos VENICE. Guarda a informação de sensor com compressão
+- [[xavc]] — família de codecs de gravação da Sony baseada em H.264/H.265, usada dos corpos de broadcast aos de cinema como

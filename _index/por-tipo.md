@@ -2,11 +2,20 @@
 
 Gerado por `tools/build_graph.py` — não editar à mão.
 
+## battery-mount
+
+- [[bat--b-mount]] — padrão de bateria de 24 V criado por consórcio (ARRI, Bebob, Core SWX) para equipamento que consome mais do qu
+
 ## camera
 
 - [[alexa-35]] — câmera de cinema Super35 da ARRI com sensor 4.6K de geração nova (ALEV 4) e o salto de latitude que definiu a 
 - [[pyxis-6k]] — câmera de cinema full-frame 6K da Blackmagic que grava [[braw]] internamente, vendida em versões de mount dist
+- [[venice]] — primeira geração da linha VENICE: sensor full-frame 6K, dual base ISO 500/2500 e gravação [[x-ocn]] em [[midia
 - [[venice-2]] — câmera de cinema digital full-frame da Sony com sensor 8.6K (há versão 6K no mesmo corpo), dual base ISO 800/3
+
+## certificacao
+
+- [[netflix-approved]] — lista de câmeras que a Netflix aceita como principal em produções originais. O critério central é **resolução 
 
 ## codec
 
@@ -14,6 +23,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[braw]] — codec RAW parcialmente debayerizado da Blackmagic: guarda a informação de sensor como RAW, mas move parte do p
 - [[prores]] — família de codecs intraframe da Apple que virou o padrão de fato para mezanino e entrega em pós: cada quadro é
 - [[x-ocn]] — formato de negativo digital da Sony, gravado pelos corpos VENICE. Guarda a informação de sensor com compressão
+- [[xavc]] — família de codecs de gravação da Sony baseada em H.264/H.265, usada dos corpos de broadcast aos de cinema como
 
 ## colorspace
 
@@ -40,6 +50,11 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[blackmagic-design]] — fabricante australiana que mudou o preço-base do mercado: câmeras de cinema, switchers ATEM, conversores, grav
 - [[sony]] — fabricante japonesa presente em quase toda a cadeia audiovisual: câmeras de cinema (CineAlta/VENICE), broadcas
 
+## midia
+
+- [[midia--axs]] — mídia proprietária da Sony para as câmeras VENICE, exigida pelas taxas do [[x-ocn]]. Exclusiva do ecossistema:
+- [[midia--cfexpress-b]] — padrão aberto de cartão de alta velocidade (PCIe/NVMe por baixo), adotado por praticamente todo fabricante de 
+
 ## moc
 
 - [[00-indice-mestre]] — ponto de entrada humano do acervo. Ler este arquivo custa pouco e diz para onde ir; ler o acervo inteiro custa
@@ -58,6 +73,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 - [[ampas]] — a Academia (a mesma do Oscar) mantém um braço de ciência e tecnologia que publica padrões de uso corrente na i
 - [[itu-r]] — órgão da ONU que publica as recomendações da série **BT**, que definem os padrões de imagem de televisão do mu
+- [[mte]] — órgão federal que edita e mantém as **Normas Regulamentadoras (NRs)**, de cumprimento obrigatório em qualquer 
 
 ## pipeline-cor
 

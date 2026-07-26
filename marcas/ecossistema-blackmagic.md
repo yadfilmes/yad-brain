@@ -11,7 +11,8 @@ confidence: alta
 updated: 2026-07-26
 rel:
   made_by: [blackmagic-design]
-  see_also: [pyxis-6k, braw, aces]
+  part_of_ecosystem: [pyxis-6k, braw]
+  see_also: [aces]
 sources:
   - {url: "https://www.blackmagicdesign.com", tier: oficial, ret: 2026-07-26, nota: "linhas de produto e integração"}
 ---

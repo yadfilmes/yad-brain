@@ -18,7 +18,8 @@ rel:
   part_of_ecosystem: [ecossistema-blackmagic]
   competes_with: [venice-2]
   budget_alternative_to: [{to: venice-2, ratio: "ordem de 1/10 do corpo"}]
-  see_also: [filtro-nd]
+  accepts_media: [midia--cfexpress-b]
+  conforms_to_pipeline: [aces]
 sources:
   - {url: "https://www.blackmagicdesign.com/products/blackmagicpyxis", tier: oficial, ret: 2026-07-26, nota: "sensor, mounts e codecs"}
 ---

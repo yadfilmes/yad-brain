@@ -16,12 +16,13 @@ rel:
   accepts_mount: [{to: mount--pl, via: adaptador-pl-sony, nota: "mount PL removível de fábrica"}]
   records_codec: [x-ocn, prores, xavc]
   supports_transfer_function: [s-log3]
+  supports_colorspace: [s-gamut3-cine]
+  accepts_media: [midia--axs]
   competes_with: [alexa-35]
   successor_of: [venice]
-  variant_of: []
   certified_for: [netflix-approved]
-  operated_by_role: []
-  see_also: [filtro-nd]
+  alternative_to: [filtro-nd]
+  see_also: [obturador-180]
 sources:
   - {url: "https://pro.sony/ue_US/products/digital-cinema-cameras/venice-2", tier: oficial, ret: 2026-07-26, nota: "specs de sensor, ISO e mídia"}
   - {url: "https://www.reddit.com/r/cinematography/", tier: comunidade, ret: 2026-07-26, nota: "experiência com base ISO 3200 em externa noturna"}

@@ -12,7 +12,6 @@ rel:
   caused_by: [scan-rate, pwm-brilho-led]
   resolved_by: [shuttersync, genlock]
   diagnosed_with: [obturador-180, scan-rate]
-  known_issue: []
   see_also: [obturador-180, scan-rate]
 sources:
   - {url: "https://www.bromptontech.com", tier: oficial, ret: 2026-07-26, nota: "documentação de ShutterSync"}

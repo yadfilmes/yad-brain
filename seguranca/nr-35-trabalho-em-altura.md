@@ -11,8 +11,7 @@ status: stub
 confidence: media
 updated: 2026-07-26
 rel:
-  governed_by: []
-  see_also: []
+  governed_by: [mte]
 sources:
   - {url: "https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadoras", tier: oficial, ret: 2026-07-26, nota: "texto consolidado das NRs — conferir a versão vigente"}
 ---

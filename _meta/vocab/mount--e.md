@@ -10,7 +10,7 @@ confidence: alta
 updated: 2026-07-26
 rel:
   made_by: [sony]
-  see_also: [mount--pl]
+  alternative_to: [mount--pl]
 sources:
   - {url: "https://pro.sony", tier: oficial, ret: 2026-07-26}
 ---
