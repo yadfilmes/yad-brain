@@ -9,6 +9,7 @@ Quem aponta para quem. Gerado por `tools/build_graph.py` — não editar.
 | `alexa-35` | `00-indice-mestre` (see_also), `arri` (see_also), `log-c4` (see_also), `venice` (competes_with), `venice-2` (competes_with) |
 | `amaran` | `aputure` (distinct_from) |
 | `ampas` | `aces` (governed_by), `cri-tlci-ssi` (governed_by) |
+| `anatel` | `rf-anatel` (governed_by) |
 | `apple` | `prores` (made_by) |
 | `aputure` | `ls-600d-pro` (made_by), `nanlux` (competes_with) |
 | `arri` | `alexa-35` (made_by), `arri-wide-gamut-4` (made_by), `arriraw` (made_by), `log-c4` (made_by), `midia--codex-compact-drive` (made_by), `mount--lpl` (made_by), `mount--pl` (made_by), `sony` (competes_with) |
@@ -28,14 +29,14 @@ Quem aponta para quem. Gerado por `tools/build_graph.py` — não editar.
 | `compactflash-association` | `midia--cfexpress-b` (governed_by) |
 | `cri-tlci-ssi` | `gaffer` (see_also), `hmi` (see_also), `ls-600d-pro` (see_also), `temperatura-de-cor` (distinct_from) |
 | `diretor` | `diretor-de-fotografia` (reports_to) |
-| `diretor-de-fotografia` | `gaffer` (reports_to), `mapa-de-luz` (consumes), `ordem-do-dia` (used_by_role) |
+| `diretor-de-fotografia` | `gaffer` (reports_to), `mapa-de-luz` (consumes), `ordem-do-dia` (used_by_role), `rf-anatel` (see_also) |
 | `ebu` | `cri-tlci-ssi` (governed_by) |
 | `ecossistema-blackmagic` | `atem-constellation-8k` (part_of_ecosystem), `atem-constellation-hd` (part_of_ecosystem), `blackmagic-design` (see_also), `braw` (part_of_ecosystem), `pyxis-6k` (part_of_ecosystem) |
 | `evoke-2400b` | `hmi` (competes_with), `ls-600d-pro` (competes_with), `mount--nanlux` (see_also), `nanlux` (see_also) |
 | `filtro-nd` | `diretor-de-fotografia` (see_also), `lei-do-inverso-do-quadrado` (see_also), `obturador-180` (requires), `venice-2` (see_also) |
 | `flicker-parede-led` | `genlock` (see_also), `obturador-180` (see_also), `pwm-brilho-led` (see_also), `scan-rate` (see_also), `shuttersync` (see_also) |
 | `gaffer` | `diretor-de-fotografia` (see_also), `mapa-de-luz` (template_for), `mapa-de-luz` (used_in_workflow), `nr-10-eletricidade` (see_also), `ordem-do-dia` (used_by_role) |
-| `genlock` | `flicker-parede-led` (resolved_by), `ndi` (distinct_from), `scan-rate` (requires), `sdi` (see_also), `shuttersync` (requires), `smpte` (see_also) |
+| `genlock` | `flicker-parede-led` (resolved_by), `ndi` (distinct_from), `scan-rate` (requires), `sdi` (see_also), `shuttersync` (requires), `smpte` (see_also), `timecode` (distinct_from), `timecode` (requires) |
 | `gerador` | `balanceamento-de-fase` (see_also), `bitola-de-cabo` (see_also), `hmi` (see_also), `rede-ac` (alternative_to) |
 | `ieee` | `rede-gigabit` (governed_by) |
 | `ies` | `cri-tlci-ssi` (governed_by) |
@@ -64,7 +65,7 @@ Quem aponta para quem. Gerado por `tools/build_graph.py` — não editar.
 | `netflix-approved` | `alexa-35` (certified_for), `venice` (certified_for), `venice-2` (certified_for) |
 | `nr-10-eletricidade` | `abnt` (see_also), `balanceamento-de-fase` (requires), `bitola-de-cabo` (requires), `gerador` (requires), `hmi` (requires), `rede-ac` (see_also) |
 | `nr-35-trabalho-em-altura` | `gaffer` (requires), `mte` (see_also), `nr-10-eletricidade` (see_also) |
-| `obturador-180` | `filtro-nd` (enables_technique), `flicker-parede-led` (diagnosed_with), `flicker-parede-led` (see_also), `fx6` (enables_technique), `hmi` (enables_technique), `scan-rate` (see_also), `venice-2` (enables_technique) |
+| `obturador-180` | `filtro-nd` (enables_technique), `flicker-parede-led` (diagnosed_with), `flicker-parede-led` (see_also), `fx6` (enables_technique), `hmi` (enables_technique), `scan-rate` (see_also), `timecode` (see_also), `venice-2` (enables_technique) |
 | `ordem-do-dia` | `mapa-de-luz` (produces) |
 | `producao` | `ordem-do-dia` (template_for) |
 | `prores` | `alexa-35` (records_codec), `venice` (records_codec), `venice-2` (records_codec), `xavc` (alternative_to) |
@@ -73,16 +74,18 @@ Quem aponta para quem. Gerado por `tools/build_graph.py` — não editar.
 | `rec-709` | `aces` (distinct_from), `aces` (supports_colorspace), `arri-wide-gamut-4` (see_also), `itu-r` (see_also), `log-c4` (distinct_from), `s-gamut3-cine` (see_also), `s-log3` (distinct_from) |
 | `rede-ac` | `abnt` (see_also), `balanceamento-de-fase` (requires), `bitola-de-cabo` (requires), `evoke-2400b` (powered_by), `gerador` (alternative_to), `hmi` (requires), `ls-600d-pro` (powered_by), `nr-10-eletricidade` (requires) |
 | `rede-gigabit` | `ndi` (requires) |
+| `rf-anatel` | `anatel` (see_also) |
 | `s-gamut3-cine` | `aces` (supports_colorspace), `arri-wide-gamut-4` (see_also), `fx6` (supports_colorspace), `s-log3` (distinct_from), `s-log3` (paired_gamut), `venice` (supports_colorspace), `venice-2` (supports_colorspace) |
 | `s-log3` | `fx6` (supports_transfer_function), `log-c4` (alternative_to), `rec-709` (distinct_from), `s-gamut3-cine` (paired_gamut), `venice` (supports_transfer_function), `venice-2` (supports_transfer_function), `x-ocn` (paired_gamut) |
 | `scan-rate` | `flicker-parede-led` (caused_by), `flicker-parede-led` (diagnosed_with), `flicker-parede-led` (see_also), `pwm-brilho-led` (see_also), `shuttersync` (see_also) |
 | `sdi` | `alexa-35` (outputs_signal), `atem-constellation-8k` (accepts_signal), `atem-constellation-8k` (implements_standard), `atem-constellation-8k` (outputs_signal), `atem-constellation-hd` (accepts_signal), `fx6` (outputs_signal), `ndi` (alternative_to), `pyxis-6k` (outputs_signal), `rede-gigabit` (see_also), `smpte` (see_also), `switcher-me` (accepts_signal), `tally` (see_also), `venice` (outputs_signal), `venice-2` (outputs_signal) |
 | `shuttersync` | `flicker-parede-led` (resolved_by) |
-| `smpte` | `genlock` (governed_by), `sdi` (governed_by) |
+| `smpte` | `genlock` (governed_by), `sdi` (governed_by), `timecode` (governed_by) |
 | `sony` | `arri` (competes_with), `bat--bp-u` (made_by), `bat--v-mount` (made_by), `blackmagic-design` (competes_with), `fx6` (made_by), `midia--axs` (made_by), `midia--sxs` (made_by), `mount--e` (made_by), `s-gamut3-cine` (made_by), `s-log3` (made_by), `venice` (made_by), `venice-2` (made_by), `x-ocn` (made_by), `xavc` (made_by) |
 | `switcher-me` | `tally` (controlled_by) |
 | `tally` | `atem-constellation-8k` (controls), `ndi` (interoperates_with), `switcher-me` (controls) |
 | `temperatura-de-cor` | `cri-tlci-ssi` (distinct_from), `evoke-2400b` (see_also), `gaffer` (see_also), `hmi` (see_also), `lei-do-inverso-do-quadrado` (see_also), `ls-600d-pro` (see_also) |
+| `timecode` | `rf-anatel` (requires) |
 | `venice` | `venice-2` (successor_of) |
 | `venice-2` | `00-indice-mestre` (see_also), `alexa-35` (alternative_to), `alexa-35` (competes_with), `filtro-nd` (see_also), `fx6` (budget_alternative_to), `pyxis-6k` (budget_alternative_to), `pyxis-6k` (competes_with), `s-log3` (see_also), `sony` (see_also), `venice` (predecessor_of) |
 | `vizrt` | `ndi` (made_by) |

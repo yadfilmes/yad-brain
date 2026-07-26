@@ -419,6 +419,47 @@
    ]
   },
   {
+   "id": "rf-anatel",
+   "title": "RF sem fio no Brasil — faixas, homologação e o buraco dos 700 MHz",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "baixa",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "audio/rf-anatel.md",
+   "tldr": "microfone sem fio no Brasil opera em **uso secundário**: divide espectro com TV e telefonia, e **quem chegou primeiro não tem prioridade**. A transição da TV digital e a chegada do 4G levaram embora a faixa de 700 MHz, q",
+   "aliases": [
+    "RF",
+    "microfone sem fio",
+    "wireless",
+    "lapela sem fio",
+    "sem fio",
+    "ANATEL",
+    "homologacao ANATEL",
+    "homologação ANATEL",
+    "700 MHz",
+    "600 MHz",
+    "frequencia",
+    "frequência"
+   ],
+   "tags": [
+    "audio",
+    "rf",
+    "wireless",
+    "brasil",
+    "anatel",
+    "regulatorio",
+    "locacao"
+   ],
+   "n_fontes": 3,
+   "tiers": [
+    "educacao",
+    "oficial"
+   ]
+  },
+  {
    "id": "alexa-35",
    "title": "ARRI ALEXA 35",
    "type": "camera",
@@ -1001,6 +1042,38 @@
    ]
   },
   {
+   "id": "anatel",
+   "title": "ANATEL — Agência Nacional de Telecomunicações",
+   "type": "orgao",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "baixa",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/orgaos/anatel.md",
+   "tldr": "a agência que decide **quem pode transmitir em qual frequência** no Brasil, e que homologa todo equipamento de rádio comercializado no país. Para audiovisual, ela aparece em dois lugares: **microfone sem fio** e qualquer",
+   "aliases": [
+    "ANATEL",
+    "Agencia Nacional de Telecomunicacoes",
+    "Agência Nacional de Telecomunicações",
+    "homologacao",
+    "homologação"
+   ],
+   "tags": [
+    "orgao",
+    "regulatorio",
+    "brasil",
+    "rf",
+    "espectro",
+    "audio"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
    "id": "itu-r",
    "title": "ITU-R (União Internacional de Telecomunicações — setor de rádio)",
    "type": "orgao",
@@ -1116,6 +1189,46 @@
    ],
    "n_fontes": 1,
    "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "timecode",
+   "title": "Timecode — jam sync, drift e drop frame",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "baixa",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/sinais/timecode.md",
+   "tldr": "timecode é o **endereço** de cada quadro, não a batida do relógio. Duas máquinas que começam no mesmo número **não ficam juntas**: os cristais correm em ritmos ligeiramente diferentes e elas afastam ao longo do dia. Por ",
+   "aliases": [
+    "timecode",
+    "time code",
+    "TC",
+    "LTC",
+    "jam sync",
+    "jamsync",
+    "drop frame",
+    "non-drop frame",
+    "NDF",
+    "DF",
+    "SMPTE 12M",
+    "sincronia"
+   ],
+   "tags": [
+    "timecode",
+    "audio",
+    "sincronia",
+    "multicamera",
+    "pos",
+    "set"
+   ],
+   "n_fontes": 3,
+   "tiers": [
+    "comunidade",
     "oficial"
    ]
   },
@@ -2429,6 +2542,24 @@
    "derivada": false
   },
   {
+   "de": "rf-anatel",
+   "aresta": "governed_by",
+   "para": "anatel",
+   "derivada": false
+  },
+  {
+   "de": "rf-anatel",
+   "aresta": "requires",
+   "para": "timecode",
+   "derivada": false
+  },
+  {
+   "de": "rf-anatel",
+   "aresta": "see_also",
+   "para": "diretor-de-fotografia",
+   "derivada": false
+  },
+  {
    "de": "alexa-35",
    "aresta": "made_by",
    "para": "arri",
@@ -3203,6 +3334,12 @@
    "derivada": false
   },
   {
+   "de": "anatel",
+   "aresta": "see_also",
+   "para": "rf-anatel",
+   "derivada": false
+  },
+  {
    "de": "itu-r",
    "aresta": "see_also",
    "para": "rec-709",
@@ -3242,6 +3379,30 @@
    "de": "genlock",
    "aresta": "see_also",
    "para": "flicker-parede-led",
+   "derivada": false
+  },
+  {
+   "de": "timecode",
+   "aresta": "governed_by",
+   "para": "smpte",
+   "derivada": false
+  },
+  {
+   "de": "timecode",
+   "aresta": "requires",
+   "para": "genlock",
+   "derivada": false
+  },
+  {
+   "de": "timecode",
+   "aresta": "distinct_from",
+   "para": "genlock",
+   "derivada": false
+  },
+  {
+   "de": "timecode",
+   "aresta": "see_also",
+   "para": "obturador-180",
    "derivada": false
   },
   {
@@ -4130,6 +4291,12 @@
    "de": "s-gamut3-cine",
    "aresta": "distinct_from",
    "para": "s-log3",
+   "derivada": true
+  },
+  {
+   "de": "genlock",
+   "aresta": "distinct_from",
+   "para": "timecode",
    "derivada": true
   },
   {

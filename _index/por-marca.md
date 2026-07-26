@@ -8,6 +8,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[abnt]] — o organismo de normalização técnica do Brasil. Suas normas levam o prefixo **NBR**. Para audiovisual, a que ap
 - [[aces]] — sistema de gerenciamento de cor da Academia: cada câmera entra por uma **IDT** (transformação de entrada), tod
 - [[ampas]] — a Academia (a mesma do Oscar) mantém um braço de ciência e tecnologia que publica padrões de uso corrente na i
+- [[anatel]] — a agência que decide **quem pode transmitir em qual frequência** no Brasil, e que homologa todo equipamento de
 - [[aputure]] — fabricante fundada em 2013, sede em Shenzhen, que reposicionou o mercado de iluminação: potência e recursos de
 - [[arri]] — fabricante alemã centenária, referência de cinema em três frentes ao mesmo tempo: câmeras (ALEXA), iluminação 
 - [[balanceamento-de-fase]] — em trifásico, o que derruba o quadro raramente é a carga **total**: é a carga concentrada **numa fase**. Três 
@@ -48,6 +49,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[rec-709]] — o padrão de cor da televisão HD e, na prática, o denominador comum de entrega até hoje: gamut relativamente pe
 - [[rede-ac]] — o Brasil não tem uma tensão, tem duas: **127 V** no Sudeste, Norte e parte do Centro-Oeste; **220 V** no Sul e
 - [[rede-gigabit]] — vídeo sobre IP exige rede **dedicada**: gigabit no mínimo, switch gerenciado, e nada de compartilhar com a int
+- [[rf-anatel]] — microfone sem fio no Brasil opera em **uso secundário**: divide espectro com TV e telefonia, e **quem chegou p
 - [[scan-rate]] — quantas vezes por segundo o painel redesenha a imagem inteira, em Hz. O olho humano se satisfaz com pouco; **a
 - [[sdi]] — padrão de vídeo profissional sobre cabo coaxial com conector BNC: **trava**, aceita tirada longa e não negocia
 - [[smpte]] — sociedade de engenheiros que normatiza boa parte da infraestrutura técnica de cinema e televisão: [[sdi]], tim
@@ -55,6 +57,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[switcher-me]] — **M/E (Mix/Effects)** é um bloco completo de mistura: escolhe fontes, aplica transição e chaves, e entrega um 
 - [[tally]] — luz que avisa **quem está no ar** (vermelho) e, em muitos sistemas, quem está no preview (verde). Parece detal
 - [[temperatura-de-cor]] — CCT, em Kelvin, descreve se a luz é "quente" (3200 K, tungstênio) ou "fria" (5600 K, luz do dia). Mas **um eix
+- [[timecode]] — timecode é o **endereço** de cada quadro, não a batida do relógio. Duas máquinas que começam no mesmo número *
 
 ## aputure
 

@@ -4,6 +4,7 @@ abnt,ABNT — Associação Brasileira de Normas Técnicas,orgao,,universal,draft
 aces,ACES (Academy Color Encoding System),pipeline-cor,,universal,draft,alta,,2026-07-26,4,educacao|oficial,conceitos/cor/aces.md
 alexa-35,ARRI ALEXA 35,camera,arri,universal,draft,baixa,,2026-07-26,3,educacao|oficial,captacao/cameras/arri/alexa-35.md
 ampas,AMPAS (Academy of Motion Picture Arts and Sciences),orgao,,universal,draft,media,,2026-07-26,1,oficial,conceitos/orgaos/ampas.md
+anatel,ANATEL — Agência Nacional de Telecomunicações,orgao,,universal,draft,baixa,,2026-07-26,1,oficial,conceitos/orgaos/anatel.md
 aputure,Aputure,marca,,universal,draft,alta,,2026-07-26,2,educacao|oficial,marcas/aputure.md
 arri,ARRI,marca,,universal,draft,alta,,2026-07-26,2,educacao|oficial,marcas/arri.md
 arri-wide-gamut-4,ARRI Wide Gamut 4,colorspace,arri,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/arri-wide-gamut-4.md
@@ -57,6 +58,7 @@ pyxis-6k,Blackmagic Pyxis 6K,camera,blackmagic-design,universal,draft,baixa,,202
 rec-709,Rec. 709,colorspace,,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/rec-709.md
 rede-ac,Rede elétrica AC no Brasil (127 / 220 V),conceito,,universal,draft,baixa,,2026-07-26,2,educacao,eletrica/rede-ac.md
 rede-gigabit,Rede para vídeo sobre IP,conceito,,universal,draft,media,,2026-07-26,1,oficial,live/sinais/rede-gigabit.md
+rf-anatel,"RF sem fio no Brasil — faixas, homologação e o buraco dos 700 MHz",conceito,,universal,draft,baixa,,2026-07-26,3,educacao|oficial,audio/rf-anatel.md
 s-gamut3-cine,S-Gamut3.Cine (Sony),colorspace,sony,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/s-gamut3-cine.md
 s-log3,S-Log3 (Sony),transfer-function,sony,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/s-log3.md
 scan-rate,Scan rate (taxa de varredura de painel de LED),conceito,,universal,draft,media,,2026-07-26,1,oficial,led-vp/conceitos/scan-rate.md
@@ -67,6 +69,7 @@ sony,Sony,marca,,universal,draft,media,,2026-07-26,1,oficial,marcas/sony.md
 switcher-me,"M/E, program, preview e keyer — anatomia de um switcher",conceito,,universal,draft,media,,2026-07-26,1,oficial,live/conceitos/switcher-me.md
 tally,Tally (sinalização de câmera no ar),conceito,,universal,draft,media,,2026-07-26,1,oficial,live/conceitos/tally.md
 temperatura-de-cor,Temperatura de cor (CCT) e tint,conceito,,universal,draft,media,,2026-07-26,1,oficial,luz/conceitos/temperatura-de-cor.md
+timecode,"Timecode — jam sync, drift e drop frame",conceito,,universal,draft,baixa,,2026-07-26,3,comunidade|oficial,conceitos/sinais/timecode.md
 venice,Sony VENICE (primeira geração),camera,sony,universal,draft,media,,2026-07-26,1,oficial,captacao/cameras/sony/venice.md
 venice-2,Sony VENICE 2,camera,sony,universal,draft,baixa,,2026-07-26,2,comunidade|oficial,captacao/cameras/sony/venice-2.md
 x-ocn,X-OCN (eXtended tonal range Original Camera Negative),codec,sony,universal,draft,baixa,,2026-07-26,2,educacao|oficial,conceitos/codecs/x-ocn.md

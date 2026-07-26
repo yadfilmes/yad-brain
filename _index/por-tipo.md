@@ -48,11 +48,13 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[pwm-brilho-led]] — LED não regula intensidade baixando tensão: ele **pisca muito rápido** e o tempo ligado define o brilho aparen
 - [[rede-ac]] — o Brasil não tem uma tensão, tem duas: **127 V** no Sudeste, Norte e parte do Centro-Oeste; **220 V** no Sul e
 - [[rede-gigabit]] — vídeo sobre IP exige rede **dedicada**: gigabit no mínimo, switch gerenciado, e nada de compartilhar com a int
+- [[rf-anatel]] — microfone sem fio no Brasil opera em **uso secundário**: divide espectro com TV e telefonia, e **quem chegou p
 - [[scan-rate]] — quantas vezes por segundo o painel redesenha a imagem inteira, em Hz. O olho humano se satisfaz com pouco; **a
 - [[shuttersync]] — recurso das processadoras Brompton que alinha a varredura do painel com o obturador da câmera, permitindo ajus
 - [[switcher-me]] — **M/E (Mix/Effects)** é um bloco completo de mistura: escolhe fontes, aplica transição e chaves, e entrega um 
 - [[tally]] — luz que avisa **quem está no ar** (vermelho) e, em muitos sistemas, quem está no preview (verde). Parece detal
 - [[temperatura-de-cor]] — CCT, em Kelvin, descreve se a luz é "quente" (3200 K, tungstênio) ou "fria" (5600 K, luz do dia). Mas **um eix
+- [[timecode]] — timecode é o **endereço** de cada quadro, não a batida do relógio. Duas máquinas que começam no mesmo número *
 
 ## documento
 
@@ -115,6 +117,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 - [[abnt]] — o organismo de normalização técnica do Brasil. Suas normas levam o prefixo **NBR**. Para audiovisual, a que ap
 - [[ampas]] — a Academia (a mesma do Oscar) mantém um braço de ciência e tecnologia que publica padrões de uso corrente na i
+- [[anatel]] — a agência que decide **quem pode transmitir em qual frequência** no Brasil, e que homologa todo equipamento de
 - [[itu-r]] — órgão da ONU que publica as recomendações da série **BT**, que definem os padrões de imagem de televisão do mu
 - [[mte]] — órgão federal que edita e mantém as **Normas Regulamentadoras (NRs)**, de cumprimento obrigatório em qualquer 
 - [[smpte]] — sociedade de engenheiros que normatiza boa parte da infraestrutura técnica de cinema e televisão: [[sdi]], tim
