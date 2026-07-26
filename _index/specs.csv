@@ -1,6 +1,6 @@
 id,title,type,brand,zona,status,confidence,risco,updated,n_fontes,tiers,path
 00-indice-mestre,Índice mestre,moc,,universal,draft,baixa,,2026-07-26,1,campo-proprio,_moc/00-indice-mestre.md
-aces,ACES (Academy Color Encoding System),pipeline-cor,,universal,draft,alta,,2026-07-26,3,educacao|oficial,conceitos/cor/aces.md
+aces,ACES (Academy Color Encoding System),pipeline-cor,,universal,draft,alta,,2026-07-26,4,educacao|oficial,conceitos/cor/aces.md
 alexa-35,ARRI ALEXA 35,camera,arri,universal,draft,baixa,,2026-07-26,3,educacao|oficial,captacao/cameras/arri/alexa-35.md
 ampas,AMPAS (Academy of Motion Picture Arts and Sciences),orgao,,universal,draft,media,,2026-07-26,1,oficial,conceitos/orgaos/ampas.md
 aputure,Aputure,marca,,universal,draft,alta,,2026-07-26,2,educacao|oficial,marcas/aputure.md

@@ -3,7 +3,7 @@ id: cri-tlci-ssi
 title: CRI, TLCI, SSI e TM-30 — qualidade de cor de fixture
 type: conceito
 zona: universal
-aliases: ["indice de reproducao de cor", "índice de reprodução de cor", "color rendering", "qualidade de cor de fixture"]
+aliases: [CRI, TLCI, SSI, "TM-30", Ra, Rf, Rg, R9, "indice de reproducao de cor", "índice de reprodução de cor", "color rendering index", "color rendering", "qualidade de cor de fixture"]
 tags: [luz, cor, fotometria, metrica, qualidade]
 status: draft
 confidence: alta
@@ -33,7 +33,7 @@ qualidade de cor, e é daí que vem boa parte da confusão comercial.
 | **CRI (Ra)** | **CIE** — CIE 13.3-1995 | olho humano, era da lâmpada incandescente | média de 8 cores pastel; ignora vermelho saturado (R9), justamente o do tom de pele |
 | **TLCI** | **EBU** — Tech 3355 | **câmera de vídeo** | mais relevante que CRI em audiovisual |
 | **SSI** | **AMPAS** (Academy) | comparar espectros entre si | não é nota única: compara uma fonte com uma referência |
-| **TM-30** | **ANSI/IES** | avaliação moderna completa | dois eixos — fidelidade (Rf) e saturação (Rg) |
+| **TM-30** | **IES** — TM-30-15; **ANSI/IES** a partir de TM-30-18 | avaliação moderna completa | dois eixos — fidelidade (Rf) e saturação (Rg) |
 
 ## Por que o CRI perdeu autoridade
 

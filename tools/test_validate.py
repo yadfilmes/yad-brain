@@ -251,6 +251,21 @@ checa("falta de loc em fonte oficial impede alta",
 checa("nota sem fonte nenhuma -> baixa",
       V.confianca_esperada([], False) == "baixa")
 
+# Contradição achada por revisor independente no lote 04: a 4ª linha da tabela
+# dizia "fonte única, qualquer tier -> baixa" e a 7ª dizia "oficial com loc,
+# sem corroboração -> media". O script implementava a 7ª. Resolvido a favor
+# dela; este teste trava as duas pontas para não divergirem de novo.
+checa("fonte única OFICIAL com loc -> media (7ª linha da tabela)",
+      V.confianca_esperada([OFICIAL_LOC], False) == "media")
+
+checa("fonte única FRACA -> baixa (4ª linha da tabela)",
+      V.confianca_esperada([fonte("blogqualquer", "educacao")], False) == "baixa")
+
+checa("duas páginas do mesmo fabricante nunca chegam a alta",
+      V.confianca_esperada([fonte("brompton", "oficial"),
+                            {"url": "https://www.brompton.com/outra",
+                             "tier": "oficial", "loc": "z"}], False) != "alta")
+
 
 # -------------------------------------------------------------------- saída
 print()

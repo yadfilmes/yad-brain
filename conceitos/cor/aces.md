@@ -3,7 +3,7 @@ id: aces
 title: ACES (Academy Color Encoding System)
 type: pipeline-cor
 zona: universal
-aliases: [ACES, "Academy Color Encoding System", "ACES 2065-1"]
+aliases: [ACES, "Academy Color Encoding System", "ACES 2065-1", ACES2065-1, ACEScct, ACEScg, ACEScc, IDT, ODT, RRT, "Output Transform"]
 tags: [cor, pipeline, gerenciamento-de-cor, padrao, academy]
 status: draft
 confidence: alta
@@ -16,6 +16,7 @@ rel:
 sources:
   - {url: "https://docs.acescentral.com/background/overview/", tier: oficial, ret: 2026-07-26, loc: "ACES System - Overview", nota: "arquitetura IDT / espaco de trabalho / ODT"}
   - {url: "https://docs.acescentral.com/encodings/acescct/", tier: oficial, ret: 2026-07-26, loc: "ACEScct Specification", nota: "encoding log em primarias AP1, para grading scene-referred"}
+  - {url: "https://docs.acescentral.com/system-components/output-transforms/", tier: oficial, ret: 2026-07-26, loc: "Output Transforms", nota: "ODT = Output DEVICE Transform; de ACES 1.1 em diante RRT e ODT sao concatenados num Output Transform"}
   - {url: "https://chrisbrejon.com/cg-cinematography/chapter-1-5-academy-color-encoding-system-aces/", tier: educacao, ret: 2026-07-26, loc: "Chapter 1.5 - Academy Color Encoding System", nota: "pratica de pipeline e armadilhas de IDT"}
 ---
 
@@ -23,24 +24,33 @@ sources:
 
 **TL;DR** — sistema de gerenciamento de cor da Academia: cada câmera entra por
 uma **IDT** (transformação de entrada), todo mundo trabalha num espaço comum e
-enorme, e cada destino sai por uma **ODT** (transformação de saída). Resolve o
+enorme, e cada destino sai por um **Output Transform**. Resolve o
 problema de misturar câmeras diferentes e entregar para telas diferentes sem
 refazer o grading.
 
-## As três peças
+## As peças do caminho
 
 | peça | função |
 |---|---|
-| **IDT** (Input Transform) | traz o material da câmera para ACES2065-1 — uma por câmera/curva |
+| **IDT** (Input Device Transform) | traz o material da câmera para ACES2065-1 — uma por câmera/curva |
 | **espaço de trabalho** | onde a cor é manipulada |
-| **ODT** (Output Transform) | leva o resultado ACES scene-linear para o destino — cinema, [[rec-709]], HDR |
+| **RRT** (Reference Rendering Transform) | renderização de referência, comum a todos os destinos |
+| **ODT** (Output **Device** Transform) | leva a saída do RRT para um destino específico — cinema, [[rec-709]], HDR |
+
+O caminho, em ordem: câmera → **IDT** → espaço de trabalho → **RRT** → **ODT** → tela.
+
+**Cuidado com "Output Transform" — o termo mudou de significado.** Em ACES 1.0
+o caminho é RRT → ODT, dois passos. **De ACES 1.1 em diante, RRT e ODT foram
+concatenados** num passo único chamado *Output Transform* (RRT+ODT). Ou seja:
+ODT ≠ Output Transform. Documentação, tutorial e menu de software escritos em
+épocas diferentes usam os dois vocabulários, e é aí que a confusão nasce.
 
 Os dois espaços de trabalho, que são a confusão mais comum:
 
-| encoding | spec | primárias | codificação | serve para |
-|---|---|---|---|---|
-| **ACEScct** | S-2016-001 | AP1 | logarítmica | grading scene-referred |
-| **ACEScg** | S-2014-004 | AP1 | linear | render e composição de CG |
+| encoding | primárias | codificação | serve para |
+|---|---|---|---|
+| **ACEScct** | AP1 | logarítmica | grading scene-referred |
+| **ACEScg** | AP1 | linear | render e composição de CG |
 
 Mesmas primárias, codificações diferentes — é por isso que trocar um pelo outro
 produz resultado sutilmente errado em vez de obviamente quebrado.

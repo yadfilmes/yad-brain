@@ -701,11 +701,19 @@
    "risco": "",
    "updated": "2026-07-26",
    "path": "conceitos/cor/aces.md",
-   "tldr": "sistema de gerenciamento de cor da Academia: cada câmera entra por uma **IDT** (transformação de entrada), todo mundo trabalha num espaço comum e enorme, e cada destino sai por uma **ODT** (transformação de saída). Resol",
+   "tldr": "sistema de gerenciamento de cor da Academia: cada câmera entra por uma **IDT** (transformação de entrada), todo mundo trabalha num espaço comum e enorme, e cada destino sai por um **Output Transform**. Resolve o problema",
    "aliases": [
     "ACES",
     "Academy Color Encoding System",
-    "ACES 2065-1"
+    "ACES 2065-1",
+    "ACES2065-1",
+    "ACEScct",
+    "ACEScg",
+    "ACEScc",
+    "IDT",
+    "ODT",
+    "RRT",
+    "Output Transform"
    ],
    "tags": [
     "cor",
@@ -714,7 +722,7 @@
     "padrao",
     "academy"
    ],
-   "n_fontes": 3,
+   "n_fontes": 4,
    "tiers": [
     "educacao",
     "oficial"
@@ -1388,8 +1396,17 @@
    "path": "luz/conceitos/cri-tlci-ssi.md",
    "tldr": "quatro métricas que tentam responder \"essa luz reproduz cor direito?\". **CRI é a mais citada e a mais fraca**; TLCI foi feita para câmera; SSI compara espectros; TM-30 é a mais completa. Fabricante anuncia o número que l",
    "aliases": [
+    "CRI",
+    "TLCI",
+    "SSI",
+    "TM-30",
+    "Ra",
+    "Rf",
+    "Rg",
+    "R9",
     "indice de reproducao de cor",
     "índice de reprodução de cor",
+    "color rendering index",
     "color rendering",
     "qualidade de cor de fixture"
    ],

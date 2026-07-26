@@ -71,8 +71,12 @@ lista não tem o ajuste, e aí a única saída é casar shutter e subir o scan r
 
 ## Dimensionar antes de montar
 
-`tools/calc/led_wall.py --fps <frame rate>` devolve o refresh mínimo e lembra
-do genlock — boa parte deste problema se evita no orçamento, não em set.
+```
+python3 tools/calc/led_wall.py --largura 6 --altura 3 --pitch 2.6 --fps 24
+```
+
+A seção **SINCRONIA COM A CÂMERA** devolve o refresh mínimo, o confortável e
+lembra do genlock. `--largura`, `--altura` e `--pitch` são obrigatórios — boa parte deste problema se evita no orçamento, não em set.
 
 ## Quando não é isso
 

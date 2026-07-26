@@ -37,7 +37,7 @@ Ler de cima para baixo e **parar na primeira linha que se aplica**.
 | há `<!-- verificar -->` no corpo | `baixa` |
 | há conflito de fontes registrado e **não resolvido** na nota | `baixa` |
 | a nota faz afirmação numérica e **não tem** fonte `oficial` nem `lab` | `baixa` |
-| fonte única (uma organização só), qualquer tier | `baixa` |
+| fonte única (uma organização só) e **nenhuma** delas `oficial`/`lab` | `baixa` |
 | ≥2 organizações independentes, mas **nenhuma** `oficial` nem `lab` | `media` |
 | ≥2 organizações independentes, ≥1 `oficial`/`lab`, mas falta `loc` em alguma delas | `media` |
 | ≥1 fonte `oficial`/`lab` com `loc`, **sem** corroboração independente | `media` |
@@ -58,6 +58,30 @@ de produto da Sony não se corroboram — repetem-se.
 
 Corroboração é **a mesma afirmação em fontes que não se copiam**. Dois blogs
 que citam o mesmo press release são uma fonte com dois endereços.
+
+### Teto do fabricante único
+
+Nota cuja única organização-fonte é o **fabricante do produto que ela
+recomenda** nunca passa de `media`, por mais páginas que cite. A tabela já
+produz isso (fonte única não alcança `alta`), e a razão merece estar escrita:
+o fabricante é autoridade sobre a spec do próprio produto e **parte
+interessada** sobre quando usá-lo. As duas coisas convivem na mesma página, e
+só a primeira sustenta `alta`.
+
+### Correção de contradição — 2026-07-26
+
+A versão original desta tabela dizia, na 4ª linha, "fonte única (uma
+organização só), **qualquer tier** → `baixa`" — e contradizia a 7ª linha ("≥1
+fonte `oficial`/`lab` com `loc`, sem corroboração → `media`"). Lendo de cima
+para baixo, a 4ª vencia e o `validate.py` implementava a 7ª: **a régua e o
+script discordavam**, e a nota ficava com a leitura mais generosa.
+
+Achado por revisor independente no lote 04. Resolvido a favor da 7ª linha, e a
+justificativa não é conveniência: o manual do fabricante com página citada é
+genuinamente confiável **sobre a spec do próprio produto**. Achatar isso em
+`baixa` junto com um blog sem fonte apagaria a distinção que o campo existe
+para carregar, e empurraria o acervo inteiro para `baixa` — onde o valor da
+informação é zero.
 
 ---
 
