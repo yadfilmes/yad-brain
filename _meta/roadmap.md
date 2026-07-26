@@ -60,6 +60,25 @@ Ordem sugerida (a de captação e cor já existem):
 
 ---
 
+## R7 · Templates faltantes · **prioridade alta**
+
+`funcao`, `documento` e `interface` estão em produção sem template em
+`_meta/templates/`. Pela regra de fechamento do Protocolo 92 (S.3), tipo sem
+template não deveria estar em produção — o item 10 da rubrica não tem contra o
+que ser medido.
+
+---
+
+## R8 · Calibrar o conjunto-ouro · **prioridade média**
+
+O benchmark deu 45/45 enquanto a rubrica R-N reprovava as mesmas notas com
+32–58. Não é contradição: ele mede **recuperação**, e é cego a procedência,
+profundidade de grafo e tier de fonte. Avaliar se cabe uma categoria que
+exercite isso, ou aceitar explicitamente que são instrumentos de eixos
+diferentes.
+
+---
+
 ## R5 · Site estático · **fase 3**
 
 Vista derivada publicada (tipo Quartz) com busca e link compartilhável.

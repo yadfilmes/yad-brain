@@ -3,13 +3,14 @@ id: cri-tlci-ssi
 title: CRI, TLCI, SSI e TM-30 — qualidade de cor de fixture
 type: conceito
 zona: universal
-aliases: [CRI, TLCI, SSI, "TM-30", Ra, "índice de reprodução de cor", "color rendering"]
+aliases: ["indice de reproducao de cor", "índice de reprodução de cor", "color rendering", "qualidade de cor de fixture"]
 tags: [luz, cor, fotometria, metrica, qualidade]
 status: draft
 confidence: media
 updated: 2026-07-26
 rel:
-  see_also: [temperatura-de-cor]
+  governed_by: [ampas]
+  distinct_from: [temperatura-de-cor]
 sources:
   - {url: "https://www.arri.com/en/lighting", tier: oficial, ret: 2026-07-26, nota: "métricas declaradas de fixtures"}
 ---

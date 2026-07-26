@@ -3,14 +3,16 @@ id: mapa-de-luz
 title: Mapa de luz (lighting diagram)
 type: documento
 zona: universal
-aliases: ["mapa de luz", "lighting diagram", "planta de luz", "light plot", "diagrama de iluminação"]
+aliases: ["mapa de luz", "lighting diagram", "planta de luz", "light plot", "diagrama de iluminacao", "diagrama de iluminação"]
 tags: [producao, documento, luz, prep, g-e]
 status: draft
 confidence: media
 updated: 2026-07-26
 rel:
-  template_for: []
-  see_also: [gaffer, diretor-de-fotografia, ordem-do-dia, ls-600d-pro]
+  template_for: [gaffer]
+  produces: [ordem-do-dia]
+  consumes: [diretor-de-fotografia]
+  used_in_workflow: [gaffer]
 sources:
   - {url: "https://www.abcine.org.br", tier: educacao, ret: 2026-07-26, nota: "prática de documentação de set"}
 ---

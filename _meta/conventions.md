@@ -124,6 +124,18 @@ preço está fora de escopo.
 
 ## Segurança
 
+**Quando marcar `risco: seguranca` — decisão explícita, nunca por omissão:**
+
+| caso | marca? |
+|---|---|
+| a nota descreve procedimento, norma ou limite cuja violação causa dano físico | **sim** |
+| a nota é de função ou documento que *aponta* para uma norma, sem prescrever o procedimento | não — mas declara `requires:` para a nota de norma |
+| a nota traz cálculo que vira decisão de instalação | não na nota; o **disclaimer vai na saída da ferramenta** |
+
+Exemplo do acervo: `nr-35-trabalho-em-altura` é `risco: seguranca`; `gaffer`
+não é, mas declara `requires: [nr-35-trabalho-em-altura]` — porque descreve
+quem responde, não como executar.
+
 Notas com `risco: seguranca` (elétrica, rigging, altura, RF, drone):
 - só fonte `oficial` ou norma;
 - **revisão humana 100%**, nunca amostral;

@@ -153,8 +153,41 @@ def main():
                         erro(rel, f"fonte é raiz de domínio, não evidência: {url}")
                     else:
                         aviso(rel, f"fonte é raiz de domínio (precisa de página/seção): {url}")
-                if t in ("oficial", "lab") and not f.get("loc") and status == "reviewed":
-                    erro(rel, f"fonte {t} sem 'loc' (página/tabela/seção): {url}")
+                if t in ("oficial", "lab") and not f.get("loc"):
+                    if status == "reviewed":
+                        erro(rel, f"fonte {t} sem 'loc' (página/tabela/seção): {url}")
+                    else:
+                        aviso(rel, f"fonte {t} sem 'loc' — a evidência precisa de página/seção")
+
+        # Alias acentuado precisa de par ASCII: o grep é byte a byte, e
+        # alias que só existe acentuado é alias que ninguém encontra.
+        import unicodedata
+        def _ascii(s):
+            return "".join(c for c in unicodedata.normalize("NFD", s)
+                           if unicodedata.category(c) != "Mn")
+        apelidos = dados.get("aliases") or []
+        conjunto = {a.lower() for a in apelidos if isinstance(a, str)}
+        for al in apelidos:
+            if isinstance(al, str) and _ascii(al) != al and _ascii(al).lower() not in conjunto:
+                aviso(rel, f"alias com acento sem par ASCII: '{al}' (grep é byte a byte)")
+
+        # Padrão novo nº 7 do lote 03: prática de campo sustentada por fonte
+        # oficial. Oficial sustenta número; prática pede comunidade ou
+        # campo-proprio — AGENTS.md proíbe trocar um pelo outro.
+        tiers_nota = {f.get("tier") for f in fontes if isinstance(f, dict)}
+        tem_pratica = any(m in corpo for m in
+                          ("## Gotchas", "Regra prática", "regra prática", "prática de campo"))
+        if tem_pratica and not (tiers_nota & {"comunidade", "campo-proprio", "lab"}):
+            aviso(rel, "conteúdo de prática de campo sem fonte de tier "
+                       "'comunidade', 'campo-proprio' ou 'lab'")
+
+        # 'media' virou valor-padrão automático: 5/5 notas do lote 03 com
+        # fonte única, sem loc e sem corroboração. Confiança é julgamento
+        # sobre evidência, não campo a preencher.
+        sem_loc = all(not f.get("loc") for f in fontes if isinstance(f, dict))
+        if conf == "media" and len(fontes) <= 1 and sem_loc and status != "stub":
+            aviso(rel, "confidence 'media' com fonte única sem 'loc' — "
+                       "sem corroboração o valor honesto é 'baixa'")
 
         # corpo
         if "**TL;DR**" not in corpo:
@@ -205,7 +238,9 @@ def main():
         # do acervo — usado como atalho onde existia aresta específica.
         n_see_also = len(fm.alvos(relacoes.get("see_also", [])))
         n_total = sum(len(fm.alvos(v)) for v in relacoes.values())
-        if n_total >= 4 and n_see_also / n_total > 0.5:
+        # Gatilho em 2, não em 4: com 4, uma nota 3/3 ou 1/1 see_also passava
+        # em silêncio — foi assim que a regressão do lote 03 escapou.
+        if n_total >= 2 and n_see_also / n_total > 0.5:
             aviso(rel, f"grafo raso: {n_see_also}/{n_total} arestas são 'see_also' "
                        f"— preferir aresta específica")
 

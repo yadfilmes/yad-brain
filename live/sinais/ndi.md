@@ -3,7 +3,7 @@ id: ndi
 title: NDI (Network Device Interface)
 type: interface
 zona: universal
-aliases: [NDI, "NDI HX", "NDI 5", "NDI 6", "vídeo sobre IP"]
+aliases: [NDI, "NDI 5", "NDI 6", "Network Device Interface"]
 tags: [live, sinal, ip, rede, streaming]
 status: draft
 confidence: media
@@ -11,7 +11,8 @@ updated: 2026-07-26
 rel:
   alternative_to: [sdi]
   requires: [rede-gigabit]
-  see_also: [genlock]
+  interoperates_with: [tally]
+  distinct_from: [genlock]
 sources:
   - {url: "https://ndi.video/tech/", tier: oficial, ret: 2026-07-26, nota: "especificação e variantes"}
 ---

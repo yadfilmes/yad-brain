@@ -9,8 +9,9 @@ status: draft
 confidence: media
 updated: 2026-07-26
 rel:
-  operated_by_role: []
-  see_also: [gaffer, venice-2, alexa-35, filtro-nd, aces]
+  conforms_to_pipeline: [aces]
+  produces: [mapa-de-luz]
+  see_also: [gaffer, filtro-nd]
 sources:
   - {url: "https://www.abcine.org.br", tier: educacao, ret: 2026-07-26, nota: "definição da função no Brasil"}
 ---

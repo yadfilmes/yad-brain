@@ -3,13 +3,14 @@ id: switcher-me
 title: M/E, program, preview e keyer — anatomia de um switcher
 type: conceito
 zona: universal
-aliases: ["M/E", "ME", "mix effects", "program preview", keyer, "downstream key", DSK]
+aliases: ["M/E", "ME", "mix effects", switcher, "vision mixer", "mixer de video", "mixer de vídeo"]
 tags: [live, switcher, broadcast, operacao]
 status: draft
 confidence: media
 updated: 2026-07-26
 rel:
-  see_also: [sdi, ndi, tally]
+  accepts_signal: [sdi, ndi]
+  controls: [tally]
 sources:
   - {url: "https://www.blackmagicdesign.com/products/atem", tier: oficial, ret: 2026-07-26, nota: "arquitetura de M/E e keyers"}
 ---

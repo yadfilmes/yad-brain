@@ -3,15 +3,17 @@ id: gaffer
 title: Gaffer (chefe de elétrica)
 type: funcao
 zona: universal
-aliases: [gaffer, "chefe de elétrica", "chefe de eletricistas", "chief lighting technician", CLT]
+aliases: [gaffer, "chefe de eletrica", "chefe de elétrica", "chefe de eletricistas", "chief lighting technician"]
 tags: [funcao, luz, eletrica, set, g-e]
 status: draft
 confidence: media
 updated: 2026-07-26
 rel:
   reports_to: [diretor-de-fotografia]
-  used_in_workflow: []
-  see_also: [ls-600d-pro, temperatura-de-cor, nr-35-trabalho-em-altura]
+  used_in_workflow: [mapa-de-luz]
+  requires: [nr-35-trabalho-em-altura]
+  operated_by_role: []
+  see_also: [temperatura-de-cor, cri-tlci-ssi]
 sources:
   - {url: "https://www.abcine.org.br", tier: educacao, ret: 2026-07-26, nota: "nomenclatura de funções no Brasil"}
 ---

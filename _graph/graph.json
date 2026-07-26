@@ -990,10 +990,10 @@
     "M/E",
     "ME",
     "mix effects",
-    "program preview",
-    "keyer",
-    "downstream key",
-    "DSK"
+    "switcher",
+    "vision mixer",
+    "mixer de video",
+    "mixer de vídeo"
    ],
    "tags": [
     "live",
@@ -1049,10 +1049,9 @@
    "tldr": "vídeo profissional trafegando sobre rede Ethernet comum, com descoberta automática de fontes. Troca cabo coaxial dedicado por infraestrutura de rede: uma fonte, muitos destinos, sem matriz de roteamento.",
    "aliases": [
     "NDI",
-    "NDI HX",
     "NDI 5",
     "NDI 6",
-    "vídeo sobre IP"
+    "Network Device Interface"
    ],
    "tags": [
     "live",
@@ -1141,13 +1140,10 @@
    "path": "luz/conceitos/cri-tlci-ssi.md",
    "tldr": "quatro métricas que tentam responder \"essa luz reproduz cor direito?\". **CRI é a mais citada e a mais fraca**; TLCI foi feita para câmera; SSI compara espectros; TM-30 é a mais completa. Fabricante anuncia o número que l",
    "aliases": [
-    "CRI",
-    "TLCI",
-    "SSI",
-    "TM-30",
-    "Ra",
+    "indice de reproducao de cor",
     "índice de reprodução de cor",
-    "color rendering"
+    "color rendering",
+    "qualidade de cor de fixture"
    ],
    "tags": [
     "luz",
@@ -1469,6 +1465,7 @@
     "lighting diagram",
     "planta de luz",
     "light plot",
+    "diagrama de iluminacao",
     "diagrama de iluminação"
    ],
    "tags": [
@@ -1560,10 +1557,10 @@
    "tldr": "chefe do departamento de elétrica: transforma a intenção do diretor de fotografia em plano executável de luz, e responde pela equipe, pelo equipamento e pela **segurança elétrica** do set. Não é quem escolhe o visual; é ",
    "aliases": [
     "gaffer",
+    "chefe de eletrica",
     "chefe de elétrica",
     "chefe de eletricistas",
-    "chief lighting technician",
-    "CLT"
+    "chief lighting technician"
    ],
    "tags": [
     "funcao",
@@ -2424,19 +2421,19 @@
   },
   {
    "de": "switcher-me",
-   "aresta": "see_also",
+   "aresta": "accepts_signal",
    "para": "sdi",
    "derivada": false
   },
   {
    "de": "switcher-me",
-   "aresta": "see_also",
+   "aresta": "accepts_signal",
    "para": "ndi",
    "derivada": false
   },
   {
    "de": "switcher-me",
-   "aresta": "see_also",
+   "aresta": "controls",
    "para": "tally",
    "derivada": false
   },
@@ -2472,7 +2469,13 @@
   },
   {
    "de": "ndi",
-   "aresta": "see_also",
+   "aresta": "interoperates_with",
+   "para": "tally",
+   "derivada": false
+  },
+  {
+   "de": "ndi",
+   "aresta": "distinct_from",
    "para": "genlock",
    "derivada": false
   },
@@ -2508,7 +2511,13 @@
   },
   {
    "de": "cri-tlci-ssi",
-   "aresta": "see_also",
+   "aresta": "governed_by",
+   "para": "ampas",
+   "derivada": false
+  },
+  {
+   "de": "cri-tlci-ssi",
+   "aresta": "distinct_from",
    "para": "temperatura-de-cor",
    "derivada": false
   },
@@ -2658,26 +2667,26 @@
   },
   {
    "de": "mapa-de-luz",
-   "aresta": "see_also",
+   "aresta": "template_for",
    "para": "gaffer",
    "derivada": false
   },
   {
    "de": "mapa-de-luz",
-   "aresta": "see_also",
-   "para": "diretor-de-fotografia",
-   "derivada": false
-  },
-  {
-   "de": "mapa-de-luz",
-   "aresta": "see_also",
+   "aresta": "produces",
    "para": "ordem-do-dia",
    "derivada": false
   },
   {
    "de": "mapa-de-luz",
-   "aresta": "see_also",
-   "para": "ls-600d-pro",
+   "aresta": "consumes",
+   "para": "diretor-de-fotografia",
+   "derivada": false
+  },
+  {
+   "de": "mapa-de-luz",
+   "aresta": "used_in_workflow",
+   "para": "gaffer",
    "derivada": false
   },
   {
@@ -2700,6 +2709,18 @@
   },
   {
    "de": "diretor-de-fotografia",
+   "aresta": "conforms_to_pipeline",
+   "para": "aces",
+   "derivada": false
+  },
+  {
+   "de": "diretor-de-fotografia",
+   "aresta": "produces",
+   "para": "mapa-de-luz",
+   "derivada": false
+  },
+  {
+   "de": "diretor-de-fotografia",
    "aresta": "see_also",
    "para": "gaffer",
    "derivada": false
@@ -2707,25 +2728,7 @@
   {
    "de": "diretor-de-fotografia",
    "aresta": "see_also",
-   "para": "venice-2",
-   "derivada": false
-  },
-  {
-   "de": "diretor-de-fotografia",
-   "aresta": "see_also",
-   "para": "alexa-35",
-   "derivada": false
-  },
-  {
-   "de": "diretor-de-fotografia",
-   "aresta": "see_also",
    "para": "filtro-nd",
-   "derivada": false
-  },
-  {
-   "de": "diretor-de-fotografia",
-   "aresta": "see_also",
-   "para": "aces",
    "derivada": false
   },
   {
@@ -2736,8 +2739,14 @@
   },
   {
    "de": "gaffer",
-   "aresta": "see_also",
-   "para": "ls-600d-pro",
+   "aresta": "used_in_workflow",
+   "para": "mapa-de-luz",
+   "derivada": false
+  },
+  {
+   "de": "gaffer",
+   "aresta": "requires",
+   "para": "nr-35-trabalho-em-altura",
    "derivada": false
   },
   {
@@ -2749,7 +2758,7 @@
   {
    "de": "gaffer",
    "aresta": "see_also",
-   "para": "nr-35-trabalho-em-altura",
+   "para": "cri-tlci-ssi",
    "derivada": false
   },
   {
@@ -2828,6 +2837,24 @@
    "de": "s-gamut3-cine",
    "aresta": "distinct_from",
    "para": "s-log3",
+   "derivada": true
+  },
+  {
+   "de": "tally",
+   "aresta": "interoperates_with",
+   "para": "ndi",
+   "derivada": true
+  },
+  {
+   "de": "genlock",
+   "aresta": "distinct_from",
+   "para": "ndi",
+   "derivada": true
+  },
+  {
+   "de": "temperatura-de-cor",
+   "aresta": "distinct_from",
+   "para": "cri-tlci-ssi",
    "derivada": true
   }
  ]
