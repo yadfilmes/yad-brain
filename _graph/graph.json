@@ -120,7 +120,7 @@
    "brand": "arri",
    "zona": "universal",
    "status": "draft",
-   "confidence": "alta",
+   "confidence": "media",
    "risco": "",
    "updated": "2026-07-26",
    "path": "captacao/cameras/arri/alexa-35.md",
@@ -178,7 +178,7 @@
    "brand": "sony",
    "zona": "universal",
    "status": "draft",
-   "confidence": "alta",
+   "confidence": "media",
    "risco": "",
    "updated": "2026-07-26",
    "path": "captacao/cameras/sony/venice-2.md",
@@ -900,7 +900,8 @@
     "flicker LED",
     "banda na parede de LED",
     "linha rolando LED",
-    "scan line",
+    "cintilacao",
+    "cintilação",
     "banding"
    ],
    "tags": [
@@ -1593,18 +1594,6 @@
   {
    "de": "flicker-parede-led",
    "aresta": "caused_by",
-   "para": "obturador-180",
-   "derivada": false
-  },
-  {
-   "de": "flicker-parede-led",
-   "aresta": "caused_by",
-   "para": "genlock",
-   "derivada": false
-  },
-  {
-   "de": "flicker-parede-led",
-   "aresta": "caused_by",
    "para": "scan-rate",
    "derivada": false
   },
@@ -1624,6 +1613,18 @@
    "de": "flicker-parede-led",
    "aresta": "resolved_by",
    "para": "genlock",
+   "derivada": false
+  },
+  {
+   "de": "flicker-parede-led",
+   "aresta": "diagnosed_with",
+   "para": "obturador-180",
+   "derivada": false
+  },
+  {
+   "de": "flicker-parede-led",
+   "aresta": "diagnosed_with",
+   "para": "scan-rate",
    "derivada": false
   },
   {

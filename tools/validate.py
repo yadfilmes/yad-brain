@@ -32,6 +32,7 @@ STATUS_VALIDOS = {"stub", "draft", "reviewed", "revisar"}
 CONFIANCA_VALIDA = {"alta", "media", "baixa"}
 ZONAS_VALIDAS = {"universal", "yad"}
 TIERS_VALIDOS = {"oficial", "lab", "educacao", "comunidade", "campo-proprio"}
+RAIZ_DE_DOMINIO = re.compile(r"^https?://[^/]+/?$")
 SLUG = re.compile(r"^[a-z0-9]+(?:[-]{1,2}[a-z0-9]+)*$")
 LIMITE_PALAVRAS = 900          # ~1.200 tokens
 MIN_PALAVRAS = 40
@@ -140,12 +141,32 @@ def main():
                 t = f.get("tier", "")
                 if t and t not in TIERS_VALIDOS:
                     erro(rel, f"tier de fonte inválido: '{t}'")
-                if not f.get("url"):
+                url = f.get("url", "")
+                if not url:
                     aviso(rel, "fonte sem url")
+                # Padrão sistêmico nº 1 do scorecard 2026-07/lote-02-rn:
+                # o acervo citava DOMÍNIO em vez de EVIDÊNCIA. Uma URL que é
+                # só host+/ aponta para o dono do conteúdo, não para o que
+                # sustenta a afirmação.
+                elif RAIZ_DE_DOMINIO.match(url):
+                    if status == "reviewed":
+                        erro(rel, f"fonte é raiz de domínio, não evidência: {url}")
+                    else:
+                        aviso(rel, f"fonte é raiz de domínio (precisa de página/seção): {url}")
+                if t in ("oficial", "lab") and not f.get("loc") and status == "reviewed":
+                    erro(rel, f"fonte {t} sem 'loc' (página/tabela/seção): {url}")
 
         # corpo
         if "**TL;DR**" not in corpo:
             erro(rel, "corpo sem TL;DR na abertura")
+
+        # Padrão sistêmico nº 4: frontmatter contradizendo o corpo.
+        # Nota com lacuna declarada não pode alegar confiança alta.
+        pendencias = corpo.count("<!-- verificar")
+        if pendencias and conf == "alta":
+            erro(rel, f"confidence 'alta' com {pendencias} pendência(s) <!-- verificar --> no corpo")
+        if pendencias and status == "reviewed":
+            erro(rel, f"status 'reviewed' com {pendencias} pendência(s) <!-- verificar --> no corpo")
         palavras = len(corpo.split())
         if palavras > LIMITE_PALAVRAS:
             aviso(rel, f"nota longa ({palavras} palavras) — considerar dividir")
@@ -164,8 +185,12 @@ def main():
                 erro(rel, "nota de segurança sem disclaimer obrigatório")
             if not dados.get("jurisdicao"):
                 erro(rel, "nota de segurança sem 'jurisdicao'")
-            if status == "reviewed":
-                aviso(rel, "segurança em 'reviewed' — confirmar revisão humana integral")
+            # Gate G4 do Protocolo 92 (S.6.4): segurança nunca dispensa humano.
+            # Era o único gate que o CI deixava passar em silêncio — scorecard
+            # emitido por IA não fecha este gate, por melhor que seja a nota.
+            if status == "reviewed" and not dados.get("revisor_humano"):
+                erro(rel, "nota de segurança em 'reviewed' sem campo 'revisor_humano' "
+                          "— revisão por IA não fecha o gate G4")
 
         dados["_rel_path"] = rel
         caminho_dados[rel] = dados
@@ -176,6 +201,14 @@ def main():
         if not isinstance(relacoes, dict):
             erro(rel, "bloco 'rel' malformado")
             continue
+        # Padrão sistêmico nº 2: grafo raso. `see_also` era 61 de 120 arestas
+        # do acervo — usado como atalho onde existia aresta específica.
+        n_see_also = len(fm.alvos(relacoes.get("see_also", [])))
+        n_total = sum(len(fm.alvos(v)) for v in relacoes.values())
+        if n_total >= 4 and n_see_also / n_total > 0.5:
+            aviso(rel, f"grafo raso: {n_see_also}/{n_total} arestas são 'see_also' "
+                       f"— preferir aresta específica")
+
         for aresta, valor in relacoes.items():
             if aresta not in vocab:
                 erro(rel, f"aresta fora do vocabulário fechado: '{aresta}'")

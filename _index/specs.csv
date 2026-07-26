@@ -1,7 +1,7 @@
 id,title,type,brand,zona,status,confidence,risco,updated,n_fontes,tiers,path
 00-indice-mestre,Índice mestre,moc,,universal,draft,alta,,2026-07-26,1,campo-proprio,_moc/00-indice-mestre.md
 aces,ACES (Academy Color Encoding System),pipeline-cor,,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/aces.md
-alexa-35,ARRI ALEXA 35,camera,arri,universal,draft,alta,,2026-07-26,2,lab|oficial,captacao/cameras/arri/alexa-35.md
+alexa-35,ARRI ALEXA 35,camera,arri,universal,draft,media,,2026-07-26,2,lab|oficial,captacao/cameras/arri/alexa-35.md
 ampas,AMPAS (Academy of Motion Picture Arts and Sciences),orgao,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/orgaos/ampas.md
 arri,ARRI,marca,,universal,draft,alta,,2026-07-26,1,oficial,marcas/arri.md
 arri-wide-gamut-4,ARRI Wide Gamut 4,colorspace,arri,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/arri-wide-gamut-4.md
@@ -28,5 +28,5 @@ s-log3,S-Log3 (Sony),transfer-function,sony,universal,draft,media,,2026-07-26,1,
 scan-rate,Scan rate (taxa de varredura de painel de LED),conceito,,universal,draft,media,,2026-07-26,1,oficial,led-vp/conceitos/scan-rate.md
 shuttersync,ShutterSync (Brompton),conceito,brompton,universal,draft,media,,2026-07-26,1,oficial,led-vp/conceitos/shuttersync.md
 sony,Sony,marca,,universal,draft,alta,,2026-07-26,1,oficial,marcas/sony.md
-venice-2,Sony VENICE 2,camera,sony,universal,draft,alta,,2026-07-26,2,comunidade|oficial,captacao/cameras/sony/venice-2.md
+venice-2,Sony VENICE 2,camera,sony,universal,draft,media,,2026-07-26,2,comunidade|oficial,captacao/cameras/sony/venice-2.md
 x-ocn,X-OCN (eXtended Original Camera Negative),codec,sony,universal,draft,media,,2026-07-26,1,oficial,conceitos/codecs/x-ocn.md

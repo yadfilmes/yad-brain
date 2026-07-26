@@ -43,10 +43,10 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 | `paired_gamut` | 6 |
 | `records_codec` | 6 |
 | `conforms_to_pipeline` | 5 |
-| `caused_by` | 4 |
 | `distinct_from` | 4 |
 | `accepts_mount` | 3 |
 | `competes_with` | 3 |
 | `has_native_mount` | 3 |
+| `caused_by` | 2 |
 | `certified_for` | 2 |
-| `governed_by` | 2 |
+| `diagnosed_with` | 2 |

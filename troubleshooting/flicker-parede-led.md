@@ -3,14 +3,15 @@ id: flicker-parede-led
 title: Flicker ou banda horizontal filmando parede de LED
 type: problema
 zona: universal
-aliases: ["flicker LED", "banda na parede de LED", "linha rolando LED", "scan line", "banding"]
+aliases: ["flicker LED", "banda na parede de LED", "linha rolando LED", "cintilacao", "cintilação", "banding"]
 tags: [led-wall, virtual-production, flicker, shutter, diagnostico]
 status: draft
 confidence: media
 updated: 2026-07-26
 rel:
-  caused_by: [obturador-180, genlock, scan-rate, pwm-brilho-led]
+  caused_by: [scan-rate, pwm-brilho-led]
   resolved_by: [shuttersync, genlock]
+  diagnosed_with: [obturador-180, scan-rate]
   known_issue: []
   see_also: [obturador-180, scan-rate]
 sources:
@@ -53,6 +54,13 @@ hardware, não ajuste de set.
 - Casar shutter com a frequência de refresh do painel.
 - Genlock entre câmera e processadora sempre que houver mais de uma câmera.
 - Usar o ajuste fino de fase da processadora (em produtos que oferecem).
+
+## Quando não é isso
+
+Se a banda **não muda** ao variar shutter, brilho e genlock, provavelmente
+não é sincronia: investigar moiré (padrão do conteúdo contra a grade de
+pixels), linha de LED defeituosa (banda fixa, sempre na mesma altura) ou
+cabo de dados com mau contato (banda intermitente e localizada).
 
 ## Observação de confiança
 
