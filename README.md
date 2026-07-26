@@ -61,18 +61,32 @@ O mesmo diretório serve três consumidores ao mesmo tempo:
 
 ### Instalar no SSD externo (macOS)
 
+Destino: `/Volumes/U34 Bolt/Claude/YAD BRAIN`
+As aspas são obrigatórias em todos os comandos — há espaço no nome do volume e
+no da pasta.
+
+**Se a pasta ainda não existe ou está vazia:**
+
 ```bash
-# 1. Ir até a pasta desejada no SSD (aspas por causa dos espaços no nome)
 cd "/Volumes/U34 Bolt/Claude"
-
-# 2. Clonar o repositório
-git clone https://github.com/yadfilmes/yad-brain.git
-
-# 3. Entrar e ver o estado
-cd yad-brain && git log --oneline
+git clone https://github.com/yadfilmes/yad-brain.git "YAD BRAIN"
+cd "YAD BRAIN"
+git checkout claude/audiovisual-brain-repository-p1r4l2
+git log --oneline
 ```
 
-Resultado: `/Volumes/U34 Bolt/Claude/yad-brain`
+**Se a pasta já existe com arquivos dentro:**
+
+```bash
+cd "/Volumes/U34 Bolt/Claude/YAD BRAIN"
+git init
+git remote add origin https://github.com/yadfilmes/yad-brain.git
+git fetch origin
+git checkout claude/audiovisual-brain-repository-p1r4l2
+```
+
+> O trabalho está no branch `claude/audiovisual-brain-repository-p1r4l2` —
+> por isso o `checkout` depois do clone.
 
 Depois disso:
 - **Obsidian** → *Open folder as vault* → aponte para essa pasta.
@@ -84,6 +98,11 @@ Depois disso:
 > fora do Time Machine. Não tem problema — **o GitHub é o backup**. Só não
 > desconecte o disco com o Obsidian ou o Claude escrevendo; se acontecer,
 > `git status` mostra o estrago e um novo `clone` resolve.
+
+> **Convenção que isto impõe:** o nome da pasta e o caminho até ela são
+> irrelevantes para o projeto. Todo script deste repositório usa **caminho
+> relativo à raiz**, nunca absoluto — assim funciona igual no SSD, em outra
+> máquina ou num container, com espaço no caminho ou sem.
 
 ---
 
