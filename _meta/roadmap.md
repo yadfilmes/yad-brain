@@ -29,7 +29,7 @@ Só existe `tools/calc/storage.py`. Ordem de valor por esforço:
 |---|---|---|
 | mídia / storage | diário | **feito** |
 | parede de LED | gabinetes, portas, potência, peso, shutter × scan × refresh | **feito** |
-| elétrica | corrente, balanceamento de fase, gerador (com disclaimer obrigatório) | a fazer |
+| elétrica | corrente, circuitos, cabo/queda, gerador, balanceamento de fase | **feito** |
 | óptica | profundidade de campo, FOV, crop, hiperfocal | a fazer |
 | áudio / timecode | conversão 23.976 ↔ 29.97, drift, delay por distância | sob demanda |
 | redes | ST 2110, NDI, SRT | adiado até haver job IP |

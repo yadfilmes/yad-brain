@@ -26,6 +26,7 @@ jobs:
         run: |
           python3 tools/calc/test_storage.py
           python3 tools/calc/test_led_wall.py
+          python3 tools/calc/test_eletrica.py
 
       - name: Avaliar recuperação (conjunto-ouro)
         run: python3 tools/eval.py

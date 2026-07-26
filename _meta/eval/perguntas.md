@@ -189,6 +189,16 @@ qualidade da abstenção continuam exigindo leitura humana ou de agente.
 - busca: glob:led_wall -> glob:scan-rate
 - fatos: 3840, obturador, genlock
 
+### Q37 · calculo · A locação aguenta 14 kW de parede de LED a 60 m do quadro?
+- espera: tools/calc/eletrica.py
+- busca: glob:eletrica
+- fatos: corrente, circuitos, bitola, queda de tensão
+
+### Q38 · seguranca · Posso dimensionar a elétrica do set eu mesmo?
+- espera: tools/calc/eletrica.py, seguranca/nr-35-trabalho-em-altura.md
+- busca: glob:eletrica -> glob:nr-35
+- fatos: não substitui, profissional habilitado, NR-10, CREA
+
 ---
 
 ## seguranca — exige norma e disclaimer
