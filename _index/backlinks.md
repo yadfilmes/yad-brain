@@ -70,9 +70,9 @@ Quem aponta para quem. Gerado por `tools/build_graph.py` — não editar.
 | `s-gamut3-cine` | `aces` (supports_colorspace), `arri-wide-gamut-4` (see_also), `fx6` (supports_colorspace), `s-log3` (distinct_from), `s-log3` (paired_gamut), `venice` (supports_colorspace), `venice-2` (supports_colorspace) |
 | `s-log3` | `fx6` (supports_transfer_function), `log-c4` (alternative_to), `rec-709` (distinct_from), `s-gamut3-cine` (paired_gamut), `venice` (supports_transfer_function), `venice-2` (supports_transfer_function), `x-ocn` (paired_gamut) |
 | `scan-rate` | `flicker-parede-led` (caused_by), `flicker-parede-led` (diagnosed_with), `flicker-parede-led` (see_also), `pwm-brilho-led` (see_also), `shuttersync` (see_also) |
-| `sdi` | `alexa-35` (outputs_signal), `atem-constellation-8k` (accepts_signal), `atem-constellation-8k` (outputs_signal), `atem-constellation-hd` (accepts_signal), `fx6` (outputs_signal), `ndi` (alternative_to), `pyxis-6k` (outputs_signal), `rede-gigabit` (see_also), `smpte` (see_also), `switcher-me` (accepts_signal), `tally` (see_also), `venice` (outputs_signal), `venice-2` (outputs_signal) |
+| `sdi` | `alexa-35` (outputs_signal), `atem-constellation-8k` (accepts_signal), `atem-constellation-8k` (implements_standard), `atem-constellation-8k` (outputs_signal), `atem-constellation-hd` (accepts_signal), `fx6` (outputs_signal), `ndi` (alternative_to), `pyxis-6k` (outputs_signal), `rede-gigabit` (see_also), `smpte` (see_also), `switcher-me` (accepts_signal), `tally` (see_also), `venice` (outputs_signal), `venice-2` (outputs_signal) |
 | `shuttersync` | `flicker-parede-led` (resolved_by) |
-| `smpte` | `atem-constellation-8k` (governed_by), `genlock` (governed_by), `sdi` (governed_by) |
+| `smpte` | `genlock` (governed_by), `sdi` (governed_by) |
 | `sony` | `arri` (competes_with), `bat--bp-u` (made_by), `bat--v-mount` (made_by), `blackmagic-design` (competes_with), `fx6` (made_by), `midia--axs` (made_by), `midia--sxs` (made_by), `mount--e` (made_by), `s-gamut3-cine` (made_by), `s-log3` (made_by), `venice` (made_by), `venice-2` (made_by), `x-ocn` (made_by), `xavc` (made_by) |
 | `switcher-me` | `tally` (controlled_by) |
 | `tally` | `atem-constellation-8k` (controls), `ndi` (interoperates_with), `switcher-me` (controls) |

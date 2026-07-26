@@ -1880,7 +1880,7 @@
    "brand": "",
    "zona": "universal",
    "status": "draft",
-   "confidence": "media",
+   "confidence": "baixa",
    "risco": "",
    "updated": "2026-07-26",
    "path": "troubleshooting/flicker-parede-led.md",
@@ -1900,7 +1900,7 @@
     "shutter",
     "diagnostico"
    ],
-   "n_fontes": 2,
+   "n_fontes": 3,
    "tiers": [
     "oficial"
    ]
@@ -3097,8 +3097,8 @@
   },
   {
    "de": "atem-constellation-8k",
-   "aresta": "governed_by",
-   "para": "smpte",
+   "aresta": "implements_standard",
+   "para": "sdi",
    "derivada": false
   },
   {

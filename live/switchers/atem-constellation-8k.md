@@ -16,7 +16,7 @@ rel:
   accepts_signal: [sdi]
   outputs_signal: [sdi]
   controls: [tally]
-  governed_by: [smpte]
+  implements_standard: [sdi]
   interoperates_with: [{to: ndi, via: conversor, nota: "sem NDI nativo; integracao passa por conversor dedicado"}]
   competes_with: [atem-constellation-hd]
 sources:

@@ -54,6 +54,64 @@ por combinação. A linha da tabela **é** a afirmação com escopo.
   `16 stops (declarado); ~13,5 (CineD, medido)`.
 - Campo `loc` na fonte quando for documento paginado: `p. 143, tab. 8`.
 
+## A ordem das operações (regra da transcrição)
+
+Este acervo já reprovou **8 de 9 vezes pela mesma causa**, medida em dois lotes
+independentes: não número inventado, e sim **número certo no escopo errado, ou
+afirmação atribuída a fonte que não a sustenta**. O revisor do lote 04 nomeou o
+mecanismo:
+
+> a anotação da fonte está sendo escrita a partir da memória, e depois
+> carimbada com a URL.
+
+Pesquisar mais não corrige isso — a nota da FX6 foi escrita com esforço máximo
+de pesquisa e produziu seis defeitos. O que corrige é **inverter a ordem**:
+
+```
+ERRADO   afirmar → procurar URL que hospede a afirmação → descrever a fonte
+CERTO    abrir a fonte → transcrever literalmente → escrever a partir da transcrição
+```
+
+### O campo `cit` — transcrição literal
+
+Fonte `oficial` ou `lab` carrega `cit`: **o trecho da fonte, nas palavras da
+fonte**, que sustenta a afirmação. No idioma original, sem tradução e sem
+paráfrase.
+
+```yaml
+sources:
+  - {url: "https://docs.acescentral.com/system-components/output-transforms/",
+     tier: oficial, ret: 2026-07-26, loc: "Output Transforms",
+     cit: "In ACES 1.1 and beyond, the RRT and ODT were concatenated and designated an Output Transform",
+     nota: "ODT = Output DEVICE Transform"}
+```
+
+Por que isto funciona quando pesquisar mais não funciona: **não dá para
+transcrever literalmente sem ler.** O campo é a prova de que a fonte foi
+aberta, e é contra ele que o revisor confere a afirmação do corpo — sem
+precisar de acesso à rede.
+
+Regras:
+
+- `cit` é **citação curta com atribuição** (Lei 9.610/98, art. 46) — uma ou
+  duas frases, nunca tabela inteira nem parágrafo longo.
+- `cit` ≠ `loc`. `loc` diz **onde**; `cit` diz **o quê**. Repetir o título do
+  documento nos dois é o defeito do lote 04.
+- `cit` sustenta **uma** afirmação. Nota com três specs de fontes diferentes
+  tem três fontes com três `cit`, não uma fonte genérica.
+- Afirmação do corpo que nenhum `cit` sustenta **não entra** — ou vira lacuna
+  declarada.
+
+### Lacuna se declara em marcador, não em prosa
+
+`<!-- verificar -->` é o marcador. Escrever "isso ainda precisa sair da
+documentação do fabricante" em português corrido é honesto para quem lê e
+**invisível para a máquina** — a nota fica com confiança mais alta que a mesma
+nota com o marcador.
+
+O `validate.py` passou a detectar lacuna declarada em prosa e a exigir o
+marcador junto. Honestidade não pode ser punida por escolher a forma errada.
+
 ## Tiers de fonte
 
 | tier | o que é | serve para |

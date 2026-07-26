@@ -15,7 +15,7 @@ rel:
   known_issue: []                      # equipamento que notoriamente sofre disso
   see_also: []
 sources:
-  - {url: "https://...", tier: oficial, ret: AAAA-MM-DD}
+  - {url: "https://...", tier: oficial, ret: AAAA-MM-DD, loc: "p. X, tab. Y", cit: "o trecho NAS PALAVRAS DA FONTE que sustenta a afirmacao", nota: "o que veio daqui"}
 ---
 
 # Descrição do sintoma como quem vê no set

@@ -13,7 +13,7 @@ rel:
   distinct_from: []     # combate sinônimo falso: "latitude" != "dynamic range"
   requires: []
 sources:
-  - {url: "https://...", tier: oficial, ret: AAAA-MM-DD}
+  - {url: "https://...", tier: oficial, ret: AAAA-MM-DD, loc: "p. X, tab. Y", cit: "o trecho NAS PALAVRAS DA FONTE que sustenta a afirmacao", nota: "o que veio daqui"}
 ---
 
 # Nome do conceito

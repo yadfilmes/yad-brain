@@ -16,7 +16,7 @@ rel:
 sources:
   - {url: "https://docs.acescentral.com/background/overview/", tier: oficial, ret: 2026-07-26, loc: "ACES System - Overview", nota: "arquitetura IDT / espaco de trabalho / ODT"}
   - {url: "https://docs.acescentral.com/encodings/acescct/", tier: oficial, ret: 2026-07-26, loc: "ACEScct Specification", nota: "encoding log em primarias AP1, para grading scene-referred"}
-  - {url: "https://docs.acescentral.com/system-components/output-transforms/", tier: oficial, ret: 2026-07-26, loc: "Output Transforms", nota: "ODT = Output DEVICE Transform; de ACES 1.1 em diante RRT e ODT sao concatenados num Output Transform"}
+  - {url: "https://docs.acescentral.com/system-components/output-transforms/", tier: oficial, ret: 2026-07-26, loc: "Output Transforms", cit: "ACES 1 defined a Reference Rendering Transform (RRT) and an Output Device Transform (ODT). In ACES 1.1 and beyond, the RRT and ODT were concatenated and designated an Output Transform (RRT+ODT)", nota: "ODT = Output DEVICE Transform; Output Transform = RRT+ODT"}
   - {url: "https://chrisbrejon.com/cg-cinematography/chapter-1-5-academy-color-encoding-system-aces/", tier: educacao, ret: 2026-07-26, loc: "Chapter 1.5 - Academy Color Encoding System", nota: "pratica de pipeline e armadilhas de IDT"}
 ---
 

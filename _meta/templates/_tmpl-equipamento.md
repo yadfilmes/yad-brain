@@ -15,7 +15,7 @@ rel:                    # só arestas de _meta/edge-vocabulary.md
   # has_native_mount / records_codec / competes_with / budget_alternative_to
   # incompatible_with: [{to: slug, motivo: "por quê"}]
 sources:
-  - {url: "https://...", tier: oficial, ret: AAAA-MM-DD, loc: "p. X, tab. Y", nota: "o que veio daqui"}
+  - {url: "https://...", tier: oficial, ret: AAAA-MM-DD, loc: "p. X, tab. Y", cit: "o trecho NAS PALAVRAS DA FONTE que sustenta a afirmacao", nota: "o que veio daqui"}
 ---
 
 # Nome Comercial Completo

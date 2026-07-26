@@ -80,7 +80,11 @@ Propriedades reconhecidas: `to` (obrigatória na forma longa), `via`, `limite`,
 - `template_for` — papelada ↔ processo
 - `enables_technique` — equipamento viabiliza técnica
 - `requires` — pré-requisito
-- `governed_by` — norma → órgão
+- `governed_by` — **o que é normatizado → órgão que normatiza.** Origem válida:
+  `norma`, `interface`, `midia`, `colorspace`, `transfer-function`,
+  `pipeline-cor`, `certificacao` e `conceito` técnico com norma (genlock →
+  SMPTE). **Produto não usa esta aresta** — câmera, switcher e fixture
+  *implementam* norma (`implements_standard`), não são governados por órgão
 - `supersedes` — substitui norma/versão anterior
 
 ## Diagnóstico (troubleshooting)

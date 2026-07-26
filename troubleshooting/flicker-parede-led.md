@@ -6,7 +6,7 @@ zona: universal
 aliases: ["flicker LED", "banda na parede de LED", "linha rolando LED", "cintilacao", "cintilação", "banding"]
 tags: [led-wall, virtual-production, flicker, shutter, diagnostico]
 status: draft
-confidence: media
+confidence: baixa
 updated: 2026-07-26
 rel:
   caused_by: [scan-rate, pwm-brilho-led]
@@ -14,8 +14,9 @@ rel:
   diagnosed_with: [obturador-180, scan-rate]
   see_also: [obturador-180, scan-rate]
 sources:
-  - {url: "https://www.bromptontech.com/features/shuttersync/", tier: oficial, ret: 2026-07-26, loc: "ShutterSync - Features", nota: "exclusivo dos processadores Tessera SX40 e S8, a partir do software Tessera 3.2; opcao de Sensor Type (Any / Global / Rolling)"}
-  - {url: "https://www.bromptontech.com/recreating-reality-synchronisation-artefacts/", tier: oficial, ret: 2026-07-26, loc: "Recreating Reality - Synchronisation Artefacts", nota: "mecanismo do frame blending quando a fase esta errada"}
+  - {url: "https://www.bromptontech.com/features/shuttersync/", tier: oficial, ret: 2026-07-26, loc: "ShutterSync - Features", cit: "ShutterSync is exclusive to the Tessera SX40 and Tessera S8 LED processors", nota: "escopo do recurso por processador"}
+  - {url: "https://www.bromptontech.com/release/tessera-3-4-9/", tier: oficial, ret: 2026-07-26, loc: "Tessera Processor Software 3.4.9", cit: "As part of the Tessera Software version 3.4 update, the ShutterSync features the option to change the camera Sensor Type. There are three options: Any, Global Shutter and Rolling Shutter", nota: "Sensor Type e recurso de 3.4, nao de 3.2"}
+  - {url: "https://www.bromptontech.com/recreating-reality-synchronisation-artefacts/", tier: oficial, ret: 2026-07-26, loc: "Recreating Reality - Synchronisation Artefacts", cit: "When the phase is correct, the LED displays a single full frame for the time that the camera shutter is open to expose the sensor", nota: "mecanismo do frame blending quando a fase esta errada"}
 ---
 
 # Flicker ou banda horizontal filmando parede de LED
@@ -87,7 +88,10 @@ cabo de dados com mau contato (banda intermitente e localizada).
 
 ## Observação de confiança
 
-Nota `draft` com `confidence: media`: a ordem das causas vem de padrão de campo
-relatado, não de teste controlado. Os valores exatos de scan rate e o
-comportamento por produto precisam sair da documentação do fabricante antes de
-virar `reviewed`.
+Nota `draft`: a ordem das causas vem de padrão de campo relatado, não de teste
+controlado. <!-- verificar: a ordenação por frequência não tem fonte de campo
+citada; precisa de tier `comunidade` ou `campo-proprio` que a sustente -->
+
+Os valores exatos de scan rate e o comportamento por produto precisam sair da
+documentação do fabricante antes de virar `reviewed`.
+<!-- verificar: scan rate por produto, na ficha do painel -->

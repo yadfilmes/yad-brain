@@ -50,6 +50,24 @@ TIPO_ESPERADO = {
     "caused_by": {"conceito", "problema", "interface"},
 }
 
+# Padrão nº 14 do lote 04: o CI checava o tipo do ALVO e nunca o da ORIGEM.
+# `governed_by` é definida no vocabulário como "norma -> órgão"; saía de nó
+# `conceito` e de `pipeline-cor` sem ninguém reclamar. Aresta direcional tem
+# domínio, não só contradomínio.
+TIPO_DE_ORIGEM = {
+    # Produto implementa norma (`implements_standard`); não é governado por
+    # órgão. Conceito técnico com norma por trás (genlock -> SMPTE) entra.
+    "governed_by": {"norma", "interface", "midia", "colorspace", "conceito",
+                    "transfer-function", "certificacao", "pipeline-cor"},
+    "caused_by": {"problema"},
+    "resolved_by": {"problema"},
+    "diagnosed_with": {"problema"},
+    "reports_to": {"funcao"},
+    "records_codec": {"camera", "switcher"},
+    "has_native_mount": {"camera"},
+    "template_for": {"documento"},
+}
+
 # Tipos cujas arestas fortes são de ENTRADA por desenho — grafo só de
 # `see_also` neles é a forma correta, não defeito. O vocabulário não tem
 # `publishes` nem `certifies`, e inventar uma para satisfazer a régua seria
@@ -66,6 +84,23 @@ RUIDO_DE_HOST = {
     "jp", "de", "cn", "fr", "es", "it", "nl", "au", "ca",
 }
 ORDEM_CONFIANCA = {"baixa": 0, "media": 1, "alta": 2}
+MIN_CITACAO = 40               # uma frase, não um fragmento
+
+# Padrão nº 13 do lote 04: lacuna declarada em prosa é invisível para a
+# máquina, então a nota honesta em português fica com confiança MAIS ALTA que
+# a mesma nota honesta em marcador. Incentivo invertido — estes padrões o
+# desfazem, exigindo o `<!-- verificar -->` junto.
+# Apertado depois de 2 falsos positivos em 3: "a conferir" e "para conferir"
+# são conselho ao leitor sobre prática de set, não declaração de lacuna. Só
+# entram padrões que falam do estado de EVIDÊNCIA DA PRÓPRIA NOTA.
+LACUNA_EM_PROSA = re.compile(
+    r"(precisa[m]? sair d[ao] |antes de virar\s+`?reviewed"
+    r"|não (?:foi|foram|está|estão) conferid|não conferid[oa]s?\b"
+    r"|(?:não|sem) (?:é |ser )?de teste controlado"
+    r"|ainda não (?:verificad|confirmad|test)"
+    r"|falta[m]? (?:confirmar|verificar) )",
+    re.IGNORECASE,
+)
 
 RAIZ_DE_DOMINIO = re.compile(r"^https?://[^/]+/?$")
 SLUG = re.compile(r"^[a-z0-9]+(?:[-]{1,2}[a-z0-9]+)*$")
@@ -321,6 +356,23 @@ def main():
                         erro(rel, f"fonte é raiz de domínio, não evidência: {url}")
                     else:
                         aviso(rel, f"fonte é raiz de domínio (precisa de página/seção): {url}")
+                # Regra da transcrição (conventions.md): fonte forte carrega o
+                # trecho NAS PALAVRAS DA FONTE. 8 de 9 reprovações de G1 em
+                # dois lotes foram má transcrição — e não dá para transcrever
+                # literalmente sem abrir a fonte. O campo é a prova de leitura.
+                if t in ("oficial", "lab"):
+                    cit = (f.get("cit") or "").strip()
+                    loc = (f.get("loc") or "").strip()
+                    if not cit:
+                        msg = (f"fonte {t} sem 'cit' — transcrever o trecho que "
+                               f"sustenta a afirmação, nas palavras da fonte: {url}")
+                        (erro if status == "reviewed" else aviso)(rel, msg)
+                    elif len(cit) < MIN_CITACAO:
+                        aviso(rel, f"'cit' curta demais ({len(cit)} caracteres) — "
+                                   f"transcrever a frase, não um fragmento: {url}")
+                    elif loc and cit.lower() == loc.lower():
+                        erro(rel, f"'cit' idêntica a 'loc' — 'loc' diz ONDE, "
+                                  f"'cit' diz O QUÊ: {url}")
                 if t in ("oficial", "lab") and not f.get("loc"):
                     if status == "reviewed":
                         erro(rel, f"fonte {t} sem 'loc' (página/tabela/seção): {url}")
@@ -360,6 +412,16 @@ def main():
             erro(rel, f"confidence 'alta' com {pendencias} pendência(s) <!-- verificar --> no corpo")
         if pendencias and status == "reviewed":
             erro(rel, f"status 'reviewed' com {pendencias} pendência(s) <!-- verificar --> no corpo")
+
+        # Lacuna declarada em prosa precisa do marcador junto — senão a
+        # honestidade em português vale mais confiança que a mesma honestidade
+        # em `<!-- verificar -->` (padrão nº 13 do lote 04).
+        if not pendencias and status != "stub":
+            achado = LACUNA_EM_PROSA.search(corpo)
+            if achado:
+                msg = (f"lacuna declarada em prosa (\"{achado.group(0)}\") sem "
+                       f"'<!-- verificar -->' — o marcador é o que a máquina lê")
+                (erro if status == "reviewed" else aviso)(rel, msg)
 
         # Piso mecânico da rubrica de confiança (_meta/qa/rubrica-confianca.md).
         # Declarar mais conservador que a tabela é permitido e honesto; mais
@@ -442,6 +504,14 @@ def main():
             if not fm.alvos(valor):
                 aviso(rel, f"aresta '{aresta}' declarada sem alvo — "
                            f"preencher ou remover")
+            origem_ok = TIPO_DE_ORIGEM.get(aresta)
+            tipo_origem = dados.get("type", "")
+            if origem_ok and tipo_origem and tipo_origem not in origem_ok:
+                msg = (f"aresta '{aresta}' saindo de type '{tipo_origem}' "
+                       f"(esperado: {'/'.join(sorted(origem_ok))}) — "
+                       f"ver _meta/edge-vocabulary.md")
+                (erro if dados.get("status") == "reviewed" else aviso)(rel, msg)
+
             for alvo in fm.alvos(valor):
                 arestas_totais += 1
                 esperado = TIPO_ESPERADO.get(aresta)

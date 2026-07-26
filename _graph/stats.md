@@ -51,7 +51,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 | `alternative_to` | 24 |
 | `distinct_from` | 16 |
 | `competes_with` | 15 |
-| `governed_by` | 12 |
+| `governed_by` | 11 |
 | `conforms_to_pipeline` | 10 |
 | `records_codec` | 10 |
 | `accepts_media` | 7 |

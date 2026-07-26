@@ -59,6 +59,26 @@ cite a norma, reproduza o disclaimer e **não improvise**. Se a resposta puder
 virar decisão de set com risco físico, diga explicitamente que não substitui
 profissional habilitado.
 
+## Ao escrever: a ordem das operações
+
+Este acervo já reprovou **8 de 9 vezes pela mesma causa** — não número
+inventado, e sim **afirmação certa no escopo errado, ou atribuída a fonte que
+não a sustenta**. Pesquisar mais não corrige; o que corrige é a ordem:
+
+```
+ERRADO   afirmar → achar URL que hospede → descrever a fonte
+CERTO    abrir a fonte → transcrever em `cit` → escrever a partir da transcrição
+```
+
+- Fonte `oficial`/`lab` carrega **`cit`**: o trecho **nas palavras da fonte**,
+  idioma original, sem paráfrase. Não dá para transcrever sem ler — é essa a
+  função do campo.
+- `loc` diz **onde**; `cit` diz **o quê**. Repetir o título nos dois não vale.
+- Afirmação que nenhum `cit` sustenta não entra — ou vira lacuna declarada.
+- **Lacuna se declara em `<!-- verificar -->`**, nunca só em prosa: em
+  português corrido ela é invisível para a máquina, e a nota acaba com
+  confiança mais alta do que merece.
+
 ## Ao escrever ou editar
 
 - Modelos em `_meta/templates/` · regras em `_meta/conventions.md`

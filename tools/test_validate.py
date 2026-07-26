@@ -267,6 +267,41 @@ checa("duas páginas do mesmo fabricante nunca chegam a alta",
                              "tier": "oficial", "loc": "z"}], False) != "alta")
 
 
+# ------------------------------------------- lacuna em prosa e origem da aresta
+print("\nregra da transcrição: lacuna em prosa e domínio de aresta")
+
+# Esta regex já custou 2 falsos positivos em 3 acertos na primeira versão.
+# Os casos abaixo travam as duas direções — o que ela precisa pegar, e as
+# frases de prática de set que ela NÃO pode confundir com lacuna.
+PEGA = [
+    "a ordem vem de padrão de campo relatado, não de teste controlado.",
+    "os valores precisam sair da documentação do fabricante.",
+    "conferir isso antes de virar `reviewed`.",
+    "o número não foi conferido contra o manual.",
+    "falta confirmar o comportamento em firmware novo.",
+]
+NAO_PEGA = [
+    "é o ponto a conferir antes de fechar o kit.",
+    "serve para conferir se a ordem das cenas respeita a luz.",
+    "conferir a especificação do cabo, não só o conector.",
+    "vale conferir na câmera, não a olho.",
+    "pergunta útil ao alugar: qual o R9 e qual o TLCI.",
+]
+for frase in PEGA:
+    checa(f"pega lacuna: {frase[:38]}…", bool(V.LACUNA_EM_PROSA.search(frase)))
+for frase in NAO_PEGA:
+    m = V.LACUNA_EM_PROSA.search(frase)
+    checa(f"não confunde prática: {frase[:34]}…", not m, m.group(0) if m else "")
+
+checa("`governed_by` aceita conceito técnico com norma (genlock -> SMPTE)",
+      "conceito" in V.TIPO_DE_ORIGEM["governed_by"])
+checa("`governed_by` recusa produto — produto implementa norma",
+      not ({"camera", "switcher", "fixture"} & V.TIPO_DE_ORIGEM["governed_by"]))
+checa("toda aresta com domínio declarado existe no vocabulário",
+      all(a in VOCAB for a in V.TIPO_DE_ORIGEM),
+      str([a for a in V.TIPO_DE_ORIGEM if a not in VOCAB]))
+
+
 # -------------------------------------------------------------------- saída
 print()
 if falhas:
