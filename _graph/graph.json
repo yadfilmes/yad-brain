@@ -244,6 +244,38 @@
    ]
   },
   {
+   "id": "mount--bowens",
+   "title": "Bowens (mount de modificador)",
+   "type": "mount",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "baixa",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "_meta/vocab/mount--bowens.md",
+   "tldr": "o encaixe de modificador mais difundido do mundo em LED de cinema. Não é padrão de norma: virou padrão **por adoção**, depois que fabricantes chineses o escolheram para as linhas COB. É o que dá acesso ao maior parque de",
+   "aliases": [
+    "Bowens",
+    "Bowens S",
+    "Bowens mount",
+    "encaixe Bowens",
+    "baioneta Bowens",
+    "Bowens S-type"
+   ],
+   "tags": [
+    "luz",
+    "mount",
+    "modificador",
+    "softbox",
+    "padrao"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
    "id": "mount--e",
    "title": "E-mount (Sony)",
    "type": "mount",
@@ -295,6 +327,36 @@
     "cine",
     "arri",
     "large-format"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "mount--nanlux",
+   "title": "Nanlux (mount de modificador proprietário)",
+   "type": "mount",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "baixa",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "_meta/vocab/mount--nanlux.md",
+   "tldr": "encaixe próprio da [[nanlux]] para a linha de alta potência. Existe adaptador para [[mount--bowens]], mas o parque de modificadores Bowens **não serve direto** — e em fixture dessa potência isso não é detalhe de conforto",
+   "aliases": [
+    "mount Nanlux",
+    "encaixe Nanlux",
+    "NL mount",
+    "Nanlux mount"
+   ],
+   "tags": [
+    "luz",
+    "mount",
+    "modificador",
+    "proprietario",
+    "nanlux"
    ],
    "n_fontes": 1,
    "tiers": [
@@ -879,6 +941,37 @@
    ]
   },
   {
+   "id": "abnt",
+   "title": "ABNT — Associação Brasileira de Normas Técnicas",
+   "type": "orgao",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "baixa",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/orgaos/abnt.md",
+   "tldr": "o organismo de normalização técnica do Brasil. Suas normas levam o prefixo **NBR**. Para audiovisual, a que aparece toda hora é a **NBR 5410** (instalações elétricas de baixa tensão), que é o chão de qualquer conta de el",
+   "aliases": [
+    "ABNT",
+    "Associacao Brasileira de Normas Tecnicas",
+    "Associação Brasileira de Normas Técnicas",
+    "NBR",
+    "ABNT NBR"
+   ],
+   "tags": [
+    "orgao",
+    "norma",
+    "brasil",
+    "eletrica",
+    "tecnico"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
    "id": "ampas",
    "title": "AMPAS (Academy of Motion Picture Arts and Sciences)",
    "type": "orgao",
@@ -1084,6 +1177,146 @@
    "n_fontes": 1,
    "tiers": [
     "oficial"
+   ]
+  },
+  {
+   "id": "balanceamento-de-fase",
+   "title": "Balanceamento de fase em set trifásico",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "baixa",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "eletrica/balanceamento-de-fase.md",
+   "tldr": "em trifásico, o que derruba o quadro raramente é a carga **total**: é a carga concentrada **numa fase**. Três fases de 20 A cada aguentam 60 A distribuídos e desarmam com 25 A numa só. Distribuir não é capricho — é o que",
+   "aliases": [
+    "balanceamento de fase",
+    "balanceamento de fases",
+    "equilibrar fases",
+    "desequilibrio de fase",
+    "desequilíbrio de fase",
+    "phase balancing",
+    "trifasico",
+    "trifásico"
+   ],
+   "tags": [
+    "eletrica",
+    "trifasico",
+    "set",
+    "gaffer",
+    "distribuicao"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "educacao"
+   ]
+  },
+  {
+   "id": "bitola-de-cabo",
+   "title": "Bitola de cabo — condução e queda de tensão",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "baixa",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "eletrica/bitola-de-cabo.md",
+   "tldr": "bitola de cabo tem **duas** restrições, não uma. O cabo precisa conduzir a corrente **sem esquentar** e entregar tensão suficiente **no fim da tirada**. Em tirada longa é quase sempre a **segunda** que manda — e é a que ",
+   "aliases": [
+    "bitola",
+    "bitola de cabo",
+    "secao do cabo",
+    "seção do cabo",
+    "mm2",
+    "mm²",
+    "cabo de energia",
+    "extensao",
+    "extensão",
+    "cable gauge",
+    "AWG"
+   ],
+   "tags": [
+    "eletrica",
+    "cabo",
+    "dimensionamento",
+    "set",
+    "orcamento"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "educacao"
+   ]
+  },
+  {
+   "id": "gerador",
+   "title": "Gerador de set — dimensionamento em kVA",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "baixa",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "eletrica/gerador.md",
+   "tldr": "gerador se contrata em **kVA**, não em kW, e os dois não são a mesma coisa: kVA = kW ÷ fator de potência. Some margem, e some **muito mais** se houver carga indutiva ([[hmi]] com reator, motor) — o arranque puxa bem acim",
+   "aliases": [
+    "gerador",
+    "grupo gerador",
+    "gerador de set",
+    "genset",
+    "generator",
+    "kVA",
+    "grupo motor-gerador"
+   ],
+   "tags": [
+    "eletrica",
+    "energia",
+    "externa",
+    "orcamento",
+    "set"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "educacao"
+   ]
+  },
+  {
+   "id": "rede-ac",
+   "title": "Rede elétrica AC no Brasil (127 / 220 V)",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "eletrica/rede-ac.md",
+   "tldr": "o Brasil não tem uma tensão, tem duas: **127 V** no Sudeste, Norte e parte do Centro-Oeste; **220 V** no Sul e parte do Nordeste. A mesma luz puxa **~1,7× mais corrente em 127 V**, e é essa conta que decide se a locação ",
+   "aliases": [
+    "rede AC",
+    "rede eletrica",
+    "rede elétrica",
+    "tomada",
+    "energia da rede",
+    "127V",
+    "220V",
+    "110V",
+    "mains",
+    "wall power"
+   ],
+   "tags": [
+    "eletrica",
+    "energia",
+    "brasil",
+    "set",
+    "locacao"
+   ],
+   "n_fontes": 2,
+   "tiers": [
+    "educacao"
    ]
   },
   {
@@ -1846,6 +2079,40 @@
    ]
   },
   {
+   "id": "nr-10-eletricidade",
+   "title": "NR-10 — Segurança em Instalações e Serviços em Eletricidade",
+   "type": "norma",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "baixa",
+   "risco": "seguranca",
+   "updated": "2026-07-26",
+   "path": "seguranca/nr-10-eletricidade.md",
+   "tldr": "norma do Ministério do Trabalho que define requisitos mínimos de segurança para quem trabalha com eletricidade, em qualquer fase (geração, transmissão, distribuição e **consumo** — que é onde o set vive). Obrigatória par",
+   "aliases": [
+    "NR 10",
+    "NR-10",
+    "NR10",
+    "seguranca em eletricidade",
+    "segurança em eletricidade",
+    "norma regulamentadora 10",
+    "SEP"
+   ],
+   "tags": [
+    "seguranca",
+    "norma",
+    "eletrica",
+    "brasil",
+    "treinamento",
+    "gaffer"
+   ],
+   "n_fontes": 2,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
    "id": "nr-35-trabalho-em-altura",
    "title": "NR-35 — Trabalho em Altura",
    "type": "norma",
@@ -2024,6 +2291,24 @@
    "derivada": false
   },
   {
+   "de": "mount--bowens",
+   "aresta": "made_by",
+   "para": "bowens",
+   "derivada": false
+  },
+  {
+   "de": "mount--bowens",
+   "aresta": "alternative_to",
+   "para": "mount--nanlux",
+   "derivada": false
+  },
+  {
+   "de": "mount--bowens",
+   "aresta": "see_also",
+   "para": "ls-600d-pro",
+   "derivada": false
+  },
+  {
    "de": "mount--e",
    "aresta": "made_by",
    "para": "sony",
@@ -2051,6 +2336,24 @@
    "de": "mount--lpl",
    "aresta": "alternative_to",
    "para": "mount--e",
+   "derivada": false
+  },
+  {
+   "de": "mount--nanlux",
+   "aresta": "made_by",
+   "para": "nanlux",
+   "derivada": false
+  },
+  {
+   "de": "mount--nanlux",
+   "aresta": "alternative_to",
+   "para": "mount--bowens",
+   "derivada": false
+  },
+  {
+   "de": "mount--nanlux",
+   "aresta": "see_also",
+   "para": "evoke-2400b",
    "derivada": false
   },
   {
@@ -2840,6 +3143,24 @@
    "derivada": false
   },
   {
+   "de": "abnt",
+   "aresta": "see_also",
+   "para": "bitola-de-cabo",
+   "derivada": false
+  },
+  {
+   "de": "abnt",
+   "aresta": "see_also",
+   "para": "rede-ac",
+   "derivada": false
+  },
+  {
+   "de": "abnt",
+   "aresta": "see_also",
+   "para": "nr-10-eletricidade",
+   "derivada": false
+  },
+  {
    "de": "ampas",
    "aresta": "see_also",
    "para": "aces",
@@ -2915,6 +3236,102 @@
    "de": "obturador-180",
    "aresta": "see_also",
    "para": "flicker-parede-led",
+   "derivada": false
+  },
+  {
+   "de": "balanceamento-de-fase",
+   "aresta": "requires",
+   "para": "rede-ac",
+   "derivada": false
+  },
+  {
+   "de": "balanceamento-de-fase",
+   "aresta": "requires",
+   "para": "nr-10-eletricidade",
+   "derivada": false
+  },
+  {
+   "de": "balanceamento-de-fase",
+   "aresta": "see_also",
+   "para": "gerador",
+   "derivada": false
+  },
+  {
+   "de": "balanceamento-de-fase",
+   "aresta": "see_also",
+   "para": "bitola-de-cabo",
+   "derivada": false
+  },
+  {
+   "de": "bitola-de-cabo",
+   "aresta": "governed_by",
+   "para": "abnt",
+   "derivada": false
+  },
+  {
+   "de": "bitola-de-cabo",
+   "aresta": "requires",
+   "para": "rede-ac",
+   "derivada": false
+  },
+  {
+   "de": "bitola-de-cabo",
+   "aresta": "requires",
+   "para": "nr-10-eletricidade",
+   "derivada": false
+  },
+  {
+   "de": "bitola-de-cabo",
+   "aresta": "see_also",
+   "para": "gerador",
+   "derivada": false
+  },
+  {
+   "de": "gerador",
+   "aresta": "alternative_to",
+   "para": "rede-ac",
+   "derivada": false
+  },
+  {
+   "de": "gerador",
+   "aresta": "requires",
+   "para": "bitola-de-cabo",
+   "derivada": false
+  },
+  {
+   "de": "gerador",
+   "aresta": "requires",
+   "para": "nr-10-eletricidade",
+   "derivada": false
+  },
+  {
+   "de": "gerador",
+   "aresta": "see_also",
+   "para": "balanceamento-de-fase",
+   "derivada": false
+  },
+  {
+   "de": "rede-ac",
+   "aresta": "governed_by",
+   "para": "abnt",
+   "derivada": false
+  },
+  {
+   "de": "rede-ac",
+   "aresta": "requires",
+   "para": "bitola-de-cabo",
+   "derivada": false
+  },
+  {
+   "de": "rede-ac",
+   "aresta": "alternative_to",
+   "para": "gerador",
+   "derivada": false
+  },
+  {
+   "de": "rede-ac",
+   "aresta": "see_also",
+   "para": "nr-10-eletricidade",
    "derivada": false
   },
   {
@@ -3214,7 +3631,7 @@
   {
    "de": "ls-600d-pro",
    "aresta": "fits",
-   "para": "mount-bowens",
+   "para": "mount--bowens",
    "derivada": false
   },
   {
@@ -3256,7 +3673,7 @@
   {
    "de": "evoke-2400b",
    "aresta": "fits",
-   "para": "mount-nanlux",
+   "para": "mount--nanlux",
    "derivada": false
   },
   {
@@ -3509,6 +3926,30 @@
    "de": "gaffer",
    "aresta": "see_also",
    "para": "cri-tlci-ssi",
+   "derivada": false
+  },
+  {
+   "de": "nr-10-eletricidade",
+   "aresta": "governed_by",
+   "para": "mte",
+   "derivada": false
+  },
+  {
+   "de": "nr-10-eletricidade",
+   "aresta": "requires",
+   "para": "rede-ac",
+   "derivada": false
+  },
+  {
+   "de": "nr-10-eletricidade",
+   "aresta": "see_also",
+   "para": "nr-35-trabalho-em-altura",
+   "derivada": false
+  },
+  {
+   "de": "nr-10-eletricidade",
+   "aresta": "see_also",
+   "para": "gaffer",
    "derivada": false
   },
   {

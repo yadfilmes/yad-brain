@@ -36,12 +36,16 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 ## conceito
 
+- [[balanceamento-de-fase]] — em trifásico, o que derruba o quadro raramente é a carga **total**: é a carga concentrada **numa fase**. Três 
+- [[bitola-de-cabo]] — bitola de cabo tem **duas** restrições, não uma. O cabo precisa conduzir a corrente **sem esquentar** e entreg
 - [[cri-tlci-ssi]] — quatro métricas que tentam responder "essa luz reproduz cor direito?". **CRI é a mais citada e a mais fraca**;
 - [[filtro-nd]] — filtro cinza que corta luz sem (idealmente) alterar cor, para manter diafragma aberto e obturador 180° sob sol
 - [[genlock]] — sinal de referência comum que faz vários equipamentos varrerem o quadro no mesmo instante. Sem ele, cada câmer
+- [[gerador]] — gerador se contrata em **kVA**, não em kW, e os dois não são a mesma coisa: kVA = kW ÷ fator de potência. Some
 - [[lei-do-inverso-do-quadrado]] — dobrar a distância entre a luz e o sujeito derruba a intensidade a **um quarto** (dois stops), não à metade. É
 - [[obturador-180]] — manter o obturador em 180° (velocidade = 1 ÷ (2 × frame rate)) entrega o borrão de movimento a que o olho está
 - [[pwm-brilho-led]] — LED não regula intensidade baixando tensão: ele **pisca muito rápido** e o tempo ligado define o brilho aparen
+- [[rede-ac]] — o Brasil não tem uma tensão, tem duas: **127 V** no Sudeste, Norte e parte do Centro-Oeste; **220 V** no Sul e
 - [[rede-gigabit]] — vídeo sobre IP exige rede **dedicada**: gigabit no mínimo, switch gerenciado, e nada de compartilhar com a int
 - [[scan-rate]] — quantas vezes por segundo o painel redesenha a imagem inteira, em Hz. O olho humano se satisfaz com pouco; **a
 - [[shuttersync]] — recurso das processadoras Brompton que alinha a varredura do painel com o obturador da câmera, permitindo ajus
@@ -95,16 +99,20 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 ## mount
 
+- [[mount--bowens]] — o encaixe de modificador mais difundido do mundo em LED de cinema. Não é padrão de norma: virou padrão **por a
 - [[mount--e]] — mount eletrônico da Sony com flange focal distance curto (18 mm), usado da mirrorless de entrada ao topo de ci
 - [[mount--lpl]] — mount da ARRI criado para formato grande: diâmetro maior e flange focal distance menor que o [[mount--pl]] (44
+- [[mount--nanlux]] — encaixe próprio da [[nanlux]] para a linha de alta potência. Existe adaptador para [[mount--bowens]], mas o pa
 - [[mount--pl]] — mount padrão do cinema profissional, criado pela ARRI: trava mecânica de quatro flanges, sem contatos elétrico
 
 ## norma
 
+- [[nr-10-eletricidade]] — norma do Ministério do Trabalho que define requisitos mínimos de segurança para quem trabalha com eletricidade
 - [[nr-35-trabalho-em-altura]] — norma regulamentadora brasileira que rege qualquer atividade executada acima de 2 metros do nível inferior com
 
 ## orgao
 
+- [[abnt]] — o organismo de normalização técnica do Brasil. Suas normas levam o prefixo **NBR**. Para audiovisual, a que ap
 - [[ampas]] — a Academia (a mesma do Oscar) mantém um braço de ciência e tecnologia que publica padrões de uso corrente na i
 - [[itu-r]] — órgão da ONU que publica as recomendações da série **BT**, que definem os padrões de imagem de televisão do mu
 - [[mte]] — órgão federal que edita e mantém as **Normas Regulamentadoras (NRs)**, de cumprimento obrigatório em qualquer 

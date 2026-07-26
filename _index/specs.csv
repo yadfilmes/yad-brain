@@ -1,5 +1,6 @@
 id,title,type,brand,zona,status,confidence,risco,updated,n_fontes,tiers,path
 00-indice-mestre,Índice mestre,moc,,universal,draft,baixa,,2026-07-26,1,campo-proprio,_moc/00-indice-mestre.md
+abnt,ABNT — Associação Brasileira de Normas Técnicas,orgao,,universal,draft,baixa,,2026-07-26,1,oficial,conceitos/orgaos/abnt.md
 aces,ACES (Academy Color Encoding System),pipeline-cor,,universal,draft,alta,,2026-07-26,4,educacao|oficial,conceitos/cor/aces.md
 alexa-35,ARRI ALEXA 35,camera,arri,universal,draft,baixa,,2026-07-26,3,educacao|oficial,captacao/cameras/arri/alexa-35.md
 ampas,AMPAS (Academy of Motion Picture Arts and Sciences),orgao,,universal,draft,media,,2026-07-26,1,oficial,conceitos/orgaos/ampas.md
@@ -9,9 +10,11 @@ arri-wide-gamut-4,ARRI Wide Gamut 4,colorspace,arri,universal,draft,media,,2026-
 arriraw,ARRIRAW,codec,arri,universal,draft,media,,2026-07-26,2,oficial,conceitos/codecs/arriraw.md
 atem-constellation-8k,Blackmagic ATEM Constellation 8K,switcher,blackmagic-design,universal,draft,alta,,2026-07-26,4,educacao|oficial,live/switchers/atem-constellation-8k.md
 atem-constellation-hd,Blackmagic ATEM Constellation HD e 4K Plus,switcher,blackmagic-design,universal,stub,baixa,,2026-07-26,1,oficial,live/switchers/atem-constellation-hd.md
+balanceamento-de-fase,Balanceamento de fase em set trifásico,conceito,,universal,draft,baixa,,2026-07-26,1,educacao,eletrica/balanceamento-de-fase.md
 bat--b-mount,B-Mount (padrão de bateria),battery-mount,,universal,draft,media,,2026-07-26,1,oficial,_meta/vocab/bat--b-mount.md
 bat--bp-u,BP-U (padrão de bateria Sony),battery-mount,,universal,draft,media,,2026-07-26,2,oficial,_meta/vocab/bat--bp-u.md
 bat--v-mount,V-Mount (padrão de bateria),battery-mount,,universal,draft,baixa,,2026-07-26,1,educacao,_meta/vocab/bat--v-mount.md
+bitola-de-cabo,Bitola de cabo — condução e queda de tensão,conceito,,universal,draft,baixa,,2026-07-26,1,educacao,eletrica/bitola-de-cabo.md
 blackmagic-design,Blackmagic Design,marca,,universal,draft,alta,,2026-07-26,2,educacao|oficial,marcas/blackmagic-design.md
 braw,Blackmagic RAW,codec,blackmagic-design,universal,draft,media,,2026-07-26,1,oficial,conceitos/codecs/braw.md
 cri-tlci-ssi,"CRI, TLCI, SSI e TM-30 — qualidade de cor de fixture",conceito,,universal,draft,alta,,2026-07-26,2,educacao|oficial,luz/conceitos/cri-tlci-ssi.md
@@ -23,6 +26,7 @@ flicker-parede-led,Flicker ou banda horizontal filmando parede de LED,problema,,
 fx6,Sony FX6,camera,sony,universal,draft,alta,,2026-07-26,4,comunidade|lab|oficial,captacao/cameras/sony/fx6.md
 gaffer,Gaffer (chefe de elétrica),funcao,,universal,draft,baixa,,2026-07-26,1,educacao,producao/funcoes/gaffer.md
 genlock,Genlock (sincronismo de referência),conceito,,universal,draft,media,,2026-07-26,1,oficial,conceitos/sinais/genlock.md
+gerador,Gerador de set — dimensionamento em kVA,conceito,,universal,draft,baixa,,2026-07-26,1,educacao,eletrica/gerador.md
 itu-r,ITU-R (União Internacional de Telecomunicações — setor de rádio),orgao,,universal,draft,media,,2026-07-26,1,oficial,conceitos/orgaos/itu-r.md
 lei-do-inverso-do-quadrado,Lei do inverso do quadrado,conceito,,universal,draft,media,,2026-07-26,1,oficial,luz/conceitos/lei-do-inverso-do-quadrado.md
 log-c4,LogC4 (ARRI),transfer-function,arri,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/log-c4.md
@@ -33,13 +37,16 @@ midia--cfexpress-a,CFexpress Type A,midia,,universal,stub,baixa,,2026-07-26,1,of
 midia--cfexpress-b,CFexpress Type B,midia,,universal,draft,media,,2026-07-26,1,oficial,_meta/vocab/midia--cfexpress-b.md
 midia--codex-compact-drive,Codex Compact Drive,midia,,universal,draft,media,,2026-07-26,2,oficial,_meta/vocab/midia--codex-compact-drive.md
 midia--sxs,SxS,midia,,universal,draft,media,,2026-07-26,1,oficial,_meta/vocab/midia--sxs.md
+mount--bowens,Bowens (mount de modificador),mount,,universal,draft,baixa,,2026-07-26,1,oficial,_meta/vocab/mount--bowens.md
 mount--e,E-mount (Sony),mount,,universal,draft,media,,2026-07-26,1,oficial,_meta/vocab/mount--e.md
 mount--lpl,LPL (Large Positive Lock — ARRI),mount,arri,universal,draft,media,,2026-07-26,1,oficial,_meta/vocab/mount--lpl.md
+mount--nanlux,Nanlux (mount de modificador proprietário),mount,,universal,draft,baixa,,2026-07-26,1,oficial,_meta/vocab/mount--nanlux.md
 mount--pl,PL (Positive Lock),mount,,universal,draft,media,,2026-07-26,1,oficial,_meta/vocab/mount--pl.md
 mte,MTE — Ministério do Trabalho e Emprego (Brasil),orgao,,universal,draft,baixa,,2026-07-26,1,oficial,conceitos/orgaos/mte.md
 nanlux,Nanlux,marca,,universal,draft,media,,2026-07-26,2,educacao|oficial,marcas/nanlux.md
 ndi,NDI (Network Device Interface),interface,,universal,draft,media,,2026-07-26,1,oficial,live/sinais/ndi.md
 netflix-approved,Netflix Approved (câmeras para produções originais),certificacao,,universal,draft,baixa,,2026-07-26,1,oficial,conceitos/certificacoes/netflix-approved.md
+nr-10-eletricidade,NR-10 — Segurança em Instalações e Serviços em Eletricidade,norma,,universal,draft,baixa,seguranca,2026-07-26,2,oficial,seguranca/nr-10-eletricidade.md
 nr-35-trabalho-em-altura,NR-35 — Trabalho em Altura,norma,,universal,stub,media,seguranca,2026-07-26,1,oficial,seguranca/nr-35-trabalho-em-altura.md
 obturador-180,Regra do obturador 180°,conceito,,universal,draft,media,,2026-07-26,1,oficial,conceitos/tecnicas/obturador-180.md
 ordem-do-dia,Ordem do dia (call sheet),documento,,universal,draft,baixa,,2026-07-26,1,educacao,producao/documentos/ordem-do-dia.md
@@ -47,6 +54,7 @@ prores,Apple ProRes,codec,,universal,draft,media,,2026-07-26,1,oficial,conceitos
 pwm-brilho-led,PWM e brilho em painel de LED,conceito,,universal,draft,media,,2026-07-26,1,oficial,led-vp/conceitos/pwm-brilho-led.md
 pyxis-6k,Blackmagic Pyxis 6K,camera,blackmagic-design,universal,draft,baixa,,2026-07-26,1,oficial,captacao/cameras/blackmagic/pyxis-6k.md
 rec-709,Rec. 709,colorspace,,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/rec-709.md
+rede-ac,Rede elétrica AC no Brasil (127 / 220 V),conceito,,universal,draft,media,,2026-07-26,2,educacao,eletrica/rede-ac.md
 rede-gigabit,Rede para vídeo sobre IP,conceito,,universal,draft,media,,2026-07-26,1,oficial,live/sinais/rede-gigabit.md
 s-gamut3-cine,S-Gamut3.Cine (Sony),colorspace,sony,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/s-gamut3-cine.md
 s-log3,S-Log3 (Sony),transfer-function,sony,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/s-log3.md

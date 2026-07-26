@@ -5,13 +5,16 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 ## (sem)
 
 - [[00-indice-mestre]] — ponto de entrada humano do acervo. Ler este arquivo custa pouco e diz para onde ir; ler o acervo inteiro custa
+- [[abnt]] — o organismo de normalização técnica do Brasil. Suas normas levam o prefixo **NBR**. Para audiovisual, a que ap
 - [[aces]] — sistema de gerenciamento de cor da Academia: cada câmera entra por uma **IDT** (transformação de entrada), tod
 - [[ampas]] — a Academia (a mesma do Oscar) mantém um braço de ciência e tecnologia que publica padrões de uso corrente na i
 - [[aputure]] — fabricante fundada em 2013, sede em Shenzhen, que reposicionou o mercado de iluminação: potência e recursos de
 - [[arri]] — fabricante alemã centenária, referência de cinema em três frentes ao mesmo tempo: câmeras (ALEXA), iluminação 
+- [[balanceamento-de-fase]] — em trifásico, o que derruba o quadro raramente é a carga **total**: é a carga concentrada **numa fase**. Três 
 - [[bat--b-mount]] — padrão de bateria de 24 V criado por consórcio (ARRI, Bebob, Core SWX) para equipamento que consome mais do qu
 - [[bat--bp-u]] — bateria **encaixada no corpo**, não em placa traseira: o padrão da linha de camcorder e cinema compacta da Son
 - [[bat--v-mount]] — o padrão de bateria mais difundido do mundo em câmera profissional, de origem **Sony**. O nome vem da peça em 
+- [[bitola-de-cabo]] — bitola de cabo tem **duas** restrições, não uma. O cabo precisa conduzir a corrente **sem esquentar** e entreg
 - [[blackmagic-design]] — fabricante australiana que mudou o preço-base do mercado: câmeras de cinema, switchers ATEM, conversores, grav
 - [[cri-tlci-ssi]] — quatro métricas que tentam responder "essa luz reproduz cor direito?". **CRI é a mais citada e a mais fraca**;
 - [[diretor-de-fotografia]] — responsável autoral pela imagem: define câmera, lente, luz, paleta e movimento, em serviço da narrativa que o 
@@ -19,6 +22,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[flicker-parede-led]] — a câmera enxerga bandas horizontais, cintilação ou linha rolando sobre a parede de LED. Quase sempre é dessinc
 - [[gaffer]] — chefe do departamento de elétrica: transforma a intenção do diretor de fotografia em plano executável de luz, 
 - [[genlock]] — sinal de referência comum que faz vários equipamentos varrerem o quadro no mesmo instante. Sem ele, cada câmer
+- [[gerador]] — gerador se contrata em **kVA**, não em kW, e os dois não são a mesma coisa: kVA = kW ÷ fator de potência. Some
 - [[itu-r]] — órgão da ONU que publica as recomendações da série **BT**, que definem os padrões de imagem de televisão do mu
 - [[lei-do-inverso-do-quadrado]] — dobrar a distância entre a luz e o sujeito derruba a intensidade a **um quarto** (dois stops), não à metade. É
 - [[mapa-de-luz]] — planta baixa da cena com posição, altura, modificador e potência de cada fixture, mais a posição de câmera. Se
@@ -26,18 +30,22 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[midia--cfexpress-b]] — padrão aberto de cartão de alta velocidade (PCIe/NVMe por baixo), adotado por praticamente todo fabricante de 
 - [[midia--codex-compact-drive]] — mídia proprietária ARRI/Codex da linha ALEXA. Grava ARRIRAW e ProRes; a variante **Express grava só ProRes**, 
 - [[midia--sxs]] — cartão Sony da era XDCAM, base do ExpressCard. É a mídia **interna** da [[venice]] para XAVC, ProRes e MPEG HD
+- [[mount--bowens]] — o encaixe de modificador mais difundido do mundo em LED de cinema. Não é padrão de norma: virou padrão **por a
 - [[mount--e]] — mount eletrônico da Sony com flange focal distance curto (18 mm), usado da mirrorless de entrada ao topo de ci
+- [[mount--nanlux]] — encaixe próprio da [[nanlux]] para a linha de alta potência. Existe adaptador para [[mount--bowens]], mas o pa
 - [[mount--pl]] — mount padrão do cinema profissional, criado pela ARRI: trava mecânica de quatro flanges, sem contatos elétrico
 - [[mte]] — órgão federal que edita e mantém as **Normas Regulamentadoras (NRs)**, de cumprimento obrigatório em qualquer 
 - [[nanlux]] — marca de alta potência da chinesa **NANGUANG** (Guangdong NANGUANG Photo & Video Systems), irmã da Nanlite e p
 - [[ndi]] — vídeo profissional trafegando sobre rede Ethernet comum, com descoberta automática de fontes. Troca cabo coaxi
 - [[netflix-approved]] — lista de câmeras que a Netflix aceita como principal em produções originais. O critério central é **resolução 
+- [[nr-10-eletricidade]] — norma do Ministério do Trabalho que define requisitos mínimos de segurança para quem trabalha com eletricidade
 - [[nr-35-trabalho-em-altura]] — norma regulamentadora brasileira que rege qualquer atividade executada acima de 2 metros do nível inferior com
 - [[obturador-180]] — manter o obturador em 180° (velocidade = 1 ÷ (2 × frame rate)) entrega o borrão de movimento a que o olho está
 - [[ordem-do-dia]] — documento diário que diz a **cada pessoa** onde estar, a que horas, para filmar o quê. Emitido pela assistênci
 - [[prores]] — família de codecs intraframe da Apple que virou o padrão de fato para mezanino e entrega em pós: cada quadro é
 - [[pwm-brilho-led]] — LED não regula intensidade baixando tensão: ele **pisca muito rápido** e o tempo ligado define o brilho aparen
 - [[rec-709]] — o padrão de cor da televisão HD e, na prática, o denominador comum de entrega até hoje: gamut relativamente pe
+- [[rede-ac]] — o Brasil não tem uma tensão, tem duas: **127 V** no Sudeste, Norte e parte do Centro-Oeste; **220 V** no Sul e
 - [[rede-gigabit]] — vídeo sobre IP exige rede **dedicada**: gigabit no mínimo, switch gerenciado, e nada de compartilhar com a int
 - [[scan-rate]] — quantas vezes por segundo o painel redesenha a imagem inteira, em Hz. O olho humano se satisfaz com pouco; **a
 - [[sdi]] — padrão de vídeo profissional sobre cabo coaxial com conector BNC: **trava**, aceita tirada longa e não negocia
