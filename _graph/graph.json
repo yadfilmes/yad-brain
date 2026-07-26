@@ -1,6 +1,35 @@
 {
  "nos": [
   {
+   "id": "mount--e",
+   "title": "E-mount (Sony)",
+   "type": "mount",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "_meta/vocab/mount--e.md",
+   "tldr": "mount eletrônico da Sony com flange focal distance curto (18 mm), usado da mirrorless de entrada ao topo de cinema (VENICE). O FFD curto é a razão de ele adaptar quase qualquer lente do mercado.",
+   "aliases": [
+    "E-mount",
+    "Sony E",
+    "E mount",
+    "FE"
+   ],
+   "tags": [
+    "mount",
+    "optica",
+    "sony",
+    "mirrorless"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
    "id": "mount--pl",
    "title": "PL (Positive Lock)",
    "type": "mount",
@@ -26,6 +55,62 @@
    ],
    "n_fontes": 1,
    "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "00-indice-mestre",
+   "title": "Índice mestre",
+   "type": "moc",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "_moc/00-indice-mestre.md",
+   "tldr": "ponto de entrada humano do acervo. Ler este arquivo custa pouco e diz para onde ir; ler o acervo inteiro custa caro e quase nunca é necessário. Os índices automáticos ficam em `_index/`; este aqui é curado à mão.",
+   "aliases": [
+    "indice mestre",
+    "mapa do acervo",
+    "start here"
+   ],
+   "tags": [
+    "moc",
+    "navegacao"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "campo-proprio"
+   ]
+  },
+  {
+   "id": "alexa-35",
+   "title": "ARRI ALEXA 35",
+   "type": "camera",
+   "brand": "arri",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "captacao/cameras/arri/alexa-35.md",
+   "tldr": "câmera de cinema Super35 da ARRI com sensor 4.6K de geração nova (ALEV 4) e o salto de latitude que definiu a régua atual do mercado. Grava ARRIRAW e ProRes internamente; mount LPL nativo com [[mount--pl]] por adaptador.",
+   "aliases": [
+    "ALEXA 35",
+    "Alexa 35",
+    "AL35"
+   ],
+   "tags": [
+    "super35",
+    "arriraw",
+    "cinema-digital",
+    "latitude",
+    "netflix-approved"
+   ],
+   "n_fontes": 2,
+   "tiers": [
+    "lab",
     "oficial"
    ]
   },
@@ -117,6 +202,68 @@
    ]
   },
   {
+   "id": "prores",
+   "title": "Apple ProRes",
+   "type": "codec",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/codecs/prores.md",
+   "tldr": "família de codecs intraframe da Apple que virou o padrão de fato para mezanino e entrega em pós: cada quadro é independente, o que torna a edição fluida e o conform previsível. Pesado no disco, leve no processador.",
+   "aliases": [
+    "ProRes",
+    "Apple ProRes",
+    "422 HQ",
+    "4444 XQ"
+   ],
+   "tags": [
+    "codec",
+    "intraframe",
+    "mezanino",
+    "entrega",
+    "apple"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "genlock",
+   "title": "Genlock (sincronismo de referência)",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/sinais/genlock.md",
+   "tldr": "sinal de referência comum que faz vários equipamentos varrerem o quadro no mesmo instante. Sem ele, cada câmera e cada processadora começa o quadro quando quer — o que produz corte instável ao vivo e banda rolando ao fil",
+   "aliases": [
+    "genlock",
+    "gen lock",
+    "sync reference",
+    "referência de sincronismo",
+    "black burst",
+    "tri-level"
+   ],
+   "tags": [
+    "sinal",
+    "sincronia",
+    "multicamera",
+    "live",
+    "virtual-production"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
    "id": "filtro-nd",
    "title": "Filtro ND (densidade neutra)",
    "type": "conceito",
@@ -141,6 +288,121 @@
     "optica",
     "filtro",
     "fotometria"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "obturador-180",
+   "title": "Regra do obturador 180°",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/tecnicas/obturador-180.md",
+   "tldr": "manter o obturador em 180° (velocidade = 1 ÷ (2 × frame rate)) entrega o borrão de movimento a que o olho está acostumado no cinema. A 24 fps isso é ~1/48; a 25 fps, 1/50; a 30 fps, 1/60.",
+   "aliases": [
+    "180 degree shutter",
+    "shutter 180",
+    "regra dos 180 graus",
+    "ângulo de obturador"
+   ],
+   "tags": [
+    "exposicao",
+    "movimento",
+    "motion-blur",
+    "cadencia"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "arri",
+   "title": "ARRI",
+   "type": "marca",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "marcas/arri.md",
+   "tldr": "fabricante alemã centenária, referência de cinema em três frentes ao mesmo tempo: câmeras (ALEXA), iluminação (SkyPanel, HMI) e óptica (Signature). Criou o [[mount--pl]], que virou padrão da indústria.",
+   "aliases": [
+    "Arnold & Richter",
+    "ARRI Group",
+    "Arri"
+   ],
+   "tags": [
+    "marca",
+    "camera",
+    "luz",
+    "optica",
+    "cinema"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "blackmagic-design",
+   "title": "Blackmagic Design",
+   "type": "marca",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "marcas/blackmagic-design.md",
+   "tldr": "fabricante australiana que mudou o preço-base do mercado: câmeras de cinema, switchers ATEM, conversores, gravadores HyperDeck e o DaVinci Resolve — com versão gratuita completa o bastante para produção profissional.",
+   "aliases": [
+    "Blackmagic",
+    "BMD",
+    "Blackmagic Design Pty"
+   ],
+   "tags": [
+    "marca",
+    "camera",
+    "switcher",
+    "software",
+    "conversores"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "sony",
+   "title": "Sony",
+   "type": "marca",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "marcas/sony.md",
+   "tldr": "fabricante japonesa presente em quase toda a cadeia audiovisual: câmeras de cinema (CineAlta/VENICE), broadcast (HDC), mirrorless (Alpha, FX), PTZ, monitores de referência, áudio, mídia e sensores — inclusive para concor",
+   "aliases": [
+    "Sony Corporation",
+    "Sony Professional"
+   ],
+   "tags": [
+    "marca",
+    "camera",
+    "broadcast",
+    "audio",
+    "midia"
    ],
    "n_fontes": 1,
    "tiers": [
@@ -212,9 +474,93 @@
  ],
  "arestas": [
   {
+   "de": "mount--e",
+   "aresta": "made_by",
+   "para": "sony",
+   "derivada": false
+  },
+  {
+   "de": "mount--e",
+   "aresta": "see_also",
+   "para": "mount--pl",
+   "derivada": false
+  },
+  {
    "de": "mount--pl",
    "aresta": "see_also",
    "para": "mount--e",
+   "derivada": false
+  },
+  {
+   "de": "00-indice-mestre",
+   "aresta": "see_also",
+   "para": "venice-2",
+   "derivada": false
+  },
+  {
+   "de": "00-indice-mestre",
+   "aresta": "see_also",
+   "para": "alexa-35",
+   "derivada": false
+  },
+  {
+   "de": "00-indice-mestre",
+   "aresta": "see_also",
+   "para": "pyxis-6k",
+   "derivada": false
+  },
+  {
+   "de": "alexa-35",
+   "aresta": "made_by",
+   "para": "arri",
+   "derivada": false
+  },
+  {
+   "de": "alexa-35",
+   "aresta": "has_native_mount",
+   "para": "mount--lpl",
+   "derivada": false
+  },
+  {
+   "de": "alexa-35",
+   "aresta": "accepts_mount",
+   "para": "mount--pl",
+   "derivada": false
+  },
+  {
+   "de": "alexa-35",
+   "aresta": "records_codec",
+   "para": "arriraw",
+   "derivada": false
+  },
+  {
+   "de": "alexa-35",
+   "aresta": "records_codec",
+   "para": "prores",
+   "derivada": false
+  },
+  {
+   "de": "alexa-35",
+   "aresta": "uses_battery_mount",
+   "para": "bat--b-mount",
+   "derivada": false
+  },
+  {
+   "de": "alexa-35",
+   "aresta": "competes_with",
+   "para": "venice-2",
+   "derivada": false
+  },
+  {
+   "de": "alexa-35",
+   "aresta": "certified_for",
+   "para": "netflix-approved",
+   "derivada": false
+  },
+  {
+   "de": "alexa-35",
+   "aresta": "see_also",
+   "para": "filtro-nd",
    "derivada": false
   },
   {
@@ -350,6 +696,18 @@
    "derivada": false
   },
   {
+   "de": "prores",
+   "aresta": "see_also",
+   "para": "braw",
+   "derivada": false
+  },
+  {
+   "de": "genlock",
+   "aresta": "see_also",
+   "para": "flicker-parede-led",
+   "derivada": false
+  },
+  {
    "de": "filtro-nd",
    "aresta": "see_also",
    "para": "venice-2",
@@ -359,6 +717,54 @@
    "de": "filtro-nd",
    "aresta": "see_also",
    "para": "pyxis-6k",
+   "derivada": false
+  },
+  {
+   "de": "obturador-180",
+   "aresta": "see_also",
+   "para": "filtro-nd",
+   "derivada": false
+  },
+  {
+   "de": "obturador-180",
+   "aresta": "see_also",
+   "para": "flicker-parede-led",
+   "derivada": false
+  },
+  {
+   "de": "arri",
+   "aresta": "see_also",
+   "para": "alexa-35",
+   "derivada": false
+  },
+  {
+   "de": "arri",
+   "aresta": "see_also",
+   "para": "mount--pl",
+   "derivada": false
+  },
+  {
+   "de": "blackmagic-design",
+   "aresta": "see_also",
+   "para": "pyxis-6k",
+   "derivada": false
+  },
+  {
+   "de": "blackmagic-design",
+   "aresta": "see_also",
+   "para": "braw",
+   "derivada": false
+  },
+  {
+   "de": "blackmagic-design",
+   "aresta": "see_also",
+   "para": "ecossistema-blackmagic",
+   "derivada": false
+  },
+  {
+   "de": "sony",
+   "aresta": "see_also",
+   "para": "venice-2",
    "derivada": false
   },
   {

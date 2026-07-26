@@ -72,7 +72,11 @@ def notas():
     """
     for p in sorted(RAIZ.rglob("*.md")):
         rel = p.relative_to(RAIZ).as_posix()
-        if rel.startswith(".") or rel == "README.md":
+        if rel.startswith("."):
+            continue
+        # nota nunca mora na raiz: lá ficam os documentos do projeto
+        # (README.md, AGENTS.md, ...)
+        if "/" not in rel:
             continue
         if any(rel.startswith(x) for x in IGNORAR):
             continue

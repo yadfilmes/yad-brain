@@ -1,0 +1,40 @@
+name: Validar acervo
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Sem pip install: as ferramentas usam stdlib apenas, de propósito —
+      # o acervo precisa validar igual aqui, no SSD do time e em qualquer máquina.
+
+      - name: Validar notas
+        run: python3 tools/validate.py
+
+      - name: Testar calculadoras
+        run: python3 tools/calc/test_storage.py
+
+      - name: Regenerar grafo e índices
+        run: python3 tools/build_graph.py
+
+      - name: Conferir se os derivados estão em dia
+        run: |
+          if [ -n "$(git status --porcelain _graph _index _meta/gaps.md)" ]; then
+            echo "::error::Os arquivos derivados estão defasados."
+            echo "Rode localmente antes de commitar:"
+            echo "    python3 tools/validate.py && python3 tools/build_graph.py"
+            git --no-pager diff --stat _graph _index _meta/gaps.md
+            exit 1
+          fi
+          echo "Derivados em dia."

@@ -1,8 +1,17 @@
 id,title,type,brand,zona,status,confidence,risco,updated,n_fontes,tiers,path
+00-indice-mestre,Índice mestre,moc,,universal,draft,alta,,2026-07-26,1,campo-proprio,_moc/00-indice-mestre.md
+alexa-35,ARRI ALEXA 35,camera,arri,universal,draft,alta,,2026-07-26,2,lab|oficial,captacao/cameras/arri/alexa-35.md
+arri,ARRI,marca,,universal,draft,alta,,2026-07-26,1,oficial,marcas/arri.md
+blackmagic-design,Blackmagic Design,marca,,universal,draft,alta,,2026-07-26,1,oficial,marcas/blackmagic-design.md
 braw,Blackmagic RAW,codec,blackmagic-design,universal,draft,alta,,2026-07-26,1,oficial,conceitos/codecs/braw.md
 filtro-nd,Filtro ND (densidade neutra),conceito,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/tecnicas/filtro-nd.md
 flicker-parede-led,Flicker ou banda horizontal filmando parede de LED,problema,,universal,draft,media,,2026-07-26,2,comunidade|oficial,troubleshooting/flicker-parede-led.md
+genlock,Genlock (sincronismo de referência),conceito,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/sinais/genlock.md
+mount--e,E-mount (Sony),mount,,universal,draft,alta,,2026-07-26,1,oficial,_meta/vocab/mount--e.md
 mount--pl,PL (Positive Lock),mount,,universal,draft,alta,,2026-07-26,1,oficial,_meta/vocab/mount--pl.md
 nr-35-trabalho-em-altura,NR-35 — Trabalho em Altura,norma,,universal,stub,media,seguranca,2026-07-26,1,oficial,seguranca/nr-35-trabalho-em-altura.md
+obturador-180,Regra do obturador 180°,conceito,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/tecnicas/obturador-180.md
+prores,Apple ProRes,codec,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/codecs/prores.md
 pyxis-6k,Blackmagic Pyxis 6K,camera,blackmagic-design,universal,draft,media,,2026-07-26,1,oficial,captacao/cameras/blackmagic/pyxis-6k.md
+sony,Sony,marca,,universal,draft,alta,,2026-07-26,1,oficial,marcas/sony.md
 venice-2,Sony VENICE 2,camera,sony,universal,draft,alta,,2026-07-26,2,comunidade|oficial,captacao/cameras/sony/venice-2.md
