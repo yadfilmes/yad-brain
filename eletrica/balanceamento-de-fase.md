@@ -17,13 +17,11 @@ sources:
 
 # Balanceamento de fase em set trifásico
 
-> ⚠️ Planejamento e orçamento. Distribuição definitiva é de profissional
-> habilitado, sob [[nr-10-eletricidade]] e ABNT NBR 5410.
 
 **TL;DR** — em trifásico, o que derruba o quadro raramente é a carga **total**:
-é a carga concentrada **numa fase**. Três fases de 20 A cada aguentam 60 A
-distribuídos e desarmam com 25 A numa só. Distribuir não é capricho — é o que
-faz o total caber.
+é a carga concentrada **numa fase**. Três disjuntores de 20 A comportam **48 A**
+distribuídos (regra dos 80% de carga, a mesma de [[bitola-de-cabo]]) e desarmam
+com 16 A numa fase só. Distribuir não é capricho — é o que faz o total caber.
 
 ## O erro clássico
 
@@ -39,19 +37,21 @@ Quem não pensa em fase procura defeito no disjuntor.
 A regra de campo é simples e é o que o cálculo faz: **a maior carga vai sempre
 para a fase mais leve**, em ordem decrescente.
 
-Exemplo com 6,6 kW (um 2,4 k, dois 1,2 k e três 600):
+Exemplo com 6,6 kW, **em 220 V, FP 0,92** — a corrente muda com a tensão, e
+sem ela a tabela não afirma nada (ver [[rede-ac]]):
 
-| fase | cargas | total |
-|---|---|---|
-| A | 2400 | 2400 W (~11,9 A) |
-| B | 1200 + 600 + 600 | 2400 W (~11,9 A) |
-| C | 1200 + 600 | 1800 W (~8,9 A) |
+| fase | cargas | total | corrente @ 220 V | corrente @ 127 V |
+|---|---|---|---|---|
+| A | 2400 | 2400 W | ~11,9 A | ~20,5 A |
+| B | 1200 + 600 + 600 | 2400 W | ~11,9 A | ~20,5 A |
+| C | 1200 + 600 | 1800 W | ~8,9 A | ~15,4 A |
 
 Desequilíbrio: **27%** — e aqui ele é **inevitável**, não um erro de
 distribuição.
 
 ```
 python3 tools/calc/eletrica.py --fases 2400,1200,1200,600,600,600
+python3 tools/calc/eletrica.py --fases 2400,1200,1200,600,600,600 --tensao 127
 ```
 
 ## Quando o desequilíbrio é inevitável
@@ -71,6 +71,16 @@ Em sistema equilibrado, as correntes das três fases se cancelam em boa parte no
 neutro. Desequilibrado, sobra corrente circulando ali. Por isso fase
 desbalanceada não é só risco de desarme: é o neutro trabalhando para o que
 talvez não tenha sido dimensionado.
+
+## As premissas por trás destes números
+
+Os valores acima saem de `tools/calc/eletrica.py`, cujas constantes são em boa
+parte **premissas de planejamento**, não fatos de norma — a capacidade de
+condução é aproximação conservadora, a queda máxima de 4% e a folga de 80% são
+prática de dimensionamento, e o fator de potência 0,92 varia por fixture.
+
+O registro de estado de cada constante está em `_meta/constantes-de-calculo.md`.
+Serve para chegar na conversa com a ordem de grandeza certa; **não é projeto.**
 
 ## Gotchas
 

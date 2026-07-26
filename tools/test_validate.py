@@ -251,6 +251,49 @@ checa("falta de loc em fonte oficial impede alta",
 checa("nota sem fonte nenhuma -> baixa",
       V.confianca_esperada([], False) == "baixa")
 
+# UM CASO POR LINHA DA TABELA. O lote 04 achou a 4a linha divergindo do
+# script; o lote de elétrica achou a 3a ainda divergindo, porque só a linha
+# reportada tinha sido corrigida. Estes casos existem para que a régua e o
+# script não voltem a separar em nenhuma linha.
+checa("1a linha · lacuna vence tudo",
+      V.confianca_esperada([OFICIAL_LOC, LAB_LOC], True) == "baixa")
+checa("3a linha · afirmação numérica sem fonte forte -> baixa",
+      V.confianca_esperada([fonte("blog", "educacao"), fonte("outro", "educacao")],
+                           False, tem_numero=True) == "baixa")
+checa("3a linha NÃO derruba quando há fonte forte",
+      V.confianca_esperada([OFICIAL_LOC, LAB_LOC], False, tem_numero=True) == "alta")
+checa("4a linha · fonte única fraca -> baixa",
+      V.confianca_esperada([fonte("blog", "educacao")], False) == "baixa")
+checa("4a linha · fonte única forte -> media",
+      V.confianca_esperada([OFICIAL_LOC], False) == "media")
+checa("5a linha · duas orgs, nenhuma forte, sem número -> media",
+      V.confianca_esperada([fonte("blog", "educacao"), fonte("outro", "educacao")],
+                           False) == "media")
+checa("6a linha · falta loc em fonte forte -> media",
+      V.confianca_esperada([fonte("sony", "oficial", loc=False), LAB_LOC],
+                           False) == "media")
+checa("8a linha · duas orgs, forte, com loc -> alta",
+      V.confianca_esperada([OFICIAL_LOC, LAB_LOC], False) == "alta")
+
+print("\ndetecção de afirmação numérica")
+NUM = [("a tabela diz 220 V", True), ("corrente de ~11,9 A", True),
+       ("bitola de 10 mm²", True), ("grava 12 bits log", True),
+       ("240 Mbps sustentados", True),
+       ("prosa sem número nenhum", False),
+       ("atualizado em 2026-07-26", False),
+       ("são três opções de menu", False)]
+for txt, esperado in NUM:
+    checa(f"numérica? {txt[:30]!r}",
+          V.tem_afirmacao_numerica(txt) == esperado)
+checa("número dentro de bloco de código é comando, não afirmação",
+      not V.tem_afirmacao_numerica("veja:\n```\npython3 x.py --potencia 5000\n```"))
+
+print("\nwikilink de corpo")
+checa("regex de wikilink acha o alvo",
+      V.WIKILINK.findall("ver [[hmi]] e [[gerador]]") == ["hmi", "gerador"])
+checa("wikilink com pipe e âncora é normalizado no chamador",
+      V.WIKILINK.findall("[[nota|apelido]]") == ["nota|apelido"])
+
 # Contradição achada por revisor independente no lote 04: a 4ª linha da tabela
 # dizia "fonte única, qualquer tier -> baixa" e a 7ª dizia "oficial com loc,
 # sem corroboração -> media". O script implementava a 7ª. Resolvido a favor

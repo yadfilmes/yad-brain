@@ -4,16 +4,16 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 ## Números gerais
 
-- Notas: **71**
-- Arestas declaradas: **305** (+12 derivadas por simetria/inversa)
-- Notas com fonte oficial ou de laboratório: **61/71** (85%)
+- Notas: **72**
+- Arestas declaradas: **312** (+13 derivadas por simetria/inversa)
+- Notas com fonte oficial ou de laboratório: **62/72** (86%)
 - Notas órfãs: **0**
 
 ## Por status
 
 | status | notas |
 |---|---:|
-| draft | 68 |
+| draft | 69 |
 | stub | 3 |
 
 ## Por tipo
@@ -25,7 +25,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 | certificacao | 1 |
 | codec | 5 |
 | colorspace | 3 |
-| conceito | 16 |
+| conceito | 17 |
 | documento | 2 |
 | ecossistema | 1 |
 | fixture | 2 |
@@ -46,13 +46,13 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 | aresta | nº |
 |---|---:|
-| `see_also` | 71 |
+| `see_also` | 74 |
 | `made_by` | 30 |
 | `alternative_to` | 28 |
+| `competes_with` | 16 |
 | `distinct_from` | 16 |
-| `competes_with` | 15 |
+| `requires` | 15 |
 | `governed_by` | 14 |
-| `requires` | 13 |
 | `conforms_to_pipeline` | 10 |
 | `records_codec` | 10 |
 | `accepts_media` | 7 |

@@ -9,7 +9,7 @@ apontar para o vazio — aí vira erro de validação.
 
 | slug faltante | citado por | nº |
 |---|---|---:|
-| `amaran` | marcas/aputure.md | 1 |
+| `amaran` | marcas/aputure.md | 2 |
 | `apple` | conceitos/codecs/prores.md | 1 |
 | `bowens` | _meta/vocab/mount--bowens.md | 1 |
 | `cie` | luz/conceitos/cri-tlci-ssi.md | 1 |

@@ -23,6 +23,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[gaffer]] — chefe do departamento de elétrica: transforma a intenção do diretor de fotografia em plano executável de luz, 
 - [[genlock]] — sinal de referência comum que faz vários equipamentos varrerem o quadro no mesmo instante. Sem ele, cada câmer
 - [[gerador]] — gerador se contrata em **kVA**, não em kW, e os dois não são a mesma coisa: kVA = kW ÷ fator de potência. Some
+- [[hmi]] — luz de arco elétrico com temperatura de cor de luz do dia, que ainda ganha do LED em **potência bruta por watt
 - [[itu-r]] — órgão da ONU que publica as recomendações da série **BT**, que definem os padrões de imagem de televisão do mu
 - [[lei-do-inverso-do-quadrado]] — dobrar a distância entre a luz e o sujeito derruba a intensidade a **um quarto** (dois stops), não à metade. É
 - [[mapa-de-luz]] — planta baixa da cena com posição, altura, modificador e potência de cada fixture, mais a posição de câmera. Se

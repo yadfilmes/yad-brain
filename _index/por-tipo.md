@@ -42,6 +42,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[filtro-nd]] — filtro cinza que corta luz sem (idealmente) alterar cor, para manter diafragma aberto e obturador 180° sob sol
 - [[genlock]] — sinal de referência comum que faz vários equipamentos varrerem o quadro no mesmo instante. Sem ele, cada câmer
 - [[gerador]] — gerador se contrata em **kVA**, não em kW, e os dois não são a mesma coisa: kVA = kW ÷ fator de potência. Some
+- [[hmi]] — luz de arco elétrico com temperatura de cor de luz do dia, que ainda ganha do LED em **potência bruta por watt
 - [[lei-do-inverso-do-quadrado]] — dobrar a distância entre a luz e o sujeito derruba a intensidade a **um quarto** (dois stops), não à metade. É
 - [[obturador-180]] — manter o obturador em 180° (velocidade = 1 ÷ (2 × frame rate)) entrega o borrão de movimento a que o olho está
 - [[pwm-brilho-led]] — LED não regula intensidade baixando tensão: ele **pisca muito rápido** e o tempo ligado define o brilho aparen

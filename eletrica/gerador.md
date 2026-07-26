@@ -18,9 +18,6 @@ sources:
 
 # Gerador de set — dimensionamento em kVA
 
-> ⚠️ Números de **planejamento e orçamento**. Não é projeto elétrico.
-> Instalação, aterramento e laudo exigem profissional habilitado (CREA/CFT),
-> sob [[nr-10-eletricidade]] e ABNT NBR 5410.
 
 **TL;DR** — gerador se contrata em **kVA**, não em kW, e os dois não são a
 mesma coisa: kVA = kW ÷ fator de potência. Some margem, e some **muito mais**
@@ -63,6 +60,16 @@ resto do set junto.
 
 Regra de campo: **acender em escada, não tudo de uma vez.** Não substitui a
 margem, mas evita o pico somado.
+
+## As premissas por trás destes números
+
+Os valores acima saem de `tools/calc/eletrica.py`, cujas constantes são em boa
+parte **premissas de planejamento**, não fatos de norma — a margem de 25% e a
+reserva de +50% para partida indutiva não saem de curva de arranque medida, e o
+fator de potência 0,92 varia por fixture.
+
+O registro de estado de cada constante está em `_meta/constantes-de-calculo.md`.
+Serve para chegar na conversa com a ordem de grandeza certa; **não é projeto.**
 
 ## Além do kVA
 

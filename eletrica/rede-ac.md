@@ -6,7 +6,7 @@ zona: universal
 aliases: ["rede AC", "rede eletrica", "rede elétrica", "tomada", "energia da rede", "127V", "220V", "110V", "mains", "wall power"]
 tags: [eletrica, energia, brasil, set, locacao]
 status: draft
-confidence: media
+confidence: baixa
 updated: 2026-07-26
 rel:
   governed_by: [abnt]
@@ -62,8 +62,25 @@ python3 tools/calc/eletrica.py --potencia 14400 --tensao 127
 python3 tools/calc/eletrica.py --potencia 14400 --trifasico
 ```
 
-A calculadora encadeia potência → corrente → circuitos → [[bitola-de-cabo]], e
-é aí que aparece o problema que ninguém quer descobrir no dia.
+Esses dois devolvem corrente, disjuntor e número de circuitos. A
+[[bitola-de-cabo]] só entra quando há distância — o encadeamento completo
+exige `--distancia`:
+
+```
+python3 tools/calc/eletrica.py --potencia 14400 --tensao 127 --distancia 40
+```
+
+É aí que aparece o problema que ninguém quer descobrir no dia.
+
+## As premissas por trás destes números
+
+Os valores acima saem de `tools/calc/eletrica.py`, cujas constantes são em boa
+parte **premissas de planejamento**, não fatos de norma — a capacidade de
+condução é aproximação conservadora, a queda máxima de 4% e a folga de 80% são
+prática de dimensionamento, e o fator de potência 0,92 varia por fixture.
+
+O registro de estado de cada constante está em `_meta/constantes-de-calculo.md`.
+Serve para chegar na conversa com a ordem de grandeza certa; **não é projeto.**
 
 ## Gotchas
 

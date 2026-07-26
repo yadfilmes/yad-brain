@@ -83,6 +83,13 @@ RUIDO_DE_HOST = {
     "com", "org", "net", "io", "co", "tv", "gov", "edu", "online", "info",
     "jp", "de", "cn", "fr", "es", "it", "nl", "au", "ca",
 }
+WIKILINK = re.compile(r"\[\[([^\]]+)\]\]")
+# 3a linha da rubrica de confianca: afirmacao numerica sem fonte forte -> baixa.
+# Unidades do dominio do acervo; ver o limite declarado em rubrica-confianca.md.
+NUMERO_COM_UNIDADE = re.compile(
+    r"\d[\d.,]*\s*(?:A\b|V\b|W\b|kW\b|kVA\b|VA\b|mm²|mm2\b|Hz\b|kHz\b|"
+    r"Mb/s|Mbps\b|Gb/s|fps\b|stops?\b|K\b|lux\b|lm\b|TB\b|GB\b|bits?\b|ms\b|m²)"
+)
 ORDEM_CONFIANCA = {"baixa": 0, "media": 1, "alta": 2}
 MIN_CITACAO = 40               # uma frase, não um fragmento
 
@@ -192,14 +199,31 @@ def organizacao(url):
     return partes[0] if partes else m.group(1).lower()
 
 
-def confianca_esperada(fontes, tem_lacuna):
-    """Aplica a tabela de _meta/qa/rubrica-confianca.md. Função pura.
+def tem_afirmacao_numerica(corpo):
+    """A nota publica número com unidade, ou linha de tabela com número?
+
+    Piso mecânico, com o limite declarado: acerta spec ("220 V", "10 mm²",
+    "~11,9 A") e erra para o lado permissivo em prosa que só cita quantidade.
+    Ignora datas ISO e números dentro de bloco de código, que são comando e
+    não afirmação.
+    """
+    limpo = re.sub(r"```.*?```", "", corpo or "", flags=re.S)
+    limpo = re.sub(r"\d{4}-\d{2}-\d{2}", "", limpo)
+    return bool(NUMERO_COM_UNIDADE.search(limpo))
+
+
+def confianca_esperada(fontes, tem_lacuna, tem_numero=False):
+    """Aplica a tabela de _meta/qa/rubrica-confianca.md, LINHA A LINHA.
 
     Devolve o valor MAIS ALTO que as fontes sustentam. A nota pode declarar
     esse valor ou um mais conservador; declarar mais otimista é que reprova.
+
+    A ordem das linhas É a regra: lê-se de cima para baixo e para na primeira
+    que se aplica. O lote 04 achou a 4ª linha divergindo do script; o lote de
+    elétrica achou a 3ª ainda divergindo, porque só a linha reportada tinha
+    sido corrigida. Agora a função segue a tabela inteira, e `test_validate.py`
+    tem um caso por linha para que as duas não voltem a separar.
     """
-    if tem_lacuna:
-        return "baixa"
     tiers = {f.get("tier") for f in fontes if isinstance(f, dict)}
     orgs = {organizacao(f.get("url", "")) for f in fontes if isinstance(f, dict)}
     orgs.discard("")
@@ -207,11 +231,17 @@ def confianca_esperada(fontes, tem_lacuna):
     sem_loc = any(f.get("tier") in ("oficial", "lab") and not f.get("loc")
                   for f in fontes if isinstance(f, dict))
 
-    if len(orgs) < 2:
+    if tem_lacuna:                      # 1ª linha
+        return "baixa"
+    if tem_numero and not forte:        # 3ª linha
+        return "baixa"
+    if len(orgs) < 2:                   # 4ª linha
         return "baixa" if not forte else "media"
-    if not forte:
+    if not forte:                       # 5ª linha
         return "media"
-    return "media" if sem_loc else "alta"
+    if sem_loc:                         # 6ª linha
+        return "media"
+    return "alta"                       # 8ª linha
 
 
 def checar_arestas_minimas(tipo, status, presentes, dispensas, regras, vocab):
@@ -428,7 +458,8 @@ def main():
         # otimista, não. O que a máquina NÃO confere está escrito na rubrica:
         # se as fontes de fato dizem a mesma coisa é julgamento do revisor.
         if conf and status != "stub":
-            teto = confianca_esperada(fontes, pendencias > 0)
+            teto = confianca_esperada(fontes, pendencias > 0,
+                                      tem_afirmacao_numerica(corpo))
             if ORDEM_CONFIANCA[conf] > ORDEM_CONFIANCA[teto]:
                 msg = (f"confidence '{conf}' acima do que as fontes sustentam "
                        f"('{teto}') — ver _meta/qa/rubrica-confianca.md")
@@ -459,10 +490,25 @@ def main():
                           "— revisão por IA não fecha o gate G4")
 
         dados["_rel_path"] = rel
+        dados["_corpo"] = corpo
         caminho_dados[rel] = dados
 
     # -------- passo 2: arestas (precisa do registro completo) --------
     for rel, dados in caminho_dados.items():
+        # Wikilink de corpo apontando para o vazio. O docstring deste script
+        # prometia "link não quebrado" e cobria só alvos de `rel:` — uma nota
+        # passava com 0 erros e 0 avisos carregando [[hmi]] morto no texto.
+        # Achado do lote de elétrica, defeito de régua nº 1.
+        for alvo in set(WIKILINK.findall(dados.get("_corpo", ""))):
+            alvo = alvo.split("|")[0].split("#")[0].strip()
+            if not alvo or alvo in registro:
+                continue
+            if dados.get("status") == "reviewed":
+                erro(rel, f"wikilink de corpo aponta para slug inexistente: [[{alvo}]]")
+            else:
+                aviso(rel, f"wikilink de corpo aponta para slug inexistente: [[{alvo}]]")
+                lacunas.setdefault(alvo, []).append(rel)
+
         relacoes = dados.get("rel") or {}
         if not isinstance(relacoes, dict):
             erro(rel, "bloco 'rel' malformado")

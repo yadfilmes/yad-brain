@@ -18,10 +18,6 @@ sources:
 
 # Bitola de cabo — condução e queda de tensão
 
-> ⚠️ Números de **planejamento e orçamento**. Não é projeto elétrico.
-> Dimensionamento definitivo, instalação e laudo exigem profissional
-> habilitado (CREA/CFT), sob [[nr-10-eletricidade]] e ABNT NBR 5410.
-
 **TL;DR** — bitola de cabo tem **duas** restrições, não uma. O cabo precisa
 conduzir a corrente **sem esquentar** e entregar tensão suficiente **no fim da
 tirada**. Em tirada longa é quase sempre a **segunda** que manda — e é a que
@@ -49,15 +45,17 @@ Carga de **5 kW em 220 V** (≈ 24,7 A), variando só a distância:
 | 100 m | 16 mm² |
 
 **Condução sozinha pediria 4 mm² nos quatro casos.** É a queda de tensão que
-força 10 mm² aos 60 m e 16 mm² aos 100 m — duas e quatro bitolas comerciais
-acima. Chegar com 4 mm² e uma tirada de 60 m não estoura disjuntor: só entrega
+força 10 mm² aos 60 m e 16 mm² aos 100 m — **dois e três degraus** na escala
+comercial (4 → 6 → 10 → 16). Chegar com 4 mm² e uma tirada de 60 m não estoura disjuntor: só entrega
 menos luz do que o orçamento previu.
 
-Todos os números acima são reproduzíveis:
+Cada linha sai de um comando — trocando só a distância:
 
 ```
+python3 tools/calc/eletrica.py --potencia 5000 --distancia 10
+python3 tools/calc/eletrica.py --potencia 5000 --distancia 30
 python3 tools/calc/eletrica.py --potencia 5000 --distancia 60
-python3 tools/calc/eletrica.py --potencia 5000 --distancia 60 --tensao 127
+python3 tools/calc/eletrica.py --potencia 5000 --distancia 100
 ```
 
 ## O efeito da tensão, de novo
@@ -80,6 +78,16 @@ disjuntor.
 - **Queda máxima de 4%** em circuito terminal — limite prático de projeto.
 - **Ida e volta contam.** A corrente percorre o dobro da distância física; a
   tirada de 60 m são 120 m de cobre.
+
+## As premissas por trás destes números
+
+Os valores acima saem de `tools/calc/eletrica.py`, cujas constantes são em boa
+parte **premissas de planejamento**, não fatos de norma — a capacidade de
+condução é aproximação conservadora, a queda máxima de 4% e a folga de 80% são
+prática de dimensionamento, e o fator de potência 0,92 varia por fixture.
+
+O registro de estado de cada constante está em `_meta/constantes-de-calculo.md`.
+Serve para chegar na conversa com a ordem de grandeza certa; **não é projeto.**
 
 ## Gotchas
 

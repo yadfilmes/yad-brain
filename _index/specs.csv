@@ -27,6 +27,7 @@ fx6,Sony FX6,camera,sony,universal,draft,alta,,2026-07-26,4,comunidade|lab|ofici
 gaffer,Gaffer (chefe de elétrica),funcao,,universal,draft,baixa,,2026-07-26,1,educacao,producao/funcoes/gaffer.md
 genlock,Genlock (sincronismo de referência),conceito,,universal,draft,media,,2026-07-26,1,oficial,conceitos/sinais/genlock.md
 gerador,Gerador de set — dimensionamento em kVA,conceito,,universal,draft,baixa,,2026-07-26,1,educacao,eletrica/gerador.md
+hmi,HMI — descarga de haleto metálico,conceito,,universal,draft,baixa,seguranca,2026-07-26,4,educacao|oficial,luz/fixtures/hmi.md
 itu-r,ITU-R (União Internacional de Telecomunicações — setor de rádio),orgao,,universal,draft,media,,2026-07-26,1,oficial,conceitos/orgaos/itu-r.md
 lei-do-inverso-do-quadrado,Lei do inverso do quadrado,conceito,,universal,draft,media,,2026-07-26,1,oficial,luz/conceitos/lei-do-inverso-do-quadrado.md
 log-c4,LogC4 (ARRI),transfer-function,arri,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/log-c4.md
@@ -54,7 +55,7 @@ prores,Apple ProRes,codec,,universal,draft,media,,2026-07-26,1,oficial,conceitos
 pwm-brilho-led,PWM e brilho em painel de LED,conceito,,universal,draft,media,,2026-07-26,1,oficial,led-vp/conceitos/pwm-brilho-led.md
 pyxis-6k,Blackmagic Pyxis 6K,camera,blackmagic-design,universal,draft,baixa,,2026-07-26,1,oficial,captacao/cameras/blackmagic/pyxis-6k.md
 rec-709,Rec. 709,colorspace,,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/rec-709.md
-rede-ac,Rede elétrica AC no Brasil (127 / 220 V),conceito,,universal,draft,media,,2026-07-26,2,educacao,eletrica/rede-ac.md
+rede-ac,Rede elétrica AC no Brasil (127 / 220 V),conceito,,universal,draft,baixa,,2026-07-26,2,educacao,eletrica/rede-ac.md
 rede-gigabit,Rede para vídeo sobre IP,conceito,,universal,draft,media,,2026-07-26,1,oficial,live/sinais/rede-gigabit.md
 s-gamut3-cine,S-Gamut3.Cine (Sony),colorspace,sony,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/s-gamut3-cine.md
 s-log3,S-Log3 (Sony),transfer-function,sony,universal,draft,media,,2026-07-26,1,oficial,conceitos/cor/s-log3.md

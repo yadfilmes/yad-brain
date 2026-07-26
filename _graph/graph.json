@@ -1190,7 +1190,7 @@
    "risco": "",
    "updated": "2026-07-26",
    "path": "eletrica/balanceamento-de-fase.md",
-   "tldr": "em trifásico, o que derruba o quadro raramente é a carga **total**: é a carga concentrada **numa fase**. Três fases de 20 A cada aguentam 60 A distribuídos e desarmam com 25 A numa só. Distribuir não é capricho — é o que",
+   "tldr": "em trifásico, o que derruba o quadro raramente é a carga **total**: é a carga concentrada **numa fase**. Três disjuntores de 20 A comportam **48 A** distribuídos (regra dos 80% de carga, a mesma de [[bitola-de-cabo]]) e ",
    "aliases": [
     "balanceamento de fase",
     "balanceamento de fases",
@@ -1290,7 +1290,7 @@
    "brand": "",
    "zona": "universal",
    "status": "draft",
-   "confidence": "media",
+   "confidence": "baixa",
    "risco": "",
    "updated": "2026-07-26",
    "path": "eletrica/rede-ac.md",
@@ -1745,6 +1745,42 @@
    ],
    "n_fontes": 1,
    "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "hmi",
+   "title": "HMI — descarga de haleto metálico",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "baixa",
+   "risco": "seguranca",
+   "updated": "2026-07-26",
+   "path": "luz/fixtures/hmi.md",
+   "tldr": "luz de arco elétrico com temperatura de cor de luz do dia, que ainda ganha do LED em **potência bruta por watt consumido** e em alcance a distância. O preço vem em três moedas: **flicker** que depende do reator, **risco*",
+   "aliases": [
+    "HMI",
+    "haleto metalico",
+    "haleto metálico",
+    "metal halide",
+    "arco voltaico",
+    "lampada de descarga",
+    "lâmpada de descarga",
+    "daylight discharge"
+   ],
+   "tags": [
+    "luz",
+    "hmi",
+    "descarga",
+    "externa",
+    "flicker",
+    "seguranca"
+   ],
+   "n_fontes": 4,
+   "tiers": [
+    "educacao",
     "oficial"
    ]
   },
@@ -3659,6 +3695,48 @@
    "derivada": false
   },
   {
+   "de": "hmi",
+   "aresta": "requires",
+   "para": "rede-ac",
+   "derivada": false
+  },
+  {
+   "de": "hmi",
+   "aresta": "requires",
+   "para": "nr-10-eletricidade",
+   "derivada": false
+  },
+  {
+   "de": "hmi",
+   "aresta": "competes_with",
+   "para": "evoke-2400b",
+   "derivada": false
+  },
+  {
+   "de": "hmi",
+   "aresta": "enables_technique",
+   "para": "obturador-180",
+   "derivada": false
+  },
+  {
+   "de": "hmi",
+   "aresta": "see_also",
+   "para": "gerador",
+   "derivada": false
+  },
+  {
+   "de": "hmi",
+   "aresta": "see_also",
+   "para": "temperatura-de-cor",
+   "derivada": false
+  },
+  {
+   "de": "hmi",
+   "aresta": "see_also",
+   "para": "cri-tlci-ssi",
+   "derivada": false
+  },
+  {
    "de": "evoke-2400b",
    "aresta": "made_by",
    "para": "nanlux",
@@ -4076,6 +4154,12 @@
    "de": "atem-constellation-8k",
    "aresta": "distinct_from",
    "para": "atem-constellation-hd",
+   "derivada": true
+  },
+  {
+   "de": "evoke-2400b",
+   "aresta": "competes_with",
+   "para": "hmi",
    "derivada": true
   }
  ]
