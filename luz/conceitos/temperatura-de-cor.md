@@ -9,8 +9,7 @@ status: draft
 confidence: alta
 updated: 2026-07-26
 rel:
-  see_also: [cri-tlci-ssi]
-  distinct_from: []
+  distinct_from: [cri-tlci-ssi]
 sources:
   - {url: "https://www.arri.com/en/lighting", tier: oficial, ret: 2026-07-26, nota: "faixas de CCT dos fixtures"}
 ---

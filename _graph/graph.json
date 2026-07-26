@@ -1890,6 +1890,18 @@
  ],
  "arestas": [
   {
+   "de": "bat--b-mount",
+   "aresta": "alternative_to",
+   "para": "bat--v-mount",
+   "derivada": false
+  },
+  {
+   "de": "bat--b-mount",
+   "aresta": "incompatible_with",
+   "para": "bat--v-mount",
+   "derivada": false
+  },
+  {
    "de": "bat--bp-u",
    "aresta": "made_by",
    "para": "sony",
@@ -1945,8 +1957,20 @@
   },
   {
    "de": "midia--cfexpress-b",
+   "aresta": "governed_by",
+   "para": "compactflash-association",
+   "derivada": false
+  },
+  {
+   "de": "midia--cfexpress-b",
    "aresta": "alternative_to",
    "para": "midia--axs",
+   "derivada": false
+  },
+  {
+   "de": "midia--cfexpress-b",
+   "aresta": "alternative_to",
+   "para": "midia--codex-compact-drive",
    "derivada": false
   },
   {
@@ -2011,8 +2035,20 @@
   },
   {
    "de": "mount--pl",
-   "aresta": "see_also",
+   "aresta": "made_by",
+   "para": "arri",
+   "derivada": false
+  },
+  {
+   "de": "mount--pl",
+   "aresta": "alternative_to",
    "para": "mount--e",
+   "derivada": false
+  },
+  {
+   "de": "mount--pl",
+   "aresta": "see_also",
+   "para": "mount--lpl",
    "derivada": false
   },
   {
@@ -2509,8 +2545,20 @@
   },
   {
    "de": "prores",
-   "aresta": "see_also",
+   "aresta": "made_by",
+   "para": "apple",
+   "derivada": false
+  },
+  {
+   "de": "prores",
+   "aresta": "alternative_to",
    "para": "braw",
+   "derivada": false
+  },
+  {
+   "de": "prores",
+   "aresta": "wraps_in",
+   "para": "mov",
    "derivada": false
   },
   {
@@ -2553,6 +2601,12 @@
    "de": "xavc",
    "aresta": "made_by",
    "para": "sony",
+   "derivada": false
+  },
+  {
+   "de": "xavc",
+   "aresta": "wraps_in",
+   "para": "mxf",
    "derivada": false
   },
   {
@@ -2803,8 +2857,20 @@
   },
   {
    "de": "genlock",
+   "aresta": "governed_by",
+   "para": "smpte",
+   "derivada": false
+  },
+  {
+   "de": "genlock",
    "aresta": "see_also",
    "para": "flicker-parede-led",
+   "derivada": false
+  },
+  {
+   "de": "filtro-nd",
+   "aresta": "enables_technique",
+   "para": "obturador-180",
    "derivada": false
   },
   {
@@ -2821,7 +2887,7 @@
   },
   {
    "de": "obturador-180",
-   "aresta": "see_also",
+   "aresta": "requires",
    "para": "filtro-nd",
    "derivada": false
   },
@@ -2845,14 +2911,14 @@
   },
   {
    "de": "scan-rate",
-   "aresta": "see_also",
-   "para": "flicker-parede-led",
+   "aresta": "requires",
+   "para": "genlock",
    "derivada": false
   },
   {
    "de": "scan-rate",
    "aresta": "see_also",
-   "para": "genlock",
+   "para": "flicker-parede-led",
    "derivada": false
   },
   {
@@ -2899,7 +2965,7 @@
   },
   {
    "de": "tally",
-   "aresta": "see_also",
+   "aresta": "controlled_by",
    "para": "switcher-me",
    "derivada": false
   },
@@ -2913,6 +2979,12 @@
    "de": "tally",
    "aresta": "see_also",
    "para": "sdi",
+   "derivada": false
+  },
+  {
+   "de": "ndi",
+   "aresta": "made_by",
+   "para": "vizrt",
    "derivada": false
   },
   {
@@ -2937,6 +3009,12 @@
    "de": "ndi",
    "aresta": "distinct_from",
    "para": "genlock",
+   "derivada": false
+  },
+  {
+   "de": "rede-gigabit",
+   "aresta": "governed_by",
+   "para": "ieee",
    "derivada": false
   },
   {
@@ -3073,7 +3151,7 @@
   },
   {
    "de": "temperatura-de-cor",
-   "aresta": "see_also",
+   "aresta": "distinct_from",
    "para": "cri-tlci-ssi",
    "derivada": false
   },
@@ -3081,6 +3159,24 @@
    "de": "ls-600d-pro",
    "aresta": "made_by",
    "para": "aputure",
+   "derivada": false
+  },
+  {
+   "de": "ls-600d-pro",
+   "aresta": "powered_by",
+   "para": "rede-ac",
+   "derivada": false
+  },
+  {
+   "de": "ls-600d-pro",
+   "aresta": "powered_by",
+   "para": "bat--v-mount",
+   "derivada": false
+  },
+  {
+   "de": "ls-600d-pro",
+   "aresta": "fits",
+   "para": "mount-bowens",
    "derivada": false
   },
   {
@@ -3111,6 +3207,18 @@
    "de": "evoke-2400b",
    "aresta": "made_by",
    "para": "nanlux",
+   "derivada": false
+  },
+  {
+   "de": "evoke-2400b",
+   "aresta": "powered_by",
+   "para": "rede-ac",
+   "derivada": false
+  },
+  {
+   "de": "evoke-2400b",
+   "aresta": "fits",
+   "para": "mount-nanlux",
    "derivada": false
   },
   {
@@ -3283,20 +3391,32 @@
   },
   {
    "de": "ordem-do-dia",
-   "aresta": "see_also",
+   "aresta": "template_for",
+   "para": "producao",
+   "derivada": false
+  },
+  {
+   "de": "ordem-do-dia",
+   "aresta": "used_by_role",
+   "para": "diretor-de-fotografia",
+   "derivada": false
+  },
+  {
+   "de": "ordem-do-dia",
+   "aresta": "used_by_role",
    "para": "gaffer",
    "derivada": false
   },
   {
    "de": "ordem-do-dia",
    "aresta": "see_also",
-   "para": "diretor-de-fotografia",
+   "para": "mapa-de-luz",
    "derivada": false
   },
   {
-   "de": "ordem-do-dia",
-   "aresta": "see_also",
-   "para": "mapa-de-luz",
+   "de": "diretor-de-fotografia",
+   "aresta": "reports_to",
+   "para": "diretor",
    "derivada": false
   },
   {
@@ -3477,12 +3597,6 @@
    "de": "atem-constellation-8k",
    "aresta": "distinct_from",
    "para": "atem-constellation-hd",
-   "derivada": true
-  },
-  {
-   "de": "temperatura-de-cor",
-   "aresta": "distinct_from",
-   "para": "cri-tlci-ssi",
    "derivada": true
   }
  ]

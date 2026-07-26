@@ -8,6 +8,9 @@ tags: [energia, bateria, padrao, arri]
 status: draft
 confidence: media
 updated: 2026-07-26
+rel:
+  alternative_to: [bat--v-mount]
+  incompatible_with: [{to: bat--v-mount, motivo: "tensao nominal e encaixe diferentes"}]
 sources:
   - {url: "https://www.arri.com/en/technical-data/accessories", tier: oficial, ret: 2026-07-26, nota: "adoção do padrão"}
 ---

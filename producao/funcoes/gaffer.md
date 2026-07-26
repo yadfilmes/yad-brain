@@ -10,9 +10,9 @@ confidence: media
 updated: 2026-07-26
 rel:
   reports_to: [diretor-de-fotografia]
+  reports_to: [diretor-de-fotografia]
   used_in_workflow: [mapa-de-luz]
   requires: [nr-35-trabalho-em-altura]
-  operated_by_role: []
   see_also: [temperatura-de-cor, cri-tlci-ssi]
 sources:
   - {url: "https://www.abcine.org.br", tier: educacao, ret: 2026-07-26, nota: "nomenclatura de funções no Brasil"}

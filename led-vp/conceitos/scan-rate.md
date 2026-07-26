@@ -9,7 +9,8 @@ status: draft
 confidence: media
 updated: 2026-07-26
 rel:
-  see_also: [flicker-parede-led, genlock, obturador-180]
+  requires: [{to: genlock, nota: "referencia comum impede a varredura de deslizar na camera"}]
+  see_also: [flicker-parede-led, obturador-180]
 sources:
   - {url: "https://www.bromptontech.com", tier: oficial, ret: 2026-07-26, nota: "documentação de processamento e refresh"}
 ---

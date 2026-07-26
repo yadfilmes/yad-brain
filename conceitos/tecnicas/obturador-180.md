@@ -9,7 +9,8 @@ status: draft
 confidence: alta
 updated: 2026-07-26
 rel:
-  see_also: [filtro-nd, flicker-parede-led]
+  requires: [{to: filtro-nd, nota: "em luz alta, para manter o angulo sem fechar diafragma"}]
+  see_also: [flicker-parede-led]
 sources:
   - {url: "https://www.arri.com", tier: oficial, ret: 2026-07-26, nota: "convenção de ângulo de obturador"}
 ---

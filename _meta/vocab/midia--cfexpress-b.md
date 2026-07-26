@@ -9,7 +9,8 @@ status: draft
 confidence: media
 updated: 2026-07-26
 rel:
-  alternative_to: [midia--axs]
+  governed_by: [compactflash-association]
+  alternative_to: [midia--axs, midia--codex-compact-drive]
 sources:
   - {url: "https://www.compactflash.org/cfexpress", tier: oficial, ret: 2026-07-26, nota: "especificação do padrão"}
 ---

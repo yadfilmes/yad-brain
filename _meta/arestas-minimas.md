@@ -20,19 +20,34 @@ Toda nota fora de `stub` declara **ao menos uma aresta que não seja
 `see_also`**. `see_also` é "relacionado, sem semântica específica" — uma nota
 cujo grafo inteiro é `see_also` não afirma nenhuma relação, só vizinhança.
 
-**Isentos: `moc` e `orgao`.** Não é concessão, é a semântica dos dois tipos:
+**Isentos: `moc`, `orgao` e `certificacao`** — os três tipos cujas arestas
+fortes são **de entrada, por desenho**. Não é concessão, é a semântica deles:
 
-- Um **MOC** é um mapa. "Relacionado, sem semântica específica" é literalmente
-  o que um mapa afirma sobre o que lista — exigir aresta tipada ali forçaria
-  relação inventada.
-- Um **órgão** recebe suas arestas fortes de fora: normas apontam para ele com
-  `governed_by`. O vocabulário não tem aresta de saída própria de órgão (não
-  existe `publishes`), e criar uma só para satisfazer esta regra seria deixar a
-  régua desenhar a ontologia — inversão que este acervo evita.
+| tipo | quem aponta para ele |
+|---|---|
+| `moc` | é um mapa: "relacionado, sem semântica específica" é literalmente o que ele afirma |
+| `orgao` | normas apontam com `governed_by` |
+| `certificacao` | equipamento aponta com `certified_for` |
 
-A isenção foi descoberta pela própria regra: ela apontou 22 notas, e 5 delas
+Nenhum dos três tem aresta de saída própria no vocabulário — não existe
+`publishes` nem `certifies`. Criar uma só para satisfazer esta regra seria
+deixar a régua desenhar a ontologia, inversão que este acervo evita.
+
+A isenção foi descoberta pela própria regra: ela apontou 22 notas, e algumas
 estavam certas. Regra nova erra nas duas direções, e a que reprova o correto é
 a mais cara — some no ruído de aviso e ensina a ignorar o CI.
+
+### O resíduo é o estado de regime, não backlog
+
+Depois da varredura, sobram poucas notas com o aviso vivo — e isso é o
+comportamento desejado. `lei-do-inverso-do-quadrado` e `pwm-brilho-led` são lei
+física e mecanismo: têm relação real com o resto do acervo, mas o vocabulário
+não tem aresta de saída que as descreva sem inventar.
+
+**Não se zera aviso por zerar.** Levar a contagem a zero exigiria ou aresta
+falsa ou `rel_na` de fachada — as duas são a lei de Goodhart outra vez, agora
+com o painel de avisos no lugar do CI. O aviso vivo é um convite a olhar, não
+uma dívida a quitar.
 
 ---
 
@@ -101,19 +116,45 @@ não falta nunca é o par "com o que compete / o que substituiu".
 
 ### `colorspace` · `transfer-function`
 
-- obrigatorias: `made_by`
-- uma de: `paired_gamut`, `conforms_to_pipeline`, `governed_by`
+- uma de: `made_by`, `governed_by`
+- uma de: `paired_gamut`, `conforms_to_pipeline`, `distinct_from`
 
 Justificativa: curva e gamut andam em par; declarar um sem o outro é a origem
 clássica de erro de pipeline.
 
+`made_by` **não** é obrigatória aqui, e a razão é de ontologia, não de
+conveniência: espaço de cor vem de dois lugares diferentes. Curva proprietária
+tem fabricante (S-Log3 → Sony); norma tem órgão emissor (Rec.709 → ITU-R). E
+`made_by` só aponta para `marca` ou `ecossistema` — forçá-la num padrão ITU
+produziria erro de coerência de tipo no próprio CI. Os dois caminhos entram
+como grupo.
+
 ### `interface`
 
-- uma de: `implements_standard`, `governed_by`
+- uma de: `implements_standard`, `governed_by`, `made_by`
 - uma de: `alternative_to`, `competes_with`, `interoperates_with`
 
-Justificativa: interface é norma encarnada em conector — quem normatiza e o que
-faz o mesmo trabalho são as duas perguntas.
+Justificativa: as duas perguntas são "de onde vem" e "o que faz o mesmo
+trabalho". A primeira tem dois caminhos porque interface tem duas origens
+possíveis: norma de consórcio (SDI → SMPTE) ou produto de fabricante (NDI →
+Vizrt). Ver a regra de origem abaixo.
+
+---
+
+## Regra de origem: padrão ou fabricante, nunca "nenhum dos dois"
+
+Vale para `colorspace`, `transfer-function`, `interface` e `midia`. Cada um
+desses tipos nasce de **um de dois lugares**, e o conjunto mínimo aceita os
+dois caminhos como grupo — nunca dispensa os dois.
+
+| origem | aresta |
+|---|---|
+| norma de consórcio ou órgão | `governed_by` / `implements_standard` |
+| produto proprietário de fabricante | `made_by` |
+
+Não é flexibilidade: é o que impede a régua de exigir o que o resto do
+validador reprova. `made_by` só aponta para `marca` ou `ecossistema` — cobrá-la
+de um padrão ITU produziria erro de coerência de tipo no próprio CI.
 
 ### `funcao`
 

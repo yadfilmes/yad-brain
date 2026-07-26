@@ -132,9 +132,26 @@ s = rodar("orgao", "draft", ["see_also"])
 checa("órgão recebe arestas de fora — see_also sozinho não é defeito",
       not s, msgs(s))
 
+s = rodar("certificacao", "draft", [])
+checa("certificação sem aresta nenhuma é forma correta (aponta-se para ela)",
+      not s, msgs(s))
+
 s = rodar("conceito", "draft", ["see_also"])
 checa("a isenção não vazou para os demais types",
       any("sem semântica" in m for _, m in s), msgs(s))
+
+# Segundo falso positivo achado pela regra: `made_by` só aponta para marca ou
+# ecossistema. Exigi-la de um padrão ITU produziria erro de coerência de tipo
+# no próprio CI — a régua não pode pedir o que o resto do validador reprova.
+s = rodar("colorspace", "draft", ["governed_by", "distinct_from"])
+checa("colorspace de norma passa por governed_by, sem made_by", not s, msgs(s))
+
+s = rodar("transfer-function", "draft", ["made_by", "paired_gamut"])
+checa("curva proprietária passa por made_by", not s, msgs(s))
+
+s = rodar("colorspace", "draft", ["see_also"])
+checa("colorspace sem nenhum dos dois caminhos ainda reprova", len(s) >= 2,
+      msgs(s))
 
 
 # -------------------------------------------------------- a régua por status

@@ -9,7 +9,8 @@ status: draft
 confidence: media
 updated: 2026-07-26
 rel:
-  see_also: [switcher-me, ndi, sdi]
+  controlled_by: [switcher-me]
+  see_also: [ndi, sdi]
 sources:
   - {url: "https://www.blackmagicdesign.com/products/atem", tier: oficial, ret: 2026-07-26, nota: "saídas de tally"}
 ---

@@ -5,7 +5,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 ## Números gerais
 
 - Notas: **63**
-- Arestas declaradas: **253** (+13 derivadas por simetria/inversa)
+- Arestas declaradas: **273** (+12 derivadas por simetria/inversa)
 - Notas com fonte oficial ou de laboratório: **57/63** (90%)
 - Notas órfãs: **0**
 
@@ -46,15 +46,15 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 | aresta | nº |
 |---|---:|
-| `see_also` | 66 |
-| `made_by` | 25 |
-| `alternative_to` | 20 |
+| `see_also` | 59 |
+| `made_by` | 28 |
+| `alternative_to` | 24 |
+| `distinct_from` | 16 |
 | `competes_with` | 15 |
-| `distinct_from` | 15 |
 | `conforms_to_pipeline` | 10 |
 | `records_codec` | 10 |
+| `governed_by` | 9 |
 | `accepts_media` | 7 |
 | `supports_colorspace` | 7 |
-| `governed_by` | 6 |
 | `outputs_signal` | 6 |
 | `paired_gamut` | 6 |

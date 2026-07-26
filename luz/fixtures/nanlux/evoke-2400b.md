@@ -12,6 +12,8 @@ confidence: media
 updated: 2026-07-26
 rel:
   made_by: [nanlux]
+  powered_by: [rede-ac]
+  fits: [{to: mount-nanlux, nota: "proprietario; Bowens so por adaptador"}]
   competes_with: [ls-600d-pro]
   see_also: [temperatura-de-cor, lei-do-inverso-do-quadrado]
 sources:

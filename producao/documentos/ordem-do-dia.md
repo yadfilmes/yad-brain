@@ -9,8 +9,9 @@ status: draft
 confidence: media
 updated: 2026-07-26
 rel:
-  template_for: []
-  see_also: [gaffer, diretor-de-fotografia, mapa-de-luz]
+  template_for: [producao]
+  used_by_role: [diretor-de-fotografia, gaffer]
+  see_also: [mapa-de-luz]
 sources:
   - {url: "https://www.studiobinder.com/blog/what-is-a-call-sheet/", tier: educacao, ret: 2026-07-26, nota: "estrutura padrão do documento"}
 ---

@@ -9,6 +9,7 @@ status: draft
 confidence: media
 updated: 2026-07-26
 rel:
+  reports_to: [diretor]
   conforms_to_pipeline: [aces]
   produces: [mapa-de-luz]
   see_also: [gaffer, filtro-nd]

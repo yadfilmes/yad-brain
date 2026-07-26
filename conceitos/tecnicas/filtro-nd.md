@@ -9,6 +9,7 @@ status: draft
 confidence: alta
 updated: 2026-07-26
 rel:
+  enables_technique: [obturador-180]
   see_also: [venice-2, pyxis-6k]
 sources:
   - {url: "https://tiffen.com", tier: oficial, ret: 2026-07-26, nota: "escala de densidade e tipos"}

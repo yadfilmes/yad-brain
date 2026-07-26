@@ -9,7 +9,9 @@ status: draft
 confidence: alta
 updated: 2026-07-26
 rel:
-  see_also: [mount--e]
+  made_by: [arri]
+  alternative_to: [mount--e]
+  see_also: [mount--lpl]
 sources:
   - {url: "https://www.arri.com", tier: oficial, ret: 2026-07-26, nota: "origem ARRI do padrão"}
 ---

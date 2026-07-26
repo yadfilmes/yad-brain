@@ -12,6 +12,8 @@ confidence: media
 updated: 2026-07-26
 rel:
   made_by: [aputure]
+  powered_by: [rede-ac, bat--v-mount]
+  fits: [mount-bowens]
   competes_with: [evoke-2400b]
   see_also: [temperatura-de-cor, cri-tlci-ssi, lei-do-inverso-do-quadrado]
 sources:

@@ -50,9 +50,12 @@ TIPO_ESPERADO = {
     "caused_by": {"conceito", "problema", "interface"},
 }
 
-# Tipos em que grafo só de `see_also` é a forma correta, não defeito.
+# Tipos cujas arestas fortes são de ENTRADA por desenho — grafo só de
+# `see_also` neles é a forma correta, não defeito. O vocabulário não tem
+# `publishes` nem `certifies`, e inventar uma para satisfazer a régua seria
+# deixar a régua desenhar a ontologia.
 # Justificativa em _meta/arestas-minimas.md, "Piso universal".
-ISENTOS_DO_PISO = {"moc", "orgao"}
+ISENTOS_DO_PISO = {"moc", "orgao", "certificacao"}
 
 RAIZ_DE_DOMINIO = re.compile(r"^https?://[^/]+/?$")
 SLUG = re.compile(r"^[a-z0-9]+(?:[-]{1,2}[a-z0-9]+)*$")
@@ -383,6 +386,11 @@ def main():
             if aresta not in vocab:
                 erro(rel, f"aresta fora do vocabulário fechado: '{aresta}'")
                 continue
+            # Aresta declarada sem alvo (`template_for: []`) é TODO esquecido:
+            # parece grafo para quem lê o frontmatter e não é nada para o grep.
+            if not fm.alvos(valor):
+                aviso(rel, f"aresta '{aresta}' declarada sem alvo — "
+                           f"preencher ou remover")
             for alvo in fm.alvos(valor):
                 arestas_totais += 1
                 esperado = TIPO_ESPERADO.get(aresta)

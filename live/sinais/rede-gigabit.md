@@ -9,6 +9,7 @@ status: draft
 confidence: media
 updated: 2026-07-26
 rel:
+  governed_by: [ieee]
   see_also: [ndi, sdi]
 sources:
   - {url: "https://ndi.video/tech/", tier: oficial, ret: 2026-07-26, nota: "requisitos de rede"}

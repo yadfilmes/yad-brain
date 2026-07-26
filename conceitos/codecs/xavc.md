@@ -11,6 +11,7 @@ confidence: media
 updated: 2026-07-26
 rel:
   made_by: [sony]
+  wraps_in: [mxf]
   alternative_to: [prores]
   distinct_from: [x-ocn]
 sources:

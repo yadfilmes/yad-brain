@@ -9,6 +9,7 @@ status: draft
 confidence: alta
 updated: 2026-07-26
 rel:
+  governed_by: [smpte]
   see_also: [flicker-parede-led]
 sources:
   - {url: "https://www.blackmagicdesign.com", tier: oficial, ret: 2026-07-26, nota: "sync generator e entradas de referência"}

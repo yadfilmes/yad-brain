@@ -9,6 +9,7 @@ status: draft
 confidence: media
 updated: 2026-07-26
 rel:
+  made_by: [vizrt]
   alternative_to: [sdi]
   requires: [rede-gigabit]
   interoperates_with: [tally]
