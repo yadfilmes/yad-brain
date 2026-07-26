@@ -1,0 +1,8 @@
+id,title,type,brand,zona,status,confidence,risco,updated,n_fontes,tiers,path
+braw,Blackmagic RAW,codec,blackmagic-design,universal,draft,alta,,2026-07-26,1,oficial,conceitos/codecs/braw.md
+filtro-nd,Filtro ND (densidade neutra),conceito,,universal,draft,alta,,2026-07-26,1,oficial,conceitos/tecnicas/filtro-nd.md
+flicker-parede-led,Flicker ou banda horizontal filmando parede de LED,problema,,universal,draft,media,,2026-07-26,2,comunidade|oficial,troubleshooting/flicker-parede-led.md
+mount--pl,PL (Positive Lock),mount,,universal,draft,alta,,2026-07-26,1,oficial,_meta/vocab/mount--pl.md
+nr-35-trabalho-em-altura,NR-35 — Trabalho em Altura,norma,,universal,stub,media,seguranca,2026-07-26,1,oficial,seguranca/nr-35-trabalho-em-altura.md
+pyxis-6k,Blackmagic Pyxis 6K,camera,blackmagic-design,universal,draft,media,,2026-07-26,1,oficial,captacao/cameras/blackmagic/pyxis-6k.md
+venice-2,Sony VENICE 2,camera,sony,universal,draft,alta,,2026-07-26,2,comunidade|oficial,captacao/cameras/sony/venice-2.md

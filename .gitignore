@@ -28,3 +28,7 @@ venv/
 # Temporários
 *.tmp
 *.log
+
+# Artefatos derivados: gerados por tools/build_graph.py a cada commit.
+# Versionamos porque servem de consulta rápida (o Claude lê o índice pronto).
+# Se um dia pesarem, basta remover daqui — nada se perde, é tudo derivado.

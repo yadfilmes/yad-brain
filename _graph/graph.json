@@ -1,0 +1,419 @@
+{
+ "nos": [
+  {
+   "id": "mount--pl",
+   "title": "PL (Positive Lock)",
+   "type": "mount",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "_meta/vocab/mount--pl.md",
+   "tldr": "mount padrão do cinema profissional, criado pela ARRI: trava mecânica de quatro flanges, sem contatos elétricos na versão clássica, flange focal distance de 52 mm. É o encaixe que praticamente todo parque de lentes cine ",
+   "aliases": [
+    "PL",
+    "PL mount",
+    "Positive Lock",
+    "montagem PL"
+   ],
+   "tags": [
+    "mount",
+    "optica",
+    "cine",
+    "padrao"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "pyxis-6k",
+   "title": "Blackmagic Pyxis 6K",
+   "type": "camera",
+   "brand": "blackmagic-design",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "captacao/cameras/blackmagic/pyxis-6k.md",
+   "tldr": "câmera de cinema full-frame 6K da Blackmagic que grava [[braw]] internamente, vendida em versões de mount distintas (L-mount, EF e PL). Entrega imagem de nível superior ao seu preço; é a porta de entrada barata para um f",
+   "aliases": [
+    "Pyxis",
+    "Pyxis 6K",
+    "Blackmagic Pyxis"
+   ],
+   "tags": [
+    "full-frame",
+    "braw",
+    "cinema-digital",
+    "custo-beneficio"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "venice-2",
+   "title": "Sony VENICE 2",
+   "type": "camera",
+   "brand": "sony",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "captacao/cameras/sony/venice-2.md",
+   "tldr": "câmera de cinema digital full-frame da Sony com sensor 8.6K (há versão 6K no mesmo corpo), dual base ISO 800/3200 e gravação X-OCN interna em mídia AXS. Rival direta da [[alexa-35]]; forte em pouca luz e em rigs compacto",
+   "aliases": [
+    "VENICE 2",
+    "Venice2",
+    "MPC-3610",
+    "VENICE II"
+   ],
+   "tags": [
+    "full-frame",
+    "dual-base-iso",
+    "x-ocn",
+    "cinema-digital",
+    "netflix-approved"
+   ],
+   "n_fontes": 2,
+   "tiers": [
+    "comunidade",
+    "oficial"
+   ]
+  },
+  {
+   "id": "braw",
+   "title": "Blackmagic RAW",
+   "type": "codec",
+   "brand": "blackmagic-design",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/codecs/braw.md",
+   "tldr": "codec RAW parcialmente debayerizado da Blackmagic: guarda a informação de sensor como RAW, mas move parte do processamento para dentro do arquivo. Resultado prático: peso e fluidez de edição muito melhores que RAW tradic",
+   "aliases": [
+    "BRAW",
+    "Blackmagic RAW",
+    ".braw"
+   ],
+   "tags": [
+    "codec",
+    "raw",
+    "aquisicao",
+    "blackmagic"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "filtro-nd",
+   "title": "Filtro ND (densidade neutra)",
+   "type": "conceito",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "alta",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "conceitos/tecnicas/filtro-nd.md",
+   "tldr": "filtro cinza que corta luz sem (idealmente) alterar cor, para manter diafragma aberto e obturador 180° sob sol forte. Densidade em stops: ND0.3 = 1 stop, ND0.6 = 2, ND0.9 = 3, ND1.2 = 4, ND1.8 = 6, ND2.1 = 7.",
+   "aliases": [
+    "ND",
+    "neutral density",
+    "IRND",
+    "VND",
+    "densidade neutra",
+    "filtro de densidade neutra"
+   ],
+   "tags": [
+    "exposicao",
+    "optica",
+    "filtro",
+    "fotometria"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "nr-35-trabalho-em-altura",
+   "title": "NR-35 — Trabalho em Altura",
+   "type": "norma",
+   "brand": "",
+   "zona": "universal",
+   "status": "stub",
+   "confidence": "media",
+   "risco": "seguranca",
+   "updated": "2026-07-26",
+   "path": "seguranca/nr-35-trabalho-em-altura.md",
+   "tldr": "norma regulamentadora brasileira que rege qualquer atividade executada acima de 2 metros do nível inferior com risco de queda. Alcança diretamente rigging de luz, montagem de truss, trabalho em andaime e em plataforma el",
+   "aliases": [
+    "NR 35",
+    "NR-35",
+    "trabalho em altura",
+    "norma regulamentadora 35"
+   ],
+   "tags": [
+    "seguranca",
+    "norma",
+    "altura",
+    "rigging",
+    "brasil"
+   ],
+   "n_fontes": 1,
+   "tiers": [
+    "oficial"
+   ]
+  },
+  {
+   "id": "flicker-parede-led",
+   "title": "Flicker ou banda horizontal filmando parede de LED",
+   "type": "problema",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-07-26",
+   "path": "troubleshooting/flicker-parede-led.md",
+   "tldr": "a câmera enxerga bandas horizontais, cintilação ou linha rolando sobre a parede de LED. Quase sempre é dessincronia entre a varredura do painel e o obturador da câmera, não defeito do painel. Testar o shutter **antes** d",
+   "aliases": [
+    "flicker LED",
+    "banda na parede de LED",
+    "linha rolando LED",
+    "scan line",
+    "banding"
+   ],
+   "tags": [
+    "led-wall",
+    "virtual-production",
+    "flicker",
+    "shutter",
+    "diagnostico"
+   ],
+   "n_fontes": 2,
+   "tiers": [
+    "comunidade",
+    "oficial"
+   ]
+  }
+ ],
+ "arestas": [
+  {
+   "de": "mount--pl",
+   "aresta": "see_also",
+   "para": "mount--e",
+   "derivada": false
+  },
+  {
+   "de": "pyxis-6k",
+   "aresta": "made_by",
+   "para": "blackmagic-design",
+   "derivada": false
+  },
+  {
+   "de": "pyxis-6k",
+   "aresta": "has_native_mount",
+   "para": "mount--pl",
+   "derivada": false
+  },
+  {
+   "de": "pyxis-6k",
+   "aresta": "accepts_mount",
+   "para": "mount--pl",
+   "derivada": false
+  },
+  {
+   "de": "pyxis-6k",
+   "aresta": "records_codec",
+   "para": "braw",
+   "derivada": false
+  },
+  {
+   "de": "pyxis-6k",
+   "aresta": "part_of_ecosystem",
+   "para": "ecossistema-blackmagic",
+   "derivada": false
+  },
+  {
+   "de": "pyxis-6k",
+   "aresta": "competes_with",
+   "para": "venice-2",
+   "derivada": false
+  },
+  {
+   "de": "pyxis-6k",
+   "aresta": "budget_alternative_to",
+   "para": "venice-2",
+   "derivada": false
+  },
+  {
+   "de": "pyxis-6k",
+   "aresta": "see_also",
+   "para": "filtro-nd",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
+   "aresta": "made_by",
+   "para": "sony",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
+   "aresta": "has_native_mount",
+   "para": "mount--e",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
+   "aresta": "accepts_mount",
+   "para": "mount--pl",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
+   "aresta": "records_codec",
+   "para": "x-ocn",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
+   "aresta": "records_codec",
+   "para": "prores",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
+   "aresta": "records_codec",
+   "para": "xavc",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
+   "aresta": "supports_transfer_function",
+   "para": "s-log3",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
+   "aresta": "competes_with",
+   "para": "alexa-35",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
+   "aresta": "successor_of",
+   "para": "venice",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
+   "aresta": "certified_for",
+   "para": "netflix-approved",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
+   "aresta": "see_also",
+   "para": "filtro-nd",
+   "derivada": false
+  },
+  {
+   "de": "braw",
+   "aresta": "made_by",
+   "para": "blackmagic-design",
+   "derivada": false
+  },
+  {
+   "de": "braw",
+   "aresta": "part_of_ecosystem",
+   "para": "ecossistema-blackmagic",
+   "derivada": false
+  },
+  {
+   "de": "braw",
+   "aresta": "see_also",
+   "para": "pyxis-6k",
+   "derivada": false
+  },
+  {
+   "de": "filtro-nd",
+   "aresta": "see_also",
+   "para": "venice-2",
+   "derivada": false
+  },
+  {
+   "de": "filtro-nd",
+   "aresta": "see_also",
+   "para": "pyxis-6k",
+   "derivada": false
+  },
+  {
+   "de": "flicker-parede-led",
+   "aresta": "caused_by",
+   "para": "shutter-angle",
+   "derivada": false
+  },
+  {
+   "de": "flicker-parede-led",
+   "aresta": "caused_by",
+   "para": "genlock",
+   "derivada": false
+  },
+  {
+   "de": "flicker-parede-led",
+   "aresta": "caused_by",
+   "para": "scan-rate",
+   "derivada": false
+  },
+  {
+   "de": "flicker-parede-led",
+   "aresta": "caused_by",
+   "para": "pwm-brilho-led",
+   "derivada": false
+  },
+  {
+   "de": "flicker-parede-led",
+   "aresta": "resolved_by",
+   "para": "shuttersync",
+   "derivada": false
+  },
+  {
+   "de": "flicker-parede-led",
+   "aresta": "resolved_by",
+   "para": "genlock",
+   "derivada": false
+  },
+  {
+   "de": "flicker-parede-led",
+   "aresta": "diagnosed_with",
+   "para": "teste-de-shutter",
+   "derivada": false
+  },
+  {
+   "de": "flicker-parede-led",
+   "aresta": "see_also",
+   "para": "obturador-180",
+   "derivada": false
+  },
+  {
+   "de": "venice-2",
+   "aresta": "competes_with",
+   "para": "pyxis-6k",
+   "derivada": true
+  }
+ ]
+}

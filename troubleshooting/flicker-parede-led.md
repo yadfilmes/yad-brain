@@ -1,0 +1,63 @@
+---
+id: flicker-parede-led
+title: Flicker ou banda horizontal filmando parede de LED
+type: problema
+zona: universal
+aliases: ["flicker LED", "banda na parede de LED", "linha rolando LED", "scan line", "banding"]
+tags: [led-wall, virtual-production, flicker, shutter, diagnostico]
+status: draft
+confidence: media
+updated: 2026-07-26
+rel:
+  caused_by: [shutter-angle, genlock, scan-rate, pwm-brilho-led]
+  resolved_by: [shuttersync, genlock]
+  diagnosed_with: [teste-de-shutter]
+  known_issue: []
+  see_also: [obturador-180]
+sources:
+  - {url: "https://www.bromptontech.com", tier: oficial, ret: 2026-07-26, nota: "documentação de ShutterSync"}
+  - {url: "https://www.reddit.com/r/virtualproduction/", tier: comunidade, ret: 2026-07-26, nota: "casos relatados de banda em 24p"}
+---
+
+# Flicker ou banda horizontal filmando parede de LED
+
+**TL;DR** — a câmera enxerga bandas horizontais, cintilação ou linha rolando
+sobre a parede de LED. Quase sempre é dessincronia entre a varredura do painel
+e o obturador da câmera, não defeito do painel. Testar o shutter **antes** de
+mexer em qualquer outra coisa.
+
+## Causas prováveis, em ordem de frequência
+
+1. **Shutter fora de múltiplo compatível** — de longe o caso mais comum.
+2. **Ausência de genlock** entre câmera e processadora: sem referência comum,
+   a varredura desliza ao longo do take.
+3. **Scan rate baixo do painel** — painel de scan baixo entrega banda visível
+   mesmo com shutter correto.
+4. **ShutterSync/ajuste de fase não configurado** na processadora.
+5. **Brilho muito baixo do painel**, que em alguns produtos reduz a
+   profundidade efetiva de PWM e agrava a banda.
+
+## Como discriminar
+
+| teste | se resolver, a causa é |
+|---|---|
+| variar **só** o shutter (ex.: 1/50 → 1/48 → 1/100) | shutter fora de múltiplo |
+| conectar genlock e repetir o take | falta de referência comum |
+| subir o brilho do painel mantendo shutter | PWM/brilho |
+| ajustar fase no ShutterSync da processadora | sincronia fina |
+
+Se nenhum resolver, investigar scan rate do painel — que é característica de
+hardware, não ajuste de set.
+
+## Correções
+
+- Casar shutter com a frequência de refresh do painel.
+- Genlock entre câmera e processadora sempre que houver mais de uma câmera.
+- Usar o ajuste fino de fase da processadora (em produtos que oferecem).
+
+## Observação de confiança
+
+Nota `draft` com `confidence: media`: a ordem das causas vem de padrão de campo
+relatado, não de teste controlado. Os valores exatos de scan rate e o
+comportamento por produto precisam sair da documentação do fabricante antes de
+virar `reviewed`.
