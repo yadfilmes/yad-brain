@@ -7,8 +7,8 @@
   "elaborado_em": "10/08/2026",
   "atualizado_por": "Felype · felype@yadfilmes.com.br",
   "atualizado_em": "10/08/2026",
-  "versao": "v3",
-  "situacao": "EM ANDAMENTO",
+  "versao": "v4",
+  "situacao": "FECHADO",
   "imposto_pct": 16,
   "areas": [
     "EQUIPE",
@@ -175,11 +175,11 @@
     {
       "area": "HOSPEDAGEM",
       "descricao": "Hospedagem da equipe em Barretos",
-      "funcao": "diárias × quartos",
+      "funcao": "no local, durante o evento",
       "qtd": 10,
       "unit": 0,
-      "status": "A PAGAR",
-      "obs": "confirmar se é por conta do cliente"
+      "status": "",
+      "obs": "CLUBE DO COWBOY fornece — sem custo para a YAD"
     },
     {
       "area": "EQUIPAMENTO E MANUTENÇÃO",

@@ -110,6 +110,11 @@ ele, não a planilha, que registra de onde cada número veio.
   dinheiro, mas a distribuição mente até alguém classificar.
 - **Quem entra sem cachê entra mesmo assim**, com valor zero. Some da conta,
   não some da escala — e no ano seguinte ninguém lembra que ele estava lá.
+- **Zero por não ser custo ≠ zero por faltar preencher.** As duas linhas somam
+  igual e significam o oposto. O que separa é o `STATUS`: linha que o cliente
+  cobre fica **sem status** — nada a pagar — e a `OBS` diz quem cobre. Linha
+  ainda em aberto fica `A PAGAR` com o valor amarelo. Sem essa distinção, três
+  meses depois ninguém sabe se aquele campo vazio era cortesia ou esquecimento.
 - **Parcela recebida ≠ parcela combinada.** O bloco `CAIXA` separa "já andou"
   de "falta"; lucro no papel com 50% a receber não paga fornecedor.
 - **Rótulo de célula não pode começar com `=`** — o Excel lê como fórmula.
