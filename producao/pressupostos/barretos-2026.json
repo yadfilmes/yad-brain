@@ -7,7 +7,7 @@
   "elaborado_em": "10/08/2026",
   "atualizado_por": "Felype · felype@yadfilmes.com.br",
   "atualizado_em": "10/08/2026",
-  "versao": "v1",
+  "versao": "v2",
   "situacao": "EM ANDAMENTO",
   "imposto_pct": 16,
   "areas": [
@@ -34,6 +34,11 @@
       "data": "10/09/2026",
       "status": "A RECEBER",
       "obs": "proposta final Alex: R$ 81.000 (valor 2025 + 8% inflação)"
+    },
+    {
+      "descricao": "Entrada Extras Cinegrafistas",
+      "valor": 27500,
+      "status": "A RECEBER"
     }
   ],
   "saidas": [
@@ -42,54 +47,48 @@
       "descricao": "Viny",
       "funcao": "Assistente técnico geral",
       "qtd": 10,
-      "unit": 350,
-      "status": "A PAGAR",
-      "obs": "diária de referência do orçamento — confirmar o combinado"
+      "unit": 200,
+      "status": "A PAGAR"
     },
     {
       "area": "EQUIPE",
       "descricao": "Caio",
       "funcao": "Assistente técnico geral",
-      "qtd": 10,
-      "unit": 350,
-      "status": "A PAGAR",
-      "obs": "diária de referência do orçamento — confirmar o combinado"
+      "qtd": 12,
+      "unit": 250,
+      "status": "A PAGAR"
     },
     {
       "area": "EQUIPE",
       "descricao": "Cassio",
       "funcao": "Técnico do sistema",
-      "qtd": 10,
+      "qtd": 5,
       "unit": 800,
-      "status": "A PAGAR",
-      "obs": "diária de referência do orçamento — confirmar o combinado"
+      "status": "A PAGAR"
     },
     {
       "area": "EQUIPE",
       "descricao": "Paulinho",
       "funcao": "Cinegrafista",
-      "qtd": 10,
+      "qtd": 12,
       "unit": 500,
-      "status": "A PAGAR",
-      "obs": "diária de referência do orçamento — confirmar o combinado"
+      "status": "A PAGAR"
     },
     {
       "area": "EQUIPE",
       "descricao": "Guilherme",
       "funcao": "Cinegrafista",
-      "qtd": 10,
+      "qtd": 12,
       "unit": 500,
-      "status": "A PAGAR",
-      "obs": "diária de referência do orçamento — confirmar o combinado"
+      "status": "A PAGAR"
     },
     {
       "area": "EQUIPE",
       "descricao": "Rodrigo",
       "funcao": "Cinegrafista",
-      "qtd": 10,
+      "qtd": 12,
       "unit": 500,
-      "status": "A PAGAR",
-      "obs": "diária de referência do orçamento — confirmar o combinado"
+      "status": "A PAGAR"
     },
     {
       "area": "EQUIPE",
@@ -97,8 +96,7 @@
       "funcao": "Cinegrafista",
       "qtd": 10,
       "unit": 500,
-      "status": "A PAGAR",
-      "obs": "diária de referência do orçamento — confirmar o combinado"
+      "status": "A PAGAR"
     },
     {
       "area": "EQUIPE",
@@ -106,8 +104,7 @@
       "funcao": "Cinegrafista",
       "qtd": 10,
       "unit": 500,
-      "status": "A PAGAR",
-      "obs": "diária de referência do orçamento — confirmar o combinado"
+      "status": "A PAGAR"
     },
     {
       "area": "EQUIPE",
@@ -119,11 +116,19 @@
       "obs": "sem valor — entra na equipe para constar na escala"
     },
     {
+      "area": "EQUIPE",
+      "descricao": "Larissa",
+      "funcao": "Produção Adm",
+      "qtd": 1,
+      "unit": 2500,
+      "status": "A PAGAR"
+    },
+    {
       "area": "TRANSPORTE E LOGÍSTICA",
       "descricao": "Combustível — caminhão de equipamento",
       "funcao": "SP ↔ Barretos, ida e volta",
       "qtd": 1,
-      "unit": "",
+      "unit": 2000,
       "status": "A PAGAR"
     },
     {
@@ -131,7 +136,7 @@
       "descricao": "Combustível — carro de apoio",
       "funcao": "equipe",
       "qtd": 1,
-      "unit": "",
+      "unit": 1000,
       "status": "A PAGAR"
     },
     {
@@ -139,7 +144,7 @@
       "descricao": "Pedágio",
       "funcao": "ida e volta",
       "qtd": 1,
-      "unit": "",
+      "unit": 400,
       "status": "A PAGAR"
     },
     {
@@ -147,7 +152,7 @@
       "descricao": "Alimentação na estrada — ida",
       "funcao": "equipe",
       "qtd": 1,
-      "unit": "",
+      "unit": 500,
       "status": "A PAGAR"
     },
     {
@@ -155,15 +160,15 @@
       "descricao": "Alimentação na estrada — volta",
       "funcao": "equipe",
       "qtd": 1,
-      "unit": "",
+      "unit": 500,
       "status": "A PAGAR"
     },
     {
       "area": "ALIMENTAÇÃO",
       "descricao": "Alimentação da equipe durante o evento",
       "funcao": "8 pessoas × diárias",
-      "qtd": "",
-      "unit": "",
+      "qtd": 10,
+      "unit": 0,
       "status": "A PAGAR",
       "obs": "checar o que o Clube do Cowboy cobre de catering"
     },
@@ -171,19 +176,27 @@
       "area": "HOSPEDAGEM",
       "descricao": "Hospedagem da equipe em Barretos",
       "funcao": "diárias × quartos",
-      "qtd": "",
-      "unit": "",
+      "qtd": 10,
+      "unit": 0,
       "status": "A PAGAR",
       "obs": "confirmar se é por conta do cliente"
     },
     {
       "area": "EQUIPAMENTO E MANUTENÇÃO",
       "descricao": "Conserto do caminhão",
-      "funcao": "caminhão que leva o equipamento",
+      "funcao": "Caminhão que leva o equipamento",
       "qtd": 1,
       "unit": 1500,
       "status": "A PAGAR",
       "obs": "valor aproximado informado pela produção"
+    },
+    {
+      "area": "LOCAÇÃO DE TERCEIROS",
+      "descricao": "Danilo",
+      "funcao": "Cameras Broadcast",
+      "qtd": 10,
+      "unit": 1000,
+      "status": "A PAGAR"
     }
   ]
 }
