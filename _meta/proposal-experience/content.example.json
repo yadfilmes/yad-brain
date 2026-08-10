@@ -1,0 +1,177 @@
+{
+  "_comment": "Proposta fictícia. Existe para exercitar os 15 tipos de bloco e servir de esqueleto. Copie para content.json e substitua. Nenhum dado real de cliente entra neste repositório.",
+
+  "meta": {
+    "id": "exemplo-2026", "version": "V1", "date": "01.01.2026", "dna": "exemplo",
+    "title": "Projeto Exemplo — Proposta YAD Filmes",
+    "description": "Proposta comercial de exemplo, gerada pelo YAD Proposal System.",
+    "client": "Cliente", "status": "Confidencial · uso exclusivo",
+    "nav": [
+      { "label": "Conceito", "href": "#conceito" },
+      { "label": "Entregas", "href": "#entregas" },
+      { "label": "Investimento", "href": "#investimento" }
+    ],
+    "brandClient": "logo-cliente.avif",
+    "brandYad": "logo-yad.avif",
+    "footer": {
+      "logo": "logo-yad.avif",
+      "contact": "Nome do responsável<br>YAD Filmes · (00) 00000-0000<br>contato@yadfilmes.com",
+      "title": "Documento confidencial · V1 · 01.01.2026",
+      "text": "Proposta desenvolvida pela YAD Filmes exclusivamente para avaliação do cliente. Não pode ser compartilhada, reproduzida ou distribuída sem autorização prévia e expressa."
+    }
+  },
+
+  "composition": [
+    { "id": "hero", "type": "hero", "image": "hero.avif",
+      "eyebrow": "Proposta comercial · 01.01.2026",
+      "badge": { "label": "Confidencial", "text": "Desenvolvida pela YAD exclusivamente para este cliente." },
+      "title": ["Nome do", "Projeto"],
+      "copy": "Uma frase que diz o que o projeto é e por que ele importa, em até duas linhas.",
+      "meta": [
+        { "k": "Formato", "v": "Série" }, { "k": "Peças", "v": "12" },
+        { "k": "Captação", "v": "4 diárias" }, { "k": "Investimento", "v": "R$ 000.000,00" }
+      ] },
+
+    { "id": "visao", "type": "statement", "tone": "white",
+      "kicker": "Visão executiva",
+      "statement": "A tese central da proposta em uma frase, com <strong>o termo que importa</strong> em destaque.",
+      "items": [
+        { "num": "01", "h": "Primeiro princípio",  "p": "O que sustenta a ideia." },
+        { "num": "02", "h": "Segundo princípio",   "p": "O que a diferencia." },
+        { "num": "03", "h": "Terceiro princípio",  "p": "O que a torna eficiente." }
+      ] },
+
+    { "id": "frase", "type": "quote", "text": "“A frase que resume o conceito e fica na cabeça.”" },
+
+    { "id": "conceito", "type": "cards", "tone": "dark", "variant": "fan", "cols": 5, "break": true,
+      "kicker": "Conceito criativo", "title": "Nome do conceito",
+      "lead": "O parágrafo que explica a ideia central e como ela se desdobra.",
+      "items": [
+        { "label": "Cap. 01", "h": "Capítulo um",    "p": "Descrição curta." },
+        { "label": "Cap. 02", "h": "Capítulo dois",  "p": "Descrição curta." },
+        { "label": "Cap. 03", "h": "Capítulo três",  "p": "Descrição curta." },
+        { "label": "Cap. 04", "h": "Capítulo quatro","p": "Descrição curta." },
+        { "label": "Cap. 05", "h": "Capítulo cinco", "p": "Descrição curta." }
+      ] },
+
+    { "id": "linguagem", "type": "cards", "cols": 3,
+      "kicker": "Linguagem visual", "title": "Como isso se parece.",
+      "lead": "A régua estética da peça.",
+      "items": [
+        { "label": "70% · Documento", "h": "Presença",   "p": "Descrição." },
+        { "label": "20% · Cinema",    "h": "Assinatura", "p": "Descrição." },
+        { "label": "10% · Sistema",   "h": "Orientação", "p": "Descrição." }
+      ] },
+
+    { "id": "entregas", "type": "deliverables", "tone": "dark", "break": true,
+      "kicker": "Escopo por etapa", "title": "O que sai de cada captação.",
+      "lead": "Como uma mesma captação alimenta vários destinos.",
+      "items": [
+        { "label": "Campo",     "big": "Até 15 Stories", "p": "Descrição." },
+        { "label": "Social",    "big": "30s · 60s",      "p": "Descrição." },
+        { "label": "Premium",   "big": "Hero + doc",     "p": "Descrição." },
+        { "label": "Foto",      "big": "30 tratadas",    "p": "Descrição." },
+        { "label": "Banco",     "big": "30 dias",        "p": "Descrição." },
+        { "label": "Legendas",  "big": "PT-BR",          "p": "Descrição." }
+      ],
+      "totals": [
+        { "n": "75", "l": "Stories" }, { "n": "10", "l": "Reels" }, { "n": "15", "l": "Verticais" },
+        { "n": "5", "l": "Heros" },    { "n": "5", "l": "Docs" },   { "n": "150", "l": "Fotos" }
+      ] },
+
+    { "id": "operacao", "type": "workflow", "tone": "white",
+      "kicker": "Arquitetura de produção", "title": "Dois fluxos, uma verdade.",
+      "lead": "O que sai rápido não disputa acabamento com o que precisa durar.",
+      "items": [
+        { "label": "Fluxo Now",    "h": "Durante", "list": ["Item um", "Item dois", "Item três"] },
+        { "label": "Fluxo Master", "h": "Depois",  "list": ["Item um", "Item dois", "Item três"] }
+      ] },
+
+    { "id": "cronograma", "type": "timeline", "break": true,
+      "kicker": "Cronograma", "title": "Marcos e progressão.",
+      "head": ["Etapa", "Frente", "Captação", "Final"],
+      "rows": [
+        { "no": "01", "name": "Etapa um",  "where": "Cidade · UF", "shoot": "00–00 mês", "delivery": "00 mês" },
+        { "no": "02", "name": "Etapa dois", "where": "Cidade · UF", "shoot": "00–00 mês", "delivery": "00 mês" }
+      ] },
+
+    { "id": "equipe", "type": "roles", "tone": "dark", "cols": 3,
+      "kicker": "Equipe", "title": "Núcleo enxuto, especialidade no território.",
+      "lead": "Quem viaja e quem entra localmente.",
+      "items": [
+        { "h": "Direção",   "p": "Responsabilidade." },
+        { "h": "Fotografia","p": "Responsabilidade." },
+        { "h": "Produção",  "p": "Responsabilidade." }
+      ],
+      "band": "<strong>Reforço local por etapa:</strong> funções contratadas na praça, condicionadas a agenda e licenças." },
+
+    { "id": "dados", "type": "steps", "tone": "white",
+      "kicker": "Captação e dados", "title": "Qualidade onde aparece.",
+      "lead": "Padrão de captação e política de guarda.",
+      "items": [
+        { "label": "01 · Capture", "h": "Cinema modular", "p": "Descrição." },
+        { "label": "02 · Verify",  "h": "Checksum",       "p": "Descrição." },
+        { "label": "03 · Mirror",  "h": "Duas cópias",    "p": "Descrição." },
+        { "label": "04 · Retain",  "h": "30 dias",        "p": "Descrição." }
+      ] },
+
+    { "id": "governanca", "type": "roles", "cols": 4,
+      "kicker": "Governança", "title": "Velocidade precisa de decisão curta.",
+      "items": [
+        { "h": "Ponto focal",   "p": "Descrição." }, { "h": "Claims",  "p": "Descrição." },
+        { "h": "Janela",        "p": "Descrição." }, { "h": "Rodadas", "p": "Descrição." }
+      ] },
+
+    { "id": "urgencia", "type": "urgency", "tone": "accent",
+      "kicker": "Gate de mobilização", "title": "O relógio começa no aceite.",
+      "lead": "O que precisa ser travado, em que ordem.",
+      "items": [
+        { "n": "24h", "l": "kickoff" }, { "n": "48h", "l": "definições" }, { "n": "72h", "l": "logística" }
+      ] },
+
+    { "id": "investimento", "type": "investment", "tone": "dark", "break": true,
+      "kicker": "Investimento total", "title": "Projeto completo, preço protegido.",
+      "lead": "O que o valor cobre e sob quais premissas.",
+      "price": { "label": "Total do projeto", "value": "R$ 000.000,00", "note": "Validade desta proposta: 00 de mês de 2026." },
+      "breakdown": [
+        { "l": "Plataforma criativa", "v": "R$ 00.000,00" },
+        { "l": "Etapa 01",            "v": "R$ 00.000,00" },
+        { "l": "Etapa 02",            "v": "R$ 00.000,00" }
+      ],
+      "total": { "l": "Total", "v": "R$ 000.000,00" } },
+
+    { "id": "condicoes", "type": "conditions",
+      "kicker": "Condições comerciais", "title": "O que protege o preço e o prazo.",
+      "items": [
+        { "h": "Incluído",            "list": ["Item.", "Item.", "Item."] },
+        { "h": "Dependências",        "list": ["Item.", "Item.", "Item."] },
+        { "h": "Fora do escopo-base", "list": ["Item.", "Item.", "Item."] },
+        { "h": "Logística",           "list": ["Item.", "Item.", "Item."] },
+        { "h": "Confidencialidade", "wide": true, "list": ["Item.", "Item."] }
+      ],
+      "note": "Faturamento, premissas fiscais e sujeição a contrato." },
+
+    { "id": "yad", "type": "about", "tone": "white", "logo": "logo-yad.avif",
+      "kicker": "Por que YAD", "title": "Estrutura real. Direção próxima.",
+      "lead": "O parágrafo institucional.",
+      "list": ["Capacidade um", "Capacidade dois", "Capacidade três", "Capacidade quatro"] },
+
+    { "id": "operacao-yad", "type": "gallery", "signature": true,
+      "kicker": "YAD em operação", "title": "Estrutura real. Time em movimento.",
+      "lead": "A retaguarda que sustenta o projeto.",
+      "items": [
+        { "src": "g1.avif", "alt": "Descrição acessível da imagem", "h": "Título", "p": "Legenda" },
+        { "src": "g2.avif", "alt": "Descrição acessível da imagem", "h": "Título", "p": "Legenda" },
+        { "src": "g3.avif", "alt": "Descrição acessível da imagem", "h": "Título", "p": "Legenda" },
+        { "src": "g4.avif", "alt": "Descrição acessível da imagem", "h": "Título", "p": "Legenda" }
+      ] },
+
+    { "id": "contato", "type": "cta", "tone": "dark",
+      "kicker": "Próximo passo", "title": "Vamos começar.",
+      "lead": "O que o aceite libera imediatamente.",
+      "actions": [
+        { "label": "Falar no WhatsApp", "href": "https://wa.me/5500000000000", "primary": true },
+        { "label": "contato@yadfilmes.com", "href": "mailto:contato@yadfilmes.com" }
+      ] }
+  ]
+}
