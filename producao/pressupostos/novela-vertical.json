@@ -1,0 +1,128 @@
+{
+  "job": "NOVELA VERTICAL — equipe técnica + pós-produção",
+  "cliente": "MOVIOCA",
+  "periodo": "pós-produção — 2 meses de montagem",
+  "elaborado_por": "Felype · felype@yadfilmes.com.br",
+  "elaborado_em": "10/08/2026",
+  "atualizado_por": "Felype · felype@yadfilmes.com.br",
+  "atualizado_em": "10/08/2026",
+  "versao": "v1",
+  "situacao": "EM ANDAMENTO",
+  "imposto_pct": 16,
+  "areas": [
+    "MONTAGEM E PÓS",
+    "EQUIPE TÉCNICA",
+    "FINALIZAÇÃO",
+    "EQUIPAMENTO E MÍDIA",
+    "LICENÇAS E TRILHA",
+    "PRODUÇÃO E DIVERSOS",
+    "COMISSÃO"
+  ],
+  "entradas": [
+    {
+      "descricao": "Valor fechado do projeto",
+      "valor": 225000,
+      "status": "A RECEBER",
+      "obs": "R$ 270.000 do orçamento Movioca − R$ 45.000 do estúdio, que a Movioca paga direto ao Estúdio São Paulo e por isso fica fora deste pressuposto"
+    }
+  ],
+  "saidas": [
+    {
+      "area": "MONTAGEM E PÓS",
+      "descricao": "Montador finalizador",
+      "funcao": "mensal",
+      "qtd": 2,
+      "unit": 12000,
+      "status": "A PAGAR",
+      "obs": "R$ 12.000/mês × 2 meses"
+    },
+    {
+      "area": "MONTAGEM E PÓS",
+      "descricao": "Montador 1",
+      "funcao": "mensal",
+      "qtd": 2,
+      "unit": 7000,
+      "status": "A PAGAR",
+      "obs": "R$ 7.000/mês × 2 meses"
+    },
+    {
+      "area": "MONTAGEM E PÓS",
+      "descricao": "Montador 2",
+      "funcao": "mensal",
+      "qtd": 2,
+      "unit": 7000,
+      "status": "A PAGAR",
+      "obs": "R$ 7.000/mês × 2 meses"
+    },
+    {
+      "area": "EQUIPE TÉCNICA",
+      "descricao": "Diretor de fotografia",
+      "funcao": "pacote fechado",
+      "qtd": 1,
+      "unit": 17000,
+      "status": "A PAGAR"
+    },
+    {
+      "area": "FINALIZAÇÃO",
+      "descricao": "Finalização de áudio",
+      "funcao": "pelo projeto",
+      "qtd": 1,
+      "unit": 12000,
+      "status": "A PAGAR"
+    },
+    {
+      "area": "FINALIZAÇÃO",
+      "descricao": "Color grading",
+      "funcao": "pelo projeto",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "orçamento do cliente prevê R$ 25.000 — definir quem faz e por quanto"
+    },
+    {
+      "area": "FINALIZAÇÃO",
+      "descricao": "VFX + IA",
+      "funcao": "pelo projeto",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "orçamento do cliente prevê R$ 13.000"
+    },
+    {
+      "area": "FINALIZAÇÃO",
+      "descricao": "Legendagem PT-BR",
+      "funcao": "IA + revisão",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "orçamento do cliente prevê R$ 2.000"
+    },
+    {
+      "area": "FINALIZAÇÃO",
+      "descricao": "Legendagem EN — aprovação ReelShort",
+      "funcao": "IA + revisão",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "orçamento do cliente prevê R$ 2.000"
+    },
+    {
+      "area": "EQUIPAMENTO E MÍDIA",
+      "descricao": "HD 24 TB",
+      "funcao": "mídia de entrega e backup",
+      "qtd": 3,
+      "unit": 3500,
+      "status": "A PAGAR",
+      "obs": "valor médio por unidade"
+    },
+    {
+      "area": "LICENÇAS E TRILHA",
+      "descricao": "Licenças de trilha — banco ARTIS",
+      "funcao": "verba",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "orçamento do cliente prevê R$ 1.000"
+    }
+  ]
+}
