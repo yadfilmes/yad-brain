@@ -61,6 +61,7 @@ casa, sem cachê no pressuposto.
 | Montador finalizador | 12.000 | mês |
 | Montador | 7.000 | mês |
 | Diretor de fotografia | 17.000 | pacote |
+| Cinegrafista | 7.000 | projeto |
 | Finalização de áudio | 12.000 | projeto |
 | HD 24 TB | 3.500 | unidade |
 
@@ -101,8 +102,35 @@ DIVERSOS · COMISSÃO
 **Live / estúdio** (blocos do pressuposto BYD): EQUIPE · DIVERSOS · ALIMENTAÇÃO ·
 TRANSPORTE · LOCAÇÃO · COMISSÃO
 
-Comissão de captação existe: no BYD foram 10% para o Oliver (R$ 9.479 sobre
-R$ 94.790). Perguntar se o job tem captador antes de fechar.
+## Comissão de captação
+
+Existe e é grande. **A base muda o valor e precisa ser perguntada**, porque
+"15% do job" é ambíguo:
+
+| job | percentual | base | valor |
+|---|---|---|---|
+| Live BYD | 10% | entrada **bruta** (94.790) | 9.479 |
+| Novela vertical | 15% | entrada **líquida** (189.000) | 28.350 |
+
+Na novela vertical, 15% sobre a bruta daria R$ 33.750 — **R$ 5.400 a mais** que
+o lançado. Antes de fechar, confirmar com o captador se o combinado é sobre o
+que o cliente paga ou sobre o que sobra depois do imposto.
+
+**Lance a comissão como fórmula, não como número.** O padrão que o Felype e a
+Larissa criaram na novela vertical, e que vale repetir:
+
+- uma célula de percentual no `RESUMO`, ao lado do imposto
+- a linha em `SAIDAS` com o valor unitário calculado:
+  `=ROUND(RESUMO!$C$24*RESUMO!$F$22,2)` — líquida × percentual
+- a observação também por fórmula, para se reescrever sozinha:
+  `=TEXT(RESUMO!$F$22,"0,0%")&" da entrada líquida"`
+
+Não gera referência circular: a líquida não depende das saídas. Se o imposto ou
+a entrada mudarem, a comissão acompanha.
+
+⚠️ Isso ainda **não** existe em `tools/pressuposto_real.py`. Regenerar uma
+planilha que tenha essa customização feita à mão apaga as três células. Ou
+incorpora ao gerador, ou avisa antes de regerar.
 
 ---
 
@@ -131,13 +159,21 @@ extras.
 | entrada bruta | 225.000 (270.000 do orçamento − 45.000 do estúdio, pago direto ao Estúdio São Paulo) |
 | imposto 16% | 36.000 |
 | líquida | 189.000 |
-| saídas lançadas | 91.500 |
-| **lucro antes das pendências** | **97.500 — 43,3%** |
+| montagem e pós | 52.000 |
+| equipe técnica | 24.000 (DF 17.000 + cinegrafista 7.000) |
+| comissão 15% da líquida | 28.350 |
+| finalização · equipamento | 12.000 · 10.500 |
+| saídas lançadas | 126.850 |
+| **lucro antes das pendências** | **62.150 — 27,6%** |
 
 Montagem dimensionada em 2 meses (equivalente às 7 semanas de pós do orçamento
 do cliente). Cinco linhas em branco somando R$ 43.000 de escopo previsto sem
 custo definido. Em aberto também: R$ 85.000 de equipe técnica e equipamentos no
-orçamento do cliente, dos quais só o diretor de fotografia foi lançado.
+orçamento do cliente, dos quais só o DF e um cinegrafista foram lançados.
+
+A comissão entrou depois da primeira versão e derrubou a margem de 43,3% para
+27,6% — quase toda a queda vem dela. Comissão não é detalhe de rodapé; num job
+de escopo grande é a segunda maior saída depois da equipe.
 
 ### Live BYD 23–24.06 (referência histórica)
 
