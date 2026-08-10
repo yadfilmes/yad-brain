@@ -7,7 +7,7 @@
   "elaborado_em": "10/08/2026",
   "atualizado_por": "Felype · felype@yadfilmes.com.br",
   "atualizado_em": "10/08/2026",
-  "versao": "v2",
+  "versao": "v3",
   "situacao": "EM ANDAMENTO",
   "imposto_pct": 16,
   "areas": [
@@ -166,11 +166,11 @@
     {
       "area": "ALIMENTAÇÃO",
       "descricao": "Alimentação da equipe durante o evento",
-      "funcao": "8 pessoas × diárias",
+      "funcao": "no local, durante o evento",
       "qtd": 10,
       "unit": 0,
-      "status": "A PAGAR",
-      "obs": "checar o que o Clube do Cowboy cobre de catering"
+      "status": "",
+      "obs": "CLUBE DO COWBOY fornece no local — sem custo para a YAD"
     },
     {
       "area": "HOSPEDAGEM",
