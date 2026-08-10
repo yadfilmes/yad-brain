@@ -1,0 +1,183 @@
+{
+  "job": "BARRETOS 2026 — 6 câmeras + lentes servo + lentes EF + equipe técnica + montagem",
+  "cliente": "CLUBE DO COWBOY",
+  "contato": "ALEX (034) 99645-0612",
+  "periodo": "19/08/2026 a 31/08/2026 — 10 diárias",
+  "imposto_pct": 16,
+  "areas": [
+    "EQUIPE",
+    "TRANSPORTE E LOGÍSTICA",
+    "ALIMENTAÇÃO",
+    "HOSPEDAGEM",
+    "EQUIPAMENTO E MANUTENÇÃO",
+    "LOCAÇÃO DE TERCEIROS",
+    "PRODUÇÃO E DIVERSOS",
+    "COMISSÃO"
+  ],
+  "entradas": [
+    {
+      "descricao": "1ª parcela (50%) — até 10 dias antes das captações",
+      "valor": 40500,
+      "data": "07/08/2026",
+      "status": "A RECEBER",
+      "obs": "conforme pagamento da Sony · PIX ou transferência"
+    },
+    {
+      "descricao": "2ª parcela (50%) — até 10 dias após as captações",
+      "valor": 40500,
+      "data": "10/09/2026",
+      "status": "A RECEBER",
+      "obs": "proposta final Alex: R$ 81.000 (valor 2025 + 8% inflação)"
+    }
+  ],
+  "saidas": [
+    {
+      "area": "EQUIPE",
+      "descricao": "Viny",
+      "funcao": "Assistente técnico geral",
+      "qtd": 10,
+      "unit": 350,
+      "status": "A PAGAR",
+      "obs": "diária de referência do orçamento — confirmar o combinado"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Caio",
+      "funcao": "Assistente técnico geral",
+      "qtd": 10,
+      "unit": 350,
+      "status": "A PAGAR",
+      "obs": "diária de referência do orçamento — confirmar o combinado"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Cassio",
+      "funcao": "Técnico do sistema",
+      "qtd": 10,
+      "unit": 800,
+      "status": "A PAGAR",
+      "obs": "diária de referência do orçamento — confirmar o combinado"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Paulinho",
+      "funcao": "Cinegrafista",
+      "qtd": 10,
+      "unit": 500,
+      "status": "A PAGAR",
+      "obs": "diária de referência do orçamento — confirmar o combinado"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Guilherme",
+      "funcao": "Cinegrafista",
+      "qtd": 10,
+      "unit": 500,
+      "status": "A PAGAR",
+      "obs": "diária de referência do orçamento — confirmar o combinado"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Rodrigo",
+      "funcao": "Cinegrafista",
+      "qtd": 10,
+      "unit": 500,
+      "status": "A PAGAR",
+      "obs": "diária de referência do orçamento — confirmar o combinado"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Kadu",
+      "funcao": "Cinegrafista",
+      "qtd": 10,
+      "unit": 500,
+      "status": "A PAGAR",
+      "obs": "diária de referência do orçamento — confirmar o combinado"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Fhilippe",
+      "funcao": "Cinegrafista",
+      "qtd": 10,
+      "unit": 500,
+      "status": "A PAGAR",
+      "obs": "diária de referência do orçamento — confirmar o combinado"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Carlos",
+      "funcao": "Responsável do sistema",
+      "qtd": 10,
+      "unit": 0,
+      "status": "",
+      "obs": "sem valor — entra na equipe para constar na escala"
+    },
+    {
+      "area": "TRANSPORTE E LOGÍSTICA",
+      "descricao": "Combustível — caminhão de equipamento",
+      "funcao": "SP ↔ Barretos, ida e volta",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR"
+    },
+    {
+      "area": "TRANSPORTE E LOGÍSTICA",
+      "descricao": "Combustível — carro de apoio",
+      "funcao": "equipe",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR"
+    },
+    {
+      "area": "TRANSPORTE E LOGÍSTICA",
+      "descricao": "Pedágio",
+      "funcao": "ida e volta",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR"
+    },
+    {
+      "area": "ALIMENTAÇÃO",
+      "descricao": "Alimentação na estrada — ida",
+      "funcao": "equipe",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR"
+    },
+    {
+      "area": "ALIMENTAÇÃO",
+      "descricao": "Alimentação na estrada — volta",
+      "funcao": "equipe",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR"
+    },
+    {
+      "area": "ALIMENTAÇÃO",
+      "descricao": "Alimentação da equipe durante o evento",
+      "funcao": "8 pessoas × diárias",
+      "qtd": "",
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "checar o que o Clube do Cowboy cobre de catering"
+    },
+    {
+      "area": "HOSPEDAGEM",
+      "descricao": "Hospedagem da equipe em Barretos",
+      "funcao": "diárias × quartos",
+      "qtd": "",
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "confirmar se é por conta do cliente"
+    },
+    {
+      "area": "EQUIPAMENTO E MANUTENÇÃO",
+      "descricao": "Conserto do caminhão",
+      "funcao": "caminhão que leva o equipamento",
+      "qtd": 1,
+      "unit": 1500,
+      "status": "A PAGAR",
+      "obs": "valor aproximado informado pela produção"
+    }
+  ]
+}
