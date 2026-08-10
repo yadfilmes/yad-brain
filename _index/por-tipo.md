@@ -60,6 +60,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 
 - [[mapa-de-luz]] — planta baixa da cena com posição, altura, modificador e potência de cada fixture, mais a posição de câmera. Se
 - [[ordem-do-dia]] — documento diário que diz a **cada pessoa** onde estar, a que horas, para filmar o quê. Emitido pela assistênci
+- [[pressuposto-real]] — orçamento é o que o **cliente paga**; pressuposto real é o que a **produção gasta**. São dois documentos, nunc
 
 ## ecossistema
 

@@ -29,7 +29,7 @@ Quem aponta para quem. Gerado por `tools/build_graph.py` — não editar.
 | `compactflash-association` | `midia--cfexpress-b` (governed_by) |
 | `cri-tlci-ssi` | `gaffer` (see_also), `hmi` (see_also), `ls-600d-pro` (see_also), `temperatura-de-cor` (distinct_from) |
 | `diretor` | `diretor-de-fotografia` (reports_to) |
-| `diretor-de-fotografia` | `gaffer` (reports_to), `mapa-de-luz` (consumes), `ordem-do-dia` (used_by_role), `rf-anatel` (see_also) |
+| `diretor-de-fotografia` | `gaffer` (reports_to), `mapa-de-luz` (consumes), `ordem-do-dia` (used_by_role), `pressuposto-real` (used_by_role), `rf-anatel` (see_also) |
 | `ebu` | `cri-tlci-ssi` (governed_by) |
 | `ecossistema-blackmagic` | `atem-constellation-8k` (part_of_ecosystem), `atem-constellation-hd` (part_of_ecosystem), `blackmagic-design` (see_also), `braw` (part_of_ecosystem), `pyxis-6k` (part_of_ecosystem) |
 | `evoke-2400b` | `hmi` (competes_with), `ls-600d-pro` (competes_with), `mount--nanlux` (see_also), `nanlux` (see_also) |
@@ -66,8 +66,9 @@ Quem aponta para quem. Gerado por `tools/build_graph.py` — não editar.
 | `nr-10-eletricidade` | `abnt` (see_also), `balanceamento-de-fase` (requires), `bitola-de-cabo` (requires), `gerador` (requires), `hmi` (requires), `rede-ac` (see_also) |
 | `nr-35-trabalho-em-altura` | `gaffer` (requires), `mte` (see_also), `nr-10-eletricidade` (see_also) |
 | `obturador-180` | `filtro-nd` (enables_technique), `flicker-parede-led` (diagnosed_with), `flicker-parede-led` (see_also), `fx6` (enables_technique), `hmi` (enables_technique), `scan-rate` (see_also), `timecode` (see_also), `venice-2` (enables_technique) |
-| `ordem-do-dia` | `mapa-de-luz` (produces) |
-| `producao` | `ordem-do-dia` (template_for) |
+| `ordem-do-dia` | `mapa-de-luz` (produces), `pressuposto-real` (see_also) |
+| `producao` | `ordem-do-dia` (template_for), `pressuposto-real` (template_for), `pressuposto-real` (used_in_workflow) |
+| `produtor-executivo` | `pressuposto-real` (used_by_role) |
 | `prores` | `alexa-35` (records_codec), `venice` (records_codec), `venice-2` (records_codec), `xavc` (alternative_to) |
 | `pwm-brilho-led` | `flicker-parede-led` (caused_by) |
 | `pyxis-6k` | `00-indice-mestre` (see_also), `blackmagic-design` (see_also), `braw` (see_also), `ecossistema-blackmagic` (part_of_ecosystem), `filtro-nd` (see_also), `fx6` (competes_with) |

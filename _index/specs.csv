@@ -52,6 +52,7 @@ nr-10-eletricidade,NR-10 — Segurança em Instalações e Serviços em Eletrici
 nr-35-trabalho-em-altura,NR-35 — Trabalho em Altura,norma,,universal,stub,media,seguranca,2026-07-26,1,oficial,seguranca/nr-35-trabalho-em-altura.md
 obturador-180,Regra do obturador 180°,conceito,,universal,draft,media,,2026-07-26,1,oficial,conceitos/tecnicas/obturador-180.md
 ordem-do-dia,Ordem do dia (call sheet),documento,,universal,draft,baixa,,2026-07-26,1,educacao,producao/documentos/ordem-do-dia.md
+pressuposto-real,Pressuposto real (orçamento fechado → caixa da produção),documento,,universal,draft,media,,2026-08-10,2,campo-proprio,producao/documentos/pressuposto-real.md
 prores,Apple ProRes,codec,,universal,draft,media,,2026-07-26,1,oficial,conceitos/codecs/prores.md
 pwm-brilho-led,PWM e brilho em painel de LED,conceito,,universal,draft,media,,2026-07-26,1,oficial,led-vp/conceitos/pwm-brilho-led.md
 pyxis-6k,Blackmagic Pyxis 6K,camera,blackmagic-design,universal,draft,baixa,,2026-07-26,1,oficial,captacao/cameras/blackmagic/pyxis-6k.md

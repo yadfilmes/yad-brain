@@ -2165,6 +2165,42 @@
    ]
   },
   {
+   "id": "pressuposto-real",
+   "title": "Pressuposto real (orçamento fechado → caixa da produção)",
+   "type": "documento",
+   "brand": "",
+   "zona": "universal",
+   "status": "draft",
+   "confidence": "media",
+   "risco": "",
+   "updated": "2026-08-10",
+   "path": "producao/documentos/pressuposto-real.md",
+   "tldr": "orçamento é o que o **cliente paga**; pressuposto real é o que a **produção gasta**. São dois documentos, nunca o mesmo arquivo editado. A conta que liga um ao outro é sempre a mesma: `entrada bruta − imposto = entrada l",
+   "aliases": [
+    "pressuposto",
+    "presuposto",
+    "pressuposto real",
+    "orçamento real",
+    "orcamento real",
+    "distribuição real",
+    "distribuicao real",
+    "real do job",
+    "budget real",
+    "actuals"
+   ],
+   "tags": [
+    "producao",
+    "financeiro",
+    "documento",
+    "orcamento",
+    "planilha"
+   ],
+   "n_fontes": 2,
+   "tiers": [
+    "campo-proprio"
+   ]
+  },
+  {
    "id": "diretor-de-fotografia",
    "title": "Diretor de fotografia (DoP)",
    "type": "funcao",
@@ -4105,6 +4141,36 @@
    "de": "ordem-do-dia",
    "aresta": "see_also",
    "para": "mapa-de-luz",
+   "derivada": false
+  },
+  {
+   "de": "pressuposto-real",
+   "aresta": "template_for",
+   "para": "producao",
+   "derivada": false
+  },
+  {
+   "de": "pressuposto-real",
+   "aresta": "used_in_workflow",
+   "para": "producao",
+   "derivada": false
+  },
+  {
+   "de": "pressuposto-real",
+   "aresta": "used_by_role",
+   "para": "produtor-executivo",
+   "derivada": false
+  },
+  {
+   "de": "pressuposto-real",
+   "aresta": "used_by_role",
+   "para": "diretor-de-fotografia",
+   "derivada": false
+  },
+  {
+   "de": "pressuposto-real",
+   "aresta": "see_also",
+   "para": "ordem-do-dia",
    "derivada": false
   },
   {

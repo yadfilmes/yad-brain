@@ -44,6 +44,7 @@ Gerado por `tools/build_graph.py` — não editar à mão.
 - [[nr-35-trabalho-em-altura]] — norma regulamentadora brasileira que rege qualquer atividade executada acima de 2 metros do nível inferior com
 - [[obturador-180]] — manter o obturador em 180° (velocidade = 1 ÷ (2 × frame rate)) entrega o borrão de movimento a que o olho está
 - [[ordem-do-dia]] — documento diário que diz a **cada pessoa** onde estar, a que horas, para filmar o quê. Emitido pela assistênci
+- [[pressuposto-real]] — orçamento é o que o **cliente paga**; pressuposto real é o que a **produção gasta**. São dois documentos, nunc
 - [[prores]] — família de codecs intraframe da Apple que virou o padrão de fato para mezanino e entrega em pós: cada quadro é
 - [[pwm-brilho-led]] — LED não regula intensidade baixando tensão: ele **pisca muito rápido** e o tempo ligado define o brilho aparen
 - [[rec-709]] — o padrão de cor da televisão HD e, na prática, o denominador comum de entrega até hoje: gamut relativamente pe

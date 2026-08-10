@@ -9,6 +9,7 @@ apontar para o vazio — aí vira erro de validação.
 
 | slug faltante | citado por | nº |
 |---|---|---:|
+| `producao` | producao/documentos/ordem-do-dia.md, producao/documentos/pressuposto-real.md | 3 |
 | `amaran` | marcas/aputure.md | 2 |
 | `apple` | conceitos/codecs/prores.md | 1 |
 | `bowens` | _meta/vocab/mount--bowens.md | 1 |
@@ -22,5 +23,5 @@ apontar para o vazio — aí vira erro de validação.
 | `mxf` | conceitos/codecs/xavc.md | 1 |
 | `nanguang` | marcas/nanlux.md | 1 |
 | `nanlite` | marcas/nanlux.md | 1 |
-| `producao` | producao/documentos/ordem-do-dia.md | 1 |
+| `produtor-executivo` | producao/documentos/pressuposto-real.md | 1 |
 | `vizrt` | live/sinais/ndi.md | 1 |
