@@ -33,6 +33,7 @@ from pathlib import Path
 
 try:
     from openpyxl import Workbook
+    from openpyxl.drawing.image import Image as XLImage
     from openpyxl.formatting.rule import CellIsRule
     from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
     from openpyxl.utils import get_column_letter
@@ -79,15 +80,40 @@ MOEDA = 'R$ #,##0.00'
 PORCENTO = '0.0%'
 DATA = 'DD/MM/YYYY'
 
+# Paleta amostrada do próprio logo: o gradiente vai de #7C3184 (roxo, ponta
+# esquerda) a #5CA1DC (azul, ponta direita), passando por #6973B8 no meio.
+# Faixa de seção usa o roxo escuro e cabeçalho de coluna o tom médio — mais
+# escuro é hierarquia mais alta, e o documento inteiro fica na cor da marca.
 TINTA = {
-    "escuro": "1F2933",
-    "faixa": "3E4C59",
-    "claro": "F5F7FA",
-    "borda": "CBD2D9",
+    "roxo": "7C3184",
+    "roxo_escuro": "5B2A63",
+    "meio": "6973B8",
+    "azul": "5CA1DC",
+    "escuro": "6973B8",      # cabeçalho de coluna
+    "faixa": "5B2A63",       # faixa de seção
+    "claro": "F7F5FA",
+    "borda": "D6CEDE",
+    "texto_fraco": "6B6478",
     "preencher": "FFF3C4",   # amarelo: célula que espera alguém digitar
-    "resultado": "E3F9E5",   # verde: linha de resultado
+    "resultado": "EDE4F3",   # lilás: linha de resultado
+    "positivo": "E3F9E5",    # verde: lucro no azul
     "atencao": "FFE3E3",
 }
+
+# Dados da YAD, como aparecem no cabeçalho dos orçamentos. Sobrescrevíveis
+# pelo bloco "empresa" do config.
+EMPRESA_PADRAO = {
+    "nome": "YAD FILMES PRODUÇÕES AUDIOVISUAIS LTDA",
+    "endereco": "Av. Queiroz Filho, 1700 — Vila Hamburguesa, São Paulo — SP",
+    "cnpj": "45.622.704/0001-34",
+    "site": "yadfilmes.com",
+    "instagram": "@yadfilmes",
+    "telefone": "(12) 99119-0186",
+}
+
+# Logo relativo à raiz do repositório — nunca caminho absoluto.
+LOGO_PADRAO = Path(__file__).resolve().parent / "assets" / "yad-logo.png"
+LOGO_LADO_PX = 104
 
 BRANCO = Font(color="FFFFFF", bold=True, size=11)
 NEGRITO = Font(bold=True)
@@ -127,6 +153,83 @@ def _secao(ws, linha: int, texto: str, primeira: str, ultima: str):
     cel.fill = _fill(TINTA["faixa"])
     cel.alignment = Alignment(vertical="center", indent=1)
     ws.row_dimensions[linha].height = 22
+
+
+def _logo(ws, ancora: str, lado_px: int = LOGO_LADO_PX, caminho: Path | None = None):
+    """Fixa o logo numa célula. Falta do arquivo não derruba a geração."""
+    arquivo = Path(caminho) if caminho else LOGO_PADRAO
+    if not arquivo.is_file():
+        return False
+    img = XLImage(str(arquivo))
+    img.width = img.height = lado_px  # o logo é quadrado
+    img.anchor = ancora
+    ws.add_image(img)
+    return True
+
+
+def _timbrado(ws, cfg: dict, primeira_linha: int = 1) -> int:
+    """Logo à esquerda, bloco da empresa à direita. Devolve a linha seguinte."""
+    empresa = {**EMPRESA_PADRAO, **(cfg.get("empresa") or {})}
+    _logo(ws, f"B{primeira_linha}", caminho=cfg.get("logo"))
+
+    linhas = [
+        (empresa["nome"], Font(bold=True, size=12, color=TINTA["roxo_escuro"])),
+        (empresa["endereco"], Font(size=9, color=TINTA["texto_fraco"])),
+        (f"CNPJ {empresa['cnpj']}", Font(size=9, color=TINTA["texto_fraco"])),
+        (f"{empresa['site']}  ·  {empresa['instagram']}  ·  {empresa['telefone']}",
+         Font(size=9, color=TINTA["texto_fraco"])),
+    ]
+    for i, (texto, fonte) in enumerate(linhas):
+        r = primeira_linha + i
+        ws.merge_cells(start_row=r, start_column=3, end_row=r, end_column=6)
+        cel = ws.cell(row=r, column=3, value=texto)
+        cel.font = fonte
+        cel.alignment = Alignment(vertical="center")
+    # O logo ocupa ~5 linhas de altura; garante que o bloco não fique por cima.
+    for r in range(primeira_linha, primeira_linha + 5):
+        ws.row_dimensions[r].height = 21
+    return primeira_linha + 5
+
+
+def _ficha(ws, cfg: dict, linha: int) -> int:
+    """Quem fez, quem mexeu por último e em que versão. Devolve linha seguinte."""
+    hoje = cfg.get("_hoje") or datetime.date.today()
+    campos = [
+        ("Elaborado por", cfg.get("elaborado_por", ""),
+         "Em", _data_br(cfg.get("elaborado_em")) or hoje),
+        ("Atualizado por", cfg.get("atualizado_por", cfg.get("elaborado_por", "")),
+         "Em", _data_br(cfg.get("atualizado_em")) or hoje),
+        ("Versão", cfg.get("versao", "v1"),
+         "Situação", cfg.get("situacao", "EM ANDAMENTO")),
+    ]
+    for i, (rotulo, valor, rotulo2, valor2) in enumerate(campos):
+        r = linha + i
+        ws.cell(row=r, column=2, value=rotulo).font = Font(size=10, bold=True,
+                                                           color=TINTA["texto_fraco"])
+        ws.merge_cells(start_row=r, start_column=3, end_row=r, end_column=4)
+        ws.cell(row=r, column=3, value=valor).font = Font(size=10)
+        ws.cell(row=r, column=5, value=rotulo2).font = Font(size=10, bold=True,
+                                                            color=TINTA["texto_fraco"])
+        ws.cell(row=r, column=6, value=valor2).font = Font(size=10)
+        if isinstance(valor2, datetime.date):
+            ws.cell(row=r, column=6).number_format = DATA
+        for col in range(2, 7):
+            cel = ws.cell(row=r, column=col)
+            cel.border = GRADE
+            cel.fill = _fill(TINTA["claro"])
+    return linha + len(campos)
+
+
+def _impressao(ws, titulo: str, paisagem: bool = False):
+    """Deixa pronto para virar PDF: cabe na largura, rodapé com job e página."""
+    ws.page_setup.orientation = "landscape" if paisagem else "portrait"
+    ws.page_setup.fitToWidth = 1
+    ws.page_setup.fitToHeight = 0
+    ws.sheet_properties.pageSetUpPr.fitToPage = True
+    ws.oddFooter.left.text = titulo[:80]
+    ws.oddFooter.left.size = 8
+    ws.oddFooter.right.text = "Página &P de &N"
+    ws.oddFooter.right.size = 8
 
 
 def _cabecalho(ws, linha: int, primeira_col: int, titulos: list[str]):
@@ -171,13 +274,14 @@ def _aba_areas(wb: Workbook, areas: list[str]) -> int:
 # Aba SAÍDAS
 # --------------------------------------------------------------------------
 
-def _aba_saidas(wb: Workbook, saidas: list[dict], total_areas: int):
+def _aba_saidas(wb: Workbook, saidas: list[dict], total_areas: int, cfg: dict):
     ws = wb.create_sheet(ABA_SAIDAS)
     larguras = {"A": 2, "B": 26, "C": 34, "D": 26, "E": 9, "F": 15, "G": 15,
                 "H": 13, "I": 14, "J": 30}
     for col, largura in larguras.items():
         ws.column_dimensions[col].width = largura
 
+    _logo(ws, "J1", lado_px=48, caminho=cfg.get("logo"))
     _titulo(ws, "B2", "SAÍDAS — um gasto por linha")
     ws["B3"] = ("Como usar:  1) escreva o gasto numa linha vazia   "
                 "2) escolha a ÁREA na listinha da célula   "
@@ -249,6 +353,8 @@ def _aba_saidas(wb: Workbook, saidas: list[dict], total_areas: int):
     lista_status.add(f"H{SAIDAS_INICIO}:H{ULTIMA_LINHA}")
 
     ws.auto_filter.ref = f"B5:J{ULTIMA_LINHA}"
+    ws.print_title_rows = "5:5"   # o cabeçalho se repete em toda página
+    _impressao(ws, f"{cfg.get('job', 'Pressuposto real')} — SAÍDAS", paisagem=True)
 
 
 # --------------------------------------------------------------------------
@@ -261,16 +367,30 @@ def _aba_resumo(wb: Workbook, cfg: dict, total_areas: int):
     for col, largura in larguras.items():
         ws.column_dimensions[col].width = largura
 
-    _titulo(ws, "B2", "PRESSUPOSTO REAL", 20)
-    ws["B3"] = cfg.get("job", "")
-    ws["B3"].font = Font(bold=True, size=13, color=TINTA["faixa"])
-    linha_ident = 4
-    for rotulo, chave in (("Cliente", "cliente"), ("Contato", "contato"),
-                          ("Período", "periodo")):
-        if cfg.get(chave):
-            ws.cell(row=linha_ident, column=2, value=f"{rotulo}: {cfg[chave]}")
-            ws.cell(row=linha_ident, column=2).font = Font(size=10, color="52606D")
-            linha_ident += 1
+    linha_ident = _timbrado(ws, cfg) + 1
+
+    _titulo(ws, f"B{linha_ident}", "PRESSUPOSTO REAL", 20)
+    ws.row_dimensions[linha_ident].height = 28
+    linha_ident += 1
+    ws.merge_cells(start_row=linha_ident, start_column=2, end_row=linha_ident, end_column=6)
+    ws.cell(row=linha_ident, column=2, value=cfg.get("job", ""))
+    ws.cell(row=linha_ident, column=2).font = Font(bold=True, size=12, color=TINTA["meio"])
+    linha_ident += 1
+
+    identificacao = "   ·   ".join(
+        f"{rotulo}: {cfg[chave]}"
+        for rotulo, chave in (("Cliente", "cliente"), ("Contato", "contato"),
+                              ("Período", "periodo"))
+        if cfg.get(chave)
+    )
+    if identificacao:
+        ws.merge_cells(start_row=linha_ident, start_column=2,
+                       end_row=linha_ident, end_column=6)
+        ws.cell(row=linha_ident, column=2, value=identificacao)
+        ws.cell(row=linha_ident, column=2).font = Font(size=10, color=TINTA["texto_fraco"])
+        linha_ident += 1
+
+    linha_ident = _ficha(ws, cfg, linha_ident + 1)
 
     total_saidas_faixa = f"{ABA_SAIDAS}!$G${SAIDAS_INICIO}:$G${ULTIMA_LINHA}"
     area_faixa = f"{ABA_SAIDAS}!$B${SAIDAS_INICIO}:$B${ULTIMA_LINHA}"
@@ -432,7 +552,7 @@ def _aba_resumo(wb: Workbook, cfg: dict, total_areas: int):
     )
     ws.conditional_formatting.add(
         f"B{r_lucro}:C{r_lucro}",
-        CellIsRule(operator="greaterThanOrEqual", formula=["0"], fill=_fill(TINTA["resultado"])),
+        CellIsRule(operator="greaterThanOrEqual", formula=["0"], fill=_fill(TINTA["positivo"])),
     )
 
     # ---------------- 4. CAIXA ----------------
@@ -458,10 +578,15 @@ def _aba_resumo(wb: Workbook, cfg: dict, total_areas: int):
             if col in (3, 4):
                 ws.cell(row=r, column=col).number_format = MOEDA
 
-    ws["F2"] = "Preencha só a aba SAÍDAS. Esta aqui é toda fórmula."
-    ws["F2"].font = Font(italic=True, bold=True, color="52606D")
-    ws["F3"] = "Amarelo = campo para digitar."
-    ws["F3"].font = Font(italic=True, color="52606D")
+    r_aviso = r_caixa_fim + 2
+    ws.merge_cells(start_row=r_aviso, start_column=2, end_row=r_aviso, end_column=6)
+    ws.cell(row=r_aviso, column=2,
+            value="Preencha só a aba SAIDAS — esta aqui é toda fórmula. "
+                  "Célula amarela é campo para digitar.")
+    ws.cell(row=r_aviso, column=2).font = Font(italic=True, size=10,
+                                               color=TINTA["texto_fraco"])
+
+    _impressao(ws, f"{cfg.get('job', 'Pressuposto real')} — RESUMO")
 
 
 # --------------------------------------------------------------------------
@@ -471,9 +596,15 @@ def gerar(cfg: dict, saida: Path) -> Path:
     wb = Workbook()
     wb.remove(wb.active)
     total_areas = _aba_areas(wb, areas)
-    _aba_saidas(wb, cfg.get("saidas", []), total_areas)
+    _aba_saidas(wb, cfg.get("saidas", []), total_areas, cfg)
     _aba_resumo(wb, cfg, total_areas)
     wb.active = 0
+    wb.properties.creator = cfg.get("elaborado_por") or "YAD Filmes"
+    wb.properties.lastModifiedBy = (cfg.get("atualizado_por")
+                                    or cfg.get("elaborado_por") or "YAD Filmes")
+    wb.properties.title = f"Pressuposto real — {cfg.get('job', '')}".strip(" —")
+    wb.properties.company = (cfg.get("empresa") or {}).get(
+        "nome", EMPRESA_PADRAO["nome"])
     saida.parent.mkdir(parents=True, exist_ok=True)
     wb.save(saida)
     return saida
@@ -484,6 +615,11 @@ EXEMPLO = {
     "cliente": "CLIENTE",
     "contato": "Nome (DD) 90000-0000",
     "periodo": "01/01/2026 a 05/01/2026 — 5 diárias",
+    "elaborado_por": "Quem montou (e-mail)",
+    "elaborado_em": "01/01/2026",
+    "atualizado_por": "Quem mexeu por último (e-mail)",
+    "versao": "v1",
+    "situacao": "EM ANDAMENTO",
     "imposto_pct": IMPOSTO_PADRAO,
     "areas": AREAS_PADRAO,
     "entradas": [
@@ -516,6 +652,12 @@ def main() -> int:
     p.add_argument("--cliente")
     p.add_argument("--imposto", type=float,
                    help=f"alíquota em %%, padrão {IMPOSTO_PADRAO:g}")
+    p.add_argument("--elaborado-por", help="quem montou o pressuposto")
+    p.add_argument("--atualizado-por",
+                   help="quem mexeu por último; a data vira hoje")
+    p.add_argument("--versao", help='ex.: "v2"')
+    p.add_argument("--logo", type=Path,
+                   help="PNG do logo; padrão tools/assets/yad-logo.png")
     args = p.parse_args()
 
     if args.exemplo:
@@ -527,9 +669,16 @@ def main() -> int:
     cfg = {"imposto_pct": IMPOSTO_PADRAO}
     if args.config:
         cfg.update(json.loads(args.config.read_text(encoding="utf-8")))
-    for chave, valor in (("job", args.job), ("cliente", args.cliente)):
+    for chave, valor in (("job", args.job), ("cliente", args.cliente),
+                         ("elaborado_por", args.elaborado_por),
+                         ("versao", args.versao), ("logo", args.logo)):
         if valor:
             cfg[chave] = valor
+    if args.atualizado_por:
+        # Quem atualiza carimba a data de hoje: o par nome+data é o que dá
+        # sentido ao campo, e separá-los é como ele acaba mentindo.
+        cfg["atualizado_por"] = args.atualizado_por
+        cfg["atualizado_em"] = datetime.date.today()
     if args.imposto is not None:
         cfg["imposto_pct"] = args.imposto
 
@@ -537,7 +686,10 @@ def main() -> int:
     print(f"planilha gerada: {destino}")
     print(f"  imposto: {cfg['imposto_pct']:g}%  ·  "
           f"entradas: {len(cfg.get('entradas', []))}  ·  "
-          f"saídas: {len(cfg.get('saidas', []))}")
+          f"saídas: {len(cfg.get('saidas', []))}  ·  "
+          f"versão: {cfg.get('versao', 'v1')}")
+    if not LOGO_PADRAO.is_file() and not cfg.get("logo"):
+        print(f"  aviso: logo não encontrado em {LOGO_PADRAO} — gerada sem marca")
     return 0
 
 

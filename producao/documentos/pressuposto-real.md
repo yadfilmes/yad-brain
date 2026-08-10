@@ -38,12 +38,28 @@ cima do valor bruto**, esquecendo que o imposto já comeu uma fatia.
 
 | aba | quem mexe | o que tem |
 |---|---|---|
-| `RESUMO` | ninguém | entradas, imposto, saídas por área, lucro, caixa — tudo fórmula |
+| `RESUMO` | ninguém | timbrado, ficha de responsáveis, entradas, imposto, saídas por área, lucro, caixa — tudo fórmula |
 | `SAIDAS` | produção | um gasto por linha, área escolhida numa listinha |
 | `AREAS` | quem organiza | a lista de áreas; escrever uma nova aqui já aparece no RESUMO |
 
 **Regra de ouro:** quem preenche mexe só em `SAIDAS`. Célula amarela é campo
 para digitar; o resto é fórmula.
+
+## Timbrado e ficha de responsáveis
+
+O topo do `RESUMO` traz logo, razão social, CNPJ e contatos da YAD, e logo
+abaixo a ficha que diz **quem elaborou, quem atualizou por último, em que data
+e em que versão**. É o que transforma a planilha de rascunho pessoal em
+documento que circula entre produção e financeiro: sem essa ficha, três
+arquivos com o mesmo nome não têm como ser ordenados.
+
+`--atualizado-por "Fulano"` carimba a data de hoje junto. Nome e data andam
+sempre em par — separá-los é exatamente como o campo acaba mentindo. Os mesmos
+dados vão para as propriedades do arquivo (autor, título, empresa).
+
+A paleta é amostrada do próprio logo: `#7C3184` (roxo) → `#5CA1DC` (azul), com
+`#6973B8` no meio. Verde e vermelho ficam reservados para significado — lucro
+positivo e valor sem área — e nunca viram cor de marca.
 
 ## A conta, na ordem
 
@@ -74,7 +90,12 @@ diária de hotel e caminhão que quebra — e isso não cabia em "diversos".
 python3 tools/pressuposto_real.py --saida PRESSUPOSTO_JOB.xlsx          # em branco
 python3 tools/pressuposto_real.py --exemplo job.json                    # molde do config
 python3 tools/pressuposto_real.py --config job.json --saida JOB.xlsx    # já preenchido
+python3 tools/pressuposto_real.py --config job.json --saida JOB_v2.xlsx \
+        --atualizado-por "Fulano" --versao v2                           # revisão
 ```
+
+O logo sai de `tools/assets/yad-logo.png`; `--logo outro.png` troca. Arquivo
+ausente não derruba a geração — sai sem marca e avisa no terminal.
 
 O `job.json` guarda entradas, saídas e áreas. Vale versionar junto do job: é
 ele, não a planilha, que registra de onde cada número veio.
