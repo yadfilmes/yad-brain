@@ -128,9 +128,16 @@ Larissa criaram na novela vertical, e que vale repetir:
 Não gera referência circular: a líquida não depende das saídas. Se o imposto ou
 a entrada mudarem, a comissão acompanha.
 
-⚠️ Isso ainda **não** existe em `tools/pressuposto_real.py`. Regenerar uma
-planilha que tenha essa customização feita à mão apaga as três células. Ou
-incorpora ao gerador, ou avisa antes de regerar.
+✅ Isso agora **nasce pronto** no gerador:
+
+```
+python3 tools/pressuposto_real.py --config job.json --saida JOB.xlsx \
+        --comissao 15 --comissao-base liquida
+```
+
+Sem o parâmetro não nasce linha nenhuma — job sem captador fica igual ao que
+era. A base sai escrita em três lugares (rótulo do percentual, coluna FUNÇÃO e
+observação) justamente porque é o que costuma virar mal-entendido.
 
 ---
 

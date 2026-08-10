@@ -6,7 +6,7 @@
   "elaborado_em": "10/08/2026",
   "atualizado_por": "Felype · felype@yadfilmes.com.br",
   "atualizado_em": "10/08/2026",
-  "versao": "v1",
+  "versao": "v2",
   "situacao": "EM ANDAMENTO",
   "imposto_pct": 16,
   "areas": [
@@ -123,6 +123,16 @@
       "unit": "",
       "status": "A PAGAR",
       "obs": "orçamento do cliente prevê R$ 1.000"
+    },
+    {
+      "area": "EQUIPE TÉCNICA",
+      "descricao": "Cinegrafista",
+      "funcao": "pelo projeto",
+      "qtd": 1,
+      "unit": 7000,
+      "status": "A PAGAR"
     }
-  ]
+  ],
+  "comissao_pct": 15,
+  "comissao_base": "liquida"
 }

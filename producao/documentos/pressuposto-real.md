@@ -97,6 +97,23 @@ python3 tools/pressuposto_real.py --config job.json --saida JOB_v2.xlsx \
 O logo sai de `tools/assets/yad-logo.png`; `--logo outro.png` troca. Arquivo
 ausente não derruba a geração — sai sem marca e avisa no terminal.
 
+## Comissão de captação
+
+```
+--comissao 15 --comissao-base liquida    # ou: --comissao-base bruta
+```
+
+Sem o parâmetro, não nasce linha nenhuma — job sem captador fica igual.
+
+**A base muda o valor e "15% do job" é ambíguo.** Sobre a bruta de R$ 225.000
+dá R$ 33.750; sobre a líquida de R$ 189.000 dá R$ 28.350 — R$ 5.400 que só
+aparecem na hora de pagar. Por isso a base sai escrita em três lugares: rótulo
+do percentual, coluna FUNÇÃO e observação.
+
+O valor é fórmula (`=ROUND(RESUMO!$C$24*RESUMO!$F$22,2)`), não número: mudar o
+imposto ou o percentual recalcula a comissão, e a observação se reescreve
+junto. Sem circularidade — a líquida não depende das saídas.
+
 O `job.json` guarda entradas, saídas e áreas. Vale versionar junto do job: é
 ele, não a planilha, que registra de onde cada número veio.
 

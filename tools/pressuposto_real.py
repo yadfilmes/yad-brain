@@ -72,6 +72,16 @@ AREAS_PADRAO = [
 
 IMPOSTO_PADRAO = 16.0  # % sobre a entrada bruta
 
+# Comissão de captação. A BASE muda o valor e é onde o combinado vira briga:
+# "15% do job" pode ser sobre o que o cliente paga ou sobre o que sobra depois
+# do imposto. Na novela vertical a diferença entre as duas leituras foi de
+# R$ 5.400. Por isso a base é explícita no config e sai escrita na planilha.
+COMISSAO_AREA = "COMISSÃO"
+COMISSAO_BASES = {
+    "liquida": ("entrada líquida", "liquida"),
+    "bruta": ("entrada bruta", "bruta"),
+}
+
 # Linhas vazias sobrando no fim de cada bloco, para digitar sem inserir linha.
 FOLGA_ENTRADAS = 3
 FOLGA_AREAS = 3
@@ -274,7 +284,7 @@ def _aba_areas(wb: Workbook, areas: list[str]) -> int:
 # Aba SAÍDAS
 # --------------------------------------------------------------------------
 
-def _aba_saidas(wb: Workbook, saidas: list[dict], total_areas: int, cfg: dict):
+def _aba_saidas(wb: Workbook, saidas: list[dict], total_areas: int, cfg: dict) -> int | None:
     ws = wb.create_sheet(ABA_SAIDAS)
     larguras = {"A": 2, "B": 26, "C": 34, "D": 26, "E": 9, "F": 15, "G": 15,
                 "H": 13, "I": 14, "J": 30}
@@ -352,16 +362,31 @@ def _aba_saidas(wb: Workbook, saidas: list[dict], total_areas: int, cfg: dict):
     ws.add_data_validation(lista_status)
     lista_status.add(f"H{SAIDAS_INICIO}:H{ULTIMA_LINHA}")
 
+    # A comissão entra como linha própria e é preenchida por fórmula depois que
+    # o RESUMO existe — é dele que vêm a base e o percentual.
+    linha_comissao = None
+    if float(cfg.get("comissao_pct") or 0) > 0:
+        linha_comissao = SAIDAS_INICIO + len(saidas)
+        ws.cell(row=linha_comissao, column=2, value=COMISSAO_AREA)
+        ws.cell(row=linha_comissao, column=3,
+                value=cfg.get("comissao_descricao", "Comissão comercial"))
+        ws.cell(row=linha_comissao, column=4, value="% sobre a entrada")
+        ws.cell(row=linha_comissao, column=5, value=1)
+        ws.cell(row=linha_comissao, column=8, value="A PAGAR")
+        for col in (5, 6):
+            ws.cell(row=linha_comissao, column=col).fill = _fill(TINTA["claro"])
+
     ws.auto_filter.ref = f"B5:J{ULTIMA_LINHA}"
     ws.print_title_rows = "5:5"   # o cabeçalho se repete em toda página
     _impressao(ws, f"{cfg.get('job', 'Pressuposto real')} — SAÍDAS", paisagem=True)
+    return linha_comissao
 
 
 # --------------------------------------------------------------------------
 # Aba RESUMO
 # --------------------------------------------------------------------------
 
-def _aba_resumo(wb: Workbook, cfg: dict, total_areas: int):
+def _aba_resumo(wb: Workbook, cfg: dict, total_areas: int) -> dict:
     ws = wb.create_sheet(ABA_RESUMO, 0)
     larguras = {"A": 2, "B": 44, "C": 17, "D": 16, "E": 14, "F": 34}
     for col, largura in larguras.items():
@@ -444,6 +469,22 @@ def _aba_resumo(wb: Workbook, cfg: dict, total_areas: int):
     ws.cell(row=linha, column=3, value=float(cfg.get("imposto_pct", IMPOSTO_PADRAO)) / 100)
     ws.cell(row=linha, column=3).number_format = PORCENTO
     ws.cell(row=linha, column=3).fill = _fill(TINTA["preencher"])
+
+    # Percentual da comissão mora ao lado do imposto: são as duas fatias que
+    # saem antes de qualquer pagamento, e ficam juntas para serem lidas juntas.
+    comissao_pct = float(cfg.get("comissao_pct") or 0)
+    if comissao_pct > 0:
+        base = str(cfg.get("comissao_base", "liquida")).lower()
+        rotulo_base = COMISSAO_BASES.get(base, COMISSAO_BASES["liquida"])[0]
+        ws.merge_cells(start_row=linha, start_column=4, end_row=linha, end_column=5)
+        ws.cell(row=linha, column=4,
+                value=f"COMISSÃO (%) sobre a {rotulo_base}  ← edite aqui")
+        ws.cell(row=linha, column=4).font = Font(size=10)
+        ws.cell(row=linha, column=4).alignment = Alignment(horizontal="right")
+        ws.cell(row=linha, column=6, value=comissao_pct / 100)
+        ws.cell(row=linha, column=6).number_format = PORCENTO
+        ws.cell(row=linha, column=6).fill = _fill(TINTA["preencher"])
+        ws.cell(row=linha, column=6).border = GRADE
     linha += 1
     r_imposto = linha
     ws.cell(row=linha, column=2, value="(−) IMPOSTO")
@@ -588,16 +629,42 @@ def _aba_resumo(wb: Workbook, cfg: dict, total_areas: int):
 
     _impressao(ws, f"{cfg.get('job', 'Pressuposto real')} — RESUMO")
 
+    return {"bruto": f"C{r_bruto}", "liquida": f"C{r_liquida}",
+            "comissao_pct": f"F{r_pct}"}
+
 
 # --------------------------------------------------------------------------
 
 def gerar(cfg: dict, saida: Path) -> Path:
-    areas = cfg.get("areas") or AREAS_PADRAO
+    areas = list(cfg.get("areas") or AREAS_PADRAO)
+    if float(cfg.get("comissao_pct") or 0) > 0 and COMISSAO_AREA not in areas:
+        # Sem a área na lista, o valor cairia em SEM ÁREA — acrescentar é o que
+        # a pessoa queria dizer ao informar um percentual de comissão.
+        areas.append(COMISSAO_AREA)
     wb = Workbook()
     wb.remove(wb.active)
     total_areas = _aba_areas(wb, areas)
-    _aba_saidas(wb, cfg.get("saidas", []), total_areas, cfg)
-    _aba_resumo(wb, cfg, total_areas)
+    linha_comissao = _aba_saidas(wb, cfg.get("saidas", []), total_areas, cfg)
+    refs = _aba_resumo(wb, cfg, total_areas)
+
+    # A comissão só pode ser escrita depois do RESUMO: é dele que saem a base e
+    # o percentual. Valor e observação vão por fórmula, não por número — assim
+    # trocar a alíquota do imposto ou o percentual recalcula tudo sozinho, e a
+    # observação nunca contradiz o valor que está do lado dela.
+    if linha_comissao:
+        base = str(cfg.get("comissao_base", "liquida")).lower()
+        rotulo_base = COMISSAO_BASES.get(base, COMISSAO_BASES["liquida"])[0]
+        cel_base = refs["liquida"] if base != "bruta" else refs["bruto"]
+        ws = wb[ABA_SAIDAS]
+        ws.cell(row=linha_comissao, column=6,
+                value=f"=ROUND({ABA_RESUMO}!${cel_base[0]}${cel_base[1:]}"
+                      f"*{ABA_RESUMO}!${refs['comissao_pct'][0]}"
+                      f"${refs['comissao_pct'][1:]},2)")
+        ws.cell(row=linha_comissao, column=4, value=f"% sobre a {rotulo_base}")
+        ws.cell(row=linha_comissao, column=10,
+                value=f'=TEXT({ABA_RESUMO}!${refs["comissao_pct"][0]}'
+                      f'${refs["comissao_pct"][1:]},"0.0%")&" da {rotulo_base} '
+                      f'({ABA_RESUMO}!{cel_base})"')
     wb.active = 0
     wb.properties.creator = cfg.get("elaborado_por") or "YAD Filmes"
     wb.properties.lastModifiedBy = (cfg.get("atualizado_por")
@@ -621,6 +688,9 @@ EXEMPLO = {
     "versao": "v1",
     "situacao": "EM ANDAMENTO",
     "imposto_pct": IMPOSTO_PADRAO,
+    "comissao_pct": 0,
+    "comissao_base": "liquida",
+    "comissao_descricao": "Comissão comercial",
     "areas": AREAS_PADRAO,
     "entradas": [
         {"descricao": "1ª parcela (50%)", "valor": 0, "data": "01/01/2026",
@@ -656,6 +726,10 @@ def main() -> int:
     p.add_argument("--atualizado-por",
                    help="quem mexeu por último; a data vira hoje")
     p.add_argument("--versao", help='ex.: "v2"')
+    p.add_argument("--comissao", type=float,
+                   help="percentual de comissão de captação; 0 ou ausente não gera a linha")
+    p.add_argument("--comissao-base", choices=sorted(COMISSAO_BASES),
+                   help="sobre o que a comissão incide (padrão: liquida)")
     p.add_argument("--logo", type=Path,
                    help="PNG do logo; padrão tools/assets/yad-logo.png")
     args = p.parse_args()
@@ -681,6 +755,10 @@ def main() -> int:
         cfg["atualizado_em"] = datetime.date.today()
     if args.imposto is not None:
         cfg["imposto_pct"] = args.imposto
+    if args.comissao is not None:
+        cfg["comissao_pct"] = args.comissao
+    if args.comissao_base:
+        cfg["comissao_base"] = args.comissao_base
 
     destino = gerar(cfg, args.saida)
     print(f"planilha gerada: {destino}")
@@ -688,6 +766,11 @@ def main() -> int:
           f"entradas: {len(cfg.get('entradas', []))}  ·  "
           f"saídas: {len(cfg.get('saidas', []))}  ·  "
           f"versão: {cfg.get('versao', 'v1')}")
+    if float(cfg.get("comissao_pct") or 0) > 0:
+        base = COMISSAO_BASES.get(
+            str(cfg.get("comissao_base", "liquida")).lower(),
+            COMISSAO_BASES["liquida"])[0]
+        print(f"  comissão: {float(cfg['comissao_pct']):g}% sobre a {base}")
     if not LOGO_PADRAO.is_file() and not cfg.get("logo"):
         print(f"  aviso: logo não encontrado em {LOGO_PADRAO} — gerada sem marca")
     return 0
