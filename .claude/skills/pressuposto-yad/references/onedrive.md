@@ -21,6 +21,15 @@ sobre a conta.
 
 ## Mapa das pastas
 
+**Pressupostos novos do Felype** — `felype_yadfilmes_com` — **olhe aqui primeiro**
+```
+Documents/Documentos/Pressuposto/{ano}/{MÊS}/
+```
+Repare: **`Pressuposto`, no singular e sem "S"**. É a pasta onde os
+pressupostos no formato novo estão sendo salvos. Existe também um
+`Documents/Documentos/Pressuposto/AGOSTO` (sem o ano no meio) que está vazio —
+duas pastas de agosto no mesmo lugar, e a que vale é a que passa pelo ano.
+
 **Orçamentos do Felype** — `felype_yadfilmes_com`
 ```
 Documents/Documentos/Orçamentos/{ano}/{CLIENTE}/
@@ -55,6 +64,16 @@ arquivo direto em vez de afirmar que não existe.
 
 **A busca é por conteúdo e nome, não por caminho.** Para varrer uma pasta, use
 `sharepoint_folder_search` e depois `read_resource` na URI da pasta para listar.
+
+**`folder_search` casa substring, e substring tem direção.** Procurar por
+`PRESSUPOSTOS` **não acha** a pasta `Pressuposto` — o nome dela não contém o
+termo buscado. Foi assim que a pasta principal do Felype passou despercebida.
+Busque pelo **radical mais curto** (`Pressupost`, `AGOSTO`) e deixe o resultado
+mostrar as variações, em vez de apostar na grafia que você imagina.
+
+**Ordene por data de modificação para achar o que é recente.** Quando o índice
+de conteúdo ainda não pegou um arquivo novo, a pasta que o contém já aparece
+com `lastModifiedDateTime` de hoje — foi o que localizou a pasta certa.
 
 **Cópias com o mesmo nome são comuns** (`- Copiar`, versões em chat de várias
 pessoas). Confira a data de modificação e o caminho antes de tratar um arquivo
