@@ -132,6 +132,25 @@ TRANSPORTE · LOCAÇÃO · COMISSÃO
 LOGÍSTICA · HOSPEDAGEM · ALIMENTAÇÃO · TRANSMISSÃO E CONECTIVIDADE ·
 EQUIPAMENTO E MÍDIA · PRODUÇÃO E DIVERSOS · COMISSÃO
 
+**Estúdio LED com pós** (Manente): EQUIPE DE GRAVAÇÃO · PÓS-PRODUÇÃO · ESTÚDIO
+E LED · EQUIPAMENTO E ENERGIA · ALIMENTAÇÃO · PRODUÇÃO E DIVERSOS · COMISSÃO
+
+## Leia o escopo da proposta, não só a escala
+
+A escala que o Felype dita de cabeça é quem ele já tem em mente — quase nunca
+é o escopo inteiro que foi vendido. **Leia o que a proposta promete e escale
+cada promessa**, mesmo que ninguém tenha sido nomeado.
+
+No Manente ele passou 5 nomes; a proposta prometia operação de LED e playback,
+som direto redundante, luz cinematográfica, teleprompter com operação,
+maquiagem, apoio de estúdio, montagem, motion, color, mixagem, legendagem e
+AI-Driven Design. Foram **12 linhas acrescentadas** que ninguém tinha citado.
+
+O padrão que se repete: **a pós some.** No KITKAT e no Manente, a pós inteira
+ficou fora da escala falada, mesmo sendo escopo contratado. Onde a proposta
+promete entrega finalizada, procure montagem, motion, color, mix e legendagem
+antes de fechar a conta.
+
 ## Equipe vendida × equipe real
 
 A proposta comercial dimensiona logística por um manifesto de pessoas. **A
@@ -218,6 +237,27 @@ observação) justamente porque é o que costuma virar mal-entendido.
 Alimentação no local e hospedagem por conta do Clube do Cowboy. Orçamento de
 tabela dava 97.075; fechou em 81.000 (valor 2025 + 8% de inflação) mais os
 extras.
+
+### ALEX MANENTE + CIDADANIA — Estúdio LED · MDias (v1, em andamento)
+
+4 diárias avulsas de até 10h no Estúdio Morumbi, LED 7 × 4 m, até 03/10/2026.
+Tudo com equipamento próprio.
+
+| | |
+|---|---|
+| entrada bruta | 65.839,40 (sinal 50% no aceite + saldo em 30 dias) |
+| imposto 16% | 10.534,30 |
+| líquida | 55.305,10 |
+| saídas lançadas | 39.030,51 |
+| **sobra para 16 linhas em branco** | **16.274,59** |
+
+**Job apertado.** Metade do escopo — a pós inteira, o operador de LED, o som
+direto, o gaffer e o teleprompter — ainda não tem custo, e só resta R$ 16.274
+antes de virar prejuízo. Se a pós sozinha passar de R$ 10.000 (são 72h de ilha
+contratadas), o job fecha perto de zero.
+
+**Cachê registrado:** Larissa em atendimento, R$ 2.500 por pacote — o mesmo
+valor da produção adm dela no Barretos.
 
 ### KITKAT — YouTube Live · BR Media (v2, em andamento)
 
