@@ -364,17 +364,17 @@ def _aba_saidas(wb: Workbook, saidas: list[dict], total_areas: int, cfg: dict) -
 
     # A comissão entra como linha própria e é preenchida por fórmula depois que
     # o RESUMO existe — é dele que vêm a base e o percentual.
-    linha_comissao = None
-    if float(cfg.get("comissao_pct") or 0) > 0:
-        linha_comissao = SAIDAS_INICIO + len(saidas)
-        ws.cell(row=linha_comissao, column=2, value=COMISSAO_AREA)
-        ws.cell(row=linha_comissao, column=3,
-                value=cfg.get("comissao_descricao", "Comissão comercial"))
-        ws.cell(row=linha_comissao, column=4, value="% sobre a entrada")
-        ws.cell(row=linha_comissao, column=5, value=1)
-        ws.cell(row=linha_comissao, column=8, value="A PAGAR")
-        for col in (5, 6):
-            ws.cell(row=linha_comissao, column=col).fill = _fill(TINTA["claro"])
+    # Sempre presente, mesmo zerada. Comissão é a saída que mais some da
+    # conta quando não tem campo esperando por ela — e quando some, some
+    # inteira. Melhor uma linha em zero do que a pergunta não feita.
+    linha_comissao = SAIDAS_INICIO + len(saidas)
+    ws.cell(row=linha_comissao, column=2, value=COMISSAO_AREA)
+    ws.cell(row=linha_comissao, column=3,
+            value=cfg.get("comissao_descricao", "Comissão comercial"))
+    ws.cell(row=linha_comissao, column=5, value=1)
+    ws.cell(row=linha_comissao, column=8, value="A PAGAR")
+    for col in (5, 6):
+        ws.cell(row=linha_comissao, column=col).fill = _fill(TINTA["claro"])
 
     ws.auto_filter.ref = f"B5:J{ULTIMA_LINHA}"
     ws.print_title_rows = "5:5"   # o cabeçalho se repete em toda página
@@ -473,18 +473,17 @@ def _aba_resumo(wb: Workbook, cfg: dict, total_areas: int) -> dict:
     # Percentual da comissão mora ao lado do imposto: são as duas fatias que
     # saem antes de qualquer pagamento, e ficam juntas para serem lidas juntas.
     comissao_pct = float(cfg.get("comissao_pct") or 0)
-    if comissao_pct > 0:
-        base = str(cfg.get("comissao_base", "liquida")).lower()
-        rotulo_base = COMISSAO_BASES.get(base, COMISSAO_BASES["liquida"])[0]
-        ws.merge_cells(start_row=linha, start_column=4, end_row=linha, end_column=5)
-        ws.cell(row=linha, column=4,
-                value=f"COMISSÃO (%) sobre a {rotulo_base}  ← edite aqui")
-        ws.cell(row=linha, column=4).font = Font(size=10)
-        ws.cell(row=linha, column=4).alignment = Alignment(horizontal="right")
-        ws.cell(row=linha, column=6, value=comissao_pct / 100)
-        ws.cell(row=linha, column=6).number_format = PORCENTO
-        ws.cell(row=linha, column=6).fill = _fill(TINTA["preencher"])
-        ws.cell(row=linha, column=6).border = GRADE
+    base = str(cfg.get("comissao_base", "liquida")).lower()
+    rotulo_base = COMISSAO_BASES.get(base, COMISSAO_BASES["liquida"])[0]
+    ws.merge_cells(start_row=linha, start_column=4, end_row=linha, end_column=5)
+    ws.cell(row=linha, column=4,
+            value=f"COMISSÃO (%) sobre a {rotulo_base}  ← edite aqui")
+    ws.cell(row=linha, column=4).font = Font(size=10)
+    ws.cell(row=linha, column=4).alignment = Alignment(horizontal="right")
+    ws.cell(row=linha, column=6, value=comissao_pct / 100)
+    ws.cell(row=linha, column=6).number_format = PORCENTO
+    ws.cell(row=linha, column=6).fill = _fill(TINTA["preencher"])
+    ws.cell(row=linha, column=6).border = GRADE
     linha += 1
     r_imposto = linha
     ws.cell(row=linha, column=2, value="(−) IMPOSTO")
@@ -637,10 +636,8 @@ def _aba_resumo(wb: Workbook, cfg: dict, total_areas: int) -> dict:
 
 def gerar(cfg: dict, saida: Path) -> Path:
     areas = list(cfg.get("areas") or AREAS_PADRAO)
-    if float(cfg.get("comissao_pct") or 0) > 0 and COMISSAO_AREA not in areas:
-        # Sem a área na lista, o valor cairia em SEM ÁREA — acrescentar é o que
-        # a pessoa queria dizer ao informar um percentual de comissão.
-        areas.append(COMISSAO_AREA)
+    if COMISSAO_AREA not in areas:
+        areas.append(COMISSAO_AREA)  # sem ela, a comissão cairia em SEM ÁREA
     wb = Workbook()
     wb.remove(wb.active)
     total_areas = _aba_areas(wb, areas)
@@ -651,7 +648,7 @@ def gerar(cfg: dict, saida: Path) -> Path:
     # o percentual. Valor e observação vão por fórmula, não por número — assim
     # trocar a alíquota do imposto ou o percentual recalcula tudo sozinho, e a
     # observação nunca contradiz o valor que está do lado dela.
-    if linha_comissao:
+    if linha_comissao:  # sempre verdadeiro; guarda contra refatoração futura
         base = str(cfg.get("comissao_base", "liquida")).lower()
         rotulo_base = COMISSAO_BASES.get(base, COMISSAO_BASES["liquida"])[0]
         cel_base = refs["liquida"] if base != "bruta" else refs["bruto"]

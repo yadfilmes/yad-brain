@@ -35,6 +35,32 @@ diferente é trocar aquele número, não refazer a planilha.
 
 Locação de terceiro: **Danilo — câmeras broadcast, R$ 1.000/diária.**
 
+### Live multicâmera com viagem — KITKAT, 03/09/2026
+
+Diárias **estimadas por analogia**, não confirmadas — o Felype pediu para
+seguir o padrão da casa e corrigir na planilha final. Ao fechar este job,
+substituir por valores reais.
+
+| função | valor/diária | origem |
+|---|---|---|
+| Cinegrafista | 500 | padrão Barretos |
+| Assistente | 250 | padrão Barretos |
+| Técnico de sistema | 800 | padrão Barretos |
+| Técnico de vMix | 800 | estimado — mesmo nível do técnico de sistema |
+| DTV | 900 | estimado — sênior, acima do técnico de sistema |
+| Operador de gimbal | 700 | estimado — acima de cinegrafista |
+| Operador de PTZ | 600 | estimado |
+| Operador de áudio de live | 700 | estimado |
+| Produtor técnico | 700 | estimado |
+| Making of | 500 | estimado — nível de cinegrafista |
+
+Felype entra **zerado** (equipe da casa) mas conta na logística — dorme e come
+como todo mundo. Emerson entra com **cachê cheio**, ao contrário do que fez no
+pressuposto da BYD: não presuma que quem foi zerado uma vez é sempre zerado.
+
+**Diária é por dia mobilizado, não por dia de trabalho.** Neste job foram 3
+diárias para todos, ainda que a operação seja 6h de montagem + 10h de evento.
+
 ### Live / estúdio — BYD 23 e 24.06
 
 | função | valor | unidade |
@@ -102,15 +128,49 @@ DIVERSOS · COMISSÃO
 **Live / estúdio** (blocos do pressuposto BYD): EQUIPE · DIVERSOS · ALIMENTAÇÃO ·
 TRANSPORTE · LOCAÇÃO · COMISSÃO
 
+**Live com viagem** (KITKAT): EQUIPE · LOCAÇÃO DE TERCEIROS · TRANSPORTE E
+LOGÍSTICA · HOSPEDAGEM · ALIMENTAÇÃO · TRANSMISSÃO E CONECTIVIDADE ·
+EQUIPAMENTO E MÍDIA · PRODUÇÃO E DIVERSOS · COMISSÃO
+
+## Equipe vendida × equipe real
+
+A proposta comercial dimensiona logística por um manifesto de pessoas. **A
+escala real quase sempre cresce**, e hospedagem e alimentação foram vendidas
+pelo número menor.
+
+No KITKAT a proposta previu 12 pessoas e a escala fechou em 17 — mais 2 do
+fornecedor do trilho. Só a alimentação passou de R$ 6.120 para R$ 9.690.
+
+Ao montar o pressuposto de um job com viagem: **conte a escala real, compare
+com o manifesto da proposta e diga a diferença em dinheiro**. É diferença que
+sai do lucro sem aparecer em lugar nenhum.
+
+Cuidado com dupla contagem no sentido inverso: motorista que vem no pacote da
+van não leva cachê, pedágio e combustível dentro do pacote não viram linha
+própria, e equipamento da casa é receita, não custo.
+
 ## Comissão de captação
 
-Existe e é grande. **A base muda o valor e precisa ser perguntada**, porque
-"15% do job" é ambíguo:
+**A YAD tem comissão em praticamente todo job.** O Felype foi explícito: o
+campo tem que estar na planilha **sempre**, mesmo zerado, para ele preencher.
+Não pergunte "tem comissão?" antes de gerar — gere com o campo lá e ele
+preenche.
+
+Por isso `tools/pressuposto_real.py` cria a linha e a célula de percentual em
+toda planilha, independentemente do config. Sem um campo esperando por ela, a
+comissão é a saída que some da conta — e quando some, some inteira.
+
+**A base muda o valor e precisa ser perguntada**, porque "15% do job" é
+ambíguo:
 
 | job | percentual | base | valor |
 |---|---|---|---|
 | Live BYD | 10% | entrada **bruta** (94.790) | 9.479 |
 | Novela vertical | 15% | entrada **líquida** (189.000) | 28.350 |
+| KITKAT Live | 10% | entrada **bruta** (135.000) | 13.500 |
+
+10% parece ser o percentual usual ("tem comissão, como sempre, de 10%"); 15%
+foi exceção da novela vertical.
 
 Na novela vertical, 15% sobre a bruta daria R$ 33.750 — **R$ 5.400 a mais** que
 o lançado. Antes de fechar, confirmar com o captador se o combinado é sobre o
@@ -158,6 +218,26 @@ observação) justamente porque é o que costuma virar mal-entendido.
 Alimentação no local e hospedagem por conta do Clube do Cowboy. Orçamento de
 tabela dava 97.075; fechou em 81.000 (valor 2025 + 8% de inflação) mais os
 extras.
+
+### KITKAT — YouTube Live · BR Media (v2, em andamento)
+
+Evento 03/09/2026, festa privada pré-RIR. Mobilização 02 a 04/09, SP ⇄ Rio.
+Live de 2h em três canais do YouTube. 8 câmeras: 2× FX9, 1× FX6 em trilho
+Blackcam, 3× FR7 (uma zenital, duas sobre box Q30), 2× FX3 (gimbal e mão).
+
+| | |
+|---|---|
+| entrada bruta | 135.000 (técnica 113.859,20 + logística 21.140,80) |
+| imposto 16% | 21.600 |
+| líquida | 113.400 |
+| equipe (16 pessoas × 3 diárias) | 27.150 |
+| comissão 10% da bruta | 13.500 |
+| alimentação (19 pessoas × 3 dias × 170) | 9.690 |
+| van com motorista e carreto | 9.000 |
+| **lucro antes de hospedagem e Megatroper** | **54.060** |
+
+Internet é da BR Media, intercom é próprio, câmeras são da casa — três linhas
+em zero por não serem custo. Faltam hospedagem e o pacote da Megatroper.
 
 ### Novela vertical — Movioca (v1, em andamento)
 
