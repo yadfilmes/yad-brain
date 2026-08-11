@@ -1,0 +1,202 @@
+{
+  "job": "KITKAT — YouTube Live 2026 · festa privada pré-RIR",
+  "cliente": "BR MEDIA (marca: KITKAT · canais KITKAT, Luísa Sonza e host)",
+  "periodo": "evento 03/09/2026 · mobilização 02 a 04/09 · SP ⇄ Rio de Janeiro",
+  "elaborado_por": "Felype · felype@yadfilmes.com.br",
+  "elaborado_em": "11/08/2026",
+  "atualizado_por": "Felype · felype@yadfilmes.com.br",
+  "atualizado_em": "11/08/2026",
+  "versao": "v1",
+  "situacao": "EM ANDAMENTO",
+  "imposto_pct": 16,
+  "areas": [
+    "EQUIPE",
+    "LOCAÇÃO DE TERCEIROS",
+    "TRANSPORTE E LOGÍSTICA",
+    "HOSPEDAGEM",
+    "ALIMENTAÇÃO",
+    "TRANSMISSÃO E CONECTIVIDADE",
+    "EQUIPAMENTO E MÍDIA",
+    "PRODUÇÃO E DIVERSOS",
+    "COMISSÃO"
+  ],
+  "entradas": [
+    {
+      "descricao": "Operação técnica",
+      "valor": 113859.20,
+      "status": "A RECEBER",
+      "obs": "impostos inclusos · sinal de 50% a 70% após o aceite formal, saldo após o evento — percentual a definir na negociação"
+    },
+    {
+      "descricao": "Logística separada",
+      "valor": 21140.80,
+      "status": "A RECEBER",
+      "obs": "identificada à parte no aceite e no faturamento, mas dentro do total vendido de R$ 135.000"
+    }
+  ],
+  "saidas": [
+    {
+      "area": "EQUIPE", "descricao": "Gui Antunes", "funcao": "Cinegrafista · FX9 tele",
+      "qtd": 3, "unit": "", "status": "A PAGAR"
+    },
+    {
+      "area": "EQUIPE", "descricao": "Gui Consiglio", "funcao": "Cinegrafista · FX3 na mão",
+      "qtd": 3, "unit": "", "status": "A PAGAR"
+    },
+    {
+      "area": "EQUIPE", "descricao": "Kadu", "funcao": "Operador de gimbal · FX3 no Ronin RS4",
+      "qtd": 3, "unit": "", "status": "A PAGAR",
+      "obs": "cinegrafista a R$ 500/diária no Barretos 2026 — gimbal costuma ser acima"
+    },
+    {
+      "area": "EQUIPE", "descricao": "Thiago", "funcao": "Operador de PTZ · 3× FR7",
+      "qtd": 3, "unit": "", "status": "A PAGAR"
+    },
+    {
+      "area": "EQUIPE", "descricao": "Cassio", "funcao": "Técnico de sistema",
+      "qtd": 3, "unit": "", "status": "A PAGAR",
+      "obs": "R$ 800/diária no Barretos 2026"
+    },
+    {
+      "area": "EQUIPE", "descricao": "Digão", "funcao": "Técnico de sistema",
+      "qtd": 3, "unit": "", "status": "A PAGAR"
+    },
+    {
+      "area": "EQUIPE", "descricao": "Emerson", "funcao": "Técnico de vMix",
+      "qtd": 3, "unit": "", "status": "A PAGAR",
+      "obs": "entrou sem cachê no pressuposto da BYD — confirmar se aqui é pago"
+    },
+    {
+      "area": "EQUIPE", "descricao": "Erik", "funcao": "Técnico de vMix",
+      "qtd": 3, "unit": "", "status": "A PAGAR"
+    },
+    {
+      "area": "EQUIPE", "descricao": "Ronaldo", "funcao": "Operador de áudio da live",
+      "qtd": 3, "unit": "", "status": "A PAGAR",
+      "obs": "a proposta registra que o fee e a função final dele ainda seriam confirmados"
+    },
+    {
+      "area": "EQUIPE", "descricao": "Marney", "funcao": "DTV",
+      "qtd": 3, "unit": "", "status": "A PAGAR"
+    },
+    {
+      "area": "EQUIPE", "descricao": "Vinicius", "funcao": "Produtor técnico",
+      "qtd": 3, "unit": "", "status": "A PAGAR"
+    },
+    {
+      "area": "EQUIPE", "descricao": "Raul", "funcao": "Making of — vídeo e foto",
+      "qtd": 3, "unit": "", "status": "A PAGAR"
+    },
+    {
+      "area": "EQUIPE", "descricao": "Felype", "funcao": "Responsável técnico · interface com o cliente",
+      "qtd": 3, "unit": "", "status": "A PAGAR",
+      "obs": "definir se entra com cachê ou como equipe da casa"
+    },
+    {
+      "area": "EQUIPE", "descricao": "Assistente de movimento", "funcao": "previsto na proposta, ainda sem nome",
+      "qtd": 3, "unit": "", "status": "A PAGAR",
+      "obs": "consta no manifesto de 12 pessoas da proposta e não apareceu na escala"
+    },
+    {
+      "area": "EQUIPE", "descricao": "Assistente 1", "funcao": "previsto na proposta, ainda sem nome",
+      "qtd": 3, "unit": "", "status": "A PAGAR",
+      "obs": "consta no manifesto da proposta — quem passa cabo e ajuda na montagem?"
+    },
+    {
+      "area": "EQUIPE", "descricao": "Assistente 2", "funcao": "previsto na proposta, ainda sem nome",
+      "qtd": 3, "unit": "", "status": "A PAGAR",
+      "obs": "consta no manifesto da proposta"
+    },
+    {
+      "area": "LOCAÇÃO DE TERCEIROS", "descricao": "Megatroper",
+      "funcao": "Blackcam + trilho + montagem + operador",
+      "qtd": 1, "unit": "", "status": "A PAGAR",
+      "obs": "pacote fechado — confirmar se inclui equipe de montagem e se dorme no Rio"
+    },
+    {
+      "area": "LOCAÇÃO DE TERCEIROS", "descricao": "Locação de câmeras",
+      "funcao": "2× FX9, 1× FX6, 3× FR7, 2× FX3",
+      "qtd": 1, "unit": "", "status": "A PAGAR",
+      "obs": "zerar o que for equipamento próprio da YAD — só entra o que for alugado"
+    },
+    {
+      "area": "LOCAÇÃO DE TERCEIROS", "descricao": "Ronin RS4 e acessórios",
+      "funcao": "gimbal",
+      "qtd": 1, "unit": "", "status": "A PAGAR",
+      "obs": "zerar se for da casa"
+    },
+    {
+      "area": "TRANSPORTE E LOGÍSTICA", "descricao": "Van executiva com motorista",
+      "funcao": "até 18 passageiros · pacote 3 dias · SP ⇄ RJ",
+      "qtd": 1, "unit": "", "status": "A PAGAR",
+      "obs": "o motorista vem no pacote — não lançar cachê dele separado"
+    },
+    {
+      "area": "TRANSPORTE E LOGÍSTICA", "descricao": "Carreto baú — equipamento",
+      "funcao": "SP ⇄ RJ, transporte protegido",
+      "qtd": 1, "unit": "", "status": "A PAGAR",
+      "obs": "seguro de carga ainda a confirmar segundo a proposta"
+    },
+    {
+      "area": "TRANSPORTE E LOGÍSTICA", "descricao": "Pedágio",
+      "funcao": "SP ⇄ RJ, van e carreto",
+      "qtd": 1, "unit": "", "status": "A PAGAR"
+    },
+    {
+      "area": "TRANSPORTE E LOGÍSTICA", "descricao": "Combustível",
+      "funcao": "van e carreto",
+      "qtd": 1, "unit": "", "status": "A PAGAR"
+    },
+    {
+      "area": "TRANSPORTE E LOGÍSTICA", "descricao": "Estacionamento e despesas de rota",
+      "funcao": "contingência operacional",
+      "qtd": 1, "unit": "", "status": "A PAGAR"
+    },
+    {
+      "area": "HOSPEDAGEM", "descricao": "Acomodações triplas no Rio",
+      "funcao": "5 quartos × 3 diárias",
+      "qtd": 15, "unit": "", "status": "A PAGAR",
+      "obs": "a proposta dimensionou 4 triplas para 12 pessoas; a escala real tem 16 — confirmar taxas e café da manhã"
+    },
+    {
+      "area": "ALIMENTAÇÃO", "descricao": "Alimentação da equipe",
+      "funcao": "16 pessoas × 3 dias",
+      "qtd": 48, "unit": 170, "status": "A PAGAR",
+      "obs": "R$ 170 por pessoa/dia, a premissa da própria proposta — que calculou para 12 pessoas"
+    },
+    {
+      "area": "TRANSMISSÃO E CONECTIVIDADE", "descricao": "Link principal de internet",
+      "funcao": "dedicado ou bonding no local",
+      "qtd": 1, "unit": "", "status": "A PAGAR",
+      "obs": "a proposta diz que o valor técnico contempla provisão para link principal e backup"
+    },
+    {
+      "area": "TRANSMISSÃO E CONECTIVIDADE", "descricao": "Link de backup",
+      "funcao": "caminho independente",
+      "qtd": 1, "unit": "", "status": "A PAGAR",
+      "obs": "pode ser reavaliado se o local entregar dois caminhos testados e aprovados"
+    },
+    {
+      "area": "EQUIPAMENTO E MÍDIA", "descricao": "Mídia de gravação",
+      "funcao": "cartões e SSD — programa final, retenção 30 dias",
+      "qtd": 1, "unit": "", "status": "A PAGAR"
+    },
+    {
+      "area": "EQUIPAMENTO E MÍDIA", "descricao": "Intercom e monitoração",
+      "funcao": "comunicação de equipe",
+      "qtd": 1, "unit": "", "status": "A PAGAR"
+    },
+    {
+      "area": "EQUIPAMENTO E MÍDIA", "descricao": "Microfone do host e IFB",
+      "funcao": "integração técnica de áudio",
+      "qtd": 1, "unit": "", "status": "A PAGAR",
+      "obs": "PA, console e mixagem musical ficam com a produção do evento"
+    },
+    {
+      "area": "PRODUÇÃO E DIVERSOS", "descricao": "Diária de pré-produção / visita técnica",
+      "funcao": "local ainda a confirmar",
+      "qtd": 1, "unit": "", "status": "A PAGAR",
+      "obs": "local TBC — se houver visita ao Rio antes, é viagem extra"
+    }
+  ]
+}
