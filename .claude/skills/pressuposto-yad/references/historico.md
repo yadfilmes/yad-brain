@@ -248,16 +248,31 @@ Tudo com equipamento próprio.
 | entrada bruta | 65.839,40 (sinal 50% no aceite + saldo em 30 dias) |
 | imposto 16% | 10.534,30 |
 | líquida | 55.305,10 |
-| saídas lançadas | 39.030,51 |
-| **sobra para 16 linhas em branco** | **16.274,59** |
+| equipe de gravação | 16.700 |
+| estúdio Morumbi (4 × 3.000) | 12.000 |
+| gerador 6.000 + reserva de luz 4 × 1.500 | 12.000 |
+| comissão 10% da líquida | 5.530,51 |
+| alimentação | 4.800 |
+| saídas lançadas | 51.030,51 |
+| **lucro, com 10 linhas ainda em branco** | **4.274,59 — 6,5%** |
 
-**Job apertado.** Metade do escopo — a pós inteira, o operador de LED, o som
-direto, o gaffer e o teleprompter — ainda não tem custo, e só resta R$ 16.274
-antes de virar prejuízo. Se a pós sozinha passar de R$ 10.000 (são 72h de ilha
-contratadas), o job fecha perto de zero.
+**Job no limite.** Pós é interna e o design do painel é da agência, então essas
+seis linhas ficaram em zero. Ainda assim sobram só R$ 4.274 para dez linhas sem
+valor — operador de LED, som direto, gaffer, teleprompter, apoio de estúdio,
+mídia, transporte, trilha e entrega. Cinco pessoas × 4 diárias a R$ 500 já
+levam o job a prejuízo.
+
+**Custo interno do Estúdio Morumbi: R$ 3.000 por diária.** Número da casa, usar
+em todo job que ocupe a unidade. É transferência interna — o job mostra
+R$ 4.274 de lucro, mas o grupo fica com R$ 16.274 porque os 12.000 do estúdio
+voltam para dentro. Diga sempre os dois números.
 
 **Cachê registrado:** Larissa em atendimento, R$ 2.500 por pacote — o mesmo
 valor da produção adm dela no Barretos.
+
+**Escopo que saiu:** a proposta lista AI-Driven Design do painel como entrega da
+YAD, mas a MDias assumiu. Ficou registrado na observação da linha — se voltarem
+a pedir, é mudança de escopo, não cortesia.
 
 ### KITKAT — YouTube Live · BR Media (v2, em andamento)
 

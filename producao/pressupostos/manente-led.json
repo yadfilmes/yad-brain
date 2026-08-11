@@ -6,7 +6,7 @@
   "elaborado_em": "11/08/2026",
   "atualizado_por": "Felype · felype@yadfilmes.com.br",
   "atualizado_em": "11/08/2026",
-  "versao": "v1",
+  "versao": "v2",
   "situacao": "EM ANDAMENTO",
   "imposto_pct": 16,
   "comissao_pct": 10,
@@ -21,89 +21,279 @@
     "COMISSÃO"
   ],
   "entradas": [
-    {"descricao": "Sinal de 50% no ato do aceite", "valor": 32919.70,
-     "status": "A RECEBER", "obs": "impostos inclusos · proposta válida até 20/08/2026"},
-    {"descricao": "Saldo de 50% em até 30 dias do aceite", "valor": 32919.70,
-     "status": "A RECEBER"}
+    {
+      "descricao": "Sinal de 50% no ato do aceite",
+      "valor": 32919.7,
+      "status": "A RECEBER",
+      "obs": "impostos inclusos · proposta válida até 20/08/2026"
+    },
+    {
+      "descricao": "Saldo de 50% em até 30 dias do aceite",
+      "valor": 32919.7,
+      "status": "A RECEBER"
+    }
   ],
   "saidas": [
-    {"area": "EQUIPE DE GRAVAÇÃO", "descricao": "Thiago", "funcao": "Direção de fotografia",
-     "qtd": 4, "unit": 1200, "status": "A PAGAR", "obs": "ESTIMADO — sem precedente de DF em diária"},
-    {"area": "EQUIPE DE GRAVAÇÃO", "descricao": "Guilherme Consiglio", "funcao": "Cinegrafista",
-     "qtd": 4, "unit": 500, "status": "A PAGAR", "obs": "padrão da casa — Barretos 2026"},
-    {"area": "EQUIPE DE GRAVAÇÃO", "descricao": "Rodrigo", "funcao": "Assistente de câmera / DIT",
-     "qtd": 4, "unit": 250, "status": "A PAGAR", "obs": "padrão da casa — assistente técnico geral"},
-    {"area": "EQUIPE DE GRAVAÇÃO", "descricao": "Viny", "funcao": "Produção",
-     "qtd": 4, "unit": 700, "status": "A PAGAR", "obs": "ESTIMADO — mesmo nível do produtor técnico do KITKAT"},
-    {"area": "EQUIPE DE GRAVAÇÃO", "descricao": "Larissa", "funcao": "Atendimento",
-     "qtd": 1, "unit": 2500, "status": "A PAGAR", "obs": "pacote — mesmo valor da produção adm no Barretos 2026"},
-    {"area": "EQUIPE DE GRAVAÇÃO", "descricao": "Felype", "funcao": "Direção · interface com a agência",
-     "qtd": 4, "unit": 0, "status": "", "obs": "equipe da casa, sem cachê"},
-    {"area": "EQUIPE DE GRAVAÇÃO", "descricao": "Operador de LED e playback", "funcao": "a definir",
-     "qtd": 4, "unit": "", "status": "A PAGAR",
-     "obs": "ADICIONADO — a proposta promete operação do painel 7×4 m e playback, e ninguém foi escalado"},
-    {"area": "EQUIPE DE GRAVAÇÃO", "descricao": "Som direto", "funcao": "a definir",
-     "qtd": 4, "unit": "", "status": "A PAGAR",
-     "obs": "ADICIONADO — a proposta promete som direto redundante; áudio saiu 700/diária no KITKAT"},
-    {"area": "EQUIPE DE GRAVAÇÃO", "descricao": "Gaffer / elétrica", "funcao": "a definir",
-     "qtd": 4, "unit": "", "status": "A PAGAR",
-     "obs": "ADICIONADO — a proposta promete luz cinematográfica; o Rodrigo sozinho cobre?"},
-    {"area": "EQUIPE DE GRAVAÇÃO", "descricao": "Operador de teleprompter", "funcao": "a definir",
-     "qtd": 4, "unit": "", "status": "A PAGAR",
-     "obs": "ADICIONADO — a proposta inclui teleprompter completo COM OPERAÇÃO nas 4 diárias"},
-    {"area": "EQUIPE DE GRAVAÇÃO", "descricao": "Maquiagem", "funcao": "preparação do porta-voz",
-     "qtd": 4, "unit": 900, "status": "A PAGAR",
-     "obs": "ADICIONADO — a proposta inclui maquiagem; R$ 900 foi o valor da Lisa na live da BYD"},
-    {"area": "EQUIPE DE GRAVAÇÃO", "descricao": "Apoio de estúdio", "funcao": "a definir",
-     "qtd": 4, "unit": "", "status": "A PAGAR",
-     "obs": "ADICIONADO — consta na arquitetura de produção da proposta"},
-
-    {"area": "PÓS-PRODUÇÃO", "descricao": "Montagem", "funcao": "72h de ilha ≈ 9 diárias",
-     "qtd": 9, "unit": "", "status": "A PAGAR",
-     "obs": "ADICIONADO — teto do escopo: 15 min finalizados ou 72h de ilha, o que vier primeiro"},
-    {"area": "PÓS-PRODUÇÃO", "descricao": "Motion de identidade e letterings", "funcao": "pelo projeto",
-     "qtd": 1, "unit": "", "status": "A PAGAR", "obs": "ADICIONADO — prometido no escopo"},
-    {"area": "PÓS-PRODUÇÃO", "descricao": "Color grading", "funcao": "pelo projeto",
-     "qtd": 1, "unit": "", "status": "A PAGAR", "obs": "ADICIONADO — prometido no escopo"},
-    {"area": "PÓS-PRODUÇÃO", "descricao": "Mixagem e masterização de áudio", "funcao": "pelo projeto",
-     "qtd": 1, "unit": "", "status": "A PAGAR", "obs": "ADICIONADO — prometido no escopo"},
-    {"area": "PÓS-PRODUÇÃO", "descricao": "Legendagem", "funcao": "até 48 conteúdos",
-     "qtd": 1, "unit": "", "status": "A PAGAR", "obs": "ADICIONADO — prometido no escopo"},
-    {"area": "PÓS-PRODUÇÃO", "descricao": "AI-Driven Design — conteúdo do painel", "funcao": "pelo projeto",
-     "qtd": 1, "unit": "", "status": "A PAGAR",
-     "obs": "ADICIONADO — criação visual do LED dentro da linguagem aprovada; 3D e produção virtual ficam fora"},
-
-    {"area": "ESTÚDIO E LED", "descricao": "Estúdio Morumbi", "funcao": "4 diárias de até 10h",
-     "qtd": 4, "unit": 0, "status": "",
-     "obs": "unidade própria da YAD — decidir se entra custo interno de ocupação"},
-    {"area": "ESTÚDIO E LED", "descricao": "Painel de LED 7 × 4 m", "funcao": "28 m²",
-     "qtd": 4, "unit": 0, "status": "", "obs": "estrutura própria — sem locação"},
-
-    {"area": "EQUIPAMENTO E ENERGIA", "descricao": "Gerador", "funcao": "pelo projeto",
-     "qtd": 1, "unit": 6000, "status": "A PAGAR", "obs": "valor informado pela produção"},
-    {"area": "EQUIPAMENTO E ENERGIA", "descricao": "Reserva de luz extra", "funcao": "por diária",
-     "qtd": 4, "unit": 1500, "status": "A PAGAR",
-     "obs": "verba de contingência para equipamento de luz além do parque próprio"},
-    {"area": "EQUIPAMENTO E ENERGIA", "descricao": "Câmeras, óptica, luz e áudio", "funcao": "parque próprio",
-     "qtd": 4, "unit": 0, "status": "", "obs": "resolvido 100% com equipamento da casa — sem custo de locação"},
-    {"area": "EQUIPAMENTO E ENERGIA", "descricao": "Teleprompter", "funcao": "equipamento, 4 diárias",
-     "qtd": 4, "unit": "", "status": "A PAGAR", "obs": "ADICIONADO — zerar se for da casa"},
-    {"area": "EQUIPAMENTO E ENERGIA", "descricao": "Mídia, armazenamento e guarda dos masters",
-     "funcao": "cartões, backup e retenção", "qtd": 1, "unit": "", "status": "A PAGAR",
-     "obs": "ADICIONADO — 4 diárias de captação e masters entregues por link privado"},
-
-    {"area": "ALIMENTAÇÃO", "descricao": "Alimentação da equipe no estúdio",
-     "funcao": "12 pessoas × 4 diárias", "qtd": 48, "unit": 100, "status": "A PAGAR",
-     "obs": "ESTIMADO — jornada de 10h; R$ 170/dia foi a referência de viagem do KITKAT, estúdio na cidade custa menos"},
-
-    {"area": "PRODUÇÃO E DIVERSOS", "descricao": "Transporte e estacionamento",
-     "funcao": "equipe e equipamento em SP", "qtd": 4, "unit": "", "status": "A PAGAR",
-     "obs": "ADICIONADO"},
-    {"area": "PRODUÇÃO E DIVERSOS", "descricao": "Trilha e licenças de música",
-     "funcao": "banco de música", "qtd": 1, "unit": "", "status": "A PAGAR",
-     "obs": "ADICIONADO — trilha premium fica fora do escopo e é cobrada à parte, mas a trilha padrão é da YAD"},
-    {"area": "PRODUÇÃO E DIVERSOS", "descricao": "Entrega e hospedagem dos masters",
-     "funcao": "link privado no Vimeo", "qtd": 1, "unit": "", "status": "A PAGAR",
-     "obs": "ADICIONADO — prometido no escopo"}
+    {
+      "area": "EQUIPE DE GRAVAÇÃO",
+      "descricao": "Thiago",
+      "funcao": "Direção de fotografia",
+      "qtd": 4,
+      "unit": 1200,
+      "status": "A PAGAR",
+      "obs": "ESTIMADO — sem precedente de DF em diária"
+    },
+    {
+      "area": "EQUIPE DE GRAVAÇÃO",
+      "descricao": "Guilherme Consiglio",
+      "funcao": "Cinegrafista",
+      "qtd": 4,
+      "unit": 500,
+      "status": "A PAGAR",
+      "obs": "padrão da casa — Barretos 2026"
+    },
+    {
+      "area": "EQUIPE DE GRAVAÇÃO",
+      "descricao": "Rodrigo",
+      "funcao": "Assistente de câmera / DIT",
+      "qtd": 4,
+      "unit": 250,
+      "status": "A PAGAR",
+      "obs": "padrão da casa — assistente técnico geral"
+    },
+    {
+      "area": "EQUIPE DE GRAVAÇÃO",
+      "descricao": "Viny",
+      "funcao": "Produção",
+      "qtd": 4,
+      "unit": 700,
+      "status": "A PAGAR",
+      "obs": "ESTIMADO — mesmo nível do produtor técnico do KITKAT"
+    },
+    {
+      "area": "EQUIPE DE GRAVAÇÃO",
+      "descricao": "Larissa",
+      "funcao": "Atendimento",
+      "qtd": 1,
+      "unit": 2500,
+      "status": "A PAGAR",
+      "obs": "pacote — mesmo valor da produção adm no Barretos 2026"
+    },
+    {
+      "area": "EQUIPE DE GRAVAÇÃO",
+      "descricao": "Felype",
+      "funcao": "Direção · interface com a agência",
+      "qtd": 4,
+      "unit": 0,
+      "status": "",
+      "obs": "equipe da casa, sem cachê"
+    },
+    {
+      "area": "EQUIPE DE GRAVAÇÃO",
+      "descricao": "Operador de LED e playback",
+      "funcao": "a definir",
+      "qtd": 4,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "ADICIONADO — a proposta promete operação do painel 7×4 m e playback, e ninguém foi escalado"
+    },
+    {
+      "area": "EQUIPE DE GRAVAÇÃO",
+      "descricao": "Som direto",
+      "funcao": "a definir",
+      "qtd": 4,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "ADICIONADO — a proposta promete som direto redundante; áudio saiu 700/diária no KITKAT"
+    },
+    {
+      "area": "EQUIPE DE GRAVAÇÃO",
+      "descricao": "Gaffer / elétrica",
+      "funcao": "a definir",
+      "qtd": 4,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "ADICIONADO — a proposta promete luz cinematográfica; o Rodrigo sozinho cobre?"
+    },
+    {
+      "area": "EQUIPE DE GRAVAÇÃO",
+      "descricao": "Operador de teleprompter",
+      "funcao": "a definir",
+      "qtd": 4,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "ADICIONADO — a proposta inclui teleprompter completo COM OPERAÇÃO nas 4 diárias"
+    },
+    {
+      "area": "EQUIPE DE GRAVAÇÃO",
+      "descricao": "Maquiagem",
+      "funcao": "preparação do porta-voz",
+      "qtd": 4,
+      "unit": 900,
+      "status": "A PAGAR",
+      "obs": "ADICIONADO — a proposta inclui maquiagem; R$ 900 foi o valor da Lisa na live da BYD"
+    },
+    {
+      "area": "EQUIPE DE GRAVAÇÃO",
+      "descricao": "Apoio de estúdio",
+      "funcao": "a definir",
+      "qtd": 4,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "ADICIONADO — consta na arquitetura de produção da proposta"
+    },
+    {
+      "area": "PÓS-PRODUÇÃO",
+      "descricao": "Montagem",
+      "funcao": "72h de ilha ≈ 9 diárias",
+      "qtd": 9,
+      "unit": 0,
+      "status": "",
+      "obs": "pós interna da YAD — sem custo de terceiro. Se alguém receber cachê por este job, lançar aqui."
+    },
+    {
+      "area": "PÓS-PRODUÇÃO",
+      "descricao": "Motion de identidade e letterings",
+      "funcao": "pelo projeto",
+      "qtd": 1,
+      "unit": 0,
+      "status": "",
+      "obs": "pós interna da YAD — sem custo de terceiro. Se alguém receber cachê por este job, lançar aqui."
+    },
+    {
+      "area": "PÓS-PRODUÇÃO",
+      "descricao": "Color grading",
+      "funcao": "pelo projeto",
+      "qtd": 1,
+      "unit": 0,
+      "status": "",
+      "obs": "pós interna da YAD — sem custo de terceiro. Se alguém receber cachê por este job, lançar aqui."
+    },
+    {
+      "area": "PÓS-PRODUÇÃO",
+      "descricao": "Mixagem e masterização de áudio",
+      "funcao": "pelo projeto",
+      "qtd": 1,
+      "unit": 0,
+      "status": "",
+      "obs": "pós interna da YAD — sem custo de terceiro. Se alguém receber cachê por este job, lançar aqui."
+    },
+    {
+      "area": "PÓS-PRODUÇÃO",
+      "descricao": "Legendagem",
+      "funcao": "até 48 conteúdos",
+      "qtd": 1,
+      "unit": 0,
+      "status": "",
+      "obs": "pós interna da YAD — sem custo de terceiro. Se alguém receber cachê por este job, lançar aqui."
+    },
+    {
+      "area": "PÓS-PRODUÇÃO",
+      "descricao": "AI-Driven Design — conteúdo do painel",
+      "funcao": "pelo projeto",
+      "qtd": 1,
+      "unit": 0,
+      "status": "",
+      "obs": "a MDias faz o design do painel — sem custo para a YAD. ATENÇÃO: a proposta lista isso como escopo da YAD; se voltarem a pedir, é mudança de escopo."
+    },
+    {
+      "area": "ESTÚDIO E LED",
+      "descricao": "Estúdio Morumbi",
+      "funcao": "4 diárias de até 10h",
+      "qtd": 4,
+      "unit": 3000,
+      "status": "A PAGAR",
+      "obs": "custo interno de ocupação, R$ 3.000 por diária — transferência entre YAD produção e a unidade"
+    },
+    {
+      "area": "ESTÚDIO E LED",
+      "descricao": "Painel de LED 7 × 4 m",
+      "funcao": "28 m²",
+      "qtd": 4,
+      "unit": 0,
+      "status": "",
+      "obs": "estrutura própria — sem locação"
+    },
+    {
+      "area": "EQUIPAMENTO E ENERGIA",
+      "descricao": "Gerador",
+      "funcao": "pelo projeto",
+      "qtd": 1,
+      "unit": 6000,
+      "status": "A PAGAR",
+      "obs": "valor informado pela produção"
+    },
+    {
+      "area": "EQUIPAMENTO E ENERGIA",
+      "descricao": "Reserva de luz extra",
+      "funcao": "por diária",
+      "qtd": 4,
+      "unit": 1500,
+      "status": "A PAGAR",
+      "obs": "verba de contingência para equipamento de luz além do parque próprio"
+    },
+    {
+      "area": "EQUIPAMENTO E ENERGIA",
+      "descricao": "Câmeras, óptica, luz e áudio",
+      "funcao": "parque próprio",
+      "qtd": 4,
+      "unit": 0,
+      "status": "",
+      "obs": "resolvido 100% com equipamento da casa — sem custo de locação"
+    },
+    {
+      "area": "EQUIPAMENTO E ENERGIA",
+      "descricao": "Teleprompter",
+      "funcao": "equipamento, 4 diárias",
+      "qtd": 4,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "ADICIONADO — zerar se for da casa"
+    },
+    {
+      "area": "EQUIPAMENTO E ENERGIA",
+      "descricao": "Mídia, armazenamento e guarda dos masters",
+      "funcao": "cartões, backup e retenção",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "ADICIONADO — 4 diárias de captação e masters entregues por link privado"
+    },
+    {
+      "area": "ALIMENTAÇÃO",
+      "descricao": "Alimentação da equipe no estúdio",
+      "funcao": "12 pessoas × 4 diárias",
+      "qtd": 48,
+      "unit": 100,
+      "status": "A PAGAR",
+      "obs": "ESTIMADO — jornada de 10h; R$ 170/dia foi a referência de viagem do KITKAT, estúdio na cidade custa menos"
+    },
+    {
+      "area": "PRODUÇÃO E DIVERSOS",
+      "descricao": "Transporte e estacionamento",
+      "funcao": "equipe e equipamento em SP",
+      "qtd": 4,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "ADICIONADO"
+    },
+    {
+      "area": "PRODUÇÃO E DIVERSOS",
+      "descricao": "Trilha e licenças de música",
+      "funcao": "banco de música",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "ADICIONADO — trilha premium fica fora do escopo e é cobrada à parte, mas a trilha padrão é da YAD"
+    },
+    {
+      "area": "PRODUÇÃO E DIVERSOS",
+      "descricao": "Entrega e hospedagem dos masters",
+      "funcao": "link privado no Vimeo",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "ADICIONADO — prometido no escopo"
+    }
   ]
 }
