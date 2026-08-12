@@ -238,6 +238,34 @@ Alimentação no local e hospedagem por conta do Clube do Cowboy. Orçamento de
 tabela dava 97.075; fechou em 81.000 (valor 2025 + 8% de inflação) mais os
 extras.
 
+### ADORAÇÃO & ADORADORES — YAH CHURCH (v1, em andamento)
+
+Montagem 24/08, gravação 25/08/2026. 7 URSAs 12K, ATEM 4 M/E, grua e trilho.
+
+| | |
+|---|---|
+| entrada bruta | 30.502,50 (equipamentos 27.575 com 30% de desconto + equipe 11.200) |
+| imposto 16% | 4.880,40 |
+| líquida | 25.622,10 |
+| saídas lançadas | 7.962,21 |
+| **lucro, com 9 linhas em branco** | **17.659,89 — 57,9%** |
+
+Três coisas deste job que valem virar hábito:
+
+**O cliente paga 1 diária e a YAD trabalha 2.** O orçamento inteiro é
+"1 diária", mas a montagem acontece na véspera. Toda a equipe entrou com 2
+diárias. Em job com montagem no dia anterior, **conte as diárias de trabalho,
+não as diárias faturadas** — é onde o custo de equipe dobra em silêncio.
+
+**Equipe fornecida pelo cliente é margem pura.** A YAH CHURCH forneceu os 7
+cinegrafistas, vendidos a R$ 1.100 cada. R$ 7.700 de receita com zero de custo.
+Vale sempre perguntar quem entra com a equipe de câmera.
+
+**Locação de bens móveis pode não ser serviço.** O rodapé deste orçamento
+invoca a LC 116/03 para dizer que a operação não emite nota de serviço. Se
+proceder, a alíquota deste job não é a mesma dos outros — **mandar confirmar
+com a contabilidade antes de fechar**, porque 16% sobre 30.502 são R$ 4.880.
+
 ### ALEX MANENTE + CIDADANIA — Estúdio LED · MDias (v1, em andamento)
 
 4 diárias avulsas de até 10h no Estúdio Morumbi, LED 7 × 4 m, até 03/10/2026.
