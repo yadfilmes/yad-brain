@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motion Lab — banco de provas</title>
+<style>
+  :root{
+    --bg:#08090b; --panel:#101216; --line:#1e222a;
+    --fg:#e8eaed; --dim:#7c828e; --accent:#c8ff2f;
+    --raw:#ff4d5e; --lerp:#ff9f1c; --damp:#c8ff2f; --spring:#4dd8ff;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg);
+    font:15px/1.55 ui-sans-serif,-apple-system,"Segoe UI",Inter,system-ui,sans-serif}
+  body{padding:40px 24px 80px;max-width:1080px;margin:0 auto;overscroll-behavior:none}
+  h1{font-size:26px;letter-spacing:-.02em;margin:0 0 6px}
+  h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+     color:var(--dim);margin:0 0 4px;font-weight:600}
+  p{color:var(--dim);margin:0 0 18px;max-width:64ch}
+  .sub{margin-bottom:34px}
+  section{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:20px;margin-bottom:20px}
+  canvas{display:block;width:100%;height:auto;border-radius:8px;background:#0b0d10;
+    touch-action:none;cursor:crosshair}
+  .legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;
+    font-size:12px;color:var(--dim);font-variant-numeric:tabular-nums}
+  .legend b{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px}
+  .ctrl{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin-top:16px;
+    padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--dim)}
+  .ctrl label{display:flex;align-items:center;gap:8px}
+  input[type=range]{width:120px;accent-color:var(--accent)}
+  input[type=checkbox]{accent-color:var(--accent)}
+  code,.num{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--fg)}
+  .num{min-width:44px;display:inline-block;font-variant-numeric:tabular-nums}
+  .note{font-size:13px;color:var(--dim);margin-top:14px;padding-left:12px;
+    border-left:2px solid var(--line)}
+  .note strong{color:var(--fg);font-weight:600}
+  footer{color:var(--dim);font-size:13px;margin-top:36px}
+  a{color:var(--accent)}
+</style>
+</head>
+<body>
+
+<h1>Motion Lab</h1>
+<p class="sub">Banco de provas dos princípios de <code>lusion-motion-teardown.md</code>.
+Mexa o mouse rápido e pare de repente — é aí que a diferença aparece.</p>
+
+<!-- 1 ------------------------------------------------------------------ -->
+<section>
+  <h2>P1 · P2 — nada salta, tudo persegue</h2>
+  <p>Quatro seguidores, mesmo alvo, quatro regras diferentes.</p>
+  <canvas id="c1" height="300"></canvas>
+  <div class="legend">
+    <span><b style="background:var(--raw)"></b>cru — o valor do input direto</span>
+    <span><b style="background:var(--lerp)"></b>lerp ingênuo — <code>+= (t-c)*0.1</code></span>
+    <span><b style="background:var(--damp)"></b>damp λ=<span class="num" id="lamOut">4.0</span> — independente de fps</span>
+    <span><b style="background:var(--spring)"></b>spring ζ=<span class="num" id="zOut">0.6</span></span>
+  </div>
+  <div class="ctrl">
+    <label>λ do damp <input type="range" id="lam" min="1" max="20" step="0.5" value="4"></label>
+    <label>ζ do spring <input type="range" id="z" min="0.3" max="1.2" step="0.05" value="0.6"></label>
+    <label>ω do spring <input type="range" id="w" min="6" max="40" step="1" value="16"></label>
+    <label><input type="checkbox" id="slow"> simular 30 fps</label>
+    <span>fps de update: <span class="num" id="fps">—</span></span>
+  </div>
+  <p class="note">Ligue <strong>simular 30 fps</strong>. O laranja muda de
+  comportamento — fica visivelmente mais lento, porque a constante 0,1 é por
+  frame, não por segundo. O verde e o azul não mudam. Esse é o bug que existe
+  na maioria dos sites e que ninguém vê até abrir num monitor de 144&nbsp;Hz.</p>
+</section>
+
+<!-- 2 ------------------------------------------------------------------ -->
+<section>
+  <h2>P3 — massa diferente por camada</h2>
+  <p>O mesmo alvo, λ crescente do fundo para a frente. O olho lê diferença de
+  inércia como profundidade — sem nenhum 3D envolvido.</p>
+  <canvas id="c2" height="260"></canvas>
+  <div class="legend"><span>λ = 1,5 → 3 → 6 → 10 → 18</span></div>
+</section>
+
+<!-- 3 ------------------------------------------------------------------ -->
+<section>
+  <h2>P4 — velocidade controla a deformação</h2>
+  <p>Posição diz onde. Velocidade diz quanto: o corpo estica no eixo do
+  movimento, a aberração cromática abre e o rastro alonga. Ao parar, tudo
+  assenta sozinho — e é o assentar que lê como matéria física.</p>
+  <canvas id="c3" height="280"></canvas>
+  <div class="legend">
+    <span>velocidade: <span class="num" id="spd">0</span> px/s</span>
+    <span>stretch: <span class="num" id="str">1.00</span>×</span>
+  </div>
+  <div class="ctrl">
+    <label>força <input type="range" id="force" min="0" max="2" step="0.05" value="1"></label>
+  </div>
+</section>
+
+<!-- 4 ------------------------------------------------------------------ -->
+<section>
+  <h2>P4 — scroll virtual com velocidade</h2>
+  <p>Role com a roda ou arraste dentro do quadro. O scroll é interceptado, vira
+  alvo e é perseguido; a velocidade suavizada é o uniform que a cena usaria.</p>
+  <canvas id="c4" height="220"></canvas>
+  <div class="legend">
+    <span>progresso: <span class="num" id="prg">0%</span></span>
+    <span>velocidade: <span class="num" id="svel">0</span></span>
+  </div>
+</section>
+
+<footer>
+  O kernel canônico é <code>motion.js</code> (ES module, comentado, pronto para
+  produção). Este arquivo traz uma cópia reduzida embutida só para abrir via
+  <code>file://</code> sem servidor — módulos ES não carregam por
+  <code>file://</code>. Para usar o kernel de verdade:
+  <code>python3 -m http.server</code> nesta pasta.
+</footer>
+
+<script>
+/* ---- cópia reduzida de motion.js (a fonte é motion.js) ---- */
+const damp = (c, t, l, dt) => t + (c - t) * Math.exp(-l * dt);
+const clamp = (v, a, b) => Math.min(Math.max(v, a), b);
+
+class Spring {
+  constructor(v = 0, w = 16, z = 0.6) { this.v = v; this.t = v; this.vel = 0; this.w = w; this.z = z; }
+  update(dt) {
+    const steps = Math.max(1, Math.ceil(dt / (1 / 120))), h = dt / steps;
+    for (let i = 0; i < steps; i++) {
+      const a = -(this.w * this.w) * (this.v - this.t) - 2 * this.z * this.w * this.vel;
+      this.vel += a * h; this.v += this.vel * h;
+    }
+    return this.v;
+  }
+}
+
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const K = reduced ? 20 : 1;   // P-acessibilidade: alvos atingidos quase na hora
+
+/* ---- canvas com DPR ---- */
+function setup(id, h) {
+  const cv = document.getElementById(id), ctx = cv.getContext('2d');
+  const fit = () => {
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    const w = cv.clientWidth;
+    cv.width = w * dpr; cv.height = h * dpr;
+    cv.style.height = h + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  };
+  fit(); addEventListener('resize', fit);
+  return { cv, ctx, w: () => cv.clientWidth, h: () => h };
+}
+
+const A = setup('c1', 300), B = setup('c2', 260), C = setup('c3', 280), D = setup('c4', 220);
+
+/* ---- ponteiro global, alvo comum aos painéis ---- */
+const P = { x: 0, y: 0, has: false };
+function bindPointer(o, cx, cy) {
+  const el = o.cv;
+  const move = e => {
+    const r = el.getBoundingClientRect();
+    P.x = clamp(e.clientX - r.left, 0, o.w());
+    P.y = clamp(e.clientY - r.top, 0, o.h());
+    P.has = true;
+  };
+  el.addEventListener('pointermove', move, { passive: true });
+  el.addEventListener('pointerdown', move, { passive: true });
+}
+[A, B, C].forEach(o => bindPointer(o));
+
+/* ---- estado ---- */
+const raw = { x: 0, y: 0 };
+const nlerp = { x: 0, y: 0 };
+const dmp = { x: 0, y: 0 };
+const sx = new Spring(0), sy = new Spring(0);
+const layers = [1.5, 3, 6, 10, 18].map(l => ({ l, x: 0, y: 0 }));
+const body = { x: 0, y: 0, vx: 0, vy: 0, px: 0, py: 0 };
+const trail = [];
+const scroll = { target: 0, current: 0, vel: 0, prev: 0, max: 2000 };
+
+const $ = id => document.getElementById(id);
+const lamEl = $('lam'), zEl = $('z'), wEl = $('w'), slowEl = $('slow'), forceEl = $('force');
+
+D.cv.addEventListener('wheel', e => {
+  e.preventDefault();
+  const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? 400 : 1;
+  scroll.target = clamp(scroll.target + e.deltaY * unit, 0, scroll.max);
+}, { passive: false });
+let touchY = null;
+D.cv.addEventListener('pointerdown', e => (touchY = e.clientY));
+addEventListener('pointerup', () => (touchY = null));
+D.cv.addEventListener('pointermove', e => {
+  if (touchY === null) return;
+  scroll.target = clamp(scroll.target + (touchY - e.clientY) * 2, 0, scroll.max);
+  touchY = e.clientY;
+});
+
+/* ---- desenho ---- */
+function dot(ctx, x, y, r, color, alpha = 1) {
+  ctx.globalAlpha = alpha; ctx.fillStyle = color;
+  ctx.beginPath(); ctx.arc(x, y, r, 0, 6.2832); ctx.fill(); ctx.globalAlpha = 1;
+}
+function clear(o) { o.ctx.clearRect(0, 0, o.w(), o.h()); }
+
+/* ---- loop ---- */
+let last = performance.now(), acc = 0, fpsSmooth = 60;
+
+function frame(now) {
+  requestAnimationFrame(frame);
+  let dt = Math.min((now - last) / 1000, 1 / 30);
+  last = now;
+
+  // "simular 30 fps": acumula e só atualiza a cada 1/30 s, com o dt real
+  if (slowEl.checked) {
+    acc += dt;
+    if (acc < 1 / 30) return;
+    dt = acc; acc = 0;
+  }
+  fpsSmooth = damp(fpsSmooth, 1 / dt, 3, 0.05);
+  $('fps').textContent = Math.round(fpsSmooth);
+
+  const lam = +lamEl.value * K;
+  sx.z = sy.z = +zEl.value; sx.w = sy.w = +wEl.value * K;
+  $('lamOut').textContent = (+lamEl.value).toFixed(1);
+  $('zOut').textContent = (+zEl.value).toFixed(2);
+
+  if (!P.has) { P.x = A.w() / 2; P.y = A.h() / 2; }
+
+  /* painel 1 */
+  raw.x = P.x; raw.y = P.y;
+  nlerp.x += (P.x - nlerp.x) * 0.1;          // por frame — o bug, de propósito
+  nlerp.y += (P.y - nlerp.y) * 0.1;
+  dmp.x = damp(dmp.x, P.x, lam, dt);
+  dmp.y = damp(dmp.y, P.y, lam, dt);
+  sx.t = P.x; sy.t = P.y; sx.update(dt); sy.update(dt);
+
+  clear(A);
+  const a = A.ctx;
+  a.strokeStyle = '#1e222a'; a.lineWidth = 1;
+  a.beginPath(); a.moveTo(P.x, 0); a.lineTo(P.x, A.h());
+  a.moveTo(0, P.y); a.lineTo(A.w(), P.y); a.stroke();
+  dot(a, raw.x, raw.y, 7, '#ff4d5e');
+  dot(a, nlerp.x, nlerp.y, 9, '#ff9f1c');
+  dot(a, dmp.x, dmp.y, 11, '#c8ff2f');
+  dot(a, sx.v, sy.v, 13, '#4dd8ff');
+
+  /* painel 2 */
+  clear(B);
+  const b = B.ctx;
+  const bx = clamp(P.x, 0, B.w()), by = clamp(P.y, 0, B.h());
+  for (let i = layers.length - 1; i >= 0; i--) {
+    const L = layers[i];
+    L.x = damp(L.x, bx, L.l * K, dt);
+    L.y = damp(L.y, by, L.l * K, dt);
+    const t = i / (layers.length - 1);
+    dot(b, L.x, L.y, 40 - i * 6, `hsl(${72 + t * 120} 90% ${45 + t * 20}%)`, 0.25 + t * 0.6);
+  }
+
+  /* painel 3 */
+  const cx = clamp(P.x, 0, C.w()), cy = clamp(P.y, 0, C.h());
+  body.x = damp(body.x, cx, 6 * K, dt);
+  body.y = damp(body.y, cy, 6 * K, dt);
+  const ivx = (body.x - body.px) / Math.max(dt, 1e-4);
+  const ivy = (body.y - body.py) / Math.max(dt, 1e-4);
+  body.px = body.x; body.py = body.y;
+  body.vx = damp(body.vx, ivx, 6, dt);
+  body.vy = damp(body.vy, ivy, 6, dt);
+
+  const speed = Math.hypot(body.vx, body.vy);
+  const force = +forceEl.value;
+  const stretch = 1 + Math.min(speed / 1400, 1.6) * force;   // P4
+  const ang = Math.atan2(body.vy, body.vx);
+  $('spd').textContent = Math.round(speed);
+  $('str').textContent = stretch.toFixed(2);
+
+  trail.push({ x: body.x, y: body.y, s: stretch, a: ang });
+  if (trail.length > 26) trail.shift();
+
+  clear(C);
+  const c = C.ctx;
+  trail.forEach((p, i) => {
+    const t = i / trail.length;
+    c.save(); c.translate(p.x, p.y); c.rotate(p.a); c.scale(p.s, 1 / Math.sqrt(p.s));
+    dot(c, 0, 0, 26 * t, '#c8ff2f', t * 0.13); c.restore();
+  });
+  // aberração cromática proporcional à velocidade
+  const ab = (stretch - 1) * 9;
+  c.globalCompositeOperation = 'screen';
+  [['#ff2f6a', -ab], ['#2fd9ff', ab]].forEach(([col, off]) => {
+    c.save(); c.translate(body.x + Math.cos(ang) * off, body.y + Math.sin(ang) * off);
+    c.rotate(ang); c.scale(stretch, 1 / Math.sqrt(stretch));
+    dot(c, 0, 0, 30, col, 0.75); c.restore();
+  });
+  c.globalCompositeOperation = 'source-over';
+  c.save(); c.translate(body.x, body.y); c.rotate(ang);
+  c.scale(stretch, 1 / Math.sqrt(stretch));
+  dot(c, 0, 0, 30, '#0b0d10', 0.55); dot(c, 0, 0, 26, '#e8eaed', 0.9); c.restore();
+
+  /* painel 4 */
+  scroll.current = damp(scroll.current, scroll.target, 5 * K, dt);
+  const sraw = (scroll.current - scroll.prev) / Math.max(dt, 1e-4);
+  scroll.prev = scroll.current;
+  scroll.vel = damp(scroll.vel, sraw, 6, dt);
+  const prog = scroll.current / scroll.max;
+  $('prg').textContent = Math.round(prog * 100) + '%';
+  $('svel').textContent = Math.round(scroll.vel);
+
+  clear(D);
+  const d = D.ctx, W = D.w(), H = D.h();
+  const cols = 13, gap = W / cols;
+  const skew = clamp(scroll.vel / 900, -1.4, 1.4);   // velocidade deforma a grade
+  for (let i = 0; i < cols; i++) {
+    const off = (prog * 900 + i * 47) % (H + 160) - 80;
+    const hgt = 44 * (1 + Math.abs(skew) * 0.9);
+    d.save(); d.translate(i * gap + gap / 2, off);
+    d.transform(1, 0, skew * 0.55, 1, 0, 0);
+    d.fillStyle = i % 4 === 0 ? '#c8ff2f' : '#2a2f39';
+    d.globalAlpha = 0.9 - Math.abs(skew) * 0.25;
+    d.fillRect(-gap * 0.28, -hgt / 2, gap * 0.56, hgt);
+    d.restore();
+  }
+  d.globalAlpha = 1;
+  d.fillStyle = '#1e222a'; d.fillRect(16, H - 22, W - 32, 3);
+  d.fillStyle = '#c8ff2f'; d.fillRect(16, H - 22, (W - 32) * prog, 3);
+}
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>
