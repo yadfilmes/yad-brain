@@ -618,6 +618,72 @@ def _aba_resumo(wb: Workbook, cfg: dict, total_areas: int) -> dict:
             if col in (3, 4):
                 ws.cell(row=r, column=col).number_format = MOEDA
 
+    # ---------------- 5. DIVISÃO DO RESULTADO ----------------
+    # Job em sociedade: o lucro se reparte entre os sócios. O primeiro da lista
+    # absorve o resto do arredondamento — seu percentual e seu valor são o que
+    # sobra depois dos outros. Assim o total distribuído fecha exatamente com o
+    # lucro em qualquer divisão, inclusive um terço para cada, que em duas casas
+    # decimais nunca soma 100%.
+    socios = cfg.get("divisao_resultado") or []
+    if socios:
+        normalizados = []
+        for item in socios:
+            if isinstance(item, dict):
+                normalizados.append((item.get("nome", ""), item.get("pct")))
+            else:
+                normalizados.append((str(item), None))
+        n = len(normalizados)
+        padrao = 100.0 / n
+
+        linha = r_caixa_fim + 2
+        _secao(ws, linha, "5.  DIVISÃO DO RESULTADO", "B", "F")
+        linha += 1
+        _cabecalho(ws, linha, 2, ["PARTICIPANTE", "%", "VALOR"])
+        primeiro = linha + 1
+        ultimo = primeiro + n - 1
+
+        for i, (nome, pct) in enumerate(normalizados):
+            r = primeiro + i
+            ws.cell(row=r, column=2, value=nome)
+            if i == 0:
+                # O que sobra depois dos demais — garante que a soma bate.
+                # O percentual sai da coluna C (percentuais) e o valor da
+                # coluna D (reais) — somar a coluna errada aqui produz um
+                # percentual absurdo que ninguém confere.
+                ws.cell(row=r, column=3,
+                        value=f"=1-SUM(C{primeiro + 1}:C{ultimo})" if n > 1 else 1)
+                ws.cell(row=r, column=4,
+                        value=f"=C{r_lucro}-SUM(D{primeiro + 1}:D{ultimo})"
+                              if n > 1 else f"=C{r_lucro}")
+                ws.cell(row=r, column=6,
+                        value="leva a diferença de arredondamento")
+                ws.cell(row=r, column=6).font = Font(italic=True, size=9,
+                                                     color=TINTA["texto_fraco"])
+            else:
+                ws.cell(row=r, column=3,
+                        value=(float(pct) if pct is not None else padrao) / 100)
+                ws.cell(row=r, column=3).fill = _fill(TINTA["preencher"])
+                ws.cell(row=r, column=4, value=f"=ROUND($C${r_lucro}*C{r},2)")
+            ws.cell(row=r, column=3).number_format = PORCENTO
+            ws.cell(row=r, column=3).alignment = Alignment(horizontal="center")
+            ws.cell(row=r, column=4).number_format = MOEDA
+            for col in range(2, 5):
+                ws.cell(row=r, column=col).border = GRADE
+
+        r_total_divisao = ultimo + 1
+        ws.cell(row=r_total_divisao, column=2, value="TOTAL DISTRIBUÍDO")
+        ws.cell(row=r_total_divisao, column=3, value=f"=SUM(C{primeiro}:C{ultimo})")
+        ws.cell(row=r_total_divisao, column=4, value=f"=SUM(D{primeiro}:D{ultimo})")
+        ws.cell(row=r_total_divisao, column=3).number_format = PORCENTO
+        ws.cell(row=r_total_divisao, column=3).alignment = Alignment(horizontal="center")
+        ws.cell(row=r_total_divisao, column=4).number_format = MOEDA
+        for col in range(2, 5):
+            cel = ws.cell(row=r_total_divisao, column=col)
+            cel.border = GRADE
+            cel.font = Font(bold=True, size=12)
+            cel.fill = _fill(TINTA["resultado"])
+        r_caixa_fim = r_total_divisao
+
     r_aviso = r_caixa_fim + 2
     ws.merge_cells(start_row=r_aviso, start_column=2, end_row=r_aviso, end_column=6)
     ws.cell(row=r_aviso, column=2,

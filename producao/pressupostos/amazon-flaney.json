@@ -6,7 +6,7 @@
   "elaborado_em": "11/08/2026",
   "atualizado_por": "Felype · felype@yadfilmes.com.br",
   "atualizado_em": "11/08/2026",
-  "versao": "v1",
+  "versao": "v2",
   "situacao": "EM ANDAMENTO",
   "imposto_pct": 0,
   "comissao_pct": 0,
@@ -21,70 +21,192 @@
     "COMISSÃO"
   ],
   "entradas": [
-    {"descricao": "1ª parcela (50%) — no aceite da proposta", "valor": 40000.00,
-     "status": "A RECEBER",
-     "obs": "PIX ou transferência · total + opcionais 106.585 com 25% de desconto de parceiro Flaney = 79.999,99"},
-    {"descricao": "2ª parcela (50%) — até 10 dias após as captações", "valor": 39999.99,
-     "status": "A RECEBER",
-     "obs": "a proposta fecha o valor SEM NOTA; com nota seria +15% (R$ 91.999,99). Imposto está em 0% por isso — trocar a alíquota se for faturar."},
-    {"descricao": "Diferença se for faturado COM NOTA (+15%)", "valor": 0,
-     "status": "",
-     "obs": "linha de reserva: se o Flaney pedir nota, acrescentar aqui R$ 12.000 e subir o imposto"}
+    {
+      "descricao": "1ª parcela (50%) — no aceite da proposta",
+      "valor": 40000.0,
+      "status": "A RECEBER",
+      "obs": "PIX ou transferência · total + opcionais 106.585 com 25% de desconto de parceiro Flaney = 79.999,99"
+    },
+    {
+      "descricao": "2ª parcela (50%) — até 10 dias após as captações",
+      "valor": 39999.99,
+      "status": "A RECEBER",
+      "obs": "a proposta fecha o valor SEM NOTA; com nota seria +15% (R$ 91.999,99). Imposto zerado — este é um exercício."
+    },
+    {
+      "descricao": "Diferença se for faturado COM NOTA (+15%)",
+      "valor": 0,
+      "status": "",
+      "obs": "linha de reserva: se o Flaney pedir nota, acrescentar aqui R$ 12.000 e subir o imposto"
+    }
   ],
   "saidas": [
-    {"area": "EQUIPE", "descricao": "Produtor técnico / atendimento", "funcao": "montagem + gravação",
-     "qtd": 2, "unit": 1000, "status": "A PAGAR",
-     "obs": "ESTIMADO — vendido a 1.500/diária · 2 diárias de trabalho, 1,5 faturada"},
-    {"area": "EQUIPE", "descricao": "Técnico de sistema 1", "funcao": "montagem + gravação",
-     "qtd": 2, "unit": 800, "status": "A PAGAR", "obs": "padrão real da casa — YAH CHURCH (vendido a 1.000)"},
-    {"area": "EQUIPE", "descricao": "Técnico de sistema 2", "funcao": "montagem + gravação",
-     "qtd": 2, "unit": 800, "status": "A PAGAR", "obs": "padrão real da casa — YAH CHURCH (vendido a 1.000)"},
-    {"area": "EQUIPE", "descricao": "Técnico de câmeras 1", "funcao": "montagem + gravação",
-     "qtd": 2, "unit": 1000, "status": "A PAGAR", "obs": "padrão real da casa — YAH CHURCH (vendido a 1.000)"},
-    {"area": "EQUIPE", "descricao": "Técnico de câmeras 2", "funcao": "montagem + gravação",
-     "qtd": 2, "unit": 1000, "status": "A PAGAR", "obs": "padrão real da casa — YAH CHURCH (vendido a 1.000)"},
-    {"area": "EQUIPE", "descricao": "Assistente geral 1", "funcao": "montagem + gravação",
-     "qtd": 2, "unit": 350, "status": "A PAGAR", "obs": "padrão real da casa — YAH CHURCH (vendido a 500)"},
-    {"area": "EQUIPE", "descricao": "Assistente geral 2", "funcao": "montagem + gravação",
-     "qtd": 2, "unit": 350, "status": "A PAGAR", "obs": "padrão real da casa — YAH CHURCH (vendido a 500)"},
-    {"area": "EQUIPE", "descricao": "Assistente geral 3", "funcao": "montagem + gravação",
-     "qtd": 2, "unit": 350, "status": "A PAGAR", "obs": "padrão real da casa — YAH CHURCH (vendido a 500)"},
-    {"area": "EQUIPE", "descricao": "Assistente geral 4", "funcao": "montagem + gravação",
-     "qtd": 2, "unit": 350, "status": "A PAGAR", "obs": "padrão real da casa — YAH CHURCH (vendido a 500)"},
-    {"area": "EQUIPE", "descricao": "Cinegrafistas — 15 posições", "funcao": "10 URSA 12K + 5 Pocket",
-     "qtd": 15, "unit": "", "status": "A PAGAR",
-     "obs": "ADICIONADO — a proposta NÃO vendeu cinegrafista, só técnico de câmeras. Quem opera as 15 câmeras? Se o Flaney fornece, zerar; se não, é a maior linha do job."},
-    {"area": "EQUIPE", "descricao": "Felype", "funcao": "DTV / switcher ou interface com o cliente",
-     "qtd": 2, "unit": "", "status": "A PAGAR",
-     "obs": "1.500/diária quando senta no switcher, zero quando é só interface — definir o papel"},
-
-    {"area": "LOCAÇÃO DE TERCEIROS", "descricao": "Cammate 10 m", "funcao": "opcional, 1 diária",
-     "qtd": 1, "unit": "", "status": "A PAGAR",
-     "obs": "vendido a R$ 4.000 · a Megatroper cobrou 5.000 por grua + trilho no YAH CHURCH"},
-    {"area": "LOCAÇÃO DE TERCEIROS", "descricao": "Dolly Camaleon 10 m", "funcao": "opcional, 1 diária",
-     "qtd": 1, "unit": "", "status": "A PAGAR", "obs": "vendido a R$ 3.000"},
-
-    {"area": "TRANSPORTE E LOGÍSTICA", "descricao": "Unidade móvel — operação",
-     "funcao": "caminhão, motorista e combustível", "qtd": 1, "unit": "", "status": "A PAGAR",
-     "obs": "vendido a R$ 4.500 na linha LOGÍSTICA U.M. — falta o custo real de rodar a U.M."},
-    {"area": "TRANSPORTE E LOGÍSTICA", "descricao": "Pedágio, combustível e estacionamento",
-     "funcao": "ida e volta", "qtd": 1, "unit": "", "status": "A PAGAR", "obs": "ADICIONADO"},
-
-    {"area": "ALIMENTAÇÃO", "descricao": "Alimentação da equipe",
-     "funcao": "11 pessoas × 2 dias", "qtd": 22, "unit": 100, "status": "A PAGAR",
-     "obs": "ESTIMADO — confirmar se o Flaney ou a Amazon fornecem catering; se fornecerem, zerar"},
-
-    {"area": "EQUIPAMENTO E MÍDIA", "descricao": "Sistema, 15 câmeras, óptica e comunicação",
-     "funcao": "parque próprio da YAD", "qtd": 1, "unit": 0, "status": "",
-     "obs": "R$ 88.335 de equipamento vendido, todo próprio — é daqui que vem a margem do job"},
-    {"area": "EQUIPAMENTO E MÍDIA", "descricao": "Mídia e backup do material",
-     "funcao": "30 cartões + 16 SSD · cópia de segurança", "qtd": 1, "unit": "", "status": "A PAGAR",
-     "obs": "ADICIONADO — mídia é própria, a guarda e a cópia são custo"},
-    {"area": "EQUIPAMENTO E MÍDIA", "descricao": "Ponto eletrônico do apresentador",
-     "funcao": "acrescentado a pedido do cliente", "qtd": 1, "unit": 0, "status": "",
-     "obs": "consta nas observações da proposta · kit Hollyland próprio — zerar se for da casa"},
-
-    {"area": "PRODUÇÃO E DIVERSOS", "descricao": "Consumíveis de set e contingência",
-     "funcao": "fitas, pilhas, extensões", "qtd": 1, "unit": "", "status": "A PAGAR", "obs": "ADICIONADO"}
+    {
+      "area": "EQUIPE",
+      "descricao": "Produtor técnico / atendimento",
+      "funcao": "montagem + gravação",
+      "qtd": 2,
+      "unit": 1000,
+      "status": "A PAGAR",
+      "obs": "ESTIMADO — vendido a 1.500/diária · 2 diárias de trabalho, 1,5 faturada"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Técnico de sistema 1",
+      "funcao": "montagem + gravação",
+      "qtd": 2,
+      "unit": 800,
+      "status": "A PAGAR",
+      "obs": "padrão real da casa — YAH CHURCH (vendido a 1.000)"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Técnico de sistema 2",
+      "funcao": "montagem + gravação",
+      "qtd": 2,
+      "unit": 800,
+      "status": "A PAGAR",
+      "obs": "padrão real da casa — YAH CHURCH (vendido a 1.000)"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Técnico de câmeras 1",
+      "funcao": "montagem + gravação",
+      "qtd": 2,
+      "unit": 1000,
+      "status": "A PAGAR",
+      "obs": "padrão real da casa — YAH CHURCH (vendido a 1.000)"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Técnico de câmeras 2",
+      "funcao": "montagem + gravação",
+      "qtd": 2,
+      "unit": 1000,
+      "status": "A PAGAR",
+      "obs": "padrão real da casa — YAH CHURCH (vendido a 1.000)"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Assistente geral 1",
+      "funcao": "montagem + gravação",
+      "qtd": 2,
+      "unit": 350,
+      "status": "A PAGAR",
+      "obs": "padrão real da casa — YAH CHURCH (vendido a 500)"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Assistente geral 2",
+      "funcao": "montagem + gravação",
+      "qtd": 2,
+      "unit": 350,
+      "status": "A PAGAR",
+      "obs": "padrão real da casa — YAH CHURCH (vendido a 500)"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Assistente geral 3",
+      "funcao": "montagem + gravação",
+      "qtd": 2,
+      "unit": 350,
+      "status": "A PAGAR",
+      "obs": "padrão real da casa — YAH CHURCH (vendido a 500)"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Assistente geral 4",
+      "funcao": "montagem + gravação",
+      "qtd": 2,
+      "unit": 350,
+      "status": "A PAGAR",
+      "obs": "padrão real da casa — YAH CHURCH (vendido a 500)"
+    },
+    {
+      "area": "EQUIPE",
+      "descricao": "Felype",
+      "funcao": "DTV / switcher ou interface com o cliente",
+      "qtd": 2,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "1.500/diária quando senta no switcher, zero quando é só interface — definir o papel"
+    },
+    {
+      "area": "LOCAÇÃO DE TERCEIROS",
+      "descricao": "Megatroper",
+      "funcao": "grua com operador + trilho com maquinista",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "pacote único · vendido a R$ 7.000 nos opcionais (Cammate 4.000 + Dolly 3.000) · no YAH CHURCH o mesmo pacote custou R$ 5.000"
+    },
+    {
+      "area": "TRANSPORTE E LOGÍSTICA",
+      "descricao": "Unidade móvel — operação",
+      "funcao": "caminhão, motorista e combustível",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "vendido a R$ 4.500 na linha LOGÍSTICA U.M. — falta o custo real de rodar a U.M."
+    },
+    {
+      "area": "TRANSPORTE E LOGÍSTICA",
+      "descricao": "Pedágio, combustível e estacionamento",
+      "funcao": "ida e volta",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "ADICIONADO"
+    },
+    {
+      "area": "ALIMENTAÇÃO",
+      "descricao": "Alimentação da equipe",
+      "funcao": "11 pessoas × 2 dias",
+      "qtd": 22,
+      "unit": 100,
+      "status": "A PAGAR",
+      "obs": "ESTIMADO — confirmar se o Flaney ou a Amazon fornecem catering; se fornecerem, zerar"
+    },
+    {
+      "area": "EQUIPAMENTO E MÍDIA",
+      "descricao": "Sistema, 15 câmeras, óptica e comunicação",
+      "funcao": "parque próprio da YAD",
+      "qtd": 1,
+      "unit": 0,
+      "status": "",
+      "obs": "R$ 88.335 de equipamento vendido, todo próprio — é daqui que vem a margem do job"
+    },
+    {
+      "area": "EQUIPAMENTO E MÍDIA",
+      "descricao": "Mídia e backup do material",
+      "funcao": "30 cartões + 16 SSD · cópia de segurança",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "ADICIONADO — mídia é própria, a guarda e a cópia são custo"
+    },
+    {
+      "area": "EQUIPAMENTO E MÍDIA",
+      "descricao": "Ponto eletrônico do apresentador",
+      "funcao": "acrescentado a pedido do cliente",
+      "qtd": 1,
+      "unit": 0,
+      "status": "",
+      "obs": "consta nas observações da proposta · kit Hollyland próprio — zerar se for da casa"
+    },
+    {
+      "area": "PRODUÇÃO E DIVERSOS",
+      "descricao": "Consumíveis de set e contingência",
+      "funcao": "fitas, pilhas, extensões",
+      "qtd": 1,
+      "unit": "",
+      "status": "A PAGAR",
+      "obs": "ADICIONADO"
+    }
+  ],
+  "divisao_resultado": [
+    "YAD",
+    "Carlos",
+    "Danilo"
   ]
 }

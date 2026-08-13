@@ -163,6 +163,25 @@ EQUIPAMENTO E MÍDIA · PRODUÇÃO E DIVERSOS · COMISSÃO
 **Estúdio LED com pós** (Manente): EQUIPE DE GRAVAÇÃO · PÓS-PRODUÇÃO · ESTÚDIO
 E LED · EQUIPAMENTO E ENERGIA · ALIMENTAÇÃO · PRODUÇÃO E DIVERSOS · COMISSÃO
 
+## Divisão do resultado entre sócios
+
+Job em sociedade fecha com um bloco a mais: **5. DIVISÃO DO RESULTADO**, que
+reparte o lucro entre os participantes. No Flaney/Amazon são três — YAD, Carlos
+e Danilo — um terço para cada.
+
+```
+"divisao_resultado": ["YAD", "Carlos", "Danilo"]
+"divisao_resultado": [{"nome": "YAD", "pct": 50}, {"nome": "Carlos", "pct": 50}]
+```
+
+Lista de nomes divide igual; lista de objetos usa os percentuais dados. Sem a
+chave, o bloco não aparece — job sem sociedade fica igual ao que era.
+
+**O primeiro da lista absorve o arredondamento.** Seu percentual e seu valor
+são o que sobra depois dos outros, então `TOTAL DISTRIBUÍDO` fecha exatamente
+com o lucro. Um terço para três nunca soma 100% em duas casas decimais, e é
+melhor a diferença ficar visível numa linha do que sumir num centavo.
+
 ## Preço sem nota e o campo de imposto
 
 Alguns orçamentos da casa fecham **sem nota**, com a nota cobrada à parte. O
@@ -295,7 +314,12 @@ Pocket, óptica cine-servo Canon até 50-1000, Cammate e Dolly como opcionais.
 | equipamento vendido | 88.335 — todo próprio |
 | equipe vendida | 11.250 |
 | saídas lançadas | 14.200 |
-| **lucro, com 8 linhas em branco** | **65.799,99 — 82,3%** |
+| **lucro, com 7 linhas em branco** | **65.799,99 — 82,3%** |
+| dividido por 3 (YAD, Carlos, Danilo) | **21.933,33 cada** |
+
+**Projeto autoral em sociedade** — os números são exercício, não prática
+confirmada. Imposto e comissão ficam zerados por decisão do Felype, com os
+campos presentes.
 
 **Job de parque próprio: a margem está no equipamento, não na operação.** Os
 R$ 88.335 de equipamento vendido não têm custo correspondente. A equipe custa
@@ -306,9 +330,10 @@ equipamento que paga o job.
 desconto por ser parceiro que trouxe a Amazon. Antes de lançar comissão em
 cima disso, confirmar se não é dupla contagem da mesma fatia.
 
-**Cinegrafista não vendido não significa cinegrafista inexistente.** A proposta
-vendeu técnico de câmeras, não cinegrafista, para 15 câmeras. Perguntar quem
-opera antes de fechar.
+**Cinegrafista não vendido pode mesmo não existir.** A proposta vendeu técnico
+de câmeras, não cinegrafista, para 15 câmeras — e aqui foi literal: o job roda
+só com equipe técnica. Perguntar antes de lançar, sem presumir nos dois
+sentidos.
 
 ### ADORAÇÃO & ADORADORES — YAH CHURCH (v1, em andamento)
 
