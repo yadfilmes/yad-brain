@@ -35,6 +35,34 @@ diferente é trocar aquele número, não refazer a planilha.
 
 Locação de terceiro: **Danilo — câmeras broadcast, R$ 1.000/diária.**
 
+### Gravação multicâmera em SP — YAH CHURCH, 24-25/08/2026
+
+**Valores reais, confirmados pelo Felype na planilha** — não são estimativa.
+Prefira estes aos números estimados do KITKAT.
+
+| função | pessoa | valor/diária |
+|---|---|---|
+| Técnico de sistema | Digão | 800 |
+| Assistente | Japa, Tatu | **350** |
+| Assistente | Lucas | 250 |
+| Assistente | Emerson | 500 (1 diária) |
+| **DTV / switcher** | **Felype** | **1.500** |
+| Operador de vídeo | Benjamim | 350 |
+| Cinegrafista de operação | Isadora, João, Everton | **1.000** |
+
+**Assistente varia de 250 a 500 pela pessoa, não pela função.** Usar 350 como
+ponto médio quando não souber quem é, em vez dos 250 do Barretos.
+
+**Felype cobra quando opera.** Zerado quando é interface com o cliente
+(Manente, KITKAT); R$ 1.500/diária quando senta no switcher. Perguntar qual
+dos dois papéis ele faz no job antes de zerar.
+
+Fornecedores: **Megatroper grua + trilho com operador e maquinista, R$ 5.000
+por pacote** · transporte de equipamento em SP (Valner) R$ 350 · tripé alugado
+na Elite R$ 200/unidade.
+
+Comissão da Larissa neste job: **5%** — ela também faz atendimento, sem cachê.
+
 ### Live multicâmera com viagem — KITKAT, 03/09/2026
 
 Diárias **estimadas por analogia**, não confirmadas — o Felype pediu para
@@ -257,9 +285,13 @@ Três coisas deste job que valem virar hábito:
 diárias. Em job com montagem no dia anterior, **conte as diárias de trabalho,
 não as diárias faturadas** — é onde o custo de equipe dobra em silêncio.
 
-**Equipe fornecida pelo cliente é margem pura.** A YAH CHURCH forneceu os 7
-cinegrafistas, vendidos a R$ 1.100 cada. R$ 7.700 de receita com zero de custo.
-Vale sempre perguntar quem entra com a equipe de câmera.
+**"O cliente fornece os cinegrafistas" quase nunca é 100%.** O Felype disse
+que a YAH CHURCH forneceria os cinegrafistas e que não haveria custo. Na
+planilha final: de 7 posições, o cliente cobriu **2**, a YAD pagou **3** a
+R$ 1.000 cada e uma foi coberta por alguém já pago como assistente. Custo real
+R$ 3.000, não zero. **Peça a lista posição por posição**, não a afirmação
+geral — e monte uma linha por posição de câmera, numerada, que foi como ele
+reorganizou.
 
 **Locação de bens móveis pode não ser serviço.** O rodapé deste orçamento
 invoca a LC 116/03 para dizer que a operação não emite nota de serviço. Se
