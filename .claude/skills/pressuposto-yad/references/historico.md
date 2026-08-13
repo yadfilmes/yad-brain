@@ -163,6 +163,22 @@ EQUIPAMENTO E MÍDIA · PRODUÇÃO E DIVERSOS · COMISSÃO
 **Estúdio LED com pós** (Manente): EQUIPE DE GRAVAÇÃO · PÓS-PRODUÇÃO · ESTÚDIO
 E LED · EQUIPAMENTO E ENERGIA · ALIMENTAÇÃO · PRODUÇÃO E DIVERSOS · COMISSÃO
 
+## Preço sem nota e o campo de imposto
+
+Alguns orçamentos da casa fecham **sem nota**, com a nota cobrada à parte. O
+orçamento do Flaney/Amazon diz literalmente "Trabalho Sem Nota — Com Nota
++ 15%", e o YAH CHURCH invoca a LC 116/03 para dizer que locação de bens móveis
+não emite nota de serviço.
+
+Como tratar, sem inventar tese fiscal: **use a alíquota que corresponde ao
+preço que foi fechado** e escreva a premissa na observação da entrada. Se o
+valor fechado é o "sem nota", o imposto entra em 0% e a planilha registra que
+faturar com nota muda o preço e a alíquota juntos. Deixe uma linha de entrada
+de reserva para essa diferença, para o cenário não precisar ser refeito.
+
+A alíquota nunca é chute do gerador: 16% em Barretos e na novela vertical, 15%
+na live da BYD, 0% no YAH CHURCH e no Flaney/Amazon. Pergunte qual é a do job.
+
 ## Leia o escopo da proposta, não só a escala
 
 A escala que o Felype dita de cabeça é quem ele já tem em mente — quase nunca
@@ -265,6 +281,34 @@ observação) justamente porque é o que costuma virar mal-entendido.
 Alimentação no local e hospedagem por conta do Clube do Cowboy. Orçamento de
 tabela dava 97.075; fechou em 81.000 (valor 2025 + 8% de inflação) mais os
 extras.
+
+### AMAZON LIVE — Flaney (v1, em andamento)
+
+Gravação multicâmera com unidade móvel, 1,5 diária faturada. 10 URSA 12K + 5
+Pocket, óptica cine-servo Canon até 50-1000, Cammate e Dolly como opcionais.
+
+| | |
+|---|---|
+| valor de tabela + opcionais | 106.585,00 |
+| desconto de parceiro Flaney | −25% |
+| **entrada bruta** | **79.999,99** (sem nota) |
+| equipamento vendido | 88.335 — todo próprio |
+| equipe vendida | 11.250 |
+| saídas lançadas | 14.200 |
+| **lucro, com 8 linhas em branco** | **65.799,99 — 82,3%** |
+
+**Job de parque próprio: a margem está no equipamento, não na operação.** Os
+R$ 88.335 de equipamento vendido não têm custo correspondente. A equipe custa
+R$ 12.000 contra R$ 11.250 vendidos — a operação praticamente empata, e é o
+equipamento que paga o job.
+
+**Desconto de parceiro pode ser a comissão disfarçada.** O Flaney levou 25% de
+desconto por ser parceiro que trouxe a Amazon. Antes de lançar comissão em
+cima disso, confirmar se não é dupla contagem da mesma fatia.
+
+**Cinegrafista não vendido não significa cinegrafista inexistente.** A proposta
+vendeu técnico de câmeras, não cinegrafista, para 15 câmeras. Perguntar quem
+opera antes de fechar.
 
 ### ADORAÇÃO & ADORADORES — YAH CHURCH (v1, em andamento)
 
