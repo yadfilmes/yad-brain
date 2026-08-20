@@ -301,6 +301,35 @@ Alimentação no local e hospedagem por conta do Clube do Cowboy. Orçamento de
 tabela dava 97.075; fechou em 81.000 (valor 2025 + 8% de inflação) mais os
 extras.
 
+### YAMAHA + ITURAN — Série Técnica · Yamaha Motor Brasil (v1, em andamento)
+
+10 filmes técnicos 4K de até 8 min, 3 diárias de até 10h no Estúdio Morumbi,
+Canon C400 e Cine-Servo PL, painel de LED, gerador dedicado e Resolume.
+
+| | |
+|---|---|
+| tabela | 99.189,40 |
+| condição especial Indira (−5%) | **75.229,93** — com nota |
+| imposto 16% | 12.036,79 |
+| líquida | 63.193,14 |
+| equipe de set (13 funções × 3 diárias) | 27.600 |
+| estúdio Morumbi 9.000 + montagem do LED 2.700 | 11.700 |
+| comissão 10% da líquida | 6.319,31 |
+| alimentação · DIT | 3.900 · 1.500 |
+| saídas lançadas | 51.019,31 |
+| **lucro, com 5 linhas em branco** | **12.173,83 — 16,2%** |
+
+**Proposta que lista o escopo por bloco é a melhor matéria-prima que existe
+para pressuposto.** Esta nomeia, dentro de cada bloco, quem opera: direção
+geral e de fotografia, produção, 2 câmeras, assistências, áudio, making of,
+continuidade, operação de luz, geradorista, operador de Resolume e DIT. Treze
+funções vieram do texto vendido, sem ninguém precisar ditar a escala.
+
+**Job apertado por acúmulo, não por um item.** Nada aqui está caro: a equipe é
+padrão, o estúdio é o critério interno de sempre, a comissão é a usual. São 13
+funções × 3 diárias que somam 27.600, e o estúdio próprio leva mais 11.700.
+Com o gerador (referência de 6.000 no Manente), a margem cai para ~10%.
+
 ### AMAZON LIVE — Flaney (v1, em andamento)
 
 Gravação multicâmera com unidade móvel, 1,5 diária faturada. 10 URSA 12K + 5
