@@ -301,6 +301,13 @@ Cuidado com dupla contagem no sentido inverso: motorista que vem no pacote da
 van não leva cachê, pedágio e combustível dentro do pacote não viram linha
 própria, e equipamento da casa é receita, não custo.
 
+**Conte os dias mobilizados, não os dias de gravação.** Dia de montagem, dia de
+desmontagem e véspera consomem estúdio, transporte e alimentação igual. Nas
+Pílulas são 3 diárias de gravação e **4 dias de estúdio** — quem contasse 3
+perderia R$ 3.000 de ocupação e R$ 700 de transporte. No YAH CHURCH a montagem
+foi na véspera com equipe reduzida: alimentação daquele dia é para 3 pessoas,
+não para 9.
+
 ## Comissão de captação
 
 **A YAD tem comissão em praticamente todo job.** O Felype foi explícito: o
@@ -420,6 +427,51 @@ Ainda em branco: **HD 24 TB** (referência da novela vertical: 3.500) e
 
 Custo-sombra: as 3 diárias × 7 pessoas valem R$ 27.600 a preço de mercado, e o
 estúdio de 9.000 volta para o grupo. **Resultado do grupo: 49.733,48.**
+
+### YAMAHA — Pílulas do Conhecimento (v1, em andamento)
+
+Videocast técnico com Guilherme Bezerra, 6 episódios de até 10 min (60 min no
+conjunto), painel de LED e Resolume. **1 dia de montagem + 3 diárias de
+gravação**, 2 pílulas por dia, entrega em 6 semanas. Mesmo cliente e mesmo
+estúdio da Série Técnica.
+
+| | |
+|---|---|
+| entrada bruta (impostos inclusos) | 76.239,40 |
+| imposto 16% | 12.198,30 |
+| líquida | 64.041,10 |
+| estúdio Morumbi 4 × 3.000 | 12.000 |
+| alimentação (24 × 200 + 3 × 200) | 5.400 |
+| transporte 8 × 350 + consumíveis 1.000 | 3.800 |
+| comissão 5% (Carol) | 3.202,06 |
+| equipe de set · pós · equipamento | **0** |
+| saídas lançadas | 24.402,06 |
+| **lucro, com 2 linhas em branco** | **39.639,04 — 52,0% do bruto, 61,9% da líquida** |
+
+**Primeiro job montado já com o padrão de equipe fixa** — não escalei função por
+função. A proposta traz "Equipe em set · 7 pessoas" e seis das sete caem direto
+no quadro: direção geral (Felype), fotografia (Thiago), cinegrafista (Rodrigo),
+produtora (Acsa), Resolume (Viny), assistente geral (Vitória). Acrescentei som
+direto (Edhen), que a proposta não vende e um videocast exige.
+
+**O roteirista é a única função sem dono no quadro.** Ficou em branco. Na live
+da BYD o roteiro entrou zerado como equipe da casa; se aqui for interno também,
+zera — se for contratado, são 6 roteiros técnicos.
+
+**Dia de montagem é dia mobilizado.** São 4 dias de estúdio, 4 dias de
+transporte e 1 refeição a mais para a equipe técnica, ainda que só 3 sejam de
+gravação. Quem conta 3 perde R$ 3.000 de estúdio e R$ 700 de transporte.
+
+**Grafismo para LED é pré, não pós.** A arte que roda no painel tem que estar
+pronta antes da montagem. Está zerada como interna, mas é o item mais provável
+de precisar de mão de fora (design saiu 2.000 na BYD).
+
+Receita contingente registrada como entrada de reserva: da 3ª leva de alteração
+em diante, **R$ 197,50 por hora de ilha**. As duas primeiras já estão no valor.
+
+Custo-sombra da folha: ~R$ 20.900 a preço de mercado (7 × 3 diárias + dia de
+montagem). Com os 12.000 do estúdio voltando para o grupo, **resultado do grupo
+R$ 51.639,04**.
 
 ### AMAZON LIVE — Flaney (v1, em andamento)
 
