@@ -132,6 +132,11 @@ ele, não a planilha, que registra de onde cada número veio.
   cobre fica **sem status** — nada a pagar — e a `OBS` diz quem cobre. Linha
   ainda em aberto fica `A PAGAR` com o valor amarelo. Sem essa distinção, três
   meses depois ninguém sabe se aquele campo vazio era cortesia ou esquecimento.
+- **Equipe de salário fixo entra zerada — e a margem do job engana.** Quem é do
+  quadro já recebeu no dia 5: linha com valor zero e status vazio. No Yamaha
+  isso apagou R$ 27.600 e levou a margem de 16,2% a 54,1% — verdadeiro para o
+  job, falso para o mês. Reporte o par: lucro do job e a folha que ele consumiu
+  a preço de mercado.
 - **Parcela recebida ≠ parcela combinada.** O bloco `CAIXA` separa "já andou"
   de "falta"; lucro no papel com 50% a receber não paga fornecedor.
 - **Rótulo de célula não pode começar com `=`** — o Excel lê como fórmula.

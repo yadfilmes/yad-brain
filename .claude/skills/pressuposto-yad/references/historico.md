@@ -121,6 +121,53 @@ casa, sem cachê no pressuposto.
 
 ---
 
+## Equipe com salário fixo — o quadro da casa
+
+**A YAD tem gente de carteira, e essa gente entra no pressuposto zerada.** Não é
+cortesia nem esquecimento: o salário já saiu do caixa no dia 5, o job não gera
+desembolso novo. Confirmado pelo Felype no Yamaha — *"usamos praticamente nossa
+equipe, mal temos custos reais"*.
+
+| pessoa | função no set | referência de mercado/diária |
+|---|---|---|
+| Felype | direção geral / DTV | 1.500 |
+| Acsa | produção | 700 |
+| Thiago | direção de fotografia **e** câmera 1 | 1.200 + 1.000 |
+| Rodrigo | operador de câmera | 1.000 |
+| Viny | Resolume / teleprompter / produção | 700 |
+| Edhen | som direto | 700 |
+| Vitória | continuidade / script | 500 |
+
+Duas coisas que esta lista ensina:
+
+**Um nome acumula funções.** O Thiago fecha fotografia e câmera 1 sozinho; o
+Viny faz produção num job e Resolume no outro. Não crie uma linha por função da
+proposta e depois procure gente para preencher — pergunte quem vai, e junte as
+funções no nome.
+
+**Fixo é fixo dentro de casa, não na estrada.** No Barretos e no KITKAT o Viny
+e o Thiago aparecem em escala de externa, e ali o Felype tratou diária caso a
+caso. Job em estúdio com equipe própria → zera. Job com viagem → **pergunte**,
+não presuma.
+
+### Como lançar
+
+Linha existe, valor zero, **status em branco**, observação dizendo
+`SALÁRIO FIXO — equipe da casa, não é custo deste job (referência X/diária)`. É
+a mesma regra do "zero por não ser custo": status vazio significa que não há
+nada a pagar. Linha zerada com `A PAGAR` fica pendurada no bloco de caixa
+esperando um pagamento que nunca vem.
+
+### E o custo que não aparece
+
+O job não paga esse pessoal, mas a empresa paga. As 3 diárias × 7 pessoas do
+Yamaha valem **R$ 27.600 a preço de mercado** — folha que o mês inteiro precisa
+cobrir. Quando a margem de um job saltar por causa de equipe fixa, **diga os
+dois números**: o lucro do job e o custo-sombra da folha que ele consumiu. Um
+mês com três jobs desses paga a folha; um mês com um só, não.
+
+---
+
 ## Preço de venda (o que o cliente paga) — NÃO é cachê
 
 Orçamento Barretos 2026, para comparar com os cachês acima:
@@ -195,8 +242,31 @@ valor fechado é o "sem nota", o imposto entra em 0% e a planilha registra que
 faturar com nota muda o preço e a alíquota juntos. Deixe uma linha de entrada
 de reserva para essa diferença, para o cenário não precisar ser refeito.
 
-A alíquota nunca é chute do gerador: 16% em Barretos e na novela vertical, 15%
-na live da BYD, 0% no YAH CHURCH e no Flaney/Amazon. Pergunte qual é a do job.
+A alíquota nunca é chute do gerador: 16% em Barretos, na novela vertical, no
+YAH CHURCH e no Yamaha; 15% na live da BYD; 0% no Flaney/Amazon, e ali por ser
+exercício. Pergunte qual é a do job.
+
+## Custo de operação — números que se repetem
+
+Não são cachê nem venda: são o que a produção gasta para o dia acontecer.
+Corrigidos pelo Felype na planilha, não estimados.
+
+| item | valor | onde |
+|---|---|---|
+| Alimentação | **200 por pessoa/diária** | Yamaha (corrigiu meus 100) |
+| Gerador com geradorista, em estúdio | **1.000/diária** | Yamaha |
+| Gerador com geradorista, em locação | 6.000/projeto | Manente |
+| Transporte local e estacionamento | 350 por trecho, 2 trechos/diária | Yamaha |
+| Consumíveis de set | 1.000/projeto | Yamaha |
+| Estúdio YAD Morumbi | 3.000/diária | Manente, Yamaha |
+| Transporte de equipamento em SP (Valner) | 350 | YAH CHURCH |
+
+**Alimentação a 100 estava errada.** Onde eu tinha estimado 100/pessoa/dia, o
+número real é 200. Em job de 15 pessoas × 5 diárias isso é R$ 7.500 de diferença.
+Use 200 e marque como ESTIMADO só se o job tiver catering do cliente em dúvida.
+
+**O gerador muda de preço pelo lugar, não pelo tamanho.** Em estúdio próprio é
+diária de equipamento; em locação carrega deslocamento, combustível e espera.
 
 ## Leia o escopo da proposta, não só a escala
 
@@ -245,14 +315,21 @@ comissão é a saída que some da conta — e quando some, some inteira.
 **A base muda o valor e precisa ser perguntada**, porque "15% do job" é
 ambíguo:
 
-| job | percentual | base | valor |
-|---|---|---|---|
-| Live BYD | 10% | entrada **bruta** (94.790) | 9.479 |
-| Novela vertical | 15% | entrada **líquida** (189.000) | 28.350 |
-| KITKAT Live | 10% | entrada **bruta** (135.000) | 13.500 |
+| job | quem | percentual | base | valor |
+|---|---|---|---|---|
+| Live BYD | — | 10% | entrada **bruta** (94.790) | 9.479 |
+| Novela vertical | — | 15% | entrada **líquida** (189.000) | 28.350 |
+| KITKAT Live | — | 10% | entrada **bruta** (135.000) | 13.500 |
+| YAH CHURCH | Larissa | 5% | entrada líquida | — |
+| Yamaha + Ituran | **Carol** | **5%** | entrada líquida (63.193,14) | 3.159,66 |
 
-10% parece ser o percentual usual ("tem comissão, como sempre, de 10%"); 15%
-foi exceção da novela vertical.
+10% é o percentual usual ("tem comissão, como sempre, de 10%"), mas **5% já
+apareceu duas vezes** — Larissa no YAH CHURCH, Carol no Yamaha. Gere com 10% e
+deixe o Felype baixar; a diferença entre 10% e 5% no Yamaha foi R$ 3.159,66.
+
+**Escreva o nome do captador na linha.** O campo é `comissao_descricao` no
+config. "Comissão comercial" não diz para quem, e daqui a três meses ninguém
+lembra.
 
 Na novela vertical, 15% sobre a bruta daria R$ 33.750 — **R$ 5.400 a mais** que
 o lançado. Antes de fechar, confirmar com o captador se o combinado é sobre o
@@ -301,34 +378,48 @@ Alimentação no local e hospedagem por conta do Clube do Cowboy. Orçamento de
 tabela dava 97.075; fechou em 81.000 (valor 2025 + 8% de inflação) mais os
 extras.
 
-### YAMAHA + ITURAN — Série Técnica · Yamaha Motor Brasil (v1, em andamento)
+### YAMAHA + ITURAN — Série Técnica · Yamaha Motor Brasil (v2, em andamento)
 
 10 filmes técnicos 4K de até 8 min, 3 diárias de até 10h no Estúdio Morumbi,
 Canon C400 e Cine-Servo PL, painel de LED, gerador dedicado e Resolume.
+**v2 é a planilha corrigida à mão pelo Felype** — a v1 era minha estimativa.
 
-| | |
-|---|---|
-| tabela | 99.189,40 |
-| condição especial Indira (−5%) | **75.229,93** — com nota |
-| imposto 16% | 12.036,79 |
-| líquida | 63.193,14 |
-| equipe de set (13 funções × 3 diárias) | 27.600 |
-| estúdio Morumbi 9.000 + montagem do LED 2.700 | 11.700 |
-| comissão 10% da líquida | 6.319,31 |
-| alimentação · DIT | 3.900 · 1.500 |
-| saídas lançadas | 51.019,31 |
-| **lucro, com 5 linhas em branco** | **12.173,83 — 16,2%** |
+| | v1 (estimado) | v2 (real) |
+|---|---|---|
+| entrada bruta — condição Indira (−5% sobre 99.189,40) | 75.229,93 | 75.229,93 |
+| imposto 16% | 12.036,79 | 12.036,79 |
+| líquida | 63.193,14 | 63.193,14 |
+| equipe de set | 27.600 | **0** — salário fixo |
+| estúdio Morumbi | 9.000 | 9.000 |
+| montagem do painel de LED | 2.700 | **0** — montagem própria |
+| gerador | em branco | **3.000** (3 × 1.000) |
+| alimentação | 3.900 (39 × 100) | **4.200** (21 × 200) |
+| DIT | 1.500 | **0** — função removida |
+| transporte e consumíveis | em branco | **3.100** |
+| comissão | 10% = 6.319,31 | **5% (Carol) = 3.159,66** |
+| saídas | 51.019,31 | **22.459,66** |
+| **lucro** | 12.173,83 — 16,2% | **40.733,48 — 54,1% do bruto, 64,5% da líquida** |
 
-**Proposta que lista o escopo por bloco é a melhor matéria-prima que existe
-para pressuposto.** Esta nomeia, dentro de cada bloco, quem opera: direção
-geral e de fotografia, produção, 2 câmeras, assistências, áudio, making of,
-continuidade, operação de luz, geradorista, operador de Resolume e DIT. Treze
-funções vieram do texto vendido, sem ninguém precisar ditar a escala.
+**A equipe inteira é da casa.** Felype, Acsa, Thiago (fotografia + câmera 1),
+Rodrigo, Viny (Resolume/TP), Edhen e Vitória — sete pessoas de salário fixo,
+todas zeradas. Some com R$ 27.600 de custo de uma vez. Ele apagou também
+assistente 2, making of e DIT: o escopo vendido listava 13 funções, a operação
+real coube em 7 pessoas acumulando papéis.
 
-**Job apertado por acúmulo, não por um item.** Nada aqui está caro: a equipe é
-padrão, o estúdio é o critério interno de sempre, a comissão é a usual. São 13
-funções × 3 diárias que somam 27.600, e o estúdio próprio leva mais 11.700.
-Com o gerador (referência de 6.000 no Manente), a margem cai para ~10%.
+**A pós dos 10 filmes é 100% interna.** Montagem, grafismos, cor, mix e legenda
+saem zerados sem discussão.
+
+**Onde eu errei na v1**, para não repetir: escalei função por função a partir
+dos blocos da proposta em vez de perguntar quem ia; usei alimentação a 100
+quando a casa paga 200; e cobrei montagem de LED de terceiro (referência da
+BYD) num estúdio onde a montagem é da própria equipe.
+
+Ainda em branco: **HD 24 TB** (referência da novela vertical: 3.500) e
+**roteiros e matriz técnica**. Se os dois entrarem a 3.500 e 0, o lucro vai a
+37.233,48 — margem 49,5%.
+
+Custo-sombra: as 3 diárias × 7 pessoas valem R$ 27.600 a preço de mercado, e o
+estúdio de 9.000 volta para o grupo. **Resultado do grupo: 49.733,48.**
 
 ### AMAZON LIVE — Flaney (v1, em andamento)
 

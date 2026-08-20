@@ -141,6 +141,15 @@ ainda em aberto fica `A PAGAR` com o valor em amarelo.
 **Quem entra sem cachê entra mesmo assim**, com valor zero e o motivo na
 observação. Some da conta, não some da escala.
 
+**Equipe de salário fixo entra zerada, e é meia dúzia de gente.** Felype, Acsa,
+Thiago, Rodrigo, Viny, Edhen e Vitória são do quadro: o salário já saiu no dia
+5, o job não gera desembolso novo. Antes de escalar função por função a partir
+da proposta, **pergunte quem vai** — no Yamaha as 13 funções vendidas couberam
+em 7 pessoas acumulando papéis, e R$ 27.600 de custo estimado viraram zero.
+Fixo é fixo dentro de casa; em job com viagem, pergunte. Quando a margem saltar
+por isso, **diga os dois números**: o lucro do job e a folha que ele consumiu a
+preço de mercado. `references/historico.md` tem a lista e as referências.
+
 **Item previsto no orçamento do cliente e ainda sem custo definido vira linha em
 branco**, com o valor previsto na observação. Na novela vertical foram cinco
 linhas (color, VFX, duas legendagens, trilha) somando R$ 43.000 de escopo pago
