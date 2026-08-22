@@ -89,6 +89,25 @@ pressuposto da BYD: não presuma que quem foi zerado uma vez é sempre zerado.
 **Diária é por dia mobilizado, não por dia de trabalho.** Neste job foram 3
 diárias para todos, ainda que a operação seja 6h de montagem + 10h de evento.
 
+### Live pequena de meio período — AMIRA, 06/08/2026
+
+**Valores reais, ditados pelo Felype.** Evento de 8h às 13h, 3 pessoas.
+
+| função | pessoa | valor |
+|---|---|---|
+| Responsável pela live (direção técnica e switcher) | **Emerson** | **1.000** |
+| Cinegrafista **e** montagem | **Isa** | **1.000** |
+| Cinegrafista **e** assistente | **Lucas** | **500** |
+
+Café da manhã da equipe: R$ 100 fechado (evento de meio período, sem almoço).
+
+Continuidade com o YAH CHURCH: a Isa (Isadora) já valia 1.000 como cinegrafista
+de operação. **O Lucas subiu de 250 para 500 ao acumular câmera** — o valor
+segue a função mais alta que a pessoa faz no dia, não o cargo dela.
+
+O Emerson confirma o padrão de novo: **cachê cheio, sempre.** Já foi zerado uma
+única vez, no pressuposto da BYD, e nunca mais.
+
 ### Live / estúdio — BYD 23 e 24.06
 
 | função | valor | unidade |
@@ -229,6 +248,40 @@ são o que sobra depois dos outros, então `TOTAL DISTRIBUÍDO` fecha exatamente
 com o lucro. Um terço para três nunca soma 100% em duas casas decimais, e é
 melhor a diferença ficar visível numa linha do que sumir num centavo.
 
+## Desconto de parceiro — o que ele custa de verdade
+
+Vários orçamentos da casa saem com desconto: **15% de parceiro Estúdio São
+Paulo** na AMIRA, 25% de parceiro Flaney na Amazon, 30% de equipamento no YAH
+CHURCH, 5% de condição especial na Yamaha.
+
+O desconto sai do bruto, mas **quem paga a conta é o lucro**, porque os custos
+não encolhem junto. Na AMIRA:
+
+| | a preço de tabela | com 15% de desconto |
+|---|---|---|
+| entrada bruta | 7.990,00 | 6.791,50 |
+| lucro | 2.404,86 | **1.549,13** |
+
+R$ 1.198,50 de desconto viraram R$ 855,73 a menos de lucro — **36% do resultado
+do job**. Em job pequeno, o desconto de parceiro é a maior decisão comercial que
+existe, e ela é tomada antes de o pressuposto começar.
+
+Quando o orçamento tiver desconto, **diga no fechamento quanto ele custou em
+lucro**, não só o percentual. Percentual sobre venda parece pequeno; em cima do
+que sobra, não é.
+
+## Job pequeno tem estrutura de custo desproporcional
+
+Imposto e comissão não escalam com o tamanho do job — são percentuais. Na AMIRA
+os dois somaram R$ 1.942,37, ou **28,6% do bruto**, antes de qualquer pessoa ou
+equipamento entrar na conta. Sobraram R$ 5.704,86 para pagar 3 pessoas
+(R$ 2.500), transporte e café.
+
+Resultado: **22,8% de margem num job em que o equipamento é 100% próprio.** O
+mesmo perfil de job grande dá 50% ou mais. Não é que a live pequena esteja mal
+orçada — é que a estrutura fixa pesa mais quando o número é pequeno. Vale dizer
+isso ao Felype em vez de deixar a margem baixa parecer erro de conta.
+
 ## Preço sem nota e o campo de imposto
 
 Alguns orçamentos da casa fecham **sem nota**, com a nota cobrada à parte. O
@@ -329,10 +382,14 @@ ambíguo:
 | KITKAT Live | — | 10% | entrada **bruta** (135.000) | 13.500 |
 | YAH CHURCH | Larissa | 5% | entrada líquida | — |
 | Yamaha + Ituran | **Carol** | **5%** | entrada líquida (63.193,14) | 3.159,66 |
+| Yamaha Pílulas | Carol | 5% | entrada líquida (64.041,10) | 3.202,06 |
+| AMIRA (live) | a definir | **15%** | entrada líquida (5.704,86) | 855,73 |
 
-10% é o percentual usual ("tem comissão, como sempre, de 10%"), mas **5% já
-apareceu duas vezes** — Larissa no YAH CHURCH, Carol no Yamaha. Gere com 10% e
-deixe o Felype baixar; a diferença entre 10% e 5% no Yamaha foi R$ 3.159,66.
+10% é o percentual usual ("tem comissão, como sempre, de 10%"), mas o campo
+varia de 5% a 15% e **não dá para adivinhar**: 5% com a Larissa e a Carol, 15%
+na novela vertical e na AMIRA. Quando o Felype não disser, gere com 10% e
+avise; quando disser, use o dele. A diferença entre 10% e 5% no Yamaha foi
+R$ 3.159,66.
 
 **Escreva o nome do captador na linha.** O campo é `comissao_descricao` no
 config. "Comissão comercial" não diz para quem, e daqui a três meses ninguém
@@ -472,6 +529,40 @@ em diante, **R$ 197,50 por hora de ilha**. As duas primeiras já estão no valor
 Custo-sombra da folha: ~R$ 20.900 a preço de mercado (7 × 3 diárias + dia de
 montagem). Com os 12.000 do estúdio voltando para o grupo, **resultado do grupo
 R$ 51.639,04**.
+
+### AMIRA — Live profissional (v1, em andamento)
+
+Live de meio período, 8h às 13h, com 2 câmeras 4K, ATEM mini, torre vMix até 6
+canais, interface de áudio, cabeamento e monitor. Montagem, testes, operação e
+desmontagem no mesmo dia. Equipe técnica e operacional de 3 pessoas.
+
+| | |
+|---|---|
+| tabela | 7.990,00 |
+| desconto parceiro Estúdio São Paulo (−15%) | **6.791,50** |
+| imposto 16% | 1.086,64 |
+| líquida | 5.704,86 |
+| equipe — Emerson 1.000, Isa 1.000, Lucas 500 | 2.500 |
+| transporte 2 × 350 | 700 |
+| café da manhã | 100 |
+| comissão 15% da líquida | 855,73 |
+| equipamento próprio · internet do cliente | 0 |
+| saídas | 4.155,73 |
+| **lucro** | **1.549,13 — 22,8% do bruto, 27,2% da líquida** |
+
+**As 3 pessoas vendidas são exatamente as 3 pagas** — sem inflação de escala,
+raro. O que salva o job é o parque próprio: os R$ 7.990 de tabela são quase
+todos equipamento, e ele custa zero.
+
+**Equipe de terceiro, não do quadro.** Emerson, Isa e Lucas recebem cachê; não
+confunda com Felype, Acsa, Thiago, Rodrigo, Viny, Edhen e Vitória, que são
+salário fixo. Nem toda equipe da casa é equipe da casa.
+
+Comissão de 15% — a segunda maior já registrada, junto com a novela vertical.
+Internet dedicada é obrigação do cliente, escrita no orçamento.
+
+Pendências: alíquota (usei 16% por padrão, o orçamento não diz se sai com nota),
+quem recebe a comissão, e mídia/guarda da gravação, se houver arquivo.
 
 ### AMAZON LIVE — Flaney (v1, em andamento)
 

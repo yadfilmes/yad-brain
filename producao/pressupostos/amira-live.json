@@ -1,0 +1,57 @@
+{
+  "job": "AMIRA — Live profissional · captação, operação e transmissão",
+  "cliente": "AMIRA",
+  "periodo": "evento 8h às 13h · 1 diária · montagem, configuração, testes, operação e desmontagem",
+  "elaborado_por": "Felype · felype@yadfilmes.com.br",
+  "elaborado_em": "20/08/2026",
+  "atualizado_por": "Felype · felype@yadfilmes.com.br",
+  "atualizado_em": "20/08/2026",
+  "versao": "v1",
+  "situacao": "EM ANDAMENTO",
+  "imposto_pct": 16,
+  "comissao_pct": 15,
+  "comissao_base": "liquida",
+  "comissao_descricao": "Comissão comercial — a definir quem",
+  "areas": [
+    "EQUIPE",
+    "EQUIPAMENTO E TRANSMISSÃO",
+    "TRANSPORTE E LOGÍSTICA",
+    "ALIMENTAÇÃO",
+    "PRODUÇÃO E DIVERSOS",
+    "COMISSÃO"
+  ],
+  "entradas": [
+    {"descricao": "Live AMIRA — valor com desconto de parceiro", "valor": 6791.50, "status": "A RECEBER",
+     "obs": "tabela 7.990,00 com 15% de desconto parceiro Estúdio São Paulo (−1.198,50) · orçamento de 06/08/2026 · imposto em 16% por padrão da casa — CONFIRMAR se este job sai com nota"}
+  ],
+  "saidas": [
+    {"area": "EQUIPE", "descricao": "Emerson", "funcao": "Responsável pela live — direção técnica e switcher",
+     "qtd": 1, "unit": 1000, "status": "A PAGAR",
+     "obs": "valor real informado pelo Felype · Emerson tem cachê cheio, não é equipe zerada"},
+    {"area": "EQUIPE", "descricao": "Isa", "funcao": "Cinegrafista e montagem",
+     "qtd": 1, "unit": 1000, "status": "A PAGAR",
+     "obs": "valor real informado pelo Felype · mesma diária de cinegrafista de operação do YAH CHURCH"},
+    {"area": "EQUIPE", "descricao": "Lucas", "funcao": "Cinegrafista e assistente",
+     "qtd": 1, "unit": 500, "status": "A PAGAR",
+     "obs": "valor real informado pelo Felype · no YAH CHURCH era assistente a 250; subiu para 500 acumulando câmera"},
+
+    {"area": "EQUIPAMENTO E TRANSMISSÃO", "descricao": "2 câmeras 4K, ATEM mini, torre vMix, interface de áudio, cabeamento e monitor",
+     "funcao": "parque próprio", "qtd": 1, "unit": 0, "status": "",
+     "obs": "equipamento 100% da YAD — é daqui que vem o lucro deste job"},
+    {"area": "EQUIPAMENTO E TRANSMISSÃO", "descricao": "Internet dedicada",
+     "funcao": "link de transmissão", "qtd": 1, "unit": 0, "status": "",
+     "obs": "o orçamento diz que é responsabilidade do cliente — sem custo para a YAD"},
+
+    {"area": "TRANSPORTE E LOGÍSTICA", "descricao": "Transporte do equipamento e deslocamento",
+     "funcao": "ida e volta no dia", "qtd": 2, "unit": 350, "status": "A PAGAR",
+     "obs": "ADICIONADO — 350 por trecho, padrão da casa. Se for na van com a própria equipe, zerar."},
+
+    {"area": "ALIMENTAÇÃO", "descricao": "Café da manhã da equipe",
+     "funcao": "evento 8h às 13h, sem almoço", "qtd": 1, "unit": 100, "status": "A PAGAR",
+     "obs": "valor fechado informado pelo Felype · se for R$ 100 POR PESSOA, mudar a QTD para 3"},
+
+    {"area": "PRODUÇÃO E DIVERSOS", "descricao": "Mídia e guarda da gravação",
+     "funcao": "se a live também for gravada", "qtd": 1, "unit": "", "status": "A PAGAR",
+     "obs": "ADICIONADO — o orçamento vende transmissão; se ficar arquivo gravado, alguém guarda. Zerar se não houver entrega de arquivo."}
+  ]
+}
