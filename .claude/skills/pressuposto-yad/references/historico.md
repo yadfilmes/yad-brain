@@ -108,6 +108,30 @@ segue a função mais alta que a pessoa faz no dia, não o cargo dela.
 O Emerson confirma o padrão de novo: **cachê cheio, sempre.** Já foi zerado uma
 única vez, no pressuposto da BYD, e nunca mais.
 
+### Live corporativa em estúdio — JAECOO 5 Training Live, 23-24/09/2026
+
+**Valores reais, ditados pelo Felype.** Duas jornadas de até 10h: montagem e
+ensaio no dia 23, duas sessões ao vivo no dia 24.
+
+| função | qtd | valor | unidade |
+|---|---|---|---|
+| Cinegrafista | 4 | **900** | **pelo job** (2 diárias) |
+| Operador de vMix | 2 | **900** | **pelo job** (2 diárias) |
+| Operador de áudio | 1 | **900** | **pelo job** |
+| Assistente de direção (Serginho) | 1 | **1.000** | **por diária** |
+| Assistente de set | 4 | **500** | **por diária** |
+
+⚠️ **Cachê "pelo job" e cachê "por diária" vieram na mesma frase.** O Felype
+escreveu "900 pelo job (sendo duas diárias cada)" para o cinegrafista e "1.000
+por diária" para o Serginho. Lançar os dois do mesmo jeito erra por 2×. Quando
+a mensagem misturar as duas formas, **repita de volta como você lançou** — 4 ×
+900 para o cinegrafista, 2 × 1.000 para o Serginho — para ele conferir sem abrir
+a planilha.
+
+Note também que o cinegrafista aqui sai por **450 a diária efetiva**, metade dos
+900/diária do YAH CHURCH e menos que os 500 do Barretos. Live corporativa em
+estúdio paga menos que gravação de campo.
+
 ### Live / estúdio — BYD 23 e 24.06
 
 | função | valor | unidade |
@@ -307,12 +331,24 @@ Corrigidos pelo Felype na planilha, não estimados.
 | item | valor | onde |
 |---|---|---|
 | Alimentação | **200 por pessoa/diária** | Yamaha (corrigiu meus 100) |
-| Gerador com geradorista, em estúdio | **1.000/diária** | Yamaha |
+| Gerador com geradorista, em estúdio | 1.000/diária · **1.500/diária** | Yamaha · JAECOO |
 | Gerador com geradorista, em locação | 6.000/projeto | Manente |
-| Transporte local e estacionamento | 350 por trecho, 2 trechos/diária | Yamaha |
+| Transporte local e estacionamento | 350 por trecho, 2 trechos/diária | Yamaha, JAECOO |
 | Consumíveis de set | 1.000/projeto | Yamaha |
-| Estúdio YAD Morumbi | 3.000/diária | Manente, Yamaha |
+| Insumos de produção (café, papel, limpeza) | **2.000/projeto** | JAECOO |
+| Estúdio Morumbi | 3.000/diária · **4.000/diária** | Manente e Yamaha · JAECOO |
+| Montagem e desmontagem de painel de LED | 2.700 · **3.000** · 0 | BYD (Natan) · JAECOO · Yamaha (equipe própria) |
+| Internet dedicada com link de backup | **1.500/projeto** | JAECOO |
 | Transporte de equipamento em SP (Valner) | 350 | YAH CHURCH |
+
+**Dois preços para o mesmo estúdio.** Morumbi entrou a 3.000/diária no Manente e
+no Yamaha, e a 4.000 no JAECOO. Pode ser cenário-base, pode ser reajuste, pode
+ser critério diferente para live. **Pergunte qual dos dois vale** em vez de
+escolher sozinho — num job de 2 diárias a diferença é R$ 2.000.
+
+**A internet nem sempre é do cliente.** Na AMIRA e no KITKAT o orçamento jogava
+o link para o cliente; no JAECOO a YAD vende transmissão com contingência e paga
+os dois links. Leia a proposta antes de zerar a linha.
 
 **Alimentação a 100 estava errada.** Onde eu tinha estimado 100/pessoa/dia, o
 número real é 200. Em job de 15 pessoas × 5 diárias isso é R$ 7.500 de diferença.
@@ -529,6 +565,45 @@ em diante, **R$ 197,50 por hora de ilha**. As duas primeiras já estão no valor
 Custo-sombra da folha: ~R$ 20.900 a preço de mercado (7 × 3 diárias + dia de
 montagem). Com os 12.000 do estúdio voltando para o grupo, **resultado do grupo
 R$ 51.639,04**.
+
+### JAECOO 5 — Training Live · OMODA & JAECOO (v1, em andamento)
+
+Treinamento ao vivo para a rede de concessionárias no Estúdio São Paulo /
+Morumbi. 23/09 montagem, integração e ensaio; 24/09 duas sessões ao vivo de
+~1h30. Rider de 35 itens — ATEM 4 M/E Constellation, Videohub 40x40, 4
+HyperDecks, 4× Canon C400 6K, C50 de apoio, cine-servo, painel LED YAD P2.6.
+
+| | |
+|---|---|
+| entrada bruta (com nota) | 64.259,20 |
+| imposto 16% | 10.281,47 |
+| líquida | 53.977,73 |
+| equipe (12 pessoas pagas) | 12.300 |
+| estúdio 2 × 4.000 + montagem do LED 3.000 | 11.000 |
+| gerador 2 × 1.500 + internet dedicada 1.500 | 4.500 |
+| insumos de produção | 2.000 |
+| **subtotal do que o Felype ditou** | **29.800 — lucro 24.177,73, margem 37,6%** |
+| alimentação 30 × 200 (ADICIONADO) | 6.000 |
+| transporte 4 × 350 (ADICIONADO) | 1.400 |
+| saídas | 37.200 |
+| **lucro, com 3 linhas em branco** | **16.777,73 — 26,1% do bruto, 31,1% da líquida** |
+
+**Comissão zerada por decisão dele** — o campo está lá, com 0%.
+
+**A alimentação sozinha custou 11 pontos de margem.** Ele listou insumos (café,
+papel, limpeza) a 2.000 e não listou refeição. São duas jornadas de até 10 horas
+com ~15 pessoas: 30 × 200 = 6.000. É o maior buraco que a lista tinha, e é
+exatamente o tipo de gasto que sai do lucro sem aparecer em lugar nenhum.
+
+**Três funções vendidas ficaram sem dono:** direção de live e operação de corte
+(a proposta vende um ATEM 4 M/E com Advanced Panel — alguém corta), grafismo e
+playback (o pacote gráfico-base tem duas rodadas de aprovação e precisa estar
+pronto antes do ensaio) e a guarda das gravações ISO+PGM em 4K. As três ficaram
+em branco.
+
+**Equipamento é o job inteiro.** 35 itens de rider, todos próprios, sem uma
+linha de locação. Sem isso não haveria margem: 64.259,20 de venda com 37.200 de
+custo real de operação.
 
 ### AMIRA — Live profissional (v1, em andamento)
 
